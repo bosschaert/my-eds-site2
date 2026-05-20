@@ -163,3 +163,60 @@ Assets to copy from project `input/assets/` → repo `/assets/`:
 4. The product URL on each hamper card stays static (container-vs-children rule).
 5. 8 menu items → 16 slots (name + price each). Easy and gives full editability.
 6. Footer is purely static — no authorable slots (per skill's "header/footer remain static repository fragments" rule).
+
+## Phase: Generate
+
+- 45 `[data-slot]` markers across 6 sections (hero 5, menu-strip 21, visit-us 4, cta-band 3, gift-hampers 9, closer 3).
+- 7 `data-slot-skip="placeholder"` markers in template (menu lede, visit-body, band-body, 3× hamper price, closer-body).
+- DA-source HTML uses absolute URLs (`https://main--my-eds-site2--bosschaert.aem.page/assets/...`) for Media Bus.
+- Template/fragments use root-relative `/assets/...`.
+- Section first-classes added on the fly (source had `data-section` only, no `class` attribute on `<section>` elements). Confirmed no CSS layout-class collision on `hero`/`menu-strip`/`visit-us`/`cta-band`/`gift-hampers`/`closer`.
+
+## Phase: Wire
+
+- Artifacts copied to: `templates/`, `fragments/home-proposed/`, `styles/`, `scripts/`.
+- Drafts file built via `transform-da-to-eds.mjs` — 5619 bytes, 3 meta tags.
+- 7 vendored assets in `/assets/` (1 logo + 6 photos).
+- `npm run lint` passes clean.
+
+## Phase: Round-trip
+
+### Local
+- Dev server (`@adobe/aem-cli` v16.19.7) came up at `http://localhost:3000/`.
+- All 13 EDS-served paths return 200 (template, fragments, CSS, JS, 6 photos, logo, drafts).
+- **Local caveat**: drafts-file img URLs initially absolute (matching DA source for Media Bus), so images 404'd locally until the branch was pushed. Mitigation applied: `sed`-rewrote drafts file imgs to `/assets/...` for local viewing only. DA-source file unchanged.
+
+### Production
+- Pushed to `main` via `ssh` remote (`git@github.com:bosschaert/my-eds-site2.git`). Code Sync ready in ~1s.
+- All 9 sanity-probed paths return 200 on `https://main--my-eds-site2--bosschaert.aem.page/`.
+- DA PUT: `POST /versionsource` returned 201 (snapshot created). `PUT /source/...` returned 200.
+- `POST /preview/...` returned 200 with `preview.status: 200`.
+- Final URL: https://main--my-eds-site2--bosschaert.aem.page/snowflake/001/home-proposed
+- Production HTML response includes:
+  - `<meta name="template" content="home-proposed">` ✓
+  - All 6 section classes present in served HTML ✓
+  - Media Bus rewrote DA-cell `<img>` URLs to optimized `./media_<sha>.jpg?width=750&format=jpg&optimize=medium` ✓
+
+## Phase: Reflect
+
+### Project-specific findings
+- Stardust 0.2.0 emitted *0.3.0-style* placeholder attributes (`data-placeholder="true"`) — not the 0.2.0 `<span class="placeholder-tag">` shape documented in skill knowledge. Possibly a Stardust convergence in newer 0.2.0 patch revisions. Not promoting yet; needs corroboration from another Stardust 0.2.0 input.
+
+### Cross-project candidates
+- **Source-has-no-class-at-all on sections** (only `data-section`). Methodology rule "first class must be unique" applies even when the section has *no class*, by adding the `data-section` value as the section's first (and only) class. Existing methodology covers this implicitly under disambiguator priority #1, but the all-attributes-no-class case is worth a one-liner. Marking [candidate-not-yet-promoted].
+
+### Workflow gotchas (not for skill knowledge)
+- HTTPS push via macOS keychain offered the wrong account credentials → 403. Workaround was a manually-configured ssh remote. Specific to multi-account setups; not a snowflake-generalizable rule.
+
+### Timings (rough)
+| Phase | Elapsed |
+|---|---|
+| capture | < 1 min |
+| analyze | ~7 min (full source read + structural map) |
+| generate | ~7 min (template + DA doc with 45 slots) |
+| wire | ~4 min (npm install dominated) |
+| roundtrip-local | ~3 min |
+| roundtrip-prod | ~5 min (incl. push permission diagnosis) |
+
+### Status
+Ready for close. Iteration is NOT closed — awaiting user say-so.
