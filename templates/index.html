@@ -1,0 +1,250 @@
+<main>
+  <section class="top" id="top" style="position: relative; min-height: 82vh; display: flex; align-items: flex-end; overflow: hidden;">
+    <div style="position: absolute; inset: 0px; background: linear-gradient(rgb(0, 39, 74) 0%, rgb(1, 66, 106) 34%, rgb(40, 117, 181) 72%);"></div>
+    <div style="position: absolute; top: 14%; left: 64%; width: 180px; height: 180px; border-radius: 50%; background: radial-gradient(circle, rgba(93, 227, 247, 0.55), rgba(93, 227, 247, 0) 70%); animation: 9s ease-in-out 0s infinite normal none running gl-float;"></div>
+    <div style="position: absolute; inset: 0px; background: rgb(1, 50, 82); clip-path: polygon(0px 55%, 14% 40%, 30% 52%, 46% 34%, 63% 50%, 80% 38%, 100% 52%, 100% 100%, 0px 100%);"></div>
+    <div style="position: absolute; inset: 0px; background: rgb(1, 58, 94); clip-path: polygon(0px 66%, 20% 54%, 38% 64%, 58% 50%, 78% 62%, 100% 55%, 100% 100%, 0px 100%);"></div>
+    <div style="position: absolute; inset: 0px; background: rgb(63, 111, 44); clip-path: polygon(0px 80%, 24% 71%, 46% 79%, 68% 69%, 100% 77%, 100% 100%, 0px 100%);"></div>
+    <div style="position: absolute; left: 0px; right: 0px; bottom: 0px; height: 22%; background: linear-gradient(rgb(93, 227, 247), rgb(24, 195, 221));"></div>
+    <div style="position: absolute; left: 0px; right: 0px; bottom: 0px; height: 38%; background: linear-gradient(rgba(0, 39, 74, 0) 0%, rgba(0, 39, 74, 0.55) 100%);"></div>
+
+    <div style="position: relative; z-index: 2; max-width: 1120px; margin: 0px auto; padding: 0px 24px 72px; width: 100%;">
+      <div style="max-width: 720px;">
+        <span data-slot="hero-eyebrow" style="font-family: var(--ds-font-accent); font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: rgb(93, 227, 247); font-weight: 500;">Wicklow Mountains National Park</span>
+        <h1 data-slot="hero-title" style="margin: 16px 0px 0px; font-size: clamp(40px, 6vw, 74px); font-weight: 300; line-height: 1.05; letter-spacing: -0.015em; color: rgb(255, 255, 255);">Where the mountains meet the monastic past</h1>
+        <p data-slot="hero-description" style="margin: 22px 0px 0px; font-size: 19px; line-height: 1.6; color: rgb(220, 231, 242); max-width: 560px; font-weight: 450;">Two glacial lakes, a thousand-year-old round tower, and some of Ireland's most storied hiking trails — all in one valley an hour south of Dublin.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 14px; margin-top: 34px;">
+          <button type="button" style="display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; height: 48px; padding: 0px 32px; width: auto; font-family: var(--ds-font-sans); font-size: 1rem; font-weight: 500; line-height: 1; letter-spacing: 0px; border-radius: var(--ds-border-radius); border-width: 1px; border-style: solid; border-color: var(--ds-advanced-color-button-secondary-border); border-image: initial; cursor: pointer; transition: var(--ds-animation-default); white-space: nowrap; background: var(--ds-advanced-color-button-secondary-background); color: var(--ds-advanced-color-button-secondary-text);"><span data-slot="hero-cta-1">Find a trail</span></button>
+          <button type="button" style="display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; height: 48px; padding: 0px 32px; width: auto; font-family: var(--ds-font-sans); font-size: 1rem; font-weight: 500; line-height: 1; letter-spacing: 0px; border-radius: var(--ds-border-radius); border-width: 1px; border-style: solid; border-color: var(--ds-advanced-color-button-primary-border); border-image: initial; cursor: pointer; transition: var(--ds-animation-default); white-space: nowrap; background: var(--ds-advanced-color-button-primary-background); color: var(--ds-advanced-color-button-primary-text);"><span data-slot="hero-cta-2">Plan your visit</span></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats-bar" style="background: var(--ds-basic-color-surface-inverse); color: rgb(255, 255, 255);">
+    <div style="max-width: 1120px; margin: 0px auto; padding: 26px 24px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;">
+      <div style="display: flex; align-items: center; gap: 14px;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 26px; height: 26px; color: rgb(93, 227, 247); flex: 0 0 auto;" class="lucide lucide-ticket"><path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"></path><path d="M13 5v2"></path><path d="M13 17v2"></path><path d="M13 11v2"></path></svg>
+        <div><div data-slot="stat-1.title" style="font-size: 17px; font-weight: 700;">Free entry</div><div data-slot="stat-1.subtitle" style="font-size: 13px; color: var(--ds-basic-color-texticon-inverse-muted);">Monastic city &amp; lakes</div></div>
+      </div>
+
+      <div style="display: flex; align-items: center; gap: 14px;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 26px; height: 26px; color: rgb(93, 227, 247); flex: 0 0 auto;" class="lucide lucide-clock"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
+        <div><div data-slot="stat-2.title" style="font-size: 17px; font-weight: 700;">Open year-round</div><div data-slot="stat-2.subtitle" style="font-size: 13px; color: var(--ds-basic-color-texticon-inverse-muted);">Trails accessible any time</div></div>
+      </div>
+
+      <div style="display: flex; align-items: center; gap: 14px;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 26px; height: 26px; color: rgb(93, 227, 247); flex: 0 0 auto;" class="lucide lucide-footprints"><path d="M4 16v-2.38C4 11.5 2.97 10.5 3 8c.03-2.72 1.49-6 4.5-6C9.37 2 10 3.8 10 5.5c0 3.11-2 5.66-2 8.68V16a2 2 0 1 1-4 0Z"></path><path d="M20 20v-2.38c0-2.12 1.03-3.12 1-5.62-.03-2.72-1.49-6-4.5-6C14.63 6 14 7.8 14 9.5c0 3.11 2 5.66 2 8.68V20a2 2 0 1 0 4 0Z"></path><path d="M16 17h4"></path><path d="M4 13h4"></path></svg>
+        <div><div data-slot="stat-3.title" style="font-size: 17px; font-weight: 700;">9 waymarked walks</div><div data-slot="stat-3.subtitle" style="font-size: 13px; color: var(--ds-basic-color-texticon-inverse-muted);">1.5 km to 11 km loops</div></div>
+      </div>
+
+      <div style="display: flex; align-items: center; gap: 14px;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 26px; height: 26px; color: rgb(93, 227, 247); flex: 0 0 auto;" class="lucide lucide-dog"><path d="M11.25 16.25h1.5L12 17z"></path><path d="M16 14v.5"></path><path d="M4.42 11.247A13.152 13.152 0 0 0 4 14.556C4 18.728 7.582 21 12 21s8-2.272 8-6.444a11.702 11.702 0 0 0-.493-3.309"></path><path d="M8 14v.5"></path><path d="M8.5 8.5c-.384 1.05-1.083 2.028-2.344 2.5-1.931.722-3.576-.297-3.656-1-.113-.994 1.177-6.53 4-7 1.923-.321 3.651.845 3.651 2.235A7.497 7.497 0 0 1 14 5.277c0-1.39 1.844-2.598 3.767-2.277 2.823.47 4.113 6.006 4 7-.08.703-1.725 1.722-3.656 1-1.261-.472-1.855-1.45-2.239-2.5"></path></svg>
+        <div><div data-slot="stat-4.title" style="font-size: 17px; font-weight: 700;">Dogs welcome</div><div data-slot="stat-4.subtitle" style="font-size: 13px; color: var(--ds-basic-color-texticon-inverse-muted);">On a lead — wildlife area</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="discover" id="discover" style="max-width: 1120px; margin: 0px auto; padding: 88px 24px 24px;">
+    <span data-slot="discover-eyebrow" style="font-family: var(--ds-font-accent); font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ds-basic-color-brand-primary-subtle); font-weight: 500;">Discover the valley</span>
+    <h2 data-slot="discover-title" style="margin: 14px 0px 0px; font-size: clamp(30px, 4vw, 46px); font-weight: 300; line-height: 1.1; letter-spacing: -0.01em; color: var(--ds-basic-color-brand-primary); max-width: 640px;">A glen carved by ice, shaped by saints, walked for centuries</h2>
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 44px;">
+
+      <div style="border-radius: var(--ds-border-radius); overflow: hidden; box-shadow: var(--ds-elevation-100);">
+        <div style="position: relative; height: 220px; overflow: hidden;">
+          <div style="position: absolute; inset: 0px; background: linear-gradient(rgb(0, 39, 74), rgb(59, 110, 165) 78%);"></div>
+          <div style="position: absolute; inset: 0px; background: rgb(1, 42, 74); clip-path: polygon(0px 70%, 30% 58%, 60% 68%, 100% 56%, 100% 100%, 0px 100%);"></div>
+          <div style="position: absolute; left: 16%; bottom: 0px; width: 22px; height: 64%; background: rgb(10, 58, 92); border-radius: 11px 11px 0px 0px;"></div>
+          <div style="position: absolute; left: 16.5%; bottom: 56%; width: 21px; height: 14px; background: rgb(13, 47, 73); clip-path: polygon(0px 100%, 50% 0px, 100% 100%);"></div>
+          <div style="position: absolute; left: 0px; right: 0px; bottom: 0px; height: 26%; background: linear-gradient(rgb(106, 156, 63), rgb(63, 111, 44));"></div>
+        </div>
+
+        <div style="padding: 24px; background: rgb(255, 255, 255);">
+          <h3 data-slot="card-1.title" style="margin: 0px; font-size: 22px; font-weight: 450; color: var(--ds-basic-color-brand-primary);">The Monastic City</h3>
+          <p data-slot="card-1.description" style="margin: 10px 0px 0px; font-size: 15px; line-height: 1.6; color: var(--ds-basic-color-texticon-muted);">Founded by St Kevin in the 6th century. Its 30-metre round tower, cathedral ruins and gateway still stand among ancient oaks.</p>
+        </div>
+      </div>
+
+      <div style="border-radius: var(--ds-border-radius); overflow: hidden; box-shadow: var(--ds-elevation-100);">
+        <div style="position: relative; height: 220px; overflow: hidden;">
+          <div style="position: absolute; inset: 0px; background: linear-gradient(rgb(1, 58, 94), rgb(90, 160, 207) 80%);"></div>
+          <div style="position: absolute; inset: 0px; background: rgb(1, 47, 77); clip-path: polygon(0px 58%, 22% 44%, 48% 56%, 72% 42%, 100% 54%, 100% 100%, 0px 100%);"></div>
+          <div style="position: absolute; inset: 0px; background: rgb(74, 122, 42); clip-path: polygon(0px 74%, 30% 64%, 64% 72%, 100% 62%, 100% 100%, 0px 100%);"></div>
+          <div style="position: absolute; left: 0px; right: 0px; bottom: 0px; height: 34%; background: linear-gradient(rgb(93, 227, 247), rgb(24, 195, 221));"></div>
+        </div>
+
+        <div style="padding: 24px; background: rgb(255, 255, 255);">
+          <h3 data-slot="card-2.title" style="margin: 0px; font-size: 22px; font-weight: 450; color: var(--ds-basic-color-brand-primary);">The Two Lakes</h3>
+          <p data-slot="card-2.description" style="margin: 10px 0px 0px; font-size: 15px; line-height: 1.6; color: var(--ds-basic-color-texticon-muted);">Gleann Dá Loch — the "glen of two lakes." The mirror-still Upper Lake and gentler Lower Lake sit beneath sheer glacial cliffs.</p>
+        </div>
+      </div>
+
+      <div style="border-radius: var(--ds-border-radius); overflow: hidden; box-shadow: var(--ds-elevation-100);">
+        <div style="position: relative; height: 220px; overflow: hidden;">
+          <div style="position: absolute; inset: 0px; background: linear-gradient(rgb(1, 42, 74), rgb(40, 117, 181) 76%);"></div>
+          <div style="position: absolute; inset: 0px; background: rgb(1, 58, 94); clip-path: polygon(0px 52%, 26% 62%, 52% 46%, 78% 60%, 100% 50%, 100% 100%, 0px 100%);"></div>
+          <div style="position: absolute; inset: 0px; background: rgb(125, 175, 59); clip-path: polygon(0px 72%, 28% 80%, 56% 68%, 82% 78%, 100% 70%, 100% 100%, 0px 100%);"></div>
+          <div style="position: absolute; left: 44%; top: 40%; width: 8%; height: 44%; background: rgb(201, 225, 167); transform: skewX(-4deg); opacity: 0.85;"></div>
+        </div>
+
+        <div style="padding: 24px; background: rgb(255, 255, 255);">
+          <h3 data-slot="card-3.title" style="margin: 0px; font-size: 22px; font-weight: 450; color: var(--ds-basic-color-brand-primary);">The Wicklow Way</h3>
+          <p data-slot="card-3.description" style="margin: 10px 0px 0px; font-size: 15px; line-height: 1.6; color: var(--ds-basic-color-texticon-muted);">Ireland's oldest long-distance trail threads straight through the valley — 131 km of ridgeline, forest and blanket bog from Dublin to Clonegal.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="trails" id="trails" style="background: var(--ds-basic-color-surface-neutral-subtle); margin-top: 88px;">
+    <div style="max-width: 1120px; margin: 0px auto; padding: 80px 24px;">
+      <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; flex-wrap: wrap;">
+        <div>
+          <span data-slot="trails-eyebrow" style="font-family: var(--ds-font-accent); font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ds-basic-color-brand-primary-subtle); font-weight: 500;">Waymarked walks</span>
+          <h2 data-slot="trails-title" style="margin: 14px 0px 0px; font-size: clamp(30px, 4vw, 46px); font-weight: 300; line-height: 1.1; letter-spacing: -0.01em; color: var(--ds-basic-color-brand-primary);">Pick your route</h2>
+        </div>
+        <p data-slot="trails-description" style="margin: 0px; max-width: 360px; font-size: 15px; line-height: 1.6; color: var(--ds-basic-color-texticon-muted);">Colour-coded and signposted from the Upper Lake car park. Wear sturdy footwear and check the weather before the higher routes.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 44px;">
+
+        <div style="display: flex; gap: 20px; background: rgb(255, 255, 255); border-radius: var(--ds-border-radius); box-shadow: var(--ds-elevation-100); overflow: hidden;">
+          <div style="width: 150px; flex: 0 0 auto; position: relative; background: linear-gradient(160deg, rgb(93, 227, 247), rgb(24, 195, 221));">
+            <div style="position: absolute; inset: 0px; background: rgb(74, 122, 42); clip-path: polygon(0px 70%, 50% 58%, 100% 68%, 100% 100%, 0px 100%);"></div>
+            <span style="position: absolute; top: 12px; left: 12px; width: 16px; height: 16px; border-radius: 50%; background: rgb(125, 175, 59); border: 3px solid rgb(255, 255, 255);"></span>
+          </div>
+
+          <div style="padding: 22px 22px 22px 0px; flex: 1 1 0%;">
+            <div style="display: flex; align-items: center; gap: 10px;"></div>
+            <h3 data-slot="trail-1.title" style="margin: 0px; font-size: 20px; font-weight: 450; color: var(--ds-basic-color-brand-primary);">Green Road Walk</h3>
+            <span style="display: inline-flex; align-items: center; gap: 0.25rem; font-family: var(--ds-font-sans); font-size: 0.75rem; font-weight: 700; line-height: 1; letter-spacing: 0.02em; padding: 0.25rem 0.5rem; border-radius: 999px; background: var(--ds-basic-color-status-success-subtle); color: var(--ds-basic-color-status-success);">Easy</span>
+            <p data-slot="trail-1.description" style="margin: 8px 0px 14px; font-size: 14px; line-height: 1.55; color: var(--ds-basic-color-texticon-muted);">A flat, wide path along the valley floor between the two lakes — perfect for a gentle start.</p>
+            <div>
+              <span style="display: flex; align-items: center; gap: 5px;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 15px; height: 15px; color: var(--ds-basic-color-brand-primary-subtle);" class="lucide lucide-route"><circle cx="6" cy="19" r="3"></circle><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"></path><circle cx="18" cy="5" r="3"></circle></svg>3.0 km</span>
+              <span style="display: flex; align-items: center; gap: 5px;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 15px; height: 15px; color: var(--ds-basic-color-brand-primary-subtle);" class="lucide lucide-clock"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>45 min</span>
+              <span style="display: flex; align-items: center; gap: 5px;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 15px; height: 15px; color: var(--ds-basic-color-brand-primary-subtle);" class="lucide lucide-trending-up"><path d="M16 7h6v6"></path><path d="m22 7-8.5 8.5-5-5L2 17"></path></svg>Flat</span>
+            </div>
+          </div>
+        </div>
+
+        <div style="display: flex; gap: 20px; background: rgb(255, 255, 255); border-radius: var(--ds-border-radius); box-shadow: var(--ds-elevation-100); overflow: hidden;">
+          <div style="width: 150px; flex: 0 0 auto; position: relative; background: linear-gradient(160deg, rgb(93, 227, 247), rgb(24, 195, 221));">
+            <div style="position: absolute; inset: 0px; background: rgb(74, 122, 42); clip-path: polygon(0px 70%, 50% 58%, 100% 68%, 100% 100%, 0px 100%);"></div>
+            <span style="position: absolute; top: 12px; left: 12px; width: 16px; height: 16px; border-radius: 50%; background: rgb(250, 194, 0); border: 3px solid rgb(255, 255, 255);"></span>
+          </div>
+
+          <div style="padding: 22px 22px 22px 0px; flex: 1 1 0%;">
+            <div style="display: flex; align-items: center; gap: 10px;"></div>
+            <h3 data-slot="trail-2.title" style="margin: 0px; font-size: 20px; font-weight: 450; color: var(--ds-basic-color-brand-primary);">Miner's Road Loop</h3>
+            <span style="display: inline-flex; align-items: center; gap: 0.25rem; font-family: var(--ds-font-sans); font-size: 0.75rem; font-weight: 700; line-height: 1; letter-spacing: 0.02em; padding: 0.25rem 0.5rem; border-radius: 999px; background: var(--ds-basic-color-status-warning-subtle); color: var(--ds-color-warn-500);">Moderate</span>
+            <p data-slot="trail-2.description" style="margin: 8px 0px 14px; font-size: 14px; line-height: 1.55; color: var(--ds-basic-color-texticon-muted);">Skirts the Upper Lake to the ruins of the old lead-mining village at Glenealo.</p>
+            <div>
+              <span style="display: flex; align-items: center; gap: 5px;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 15px; height: 15px; color: var(--ds-basic-color-brand-primary-subtle);" class="lucide lucide-route"><circle cx="6" cy="19" r="3"></circle><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"></path><circle cx="18" cy="5" r="3"></circle></svg>5.0 km</span>
+              <span style="display: flex; align-items: center; gap: 5px;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 15px; height: 15px; color: var(--ds-basic-color-brand-primary-subtle);" class="lucide lucide-clock"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>1.5 hr</span>
+              <span style="display: flex; align-items: center; gap: 5px;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 15px; height: 15px; color: var(--ds-basic-color-brand-primary-subtle);" class="lucide lucide-trending-up"><path d="M16 7h6v6"></path><path d="m22 7-8.5 8.5-5-5L2 17"></path></svg>120 m</span>
+            </div>
+          </div>
+        </div>
+
+        <div style="display: flex; gap: 20px; background: rgb(255, 255, 255); border-radius: var(--ds-border-radius); box-shadow: var(--ds-elevation-100); overflow: hidden;">
+          <div style="width: 150px; flex: 0 0 auto; position: relative; background: linear-gradient(160deg, rgb(93, 227, 247), rgb(24, 195, 221));">
+            <div style="position: absolute; inset: 0px; background: rgb(74, 122, 42); clip-path: polygon(0px 70%, 50% 58%, 100% 68%, 100% 100%, 0px 100%);"></div>
+            <span style="position: absolute; top: 12px; left: 12px; width: 16px; height: 16px; border-radius: 50%; background: rgb(227, 31, 38); border: 3px solid rgb(255, 255, 255);"></span>
+          </div>
+
+          <div style="padding: 22px 22px 22px 0px; flex: 1 1 0%;">
+            <div style="display: flex; align-items: center; gap: 10px;"></div>
+            <h3 data-slot="trail-3.title" style="margin: 0px; font-size: 20px; font-weight: 450; color: var(--ds-basic-color-brand-primary);">The Spinc &amp; Glenealo Valley</h3>
+            <span style="display: inline-flex; align-items: center; gap: 0.25rem; font-family: var(--ds-font-sans); font-size: 0.75rem; font-weight: 700; line-height: 1; letter-spacing: 0.02em; padding: 0.25rem 0.5rem; border-radius: 999px; background: var(--ds-basic-color-status-error-subtle); color: var(--ds-basic-color-status-error);">Hard</span>
+            <p data-slot="trail-3.description" style="margin: 8px 0px 14px; font-size: 14px; line-height: 1.55; color: var(--ds-basic-color-texticon-muted);">The signature climb: a railway-sleeper boardwalk high above the Upper Lake with jaw-dropping valley views.</p>
+            <div>
+              <span style="display: flex; align-items: center; gap: 5px;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 15px; height: 15px; color: var(--ds-basic-color-brand-primary-subtle);" class="lucide lucide-route"><circle cx="6" cy="19" r="3"></circle><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"></path><circle cx="18" cy="5" r="3"></circle></svg>9.0 km</span>
+              <span style="display: flex; align-items: center; gap: 5px;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 15px; height: 15px; color: var(--ds-basic-color-brand-primary-subtle);" class="lucide lucide-clock"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>3.5 hr</span>
+              <span style="display: flex; align-items: center; gap: 5px;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 15px; height: 15px; color: var(--ds-basic-color-brand-primary-subtle);" class="lucide lucide-trending-up"><path d="M16 7h6v6"></path><path d="m22 7-8.5 8.5-5-5L2 17"></path></svg>380 m</span>
+            </div>
+          </div>
+        </div>
+
+        <div style="display: flex; gap: 20px; background: rgb(255, 255, 255); border-radius: var(--ds-border-radius); box-shadow: var(--ds-elevation-100); overflow: hidden;">
+          <div style="width: 150px; flex: 0 0 auto; position: relative; background: linear-gradient(160deg, rgb(93, 227, 247), rgb(24, 195, 221));">
+            <div style="position: absolute; inset: 0px; background: rgb(74, 122, 42); clip-path: polygon(0px 70%, 50% 58%, 100% 68%, 100% 100%, 0px 100%);"></div>
+            <span style="position: absolute; top: 12px; left: 12px; padding: 2px 7px; border-radius: 999px; background: rgb(255, 255, 255); color: var(--ds-basic-color-brand-primary); font-size: 10px; font-weight: 700; letter-spacing: 0.04em;">MULTI-DAY</span>
+          </div>
+
+          <div style="padding: 22px 22px 22px 0px; flex: 1 1 0%;">
+            <div style="display: flex; align-items: center; gap: 10px;"></div>
+            <h3 data-slot="trail-4.title" style="margin: 0px; font-size: 20px; font-weight: 450; color: var(--ds-basic-color-brand-primary);">Wicklow Way (Glendalough leg)</h3>
+            <span style="display: inline-flex; align-items: center; gap: 0.25rem; font-family: var(--ds-font-sans); font-size: 0.75rem; font-weight: 700; line-height: 1; letter-spacing: 0.02em; padding: 0.25rem 0.5rem; border-radius: 999px; background: var(--ds-basic-color-brand-primary); color: rgb(255, 255, 255);">Long-distance</span>
+            <p data-slot="trail-4.description" style="margin: 8px 0px 14px; font-size: 14px; line-height: 1.55; color: var(--ds-basic-color-texticon-muted);">Join Ireland's oldest waymarked way as it crosses the valley on its route from Dublin to Clonegal.</p>
+            <div>
+              <span style="display: flex; align-items: center; gap: 5px;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 15px; height: 15px; color: var(--ds-basic-color-brand-primary-subtle);" class="lucide lucide-route"><circle cx="6" cy="19" r="3"></circle><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"></path><circle cx="18" cy="5" r="3"></circle></svg>11 km leg</span>
+              <span style="display: flex; align-items: center; gap: 5px;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 15px; height: 15px; color: var(--ds-basic-color-brand-primary-subtle);" class="lucide lucide-clock"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>4 hr</span>
+              <span style="display: flex; align-items: center; gap: 5px;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 15px; height: 15px; color: var(--ds-basic-color-brand-primary-subtle);" class="lucide lucide-trending-up"><path d="M16 7h6v6"></path><path d="m22 7-8.5 8.5-5-5L2 17"></path></svg>450 m</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="gallery" id="gallery" style="background: var(--ds-basic-color-surface-inverse); color: rgb(255, 255, 255);">
+    <div style="max-width: 1120px; margin: 0px auto; padding: 80px 24px;">
+      <span data-slot="gallery-eyebrow" style="font-family: var(--ds-font-accent); font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: rgb(93, 227, 247); font-weight: 500;">The valley in pictures</span>
+      <h2 data-slot="gallery-title" style="margin: 14px 0px 40px; font-size: clamp(30px, 4vw, 46px); font-weight: 300; line-height: 1.1; letter-spacing: -0.01em; color: rgb(255, 255, 255);">Gallery</h2>
+
+      <div style="position: relative; height: 500px; border-radius: var(--ds-border-radius); overflow: hidden;">
+        <div style="position: absolute; inset: 0px; background: linear-gradient(135deg, rgb(0, 39, 74), rgb(40, 117, 181)); display: flex; align-items: center; justify-content: center;">
+          <div style="text-align: center;">
+            <div style="font-size: 26px; font-weight: 450;">Upper Lake</div>
+            <div style="font-size: 15px; color: rgb(207, 224, 239); margin-top: 4px;">Glacial waters beneath the cliffs of the Spinc</div>
+          </div>
+        </div>
+
+        <div style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); display: flex; align-items: center; gap: 8px;">
+          <button style="width: 44px; height: 44px; border-radius: 50%; border: 1px solid rgba(255, 255, 255, 0.5); background: rgba(0, 39, 74, 0.35); color: rgb(255, 255, 255); cursor: pointer; display: flex; align-items: center; justify-content: center;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 22px; height: 22px;" class="lucide lucide-chevron-left"><path d="m15 18-6-6 6-6"></path></svg></button>
+          <button style="width: 44px; height: 44px; border-radius: 50%; border: 1px solid rgba(255, 255, 255, 0.5); background: rgba(0, 39, 74, 0.35); color: rgb(255, 255, 255); cursor: pointer; display: flex; align-items: center; justify-content: center;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 22px; height: 22px;" class="lucide lucide-chevron-right"><path d="m9 18 6-6-6-6"></path></svg></button>
+        </div>
+
+        <div style="position: absolute; bottom: 80px; left: 50%; transform: translateX(-50%); display: flex; gap: 6px;">
+          <button style="width: 28px; height: 8px; border-radius: 999px; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; cursor: pointer; padding: 0px; transition: 0.3s ease-out; background: rgb(93, 227, 247);"></button>
+          <button style="width: 8px; height: 8px; border-radius: 999px; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; cursor: pointer; padding: 0px; transition: 0.3s ease-out; background: rgba(255, 255, 255, 0.35);"></button>
+          <button style="width: 8px; height: 8px; border-radius: 999px; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; cursor: pointer; padding: 0px; transition: 0.3s ease-out; background: rgba(255, 255, 255, 0.35);"></button>
+          <button style="width: 8px; height: 8px; border-radius: 999px; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; cursor: pointer; padding: 0px; transition: 0.3s ease-out; background: rgba(255, 255, 255, 0.35);"></button>
+          <button style="width: 8px; height: 8px; border-radius: 999px; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; cursor: pointer; padding: 0px; transition: 0.3s ease-out; background: rgba(255, 255, 255, 0.35);"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="visit" id="visit" style="max-width: 1120px; margin: 0px auto; padding: 88px 24px;">
+    <span data-slot="visit-eyebrow" style="font-family: var(--ds-font-accent); font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ds-basic-color-brand-primary-subtle); font-weight: 500;">Before you go</span>
+    <h2 data-slot="visit-title" style="margin: 14px 0px 44px; font-size: clamp(30px, 4vw, 46px); font-weight: 300; line-height: 1.1; letter-spacing: -0.01em; color: var(--ds-basic-color-brand-primary);">Plan your visit</h2>
+
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
+      <div style="background: rgb(255, 255, 255); border: 1px solid var(--ds-basic-color-border-subtle); border-radius: var(--ds-border-radius); padding: 28px;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 28px; height: 28px; color: var(--ds-basic-color-brand-primary);" class="lucide lucide-car"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"></path><circle cx="7" cy="17" r="2"></circle><path d="M9 17h6"></path><circle cx="17" cy="17" r="2"></circle></svg>
+        <h3 data-slot="info-1.title" style="margin: 16px 0px 0px; font-size: 20px; font-weight: 450; color: var(--ds-basic-color-brand-primary);">Getting here &amp; parking</h3>
+        <p data-slot="info-1.description" style="margin: 10px 0px 0px; font-size: 15px; line-height: 1.6; color: var(--ds-basic-color-texticon-muted);">An hour south of Dublin via the R755. Paid car parks at the Visitor Centre and Upper Lake; barriers may be down early morning and late evening.</p>
+      </div>
+      <div style="background: rgb(255, 255, 255); border: 1px solid var(--ds-basic-color-border-subtle); border-radius: var(--ds-border-radius); padding: 28px;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 28px; height: 28px; color: var(--ds-basic-color-brand-primary);" class="lucide lucide-info"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg>
+        <h3 data-slot="info-2.title" style="margin: 16px 0px 0px; font-size: 20px; font-weight: 450; color: var(--ds-basic-color-brand-primary);">Facilities</h3>
+        <p data-slot="info-2.description" style="margin: 10px 0px 0px; font-size: 15px; line-height: 1.6; color: var(--ds-basic-color-texticon-muted);">Toilets at the Visitor Centre and Upper Lake car park. First aid and a defibrillator at the Brockagh Resource Centre and Laragh petrol station, 1.5 km away.</p>
+      </div>
+      <div style="background: rgb(255, 255, 255); border: 1px solid var(--ds-basic-color-border-subtle); border-radius: var(--ds-border-radius); padding: 28px;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 28px; height: 28px; color: var(--ds-basic-color-brand-primary);" class="lucide lucide-backpack"><path d="M4 10a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"></path><path d="M8 10h8"></path><path d="M8 18h8"></path><path d="M8 22v-6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v6"></path><path d="M9 6V4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"></path></svg>
+        <h3 data-slot="info-3.title" style="margin: 16px 0px 0px; font-size: 20px; font-weight: 450; color: var(--ds-basic-color-brand-primary);">Come prepared</h3>
+        <p data-slot="info-3.description" style="margin: 10px 0px 0px; font-size: 15px; line-height: 1.6; color: var(--ds-basic-color-texticon-muted);">Weather turns fast in the mountains — bring layers and sturdy footwear. Leave no trace, keep dogs on leads, and don't leave valuables in your car.</p>
+      </div>
+    </div>
+
+
+    <div style="margin-top: 32px; display: flex; align-items: center; gap: 20px; flex-wrap: wrap; background: var(--ds-basic-color-brand-primary-muted); border-radius: var(--ds-border-radius); padding: 26px 30px;">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 34px; height: 34px; color: var(--ds-basic-color-brand-primary); flex: 0 0 auto;" class="lucide lucide-map"><path d="M14.106 5.553a2 2 0 0 0 1.788 0l3.659-1.83A1 1 0 0 1 21 4.619v12.764a1 1 0 0 1-.553.894l-4.553 2.277a2 2 0 0 1-1.788 0l-4.212-2.106a2 2 0 0 0-1.788 0l-3.659 1.83A1 1 0 0 1 3 19.381V6.618a1 1 0 0 1 .553-.894l4.553-2.277a2 2 0 0 1 1.788 0z"></path><path d="M15 5.764v15"></path><path d="M9 3.236v15"></path></svg>
+      <div style="flex: 1 1 0%; min-width: 220px;">
+        <div data-slot="cta-title" style="font-size: 18px; font-weight: 700; color: var(--ds-basic-color-brand-primary);">Wicklow Mountains National Park Education Centre</div>
+        <div data-slot="cta-description" style="font-size: 15px; color: var(--ds-basic-color-texticon-muted); margin-top: 2px;">Guided nature walks for adults and children, plus downloadable trail maps.</div>
+      </div>
+      <button type="button" style="display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; height: 40px; padding: 0px 24px; width: auto; font-family: var(--ds-font-sans); font-size: 1rem; font-weight: 500; line-height: 1; letter-spacing: 0px; border-radius: var(--ds-border-radius); border-width: 1px; border-style: solid; border-color: var(--ds-advanced-color-button-primary-border); border-image: initial; cursor: pointer; transition: var(--ds-animation-default); white-space: nowrap; background: var(--ds-advanced-color-button-primary-background); color: var(--ds-advanced-color-button-primary-text);"><span data-slot="cta-button">Download walking map</span></button>
+    </div>
+  </section>
+</main>
