@@ -1,0 +1,665 @@
+/* ---- data-dc-tpl=7 ---- */
+/* ============================================================
+   Auro Design System — Alaska Airlines theme
+   Global entry point. Consumers link THIS one file.
+   Imports only — every token & font lives in tokens/*.
+   Source of truth: github.com/AlaskaAirlines/AuroDesignTokens
+   ============================================================ */
+
+/* ============================================================
+   Auro / Alaska Airlines — Webfonts
+   ------------------------------------------------------------
+   The Alaska brand ships two proprietary typefaces:
+     • "AS Circular" — geometric humanist sans (display/heading/body)
+     • "Good OT"     — humanist sans used for accents & eyebrows
+   These are NOT publicly licensed, so this design system substitutes
+   the closest free Google Fonts:
+     • AS Circular → Mulish   (geometric humanist, matching proportions)
+     • Good OT     → Archivo  (grotesque workhorse for accents)
+   The real family names are kept FIRST in every font stack, so a machine
+   with the licensed fonts installed still renders the true brand type.
+   ➜ Replace with licensed AS Circular / Good OT web fonts for production.
+   ============================================================ */
+
+/* Substitute faces (rendered until the licensed fonts are uploaded) */
+/* vietnamese */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("/fonts/archivo.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("/fonts/archivo-2.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("/fonts/archivo-3.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("/fonts/archivo.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("/fonts/archivo-2.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("/fonts/archivo-3.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("/fonts/archivo.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("/fonts/archivo-2.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("/fonts/archivo-3.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("/fonts/archivo.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("/fonts/archivo-2.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("/fonts/archivo-3.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Mulish';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/mulish-italic.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Mulish';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/mulish-italic-2.woff2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Mulish';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/mulish-italic-3.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Mulish';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/mulish-italic-4.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Mulish';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/mulish-italic-5.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Mulish';
+  font-style: normal;
+  font-weight: 300 800;
+  font-display: swap;
+  src: url("/fonts/mulish.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Mulish';
+  font-style: normal;
+  font-weight: 300 800;
+  font-display: swap;
+  src: url("/fonts/mulish-2.woff2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Mulish';
+  font-style: normal;
+  font-weight: 300 800;
+  font-display: swap;
+  src: url("/fonts/mulish-3.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Mulish';
+  font-style: normal;
+  font-weight: 300 800;
+  font-display: swap;
+  src: url("/fonts/mulish-4.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Mulish';
+  font-style: normal;
+  font-weight: 300 800;
+  font-display: swap;
+  src: url("/fonts/mulish-5.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+
+/* Declare the true brand families. With only src: local(), the browser uses
+   the licensed font IF it is installed / uploaded, and otherwise falls through
+   to the next family in each --ds-font-* stack (Mulish / Archivo). This keeps
+   the tokens pointing at the real family names without shipping a substitute
+   under a false name.
+   ➜ When you upload AS Circular / Good OT web fonts, add their url() src here. */
+@font-face {
+  font-family: "AS Circular";
+  src: local("AS Circular"), local("ASCircular");
+  font-weight: 300 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Good OT";
+  src: local("Good OT"), local("GoodOT"), local("Good Pro");
+  font-weight: 400 700;
+  font-display: swap;
+}
+
+/* ============================================================
+   Auro Primitives — raw foundational values (Alaska theme)
+   Never reference these directly in UI. Use the semantic
+   --ds-basic-* / --ds-advanced-* tokens instead.
+   Source: AlaskaAirlines/AuroDesignTokens · primitives/base
+   ============================================================ */
+
+:root {
+  /* --- Base neutrals --------------------------------------- */
+  --ds-color-black: #000000;
+  --ds-color-white: #ffffff;
+
+  /* Gray scale */
+  --ds-color-gray-50: #f7f7f7;
+  --ds-color-gray-100: #f2f2f2;
+  --ds-color-gray-200: #dddddd;
+  --ds-color-gray-250: #d0d0d0;
+  --ds-color-gray-300: #c5c5c5;
+  --ds-color-gray-400: #adadad;
+  --ds-color-gray-500: #959595;
+  --ds-color-gray-600: #7e7e7e;
+  --ds-color-gray-700: #676767;
+  --ds-color-gray-800: #525252;
+  --ds-color-gray-900: #3d3d3d;
+  --ds-color-gray-1000: #2a2a2a;
+
+  /* Cool neutral scale (UI chrome, borders on tints) */
+  --ds-color-neutral-100: #f7f8fa;
+  --ds-color-neutral-200: #e4e8ec;
+  --ds-color-neutral-300: #ccd2db;
+  --ds-color-neutral-400: #afb9c6;
+  --ds-color-neutral-500: #939fad;
+  --ds-color-neutral-600: #7e8894;
+  --ds-color-neutral-700: #6a717c;
+  --ds-color-neutral-800: #585e67;
+  --ds-color-neutral-900: #484d55;
+  --ds-color-neutral-1000: #393d43;
+
+  /* --- Brand "Atlas" blue scale (derived) ------------------ */
+  --ds-color-atlas-navy: #00274a;   /* brand primary bold */
+  --ds-color-atlas: #01426a;        /* brand primary */
+  --ds-color-atlas-subtle: #2875b5; /* brand primary subtle / link */
+  --ds-color-atlas-muted: #ebf3f9;  /* brand primary muted */
+
+  /* --- Status scales --------------------------------------- */
+  --ds-color-error-100: #fbc6c6;
+  --ds-color-error-500: #e8454b;
+  --ds-color-error-700: #e31f26;
+  --ds-color-error-800: #b1161c;
+  --ds-color-success-100: #d6eac7;
+  --ds-color-success-500: #5da72a;
+  --ds-color-success-700: #447a1f;
+  --ds-color-warn-100: #fff0b2;
+  --ds-color-warn-300: #fac200;
+  --ds-color-warn-500: #bd9200;
+  --ds-color-help-100: #e8f2f8;
+  --ds-color-help-600: #007db1;
+  --ds-color-help-800: #195170;
+
+  /* --- Accent palette (illustration / data-viz) ------------ */
+  --ds-color-accent1: #b2d583;      /* green   */
+  --ds-color-accent1-bold: #92c450;
+  --ds-color-accent2: #fad362;      /* yellow  */
+  --ds-color-accent2-bold: #f2ba14;
+  --ds-color-accent3: #63beff;      /* blue    */
+  --ds-color-accent3-bold: #0074ca;
+  --ds-color-accent4: #feb17a;      /* orange  */
+  --ds-color-accent4-bold: #fb7f24;
+
+  /* --- Loyalty / Mileage Plan tiers ------------------------ */
+  --ds-color-tier-gold: #fbdc7a;
+  --ds-color-tier-platinum: #bcb8a4;
+  --ds-color-tier-titanium: #282828;
+  --ds-color-tier-cobalt: #030772;
+  --ds-color-tier-bronze: #d99f6d;
+  --ds-color-tier-nickel: #abaab1;
+  --ds-color-lounge: #01426a;
+  --ds-color-lounge-plus: #53b390;
+
+  /* --- Transparency ramps ---------------------------------- */
+  --ds-alpha-black-5: rgba(0, 0, 0, 0.05);
+  --ds-alpha-black-10: rgba(0, 0, 0, 0.1);
+  --ds-alpha-black-15: rgba(0, 0, 0, 0.15);
+  --ds-alpha-black-50: rgba(0, 0, 0, 0.5);
+  --ds-alpha-white-10: rgba(255, 255, 255, 0.1);
+  --ds-alpha-white-15: rgba(255, 255, 255, 0.15);
+  --ds-alpha-white-20: rgba(255, 255, 255, 0.2);
+  --ds-alpha-white-75: rgba(255, 255, 255, 0.75);
+
+  /* --- Type primitive scale (rem) -------------------------- */
+  --ds-type-size-10: 0.625rem;
+  --ds-type-size-12: 0.75rem;
+  --ds-type-size-14: 0.875rem;
+  --ds-type-size-16: 1rem;
+  --ds-type-size-18: 1.125rem;
+  --ds-type-size-20: 1.25rem;
+  --ds-type-size-22: 1.375rem;
+  --ds-type-size-24: 1.5rem;
+  --ds-type-size-28: 1.75rem;
+  --ds-type-size-32: 2rem;
+  --ds-type-size-36: 2.25rem;
+  --ds-type-size-40: 2.5rem;
+  --ds-type-size-44: 2.75rem;
+  --ds-type-size-48: 3rem;
+  --ds-type-size-56: 3.5rem;
+  --ds-type-size-64: 4rem;
+  --ds-type-size-72: 4.5rem;
+  --ds-type-size-86: 5.375rem;
+}
+
+/* ============================================================
+   Auro Semantic Colors — Alaska theme (v6.x)
+   --ds-basic-color-*    : usage-based semantic tokens
+   --ds-advanced-color-* : component-level tokens
+   Source: AlaskaAirlines/AuroDesignTokens · themes/alaska
+   ============================================================ */
+
+:root {
+  /* ---- BASIC · Brand ------------------------------------- */
+  --ds-basic-color-brand-primary: #01426a;
+  --ds-basic-color-brand-primary-bold: #00274a;
+  --ds-basic-color-brand-primary-muted: #ebf3f9;
+  --ds-basic-color-brand-primary-subtle: #2875b5;
+  --ds-basic-color-brand-secondary: #5de3f7;
+  --ds-basic-color-brand-secondary-bold: #18c3dd;
+  --ds-basic-color-brand-secondary-muted: #ebfafd;
+  --ds-basic-color-brand-secondary-subtle: #b4eff9;
+  --ds-basic-color-brand-tertiary: #a3cd6a;
+  --ds-basic-color-brand-tertiary-bold: #7daf3b;
+  --ds-basic-color-brand-tertiary-muted: #eaf3dd;
+  --ds-basic-color-brand-tertiary-subtle: #c9e1a7;
+
+  /* ---- BASIC · Text & icon ------------------------------- */
+  --ds-basic-color-texticon-default: #2a2a2a;
+  --ds-basic-color-texticon-muted: #676767;
+  --ds-basic-color-texticon-disabled: #d0d0d0;
+  --ds-basic-color-texticon-accent1: #265688;
+  --ds-basic-color-texticon-inverse: #ffffff;
+  --ds-basic-color-texticon-inverse-muted: #ccd2db;
+  --ds-basic-color-texticon-inverse-disabled: #7e8894;
+
+  /* ---- BASIC · Surface ----------------------------------- */
+  --ds-basic-color-surface-default: #ffffff;
+  --ds-basic-color-surface-neutral: #f2f2f2;
+  --ds-basic-color-surface-neutral-subtle: #f7f7f7;
+  --ds-basic-color-surface-neutral-medium: #c5c5c5;
+  --ds-basic-color-surface-inverse: #00274a;
+  --ds-basic-color-surface-inverse-subtle: #2875b5;
+  --ds-basic-color-surface-accent1: #5de3f7;
+  --ds-basic-color-surface-accent1-subtle: #b4eff9;
+  --ds-basic-color-surface-accent1-muted: #ebfafd;
+  --ds-basic-color-surface-accent2: #a3cd6a;
+  --ds-basic-color-surface-accent2-muted: #eaf3dd;
+  --ds-basic-color-page-background-default: #ffffff;
+  --ds-basic-color-page-background-utility: #ffffff;
+
+  /* ---- BASIC · Border ------------------------------------ */
+  --ds-basic-color-border-default: #959595;
+  --ds-basic-color-border-bold: #585e67;
+  --ds-basic-color-border-brand: #00274a;
+  --ds-basic-color-border-subtle: #dddddd;
+  --ds-basic-color-border-inverse: #ffffff;
+  --ds-basic-color-border-divider: rgba(0, 0, 0, 0.15);
+  --ds-basic-color-border-divider-inverse: rgba(255, 255, 255, 0.4);
+
+  /* ---- BASIC · Status ------------------------------------ */
+  --ds-basic-color-status-default: #afb9c6;
+  --ds-basic-color-status-error: #e31f26;
+  --ds-basic-color-status-error-subtle: #fbc6c6;
+  --ds-basic-color-status-success: #447a1f;
+  --ds-basic-color-status-success-subtle: #d6eac7;
+  --ds-basic-color-status-warning: #fac200;
+  --ds-basic-color-status-warning-subtle: #fff0b2;
+  --ds-basic-color-status-info: #01426a;
+  --ds-basic-color-status-info-subtle: #ebf3f9;
+
+  /* ---- BASIC · Fare classes ------------------------------ */
+  --ds-basic-color-fare-first: #00274a;
+  --ds-basic-color-fare-business: #01426a;
+  --ds-basic-color-fare-premiumeconomy: #005154;
+  --ds-basic-color-fare-economy: #0074ca;
+  --ds-basic-color-fare-basiceconomy: #97eaf8;
+
+  /* ---- ADVANCED · Button · Primary ----------------------- */
+  --ds-advanced-color-button-primary-background: #01426a;
+  --ds-advanced-color-button-primary-background-hover: #00274a;
+  --ds-advanced-color-button-primary-background-disabled: #acc9e2;
+  --ds-advanced-color-button-primary-text: #ffffff;
+  --ds-advanced-color-button-primary-border: #01426a;
+
+  /* ---- ADVANCED · Button · Secondary --------------------- */
+  --ds-advanced-color-button-secondary-background: #ffffff;
+  --ds-advanced-color-button-secondary-background-hover: #f2f2f2;
+  --ds-advanced-color-button-secondary-border: #01426a;
+  --ds-advanced-color-button-secondary-border-hover: #00274a;
+  --ds-advanced-color-button-secondary-text: #01426a;
+  --ds-advanced-color-button-secondary-text-hover: #00274a;
+
+  /* ---- ADVANCED · Button · Tertiary / Ghost -------------- */
+  --ds-advanced-color-button-tertiary-background: rgba(0, 0, 0, 0.05);
+  --ds-advanced-color-button-tertiary-background-hover: rgba(0, 0, 0, 0.1);
+  --ds-advanced-color-button-tertiary-text: #01426a;
+  --ds-advanced-color-button-ghost-background-hover: rgba(0, 0, 0, 0.05);
+  --ds-advanced-color-button-ghost-text: #01426a;
+  --ds-advanced-color-button-flat-text: #676767;
+  --ds-advanced-color-button-flat-text-hover: #525252;
+
+  /* ---- ADVANCED · Hyperlink ------------------------------ */
+  --ds-advanced-color-hyperlink-text: #2875b5;
+  --ds-advanced-color-hyperlink-text-hover: #01426a;
+  --ds-advanced-color-hyperlink-text-inverse: #ffffff;
+  --ds-advanced-color-hyperlink-text-inverse-hover: #ebf3f9;
+
+  /* ---- ADVANCED · Accents (illustration / dataviz) ------- */
+  --ds-advanced-color-accents-accent1: #b2d583;
+  --ds-advanced-color-accents-accent1-bold: #92c450;
+  --ds-advanced-color-accents-accent1-muted: #deedca;
+  --ds-advanced-color-accents-accent2: #fad362;
+  --ds-advanced-color-accents-accent2-bold: #f2ba14;
+  --ds-advanced-color-accents-accent2-muted: #fde398;
+  --ds-advanced-color-accents-accent3: #63beff;
+  --ds-advanced-color-accents-accent3-bold: #0074ca;
+  --ds-advanced-color-accents-accent3-muted: #aedeff;
+  --ds-advanced-color-accents-accent4: #feb17a;
+  --ds-advanced-color-accents-accent4-bold: #fb7f24;
+  --ds-advanced-color-accents-accent4-muted: #ffe2cf;
+
+  /* ---- ADVANCED · Shared / state ------------------------- */
+  --ds-advanced-color-shared-scrim: rgba(0, 0, 0, 0.5);
+  --ds-advanced-color-shared-text-accent: #2875b5;
+  --ds-advanced-color-shared-emphasized-background: rgba(1, 66, 106, 0.1);
+  --ds-advanced-color-shared-emphasized-background-hover: rgba(1, 66, 106, 0.2);
+  --ds-advanced-color-state-focused: #01426a;
+  --ds-advanced-color-state-selected: #01426a;
+  --ds-advanced-color-state-selected-hover: #00274a;
+  --ds-advanced-color-state-background-hover: #f2f2f2;
+  --ds-advanced-color-state-background-disabled: #dddddd;
+  --ds-advanced-color-skeleton-background: #f7f8fa;
+  --ds-advanced-color-skeleton-wave: #e4e8ec;
+
+  /* ---- ADVANCED · Avatar / footer ------------------------ */
+  --ds-advanced-color-avatar-gradient-top: #6899c6;
+  --ds-advanced-color-avatar-gradient-bottom: #cfe0ef;
+  --ds-advanced-color-footer-background: #01426a;
+
+  /* ---- Loyalty tier program ------------------------------ */
+  --ds-basic-color-tier-loyaltytier-gold: #fbdc7a;
+  --ds-basic-color-tier-loyaltytier-platinum: #bcb8a4;
+  --ds-basic-color-tier-loyaltytier-titanium: #282828;
+  --ds-basic-color-tier-loyaltytier-cobalt: #030772;
+  --ds-basic-color-tier-loungetier-lounge: #01426a;
+  --ds-basic-color-tier-loungetier-loungeplus: #53b390;
+
+  /* ---- oneworld alliance --------------------------------- */
+  --ds-basic-color-oneworld-emerald: #139142;
+  --ds-basic-color-oneworld-ruby: #a41d4a;
+  --ds-basic-color-oneworld-sapphire: #015daa;
+}
+
+/* ============================================================
+   Auro Typography — Alaska theme
+   Brand families (proprietary) are kept first in each stack;
+   free substitutes follow so previews render faithfully:
+     "AS Circular" → Mulish   ·   "Good OT" → Archivo
+   Source: AlaskaAirlines/AuroDesignTokens · themes/alaska
+   ============================================================ */
+
+:root {
+  /* ---- Substitute stacks --------------------------------- */
+  --ds-font-sans: "AS Circular", "Mulish", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --ds-font-accent: "Good OT", "Archivo", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  /* ---- Family tokens ------------------------------------- */
+  --ds-basic-type-family-display: var(--ds-font-sans);
+  --ds-basic-type-family-heading: var(--ds-font-sans);
+  --ds-basic-type-family-body: var(--ds-font-sans);
+  --ds-basic-type-family-accent: var(--ds-font-accent);
+  --ds-basic-type-brand-family-primary: var(--ds-font-sans);
+  --ds-basic-type-brand-family-secondary: var(--ds-font-accent);
+
+  /* ---- Weights ------------------------------------------- */
+  --ds-basic-type-weight-display: 300;
+  --ds-basic-type-weight-heading: 300;
+  --ds-basic-type-weight-heading2: 450;
+  --ds-basic-type-weight-body: 450;
+  --ds-basic-type-weight-body2: 700;
+  --ds-basic-type-weight-accent: 450;
+  --ds-basic-type-weight-accent2: 500;
+
+  /* ---- Line heights -------------------------------------- */
+  --ds-basic-type-line-height-display: 1.3;
+  --ds-basic-type-line-height-heading: 1.3;
+  --ds-basic-type-line-height-accent: 1.3;
+  --ds-basic-type-line-height-accent2: 1;
+  --ds-basic-type-line-height-body: 1.625rem;   /* on 16px body */
+  --ds-basic-type-line-height-body2: 1.5rem;
+  --ds-basic-type-line-height-body3: 1.25rem;
+  --ds-basic-type-line-height-body4: 1rem;
+  --ds-basic-type-line-height-body5: 0.875rem;
+
+  /* ---- Letter spacing ------------------------------------ */
+  --ds-basic-type-letter-spacing-display: 0;
+  --ds-basic-type-letter-spacing-heading: 0;
+  --ds-basic-type-letter-spacing-body: 0;
+  --ds-basic-type-letter-spacing-accent: 0.05em;   /* eyebrows / labels */
+  --ds-basic-type-letter-spacing-accent2: 0.10em;  /* all-caps micro    */
+
+  /* ---- Semantic role shortcuts (family · weight · lh) ---- */
+  --ds-text-display: var(--ds-basic-type-weight-display) var(--ds-type-size-56)/var(--ds-basic-type-line-height-display) var(--ds-basic-type-family-display);
+  --ds-text-heading: var(--ds-basic-type-weight-heading) var(--ds-type-size-32)/var(--ds-basic-type-line-height-heading) var(--ds-basic-type-family-heading);
+  --ds-text-body: var(--ds-basic-type-weight-body) var(--ds-type-size-16)/var(--ds-basic-type-line-height-body) var(--ds-basic-type-family-body);
+}
+
+/* ============================================================
+   Auro Spacing & Layout — Alaska theme
+   Size scale + responsive 12-col grid.
+   Source: AlaskaAirlines/AuroDesignTokens · util.AS
+   ============================================================ */
+
+:root {
+  /* ---- Size scale (spacing / sizing) --------------------- */
+  --ds-size-25: 0.125rem;  /* 2px  */
+  --ds-size-50: 0.25rem;   /* 4px  */
+  --ds-size-75: 0.375rem;  /* 6px  */
+  --ds-size-100: 0.5rem;   /* 8px  */
+  --ds-size-150: 0.75rem;  /* 12px */
+  --ds-size-200: 1rem;     /* 16px */
+  --ds-size-250: 1.25rem;  /* 20px */
+  --ds-size-300: 1.5rem;   /* 24px */
+  --ds-size-400: 2rem;     /* 32px */
+  --ds-size-500: 2.5rem;   /* 40px */
+  --ds-size-600: 3rem;     /* 48px */
+  --ds-size-700: 3.5rem;   /* 56px */
+  --ds-size-800: 4rem;     /* 64px */
+  --ds-size-900: 4.5rem;   /* 72px */
+  --ds-size-1000: 5rem;    /* 80px */
+
+  /* ---- Grid · breakpoints -------------------------------- */
+  --ds-grid-breakpoint-xs: 320px;
+  --ds-grid-breakpoint-sm: 576px;
+  --ds-grid-breakpoint-md: 768px;
+  --ds-grid-breakpoint-lg: 1024px;
+  --ds-grid-breakpoint-xl: 1232px;
+
+  /* ---- Grid · columns ------------------------------------ */
+  --ds-grid-column-xs: 6;  /* @kind other */
+  --ds-grid-column-sm: 12; /* @kind other */
+  --ds-grid-column-md: 12; /* @kind other */
+  --ds-grid-column-lg: 12; /* @kind other */
+  --ds-grid-column-xl: 12; /* @kind other */
+
+  /* ---- Grid · gutters ------------------------------------ */
+  --ds-grid-gutter-xs: 0.5rem;
+  --ds-grid-gutter-sm: 1rem;
+  --ds-grid-gutter-md: 1.5rem;
+  --ds-grid-gutter-lg: 1.5rem;
+  --ds-grid-gutter-xl: 2rem;
+
+  /* ---- Grid · margins ------------------------------------ */
+  --ds-grid-margin-xs: 0.5rem;
+  --ds-grid-margin-sm: 1rem;
+  --ds-grid-margin-md: 1.5rem;
+  --ds-grid-margin-lg: 1.5rem;
+  --ds-grid-margin-xl: 2rem;
+}
+
+/* ============================================================
+   Auro Effects — radius, elevation, depth, motion
+   Alaska elevation is a SOFT, CENTERED (0-offset) ambient blur —
+   never a directional drop shadow.
+   Source: AlaskaAirlines/AuroDesignTokens · util.AS
+   ============================================================ */
+
+:root {
+  /* ---- Corner radius ------------------------------------- */
+  --ds-border-radius: 0.375rem;   /* 6px — the single brand radius */
+
+  /* ---- Elevation (ambient, centered blur) ---------------- */
+  --ds-elevation-100: 0px 0px 5px rgba(0, 0, 0, 0.15);
+  --ds-elevation-200: 0px 0px 10px rgba(0, 0, 0, 0.15);
+  --ds-elevation-300: 0px 0px 15px rgba(0, 0, 0, 0.2);
+
+  /* ---- Stacking depth ------------------------------------ */
+  --ds-depth-overlay: 200; /* @kind other */
+  --ds-depth-modal: 300;   /* @kind other */
+  --ds-depth-tooltip: 400; /* @kind other */
+
+  /* ---- Motion -------------------------------------------- */
+  --ds-animation-default-property: all;       /* @kind other */
+  --ds-animation-default-duration: 0.3s;      /* @kind other */
+  --ds-animation-default-timing: ease-out;    /* @kind other */
+  --ds-animation-default: all 0.3s ease-out;  /* @kind other */
+}
+
+
+
+/* ---- data-dc-tpl=10 ---- */
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; font-family: var(--ds-font-sans); color: var(--ds-basic-color-texticon-default); background: #fff; -webkit-font-smoothing: antialiased; }
+  a { color: inherit; }
+  @keyframes gl-float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+
+
+/* Hero floating orb animation */
+@keyframes gl-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
