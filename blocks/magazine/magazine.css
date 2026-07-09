@@ -1,0 +1,132 @@
+/* magazine — article grid. CSS lifted from prototype section.magazine, scoped. */
+
+.magazine-container,
+.section.magazine-container {
+  background: var(--gray-100);
+}
+
+.magazine.block {
+  padding-block: var(--band);
+}
+
+.magazine .wrap {
+  max-width: var(--maxw);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.magazine .section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 44px;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.magazine .section-head h2 {
+  font-size: clamp(1.9rem, 3.2vw, 2.6rem);
+  position: relative;
+  padding-bottom: 14px;
+}
+
+.magazine .section-head h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 52px;
+  height: 4px;
+  background: var(--accent);
+}
+
+.magazine .section-head .lead {
+  color: var(--gray-mid);
+  max-width: 40ch;
+  font-size: 1rem;
+}
+
+.magazine .article-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(24px, 3vw, 40px);
+}
+
+.magazine .article {
+  background: var(--surface);
+  display: flex;
+  flex-direction: column;
+}
+
+.magazine .article-media {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+}
+
+.magazine .article-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1s var(--ease);
+}
+
+.magazine .article:hover .article-media img { transform: scale(1.06); }
+
+.magazine .article-body { padding: 26px 28px 30px; }
+
+.magazine .article .tag {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.13em;
+  color: var(--blue);
+  font-weight: 600;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.magazine .article h3 {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+}
+
+.magazine .article p {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 18px;
+}
+
+/* "Read" — blue underlined magazine text link (not a chip) */
+.magazine .article-read { margin: 0; }
+
+.magazine .mag-link {
+  color: var(--blue);
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  border-bottom: 2px solid var(--blue);
+  padding-bottom: 2px;
+}
+
+.magazine .magazine-cta { margin-top: 40px; }
+
+/* "All Articles" ghost link: yellow underline, no fill */
+.magazine .magazine-cta a.button {
+  background: transparent;
+  color: var(--ink);
+  padding-inline: 0;
+  border-bottom: 2px solid var(--accent);
+  border-radius: 0;
+}
+
+.magazine .magazine-cta a.button:hover { transform: none; background: transparent; color: var(--ink); }
+
+@media (width <= 960px) {
+  .magazine .article-grid { grid-template-columns: 1fr; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .magazine .article-media img { transition: none; }
+  .magazine .article:hover .article-media img { transform: none; }
+}

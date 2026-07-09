@@ -1,0 +1,162 @@
+/* destinations — tile grid + routes duo. CSS lifted from prototype .destinations, scoped. */
+
+.destinations.block { padding-block: var(--band); }
+
+.destinations .wrap {
+  max-width: var(--maxw);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.destinations .section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 44px;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.destinations .section-head h2 {
+  font-size: clamp(1.9rem, 3.2vw, 2.6rem);
+  position: relative;
+  padding-bottom: 14px;
+}
+
+.destinations .section-head h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 52px;
+  height: 4px;
+  background: var(--accent);
+}
+
+.destinations .section-head .lead {
+  color: var(--gray-mid);
+  max-width: 40ch;
+  font-size: 1rem;
+}
+
+.destinations .dest-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+  margin-block: 44px;
+}
+
+.destinations .dest {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  color: #fff;
+  display: flex;
+  align-items: flex-end;
+}
+
+.destinations .dest img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1s var(--ease);
+}
+
+.destinations .dest::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 40%, rgb(20 20 20 / 78%) 100%);
+}
+
+.destinations .dest:hover img { transform: scale(1.07); }
+
+.destinations .dest-label {
+  position: relative;
+  padding: 22px 22px 24px;
+  z-index: 1;
+}
+
+.destinations .dest-label .n {
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 600;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.destinations .dest-label h3 {
+  font-size: 1.35rem;
+  color: #fff;
+  line-height: 1.1;
+}
+
+.destinations .dest-cta {
+  display: flex;
+  justify-content: center;
+}
+
+.destinations .routes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  margin-top: 2px;
+}
+
+.destinations .route {
+  padding: clamp(28px, 4vw, 52px);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.destinations .route.mag { background: var(--gray-100); }
+.destinations .route.adv { background: var(--ink); color: #fff; }
+
+.destinations .route .rk {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-weight: 600;
+}
+
+.destinations .route.mag .rk { color: var(--blue); }
+.destinations .route.adv .rk { color: var(--accent); }
+
+.destinations .route h3 { font-size: clamp(1.5rem, 2.4vw, 2rem); }
+.destinations .route.adv h3 { color: #fff; }
+
+.destinations .route p {
+  font-size: 1rem;
+  color: inherit;
+  opacity: 0.85;
+  max-width: 40ch;
+}
+
+/* Route CTA links */
+.destinations .route.mag .route-cta a.button {
+  background: transparent;
+  color: var(--blue);
+  padding-inline: 0;
+  border-bottom: 2px solid var(--blue);
+  border-radius: 0;
+}
+
+.destinations .route.mag .route-cta a.button:hover { transform: none; background: transparent; color: var(--blue); }
+
+/* Adventures route uses the yellow fill chip */
+.destinations .route.adv .route-cta a.button.primary { background: var(--accent); color: var(--ink); }
+
+@media (width <= 960px) {
+  .destinations .dest-grid { grid-template-columns: repeat(2, 1fr); }
+  .destinations .routes { grid-template-columns: 1fr; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .destinations .dest img { transition: none; }
+  .destinations .dest:hover img { transform: none; }
+}

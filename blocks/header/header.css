@@ -1,0 +1,133 @@
+/* header — WKND chrome. CSS lifted from prototype .utility / header.site, scoped. */
+
+header .header.block { position: relative; }
+
+.nav-toggle-cb { display: none; }
+
+header .utility {
+  background: var(--ink);
+  color: var(--gray-100);
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+header .utility .wrap {
+  display: flex;
+  justify-content: flex-end;
+  gap: 28px;
+  align-items: center;
+  height: 40px;
+}
+
+header .utility a { opacity: 0.85; color: var(--gray-100); }
+header .utility a:hover { opacity: 1; color: var(--gray-100); }
+
+header .site {
+  position: sticky;
+  top: 0;
+  z-index: var(--z-nav);
+  background: var(--surface);
+  border-bottom: 1px solid var(--gray-200);
+}
+
+header .site .wrap {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  min-height: 84px;
+  padding-block: 16px;
+}
+
+header .logo { flex: 0 0 auto; }
+header .logo svg { height: 34px; width: auto; fill: var(--ink); }
+
+header nav.primary {
+  margin-left: auto;
+  display: flex;
+  gap: 34px;
+  align-items: center;
+}
+
+header nav.primary a {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--ink);
+  padding-block: 6px;
+  position: relative;
+}
+
+header nav.primary a[data-route="magazine"] { color: var(--blue); }
+
+header nav.primary a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background: var(--accent);
+  transition: width 0.3s var(--ease);
+}
+
+header nav.primary a:hover::after { width: 100%; }
+
+header .searchbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--gray-100);
+  padding: 9px 16px;
+  min-width: 180px;
+}
+
+header .searchbox input {
+  border: 0;
+  background: transparent;
+  font-family: var(--font-body);
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  width: 100%;
+  color: var(--ink);
+}
+
+header .searchbox input::placeholder { color: var(--gray-mid); }
+header .searchbox svg { flex: 0 0 auto; stroke: var(--ink); }
+
+header .menu-toggle { display: none; cursor: pointer; }
+
+@media (width <= 760px) {
+  header nav.primary,
+  header .searchbox { display: none; }
+
+  header .menu-toggle {
+    display: inline-flex;
+    margin-left: auto;
+    padding: 8px;
+  }
+
+  header .menu-toggle svg { stroke: var(--ink); }
+
+  /* CSS drawer: reveal nav links when the checkbox is checked */
+  header .nav-toggle-cb:checked ~ .site nav.primary {
+    display: flex;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    background: var(--surface);
+    border-bottom: 1px solid var(--gray-200);
+    padding: 12px var(--gutter) 20px;
+  }
+
+  header .nav-toggle-cb:checked ~ .site nav.primary a { padding-block: 12px; width: 100%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  header nav.primary a::after { transition: none; }
+}

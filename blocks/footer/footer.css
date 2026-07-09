@@ -1,0 +1,72 @@
+/* footer — WKND dark footer. CSS lifted from prototype footer.site, scoped. */
+
+footer .footer.block {
+  background: var(--ink);
+  color: var(--gray-100);
+  padding-block: clamp(48px, 6vw, 80px) 40px;
+}
+
+footer .footer .wrap {
+  max-width: var(--maxw);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+footer .footer-top {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 48px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid rgb(255 255 255 / 14%);
+}
+
+footer .logo svg { fill: #fff; height: 30px; width: auto; }
+
+footer .footer-blurb {
+  margin-top: 22px;
+  max-width: 46ch;
+  color: rgb(255 255 255 / 70%);
+  font-size: 15px;
+}
+
+footer .footer-col h4 {
+  font-family: var(--font-body);
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+  margin-bottom: 18px;
+  font-weight: 600;
+}
+
+footer .footer-col a {
+  display: block;
+  padding-block: 7px;
+  color: rgb(255 255 255 / 82%);
+  font-size: 15px;
+}
+
+footer .footer-col a:hover { color: #fff; }
+
+footer .footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 28px;
+  gap: 20px;
+  flex-wrap: wrap;
+  font-size: 13px;
+  color: rgb(255 255 255 / 60%);
+}
+
+footer .socials { display: flex; gap: 20px; }
+footer .socials a { color: rgb(255 255 255 / 82%); }
+footer .socials a:hover { color: var(--accent); }
+
+@media (width <= 960px) {
+  footer .footer-top { grid-template-columns: 1fr 1fr; }
+}
+
+@media (width <= 760px) {
+  footer .footer-top { grid-template-columns: 1fr; gap: 32px; }
+}

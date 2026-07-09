@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#FFEA00">
+<title>WKND Adventures and Travel</title>
+<meta name="description" content="WKND is a collective of outdoors, music, crafts, adventure sports, and travel enthusiasts sharing our experiences, connections, and expertise with the world.">
+<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAoVJREFUWAntV01rE1EUPTP5MNE6Qk3TfFijoIIW1IUEpAvFTSlWREjXIrjShf0F/ge3dtGFiihaBFFwp6u6sJsW1IVQ1NbmE1MzCU2adJz73rwxmcyb7MxmHmTuu29e7jnv3MMjUYwiDAxxqEPEZtA+AV8BXwFfAakC8/djOJ49hgcLh9iF8fLNAZZfyaVZvrsLM88gOzPB8slLR9n7jysRlm/8CuLExQxOTWWwVQiwNbeHlEAy3mH7C+Ugi6UKL1Is88hzBcnxtltdPHysodNRMHdNN/fwWm4b5QSswoJ9qcKJ1Bsq6g0FRYtYYqyfQLmi4vnrEQSDBu7c3HbDtdfkBIQCJQ4sTk7fpHmhxJVIJfpPt/hMQ7Op4saMjnSyn6CNbk7kBCwF8haQaIFNwGpFIt4LUNMVPHqhQVUN3L3lfXqqJSUgpP1dDaDVIsn/GYnkzxctBRz9fbKkoaaruD5dR+ZILzkCdA4pgcOjewiH+U8FAiMFqKc0iIztAYcCH5ajbM+FczssDnpICSgKMB7jJ1j/GYJeV3H6ZIvV6/GAQwEBuPR2REw9o5QAfUsYbO1LmBU5P9lksUAmND+KYiBukWQvzAeZjpRbWY3g23pILEujJwFhsLWv+1iBs2dazFxCgdhoByEHxr3bVUxfbrD9T18NVsGTQMqSd/UzVyCdaINAf2yG8KcWcL1gJlJtzM3WGAFqAxnYa3gSEArki/wuoJxutc0tnicdBhRAU9kds31tVLcDePd+v1h2jZ4EnACJsY5tTKomu2JVs2puVmeAg9rgTaDL4drBPUSjRg+ok2D3EXNXiYCB5U8RfN/ginW/F3PF/18gpBhW9PTA/yDlE/AV+AuOi9OzQZbCEAAAAABJRU5ErkJggg==">
+<style>
+  :root{
+    --ink:#202020; --surface:#fff; --accent:#FFEA00; --gray-100:#F7F7F7;
+    --gray-200:#EBEBEB; --gray-mid:#696969; --blue:#0045FF;
+    --font-display:"Asar",Georgia,"Times New Roman",Times,serif;
+    --font-body:"Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
+    --maxw:1280px; --gutter:clamp(20px,5vw,72px);
+    --band:clamp(56px,7vw,96px);
+    --z-nav:100;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{-webkit-text-size-adjust:100%}
+  body{font-family:var(--font-body);color:var(--ink);background:var(--surface);
+    font-size:18px;line-height:1.6;font-weight:400;-webkit-font-smoothing:antialiased}
+  img{display:block;max-width:100%}
+  a{color:inherit;text-decoration:none}
+  h1,h2,h3{font-family:var(--font-display);font-weight:400;line-height:1.05;
+    letter-spacing:-.01em;text-wrap:balance}
+  .wrap{max-width:var(--maxw);margin-inline:auto;padding-inline:var(--gutter)}
+
+  /* Utility bar */
+  .utility{background:var(--ink);color:var(--gray-100);font-size:13px;
+    letter-spacing:.08em;text-transform:uppercase}
+  .utility .wrap{display:flex;justify-content:flex-end;gap:28px;
+    align-items:center;height:40px}
+  .utility a{opacity:.85}
+  .utility a:hover{opacity:1}
+
+  /* Header nav */
+  header.site{position:sticky;top:0;z-index:var(--z-nav);background:var(--surface);
+    border-bottom:1px solid var(--gray-200)}
+  header.site .wrap{display:flex;align-items:center;gap:32px;
+    min-height:84px;padding-block:16px}
+  .logo{flex:0 0 auto}
+  .logo svg{height:34px;width:auto;fill:var(--ink)}
+  nav.primary{margin-left:auto;display:flex;gap:34px;align-items:center}
+  nav.primary a{font-size:14px;text-transform:uppercase;letter-spacing:.09em;
+    color:var(--ink);padding-block:6px;position:relative}
+  nav.primary a[data-route="magazine"]{color:var(--blue)}
+  nav.primary a::after{content:"";position:absolute;left:0;bottom:0;height:2px;
+    width:0;background:var(--accent);transition:width .3s cubic-bezier(.2,.7,.2,1)}
+  nav.primary a:hover::after{width:100%}
+  .searchbox{display:flex;align-items:center;gap:8px;background:var(--gray-100);
+    padding:9px 16px;min-width:180px}
+  .searchbox input{border:0;background:transparent;font-family:var(--font-body);
+    font-size:14px;text-transform:uppercase;letter-spacing:.06em;width:100%;color:var(--ink)}
+  .searchbox input::placeholder{color:var(--gray-mid)}
+  .searchbox svg{flex:0 0 auto;stroke:var(--ink)}
+  .menu-toggle{display:none}
+
+  /* Buttons — flat yellow, zero radius, no shadow (pinned) */
+  .btn{display:inline-flex;align-items:center;gap:10px;background:var(--accent);
+    color:var(--ink);font-family:var(--font-body);font-size:14px;font-weight:600;
+    text-transform:uppercase;letter-spacing:.09em;padding:16px 28px;border:0;
+    cursor:pointer;transition:transform .25s cubic-bezier(.2,.7,.2,1),background .2s}
+  .btn:hover{transform:translateY(-2px)}
+  .btn .arrow{transition:transform .25s cubic-bezier(.2,.7,.2,1)}
+  .btn:hover .arrow{transform:translateX(4px)}
+  .btn.ghost{background:transparent;color:var(--ink);padding-inline:0;
+    border-bottom:2px solid var(--accent)}
+  .btn.ghost:hover{transform:none}
+  .btn.mag{background:transparent;color:var(--blue);padding-inline:0;
+    border-bottom:2px solid var(--blue)}
+
+  /* HERO — one decisive full-bleed frame, title over image, real h1 (T1,T6) */
+  .hero{position:relative;min-height:min(88vh,760px);display:flex;align-items:flex-end;
+    color:#fff;overflow:hidden}
+  .hero-img{position:absolute;inset:0}
+  .hero-img img{width:100%;height:100%;object-fit:cover;object-position:center 40%}
+  .hero-img::after{content:"";position:absolute;inset:0;
+    background:linear-gradient(180deg,rgba(20,20,20,.15) 0%,rgba(20,20,20,.05) 40%,rgba(20,20,20,.72) 100%)}
+  .hero-inner{position:relative;padding-bottom:clamp(48px,7vw,88px);
+    padding-top:120px;max-width:760px}
+  .hero .eyebrow{font-size:14px;text-transform:uppercase;letter-spacing:.16em;
+    color:var(--accent);margin-bottom:20px;font-weight:600}
+  .hero h1{font-size:clamp(2.8rem,6.4vw,5rem);line-height:1;letter-spacing:-.02em;
+    color:#fff;margin-bottom:22px}
+  .hero p{font-size:clamp(1.05rem,1.6vw,1.25rem);max-width:52ch;color:rgba(255,255,255,.92);
+    margin-bottom:32px}
+  .hero-cta{display:flex;gap:20px;flex-wrap:wrap;align-items:center}
+
+  /* FEATURED ARTICLE — editorial spotlight (image-forward) */
+  section.featured{padding-block:var(--band)}
+  .featured-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(28px,4vw,64px);
+    align-items:center}
+  .featured-media{position:relative;aspect-ratio:4/3;overflow:hidden}
+  .featured-media img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+  .featured-media:hover img{transform:scale(1.04)}
+  .kicker{font-size:13px;text-transform:uppercase;letter-spacing:.14em;
+    color:var(--blue);font-weight:600;margin-bottom:16px}
+  .featured h2{font-size:clamp(2rem,3.4vw,2.9rem);margin-bottom:20px}
+  .featured p{color:#333;max-width:52ch;margin-bottom:28px}
+
+  /* RECENT ARTICLES — larger image-forward tiles, 2-up (T2) */
+  section.magazine{padding-block:var(--band);background:var(--gray-100)}
+  .section-head{display:flex;justify-content:space-between;align-items:flex-end;
+    margin-bottom:44px;gap:24px;flex-wrap:wrap}
+  .section-head h2{font-size:clamp(1.9rem,3.2vw,2.6rem);position:relative;padding-bottom:14px}
+  .section-head h2::after{content:"";position:absolute;left:0;bottom:0;width:52px;height:4px;
+    background:var(--accent)}
+  .section-head .lead{color:var(--gray-mid);max-width:40ch;font-size:1rem}
+  .article-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(24px,3vw,40px)}
+  .article{background:var(--surface);display:flex;flex-direction:column}
+  .article-media{position:relative;aspect-ratio:16/10;overflow:hidden}
+  .article-media img{width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+  .article:hover .article-media img{transform:scale(1.05)}
+  .article-body{padding:26px 28px 30px}
+  .article .tag{font-size:12px;text-transform:uppercase;letter-spacing:.13em;
+    color:var(--blue);font-weight:600;margin-bottom:12px;display:block}
+  .article h3{font-size:1.5rem;margin-bottom:12px}
+  .article p{font-size:1rem;color:#444;margin-bottom:18px}
+
+  /* DESTINATIONS — one collapsed module, single dominant CTA (T5) */
+  section.destinations{padding-block:var(--band)}
+  .dest-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-block:44px}
+  .dest{position:relative;aspect-ratio:3/4;overflow:hidden;color:#fff;display:flex;
+    align-items:flex-end}
+  .dest img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+    transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+  .dest::after{content:"";position:absolute;inset:0;
+    background:linear-gradient(180deg,transparent 40%,rgba(20,20,20,.78) 100%)}
+  .dest:hover img{transform:scale(1.06)}
+  .dest-label{position:relative;padding:22px 22px 24px;z-index:1}
+  .dest-label .n{font-size:12px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--accent);font-weight:600;display:block;margin-bottom:6px}
+  .dest-label h3{font-size:1.35rem;color:#fff;line-height:1.1}
+  .dest-cta{display:flex;justify-content:center}
+
+  /* Split routing clarity: magazine vs adventures */
+  .routes{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:2px}
+  .route{padding:clamp(28px,4vw,52px);display:flex;flex-direction:column;gap:14px}
+  .route.mag{background:var(--gray-100)}
+  .route.adv{background:var(--ink);color:#fff}
+  .route .rk{font-size:12px;text-transform:uppercase;letter-spacing:.14em;font-weight:600}
+  .route.mag .rk{color:var(--blue)}
+  .route.adv .rk{color:var(--accent)}
+  .route h3{font-size:clamp(1.5rem,2.4vw,2rem)}
+  .route.adv h3{color:#fff}
+  .route p{font-size:1rem;color:inherit;opacity:.85;max-width:40ch}
+  .route .btn.ghost{color:inherit}
+
+  /* Footer */
+  footer.site{background:var(--ink);color:var(--gray-100);padding-block:clamp(48px,6vw,80px) 40px}
+  .footer-top{display:grid;grid-template-columns:2fr 1fr 1fr;gap:48px;
+    padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,.14)}
+  footer .logo svg{fill:#fff;height:30px}
+  .footer-blurb{margin-top:22px;max-width:46ch;color:rgba(255,255,255,.7);font-size:15px}
+  .footer-col h4{font-family:var(--font-body);font-size:13px;text-transform:uppercase;
+    letter-spacing:.12em;color:var(--accent);margin-bottom:18px;font-weight:600}
+  .footer-col a{display:block;padding-block:7px;color:rgba(255,255,255,.82);font-size:15px}
+  .footer-col a:hover{color:#fff}
+  .footer-bottom{display:flex;justify-content:space-between;align-items:center;
+    padding-top:28px;gap:20px;flex-wrap:wrap;font-size:13px;color:rgba(255,255,255,.6)}
+  .socials{display:flex;gap:20px}
+  .socials a{color:rgba(255,255,255,.82)}
+  .socials a:hover{color:var(--accent)}
+
+  /* Reveal — enhancement only: JS opts elements in, so content is
+     visible by default (no JS / headless / reduced-motion all show it) */
+  .js [data-reveal]{opacity:0;transform:translateY(20px);
+    transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+  .js [data-reveal].in{opacity:1;transform:none}
+
+  @media (max-width:960px){
+    .featured-grid{grid-template-columns:1fr}
+    .featured-media{aspect-ratio:16/10;order:-1}
+    .article-grid{grid-template-columns:1fr}
+    .dest-grid{grid-template-columns:repeat(2,1fr)}
+    .footer-top{grid-template-columns:1fr 1fr}
+    .routes{grid-template-columns:1fr}
+  }
+  @media (max-width:760px){
+    nav.primary,.searchbox{display:none}
+    .menu-toggle{display:inline-flex;margin-left:auto;background:none;border:0;padding:8px;cursor:pointer}
+    .menu-toggle svg{stroke:var(--ink)}
+    .footer-top{grid-template-columns:1fr;gap:32px}
+    .hero{min-height:78vh}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{transition:none!important;animation:none!important}
+    [data-reveal]{opacity:1;transform:none}
+  }
+</style>
+</head>
+<body>
+<div class="utility"><div class="wrap"><a href="#">Sign In</a><a href="#">🇺🇸 EN-US</a></div></div>
+
+<header class="site">
+  <div class="wrap">
+    <a class="logo" href="#" aria-label="WKND home">
+      <svg viewBox="0 0 239.35 89.09" role="img" aria-label="WKND"><path d="M60.33,94.83h-13L39.94,47.39h-.25l-7,47.43H19.78L4.9,5.93H19l6.88,46.59h.21L32.45,5.88H46.6l6.86,46.45h.27L60.1,5.92H74.24Z" transform="translate(-4.9 -5.81)"/><path d="M176.45,64.52V5.94h13.49V94.8H175.49l-18.18-56-.23,0v56H143.69v-89h2.61c3.76,0,7.52,0,11.28,0A1.33,1.33,0,0,1,159.14,7q7.54,25.5,15.14,51l2,6.61Z" transform="translate(-4.9 -5.81)"/><path d="M202,5.84h21.67c9.68,0,18.75,7.78,20.19,17.36a30.86,30.86,0,0,1,.35,4.53q0,22.61,0,45.22c0,9.72-5.55,17.9-14.23,20.78a22.16,22.16,0,0,1-6.45,1.09c-6.71.14-13.43.05-20.15.05H202Zm13.44,13.73V81.41c2.76,0,5.44.07,8.11,0A7.56,7.56,0,0,0,231,73.64c0-1,0-2,0-3q0-21.59,0-43.18a7.57,7.57,0,0,0-6.86-7.86C221.31,19.42,218.42,19.57,215.45,19.57Z" transform="translate(-4.9 -5.81)"/><path d="M98.88,94.81H85.34V5.92H98.88V36.78l.26.05,4.14-8q5.64-11,11.26-22a1.56,1.56,0,0,1,1.63-1c4,.05,8.08,0,12.12,0h1.24L128.44,8q-8.39,16.63-16.8,33.25a2.16,2.16,0,0,0-.09,2q10.31,25.15,20.57,50.32c.15.36.28.73.47,1.22-.39,0-.68.09-1,.09-4.6,0-9.2,0-13.8,0a1.3,1.3,0,0,1-1.44-1q-6.52-16.8-13.1-33.58c-.14-.36-.3-.72-.54-1.32-.94,1.89-1.71,3.62-2.65,5.25a9.9,9.9,0,0,0-1.25,5.25c.07,8,0,15.92,0,23.88Z" transform="translate(-4.9 -5.81)"/></svg>
+    </a>
+    <nav class="primary">
+      <a href="#" data-route="magazine">Magazine</a>
+      <a href="#">Adventures</a>
+      <a href="#">FAQs</a>
+      <a href="#">About Us</a>
+    </nav>
+    <div class="searchbox">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+      <input type="search" placeholder="Search" aria-label="Search">
+    </div>
+    <button class="menu-toggle" aria-label="Menu"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+  </div>
+</header>
+
+<main>
+  <!-- HERO: decisive, title over image, true h1 with value prop -->
+  <section class="hero">
+    <div class="hero-img"><img src="media/hero-australia.jpeg" alt="A traveler stands on a rocky ledge above a river gorge in Western Australia at golden hour."></div>
+    <div class="wrap"><div class="hero-inner">
+      <span class="eyebrow">Curated adventures &amp; the WKND Magazine</span>
+      <h1>Go somewhere that stays with you.</h1>
+      <p>WKND curates guided trips to the world's wild places — and tells the stories worth the journey. Pick a next adventure, or read your way there first.</p>
+      <div class="hero-cta">
+        <a class="btn" href="#destinations">View Trips <span class="arrow">→</span></a>
+        <a class="btn mag" href="#magazine">Read the Magazine</a>
+      </div>
+    </div></div>
+  </section>
+
+  <!-- FEATURED ARTICLE -->
+  <section class="featured wrap" data-reveal>
+    <div class="featured-grid">
+      <div class="featured-media"><img src="media/climbing-nz.jpeg" alt="A climber rests on a cliff face high above a still blue lake and green hills."></div>
+      <div class="featured-text">
+        <span class="kicker">Featured · Magazine</span>
+        <h2>Camping in Western Australia</h2>
+        <p>The Australian West coast is a camper's dream. Endless miles of desert roads leading to secret beaches, vast canyons and crystal-clear rivers — and the very few people you meet will be some of the most easy-going characters you'll find anywhere in the world.</p>
+        <a class="btn ghost" href="#">Full Article <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- RECENT ARTICLES: larger image-forward tiles, 2-up -->
+  <section class="magazine" id="magazine">
+    <div class="wrap">
+      <div class="section-head" data-reveal>
+        <h2>From the Magazine</h2>
+        <p class="lead">Field notes, guides, and dispatches from the places we love.</p>
+      </div>
+      <div class="article-grid">
+        <article class="article" data-reveal>
+          <div class="article-media"><img src="media/hero-surf.jpeg" alt="A surfer walks along a glassy shoreline carrying a longboard, waves breaking behind."></div>
+          <div class="article-body">
+            <span class="tag">Surf</span>
+            <h3>Arctic Surfing</h3>
+            <p>We travelled to Northern Norway to chase cold-water waves under the midnight sun. What we found was quieter, and stranger, than we imagined.</p>
+            <a class="btn mag" href="#">Read</a>
+          </div>
+        </article>
+        <article class="article" data-reveal>
+          <div class="article-media"><img src="media/hero-ski.jpeg" alt="A skier carves through deep powder on a steep alpine slope under a bright sky."></div>
+          <div class="article-body">
+            <span class="tag">Ski</span>
+            <h3>Ski Touring</h3>
+            <p>Learn about our ski touring expeditions — where the climb up matters as much as the run down, and the crowds are hours behind you.</p>
+            <a class="btn mag" href="#">Read</a>
+          </div>
+        </article>
+      </div>
+      <div style="margin-top:40px" data-reveal><a class="btn ghost" href="#">All Articles <span class="arrow">→</span></a></div>
+    </div>
+  </section>
+
+  <!-- DESTINATIONS: collapsed trip module, single dominant CTA -->
+  <section class="destinations wrap" id="destinations">
+    <div class="section-head" data-reveal>
+      <h2>Where do you want to go?</h2>
+      <p class="lead">Every WKND trip is guided, small-group, and built around one unforgettable place.</p>
+    </div>
+    <div class="dest-grid">
+      <a class="dest" href="#" data-reveal><img src="media/yosemite.jpeg" alt="A hiker stands on a granite outcrop above a sweeping valley at sunset."><span class="dest-label"><span class="n">Backpacking</span><h3>Yosemite</h3></span></a>
+      <a class="dest" href="#" data-reveal><img src="media/climbing-nz.jpeg" alt="A climber high on a lakeside cliff in New Zealand."><span class="dest-label"><span class="n">Climbing</span><h3>New Zealand</h3></span></a>
+      <a class="dest" href="#" data-reveal><img src="media/hero-ski.jpeg" alt="A skier in deep powder on an alpine slope."><span class="dest-label"><span class="n">Skiing</span><h3>Tahoe</h3></span></a>
+      <a class="dest" href="#" data-reveal><img src="media/hero-surf.jpeg" alt="A surfer on a calm morning shoreline."><span class="dest-label"><span class="n">Surf &amp; Cycle</span><h3>West Coast</h3></span></a>
+    </div>
+    <div class="dest-cta" data-reveal><a class="btn" href="#">View All Trips <span class="arrow">→</span></a></div>
+
+    <!-- Explicit Magazine vs Adventures split -->
+    <div class="routes" data-reveal>
+      <div class="route mag">
+        <span class="rk">The Magazine</span>
+        <h3>Read your way there first.</h3>
+        <p>Long-form stories, guides, and photography from the field. Free, and updated every week.</p>
+        <a class="btn mag" href="#magazine">Browse the Magazine</a>
+      </div>
+      <div class="route adv">
+        <span class="rk">The Adventures</span>
+        <h3>Then come with us.</h3>
+        <p>Curated, guided trips you can sign up for the moment you're ready to explore.</p>
+        <a class="btn" href="#destinations">View Trips <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <a class="logo" href="#" aria-label="WKND home"><svg viewBox="0 0 239.35 89.09" role="img" aria-label="WKND"><path d="M60.33,94.83h-13L39.94,47.39h-.25l-7,47.43H19.78L4.9,5.93H19l6.88,46.59h.21L32.45,5.88H46.6l6.86,46.45h.27L60.1,5.92H74.24Z" transform="translate(-4.9 -5.81)"/><path d="M176.45,64.52V5.94h13.49V94.8H175.49l-18.18-56-.23,0v56H143.69v-89h2.61c3.76,0,7.52,0,11.28,0A1.33,1.33,0,0,1,159.14,7q7.54,25.5,15.14,51l2,6.61Z" transform="translate(-4.9 -5.81)"/><path d="M202,5.84h21.67c9.68,0,18.75,7.78,20.19,17.36a30.86,30.86,0,0,1,.35,4.53q0,22.61,0,45.22c0,9.72-5.55,17.9-14.23,20.78a22.16,22.16,0,0,1-6.45,1.09c-6.71.14-13.43.05-20.15.05H202Zm13.44,13.73V81.41c2.76,0,5.44.07,8.11,0A7.56,7.56,0,0,0,231,73.64c0-1,0-2,0-3q0-21.59,0-43.18a7.57,7.57,0,0,0-6.86-7.86C221.31,19.42,218.42,19.57,215.45,19.57Z" transform="translate(-4.9 -5.81)"/><path d="M98.88,94.81H85.34V5.92H98.88V36.78l.26.05,4.14-8q5.64-11,11.26-22a1.56,1.56,0,0,1,1.63-1c4,.05,8.08,0,12.12,0h1.24L128.44,8q-8.39,16.63-16.8,33.25a2.16,2.16,0,0,0-.09,2q10.31,25.15,20.57,50.32c.15.36.28.73.47,1.22-.39,0-.68.09-1,.09-4.6,0-9.2,0-13.8,0a1.3,1.3,0,0,1-1.44-1q-6.52-16.8-13.1-33.58c-.14-.36-.3-.72-.54-1.32-.94,1.89-1.71,3.62-2.65,5.25a9.9,9.9,0,0,0-1.25,5.25c.07,8,0,15.92,0,23.88Z" transform="translate(-4.9 -5.81)"/></svg></a>
+        <p class="footer-blurb">WKND is a fictitious adventure and travel brand created by Adobe to demonstrate how anyone can build with Adobe Experience Manager.</p>
+      </div>
+      <div class="footer-col"><h4>Explore</h4><a href="#magazine">Magazine</a><a href="#destinations">Adventures</a><a href="#">FAQs</a><a href="#">About Us</a></div>
+      <div class="footer-col"><h4>Company</h4><a href="#">Sign In</a><a href="#">Contact</a><a href="#">Careers</a><a href="#">Press</a></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2019, WKND Site</span>
+      <div class="socials"><a href="#" aria-label="Facebook">Facebook</a><a href="#" aria-label="Twitter">Twitter</a><a href="#" aria-label="Instagram">Instagram</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Opt into reveal only when motion is welcome; content is visible by default.
+  if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    document.documentElement.classList.add('js');
+    const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12,rootMargin:'0px 0px -8% 0px'});
+    document.querySelectorAll('[data-reveal]').forEach(el=>io.observe(el));
+  }
+</script>
+</body>
+</html>
