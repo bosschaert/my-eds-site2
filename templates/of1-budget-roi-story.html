@@ -1,0 +1,100 @@
+<main>
+<section class="of1-roi-story-hero of1-hero">
+  <div class="of1-roi-story-hero-grid of1-hero-grid">
+    <div>
+      <p class="of1-eyebrow" data-slot="hero.eyebrow">The real math</p>
+      <h1 data-slot="hero.title">Calm shouldn't come with a bill.</h1>
+      <p data-slot="hero.subtitle">Here's what a few minutes of breathing is worth — and why Breathe never charges for it.</p>
+      <a class="of1-cta of1-cta-primary" data-slot="hero.cta-primary" href="#">Get the app</a>
+    </div>
+    <div class="of1-hero-media"><img data-slot="hero.image" src="" alt=""></div>
+  </div>
+</section>
+
+<section class="of1-roi-story-split of1-section">
+  <div class="of1-roi-story-split-grid">
+    <div class="of1-roi-story-split-text">
+      <p class="of1-eyebrow" data-slot="cost-of-stress.eyebrow">The cost of stress</p>
+      <h2 data-slot="cost-of-stress.title">Unmanaged stress is expensive — in time, focus, and sleep.</h2>
+      <p data-slot="cost-of-stress.body">A short breathing session doesn't need a premium tier to help. Breathe gives you the tools without asking what they're worth to you.</p>
+    </div>
+    <div class="of1-roi-story-split-stat">
+      <p class="of1-roi-story-stat-num" data-slot="cost-of-stress.stat">3 min</p>
+      <p data-slot="cost-of-stress.stat-label">is enough for one full session</p>
+    </div>
+  </div>
+</section>
+
+<section class="of1-roi-story-timeline of1-section">
+  <h2 data-slot="timeline.title">Your first month, at no cost</h2>
+  <div class="of1-roi-story-timeline-items" data-grid-items>
+    <article class="of1-roi-story-timeline-item" data-card="1">
+      <p class="of1-roi-story-timeline-marker" data-slot="item-1.badge">Day 1</p>
+      <h3 data-slot="item-1.title">Download and breathe</h3>
+      <p data-slot="item-1.body">Pick a background and a rhythm. No account, no card, no trial clock.</p>
+    </article>
+    <article class="of1-roi-story-timeline-item" data-card="2">
+      <p class="of1-roi-story-timeline-marker" data-slot="item-2.badge">Week 1</p>
+      <h3 data-slot="item-2.title">Build the habit</h3>
+      <p data-slot="item-2.body">Download a few atmospheres for offline use. Still free.</p>
+    </article>
+    <article class="of1-roi-story-timeline-item" data-card="3">
+      <p class="of1-roi-story-timeline-marker" data-slot="item-3.badge">Month 1</p>
+      <h3 data-slot="item-3.title">Make it yours</h3>
+      <p data-slot="item-3.body">Customize inhale and exhale timing. No feature was ever behind a paywall.</p>
+    </article>
+    <article class="of1-roi-story-timeline-item" data-card="4">
+      <p class="of1-roi-story-timeline-marker" data-slot="item-4.badge">Ongoing</p>
+      <h3 data-slot="item-4.title">Support if you want to</h3>
+      <p data-slot="item-4.body">A one-time donation is always optional — it never changes what you can use.</p>
+    </article>
+  </div>
+</section>
+
+<section class="of1-roi-story-tabs of1-section">
+  <h2 data-slot="tabs.title">Compare your two options</h2>
+  <div class="of1-roi-story-tablist" role="tablist">
+    <button class="of1-roi-story-tab is-active" role="tab" aria-selected="true" data-tab="free" data-slot="tabs.tab-1-label">Free plan</button>
+    <button class="of1-roi-story-tab" role="tab" aria-selected="false" data-tab="support" data-slot="tabs.tab-2-label">Support the app</button>
+  </div>
+  <div class="of1-roi-story-panel is-active" data-panel="free">
+    <p data-slot="tabs.tab-1-body">Full access to every rhythm, background, and language. $0 today, $0 next year.</p>
+  </div>
+  <div class="of1-roi-story-panel" data-panel="support">
+    <p data-slot="tabs.tab-2-body">Choose any amount, whenever you want. It funds new backgrounds and rhythms — it doesn't unlock anything you don't already have.</p>
+  </div>
+  <script>
+    (function () {
+      var root = document.currentScript.closest('.of1-roi-story-tabs');
+      if (!root) return;
+      var tabs = root.querySelectorAll('.of1-roi-story-tab');
+      var panels = root.querySelectorAll('.of1-roi-story-panel');
+      tabs.forEach(function (tab) {
+        tab.addEventListener('click', function () {
+          tabs.forEach(function (t) { t.classList.remove('is-active'); t.setAttribute('aria-selected', 'false'); });
+          panels.forEach(function (p) { p.classList.remove('is-active'); });
+          tab.classList.add('is-active');
+          tab.setAttribute('aria-selected', 'true');
+          var target = root.querySelector('.of1-roi-story-panel[data-panel="' + tab.dataset.tab + '"]');
+          if (target) target.classList.add('is-active');
+        });
+      });
+    })();
+  </script>
+</section>
+
+<section class="of1-roi-story-quote of1-section">
+  <blockquote>
+    <p data-slot="quote.text">I stopped paying $8 a month for an app that did less than this one does for free.</p>
+    <p class="of1-roi-story-quote-attr" data-slot="quote.attribution">App Store review</p>
+  </blockquote>
+</section>
+
+<section class="of1-roi-story-cta of1-section">
+  <div class="of1-roi-story-cta-box">
+    <h2 data-slot="cta.title">Do the math. It's $0.</h2>
+    <p data-slot="cta.subtitle">Download Breathe and start your first free session today.</p>
+    <a class="of1-cta of1-cta-primary" data-slot="cta.cta-primary" href="#">Get Breathe — it's free</a>
+  </div>
+</section>
+</main>

@@ -1,0 +1,9 @@
+{
+  "html": "<div style=\"background:#23323d;padding:64px 48px;text-align:center;margin:0 auto;border-radius:22px;max-width:900px;\"><h2 style=\"font-family:'Newsreader',Georgia,serif;font-weight:400;font-size:2.2rem;color:#e8f0f5;margin:0 0 12px;line-height:1.3;\">{{title}}</h2><p style=\"font-family:'Hanken Grotesk','Trebuchet MS',sans-serif;font-size:1.1rem;color:rgba(232,240,245,0.6);margin:0 auto 28px;max-width:360px;line-height:1.5;\">{{description}}</p><a href=\"{{href}}\" style=\"display:inline-block;border:1px solid rgba(255,255,255,0.4);color:#fff;background:transparent;font-family:'Hanken Grotesk','Trebuchet MS',sans-serif;font-size:14px;font-weight:500;padding:12px 28px;border-radius:22px;text-decoration:none;\">{{buttonText}}</a></div>",
+  "slots": ["title", "description", "buttonText"],
+  "fallback": {
+    "title": "Find your calm in minutes",
+    "description": "Discover offline-ready breathing sessions with calming atmospheres, tailored to how you want to feel.",
+    "buttonText": "Get the app"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "colors": {
+    "background": "#f3f7fa",
+    "surface": "rgba(255, 255, 255, 0.75)",
+    "text": "#233039",
+    "muted": "rgba(35, 48, 57, 0.55)",
+    "primary": "#3f6486",
+    "secondary": "#9fc4e0",
+    "accent": "#3f6486",
+    "darkSection": "#23323d",
+    "darkText": "#e8f0f5",
+    "stroke": "rgba(35, 48, 57, 0.09)"
+  },
+  "typography": {
+    "headingFamily": "Newsreader, Georgia, serif",
+    "bodyFamily": "Hanken Grotesk, Trebuchet MS, sans-serif",
+    "headingWeight": "400",
+    "bodyWeight": "400",
+    "lineHeight": "1.5"
+  },
+  "rounded": "22px",
+  "spacing": {
+    "base": "16px",
+    "section": "80px",
+    "card": "24px"
+  },
+  "components": {
+    "shadow": "0 8px 28px rgba(35, 48, 57, 0.1)",
+    "shadowStrong": "0 20px 56px rgba(35, 48, 57, 0.18)",
+    "cardRadius": "22px",
+    "buttonRadius": "22px"
+  },
+  "extensions": {
+    "componentStyle": "minimal-calm",
+    "motifs": [
+      "large-radius cards with subtle shadows",
+      "dark navy CTA section with lighter serif headline",
+      "numbered feature grid (01-06)",
+      "thumbnail carousel with labeled overlay badges"
+    ],
+    "voice": {
+      "register": "brand",
+      "tone": "calm, reassuring, minimal",
+      "heroHeadline": "Find your calm in minutes.",
+      "samples": [
+        "Designed to keep the experience simple while still letting users tailor every session.",
+        "Choose from video and photo atmospheres that download once for offline sessions."
+      ]
+    },
+    "customProperties": {
+      "--ink": "#233039",
+      "--muted": "rgba(35, 48, 57, .55)",
+      "--accent": "#3f6486",
+      "--accent-light": "#9fc4e0",
+      "--surface": "rgba(255, 255, 255, .75)",
+      "--dark-section": "#23323d",
+      "--dark-ink": "#e8f0f5",
+      "--dark-muted": "rgba(232, 240, 245, .6)",
+      "--stroke": "rgba(35, 48, 57, .09)",
+      "--shadow": "0 8px 28px rgba(35, 48, 57, .1)",
+      "--shadow-strong": "0 20px 56px rgba(35, 48, 57, .18)",
+      "--radius": "22px"
+    }
+  }
+}

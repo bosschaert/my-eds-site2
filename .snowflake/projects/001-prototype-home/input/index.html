@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Breathe - Breathing App</title>
+<meta name="description" content="Breathe is a breathing app for iOS and Android with calm visuals, customizable rhythms, and offline-ready background media.">
+<link rel="icon" href="https://breathe-app.com/assets/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600&family=Newsreader:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #f3f7fa;
+  --surface: rgba(255, 255, 255, 0.75);
+  --ink: #233039;
+  --muted: rgba(35, 48, 57, 0.55);
+  --accent: #3f6486;
+  --accent-light: #9fc4e0;
+  --dark-section: #23323d;
+  --dark-ink: #e8f0f5;
+  --dark-muted: rgba(232, 240, 245, 0.6);
+  --stroke: rgba(35, 48, 57, 0.09);
+  --shadow: 0 8px 28px rgba(35, 48, 57, 0.1);
+  --shadow-strong: 0 20px 56px rgba(35, 48, 57, 0.18);
+  --radius: 22px;
+  --font-heading: 'Newsreader', Georgia, serif;
+  --font-body: 'Hanken Grotesk', 'Trebuchet MS', sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--ink);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; height: auto; }
+ul, ol { list-style: none; }
+
+/* HEADER */
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 48px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(243, 247, 250, 0.9);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header-brand svg {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+}
+
+.header-brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.header-brand-name {
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--ink);
+}
+
+.header-brand-tagline {
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.header-nav a {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--ink);
+  transition: color 0.2s;
+}
+
+.header-nav a:hover { color: var(--accent); }
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.lang-picker {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--muted);
+  border: 1px solid var(--stroke);
+  border-radius: 20px;
+  padding: 6px 14px;
+  cursor: pointer;
+}
+
+.lang-picker::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 1px solid var(--muted);
+}
+
+.header-cta {
+  background: var(--dark-section);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 20px;
+  transition: opacity 0.2s;
+}
+
+.header-cta:hover { opacity: 0.85; }
+
+/* HERO */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 60px 48px 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 40px;
+}
+
+.hero-content { max-width: 480px; }
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--surface);
+  border: 1px solid var(--stroke);
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--ink);
+  margin-bottom: 24px;
+}
+
+.hero-badge::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #4a9;
+}
+
+.hero h1 {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  line-height: 1.15;
+  color: var(--ink);
+  margin-bottom: 20px;
+}
+
+.hero h1 em {
+  font-style: italic;
+}
+
+.hero-sub {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--muted);
+  margin-bottom: 28px;
+  max-width: 380px;
+}
+
+.hero-badges {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.hero-badges img {
+  height: 40px;
+  width: auto;
+}
+
+.hero-meta {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.hero-phone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.phone-mockup {
+  position: relative;
+  width: 280px;
+  height: 570px;
+  border-radius: 40px;
+  overflow: hidden;
+  box-shadow: var(--shadow-strong);
+  background: #1a1a1a;
+}
+
+.phone-mockup img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.phone-notch {
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 24px;
+  background: #1a1a1a;
+  border-radius: 0 0 14px 14px;
+}
+
+.phone-time {
+  position: absolute;
+  top: 12px;
+  left: 24px;
+  font-size: 11px;
+  color: #fff;
+  font-weight: 500;
+}
+
+.phone-close {
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 14px;
+}
+
+/* CAPABILITIES */
+.capabilities {
+  padding: 80px 48px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.capabilities-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 48px;
+  align-items: end;
+}
+
+.capabilities-header h2 {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+  line-height: 1.2;
+  color: var(--ink);
+}
+
+.capabilities-header p {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.6;
+  max-width: 340px;
+  justify-self: end;
+}
+
+.capabilities-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.capability-card {
+  background: var(--surface);
+  border: 1px solid var(--stroke);
+  border-radius: var(--radius);
+  padding: 28px 24px;
+}
+
+.capability-num {
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-size: 24px;
+  color: var(--muted);
+  margin-bottom: 16px;
+}
+
+.capability-text {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+/* BACKGROUNDS */
+.backgrounds {
+  padding: 80px 48px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.backgrounds h2 {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+  line-height: 1.2;
+  color: var(--ink);
+  margin-bottom: 12px;
+}
+
+.backgrounds > p {
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 32px;
+  max-width: 440px;
+}
+
+.backgrounds-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.bg-card {
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid var(--stroke);
+}
+
+.bg-card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+}
+
+.bg-card-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px;
+}
+
+.bg-card-title {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.bg-card-badge {
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  background: rgba(35, 48, 57, 0.06);
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+/* RHYTHMS */
+.rhythms {
+  background: var(--dark-section);
+  padding: 100px 48px;
+  margin-top: 40px;
+}
+
+.rhythms-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.rhythms-left h2 {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+  color: var(--dark-ink);
+  margin-bottom: 12px;
+}
+
+.rhythms-left > p {
+  font-size: 14px;
+  color: var(--dark-muted);
+  margin-bottom: 48px;
+  max-width: 300px;
+}
+
+.breathing-circle {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(159, 196, 224, 0.4) 0%, rgba(159, 196, 224, 0.1) 70%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  animation: breathe-pulse 6s ease-in-out infinite;
+}
+
+@keyframes breathe-pulse {
+  0%, 100% { transform: scale(0.85); opacity: 0.7; }
+  50% { transform: scale(1); opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .breathing-circle { animation: none; transform: scale(1); opacity: 1; }
+}
+
+.breathing-circle-inner {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: rgba(159, 196, 224, 0.5);
+}
+
+.breathing-label {
+  text-align: center;
+  margin-top: 16px;
+  font-size: 12px;
+  color: var(--dark-muted);
+  letter-spacing: 0.04em;
+}
+
+.rhythms-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.rhythm-card {
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.rhythm-card img {
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+}
+
+.rhythm-card-info {
+  padding: 14px 16px;
+}
+
+.rhythm-card-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--dark-ink);
+  margin-bottom: 2px;
+}
+
+.rhythm-card-title span {
+  font-weight: 400;
+  margin-right: 4px;
+}
+
+.rhythm-card-sub {
+  font-size: 12px;
+  color: var(--dark-muted);
+}
+
+/* DOWNLOAD SECTION */
+.download-section {
+  padding: 80px 48px 40px;
+  text-align: center;
+}
+
+.download-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+
+.download-badges {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.download-badges img {
+  height: 44px;
+  width: auto;
+}
+
+/* CTA SECTION */
+.cta-section {
+  padding: 0 48px 80px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.cta-container {
+  background: var(--dark-section);
+  border-radius: var(--radius);
+  padding: 64px 48px;
+  text-align: center;
+}
+
+.cta-container h2 {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  color: var(--dark-ink);
+  margin-bottom: 12px;
+}
+
+.cta-container p {
+  font-size: 14px;
+  color: var(--dark-muted);
+  margin-bottom: 28px;
+  max-width: 360px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-button {
+  display: inline-block;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 12px 28px;
+  border-radius: var(--radius);
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.cta-button:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+/* FOOTER */
+.site-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 32px 48px;
+  border-top: 1px solid var(--stroke);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-brand svg {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+}
+
+.footer-brand-name {
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--ink);
+}
+
+.footer-nav {
+  display: flex;
+  gap: 24px;
+}
+
+.footer-nav a {
+  font-size: 13px;
+  color: var(--muted);
+  transition: color 0.2s;
+}
+
+.footer-nav a:hover { color: var(--ink); }
+
+.footer-copy {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .site-header { padding: 14px 24px; }
+  .header-nav { display: none; }
+  .lang-picker { display: none; }
+
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 40px 24px 60px;
+    text-align: center;
+  }
+  .hero-content { max-width: 100%; margin: 0 auto; }
+  .hero-sub { max-width: 100%; }
+  .hero-badges { justify-content: center; }
+  .hero-meta { text-align: center; }
+  .hero-phone { order: -1; }
+  .phone-mockup { width: 220px; height: 450px; }
+
+  .capabilities { padding: 60px 24px; }
+  .capabilities-header { grid-template-columns: 1fr; gap: 16px; }
+  .capabilities-header p { justify-self: start; }
+  .capabilities-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .backgrounds { padding: 60px 24px; }
+  .backgrounds-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .rhythms { padding: 60px 24px; }
+  .rhythms-inner { grid-template-columns: 1fr; gap: 40px; }
+  .rhythms-left { text-align: center; }
+  .rhythms-left > p { max-width: 100%; margin-left: auto; margin-right: auto; }
+
+  .download-section { padding: 60px 24px 30px; }
+  .cta-section { padding: 0 24px 60px; }
+  .cta-container { padding: 48px 24px; }
+
+  .site-footer { padding: 24px; flex-direction: column; gap: 16px; text-align: center; }
+}
+
+@media (max-width: 600px) {
+  .capabilities-grid { grid-template-columns: 1fr; }
+  .backgrounds-grid { grid-template-columns: repeat(2, 1fr); }
+  .bg-card img { height: 100px; }
+  .rhythms-grid { grid-template-columns: 1fr; }
+  .phone-mockup { width: 200px; height: 410px; }
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <a href="/" class="header-brand">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="36" height="36">
+      <defs><linearGradient id="logo-g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#a9d1da"/><stop offset="1" stop-color="#f6d9b6"/></linearGradient></defs>
+      <rect width="120" height="120" rx="28" fill="url(#logo-g)"/>
+      <circle cx="60" cy="60" r="28" fill="rgba(255,255,255,0.7)"/>
+      <path d="M30 62c10-14 20-14 30 0s20 14 30 0" fill="none" stroke="#1d7b8a" stroke-width="6" stroke-linecap="round"/>
+    </svg>
+    <span class="header-brand-text">
+      <span class="header-brand-name">Breathe</span>
+      <span class="header-brand-tagline">Mobile breathing practice</span>
+    </span>
+  </a>
+  <nav class="header-nav">
+    <a href="/">Home</a>
+    <a href="/#capabilities">Capabilities</a>
+    <a href="/support/">Support</a>
+    <a href="/privacy/">Privacy</a>
+  </nav>
+  <div class="header-right">
+    <span class="lang-picker">English <span style="font-size:10px;margin-left:4px;">&#9662;</span></span>
+    <a href="/#download" class="header-cta">Get the app</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-content">
+    <div class="hero-badge">iOS & Android</div>
+    <h1>Find your <em>calm</em><br>in minutes.</h1>
+    <p class="hero-sub">Breathe guides short, beautiful sessions — offline-ready atmospheres, smooth animations, and a clean flow that gets out of your way.</p>
+    <div class="hero-badges">
+      <a href="https://apps.apple.com/us/app/breatherelax/id6758341605"><img src="https://breathe-app.com/assets/badges/app-store-en.svg" alt="Download on the App Store" loading="eager"></a>
+      <a href="https://play.google.com/store/apps/details?id=com.breatheapp.breathe"><img src="https://breathe-app.com/assets/badges/google-play-en.svg" alt="Get it on Google Play" loading="eager"></a>
+    </div>
+    <p class="hero-meta">Free · No account · Works offline</p>
+  </div>
+  <div class="hero-phone">
+    <div class="phone-mockup">
+      <span class="phone-time">12:35</span>
+      <span class="phone-notch"></span>
+      <span class="phone-close">&times;</span>
+      <img src="https://breathe-app.com/assets/screenshots/ios/en/beach_2x.webp" alt="Beach background session" loading="eager" fetchpriority="high">
+    </div>
+  </div>
+</section>
+
+<!-- CAPABILITIES -->
+<section class="capabilities" id="capabilities">
+  <div class="capabilities-header">
+    <h2>Everything you need,<br>nothing you don't.</h2>
+    <p>Designed to keep the experience simple while still letting users tailor every session.</p>
+  </div>
+  <div class="capabilities-grid">
+    <div class="capability-card">
+      <div class="capability-num">01</div>
+      <p class="capability-text">Background carousel with videos, images, and imports from the device library.</p>
+    </div>
+    <div class="capability-card">
+      <div class="capability-num">02</div>
+      <p class="capability-text">Breathing rhythm carousel with presets and configurable inhale/exhale timings.</p>
+    </div>
+    <div class="capability-card">
+      <div class="capability-num">03</div>
+      <p class="capability-text">Start breathing button with saved selections and a session summary line.</p>
+    </div>
+    <div class="capability-card">
+      <div class="capability-num">04</div>
+      <p class="capability-text">Offline-first media with download prompts, progress indicators, and status icons.</p>
+    </div>
+    <div class="capability-card">
+      <div class="capability-num">05</div>
+      <p class="capability-text">Advanced options for duration, soundtrack, and storage management.</p>
+    </div>
+    <div class="capability-card">
+      <div class="capability-num">06</div>
+      <p class="capability-text">Available in 27 languages to support breathing practices around the world.</p>
+    </div>
+  </div>
+</section>
+
+<!-- BACKGROUNDS -->
+<section class="backgrounds" id="backgrounds">
+  <h2>Backgrounds</h2>
+  <p>Choose from video and photo atmospheres that download once for offline sessions.</p>
+  <div class="backgrounds-grid">
+    <div class="bg-card">
+      <img src="https://breathe-app.com/assets/thumbnails/beach_480.webp" alt="Beach" loading="lazy">
+      <div class="bg-card-info"><span class="bg-card-title">Beach</span><span class="bg-card-badge">VIDEO</span></div>
+    </div>
+    <div class="bg-card">
+      <img src="https://breathe-app.com/assets/thumbnails/river_480.webp" alt="River" loading="lazy">
+      <div class="bg-card-info"><span class="bg-card-title">River</span><span class="bg-card-badge">VIDEO</span></div>
+    </div>
+    <div class="bg-card">
+      <img src="https://breathe-app.com/assets/thumbnails/fireplace_480.webp" alt="Fireplace" loading="lazy">
+      <div class="bg-card-info"><span class="bg-card-title">Fireplace</span><span class="bg-card-badge">VIDEO</span></div>
+    </div>
+    <div class="bg-card">
+      <img src="https://breathe-app.com/assets/thumbnails/earth_480.webp" alt="Earth" loading="lazy">
+      <div class="bg-card-info"><span class="bg-card-title">Earth</span><span class="bg-card-badge">VIDEO</span></div>
+    </div>
+    <div class="bg-card">
+      <img src="https://breathe-app.com/assets/thumbnails/space_480.webp" alt="Space" loading="lazy">
+      <div class="bg-card-info"><span class="bg-card-title">Space</span><span class="bg-card-badge">VIDEO</span></div>
+    </div>
+    <div class="bg-card">
+      <img src="https://breathe-app.com/assets/thumbnails/seashore_480.webp" alt="Seashore" loading="lazy">
+      <div class="bg-card-info"><span class="bg-card-title">Seashore</span><span class="bg-card-badge">IMAGE</span></div>
+    </div>
+    <div class="bg-card">
+      <img src="https://breathe-app.com/assets/thumbnails/countryside_480.webp" alt="Countryside" loading="lazy">
+      <div class="bg-card-info"><span class="bg-card-title">Countryside</span><span class="bg-card-badge">IMAGE</span></div>
+    </div>
+    <div class="bg-card">
+      <img src="https://breathe-app.com/assets/thumbnails/rainforest_480.webp" alt="Rainforest" loading="lazy">
+      <div class="bg-card-info"><span class="bg-card-title">Rainforest</span><span class="bg-card-badge">IMAGE</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- BREATHING RHYTHMS -->
+<section class="rhythms" id="rhythms">
+  <div class="rhythms-inner">
+    <div class="rhythms-left">
+      <h2>Breathing rhythms</h2>
+      <p>Choose a preset or create custom inhale and exhale timings.</p>
+      <div class="breathing-circle">
+        <div class="breathing-circle-inner"></div>
+      </div>
+      <p class="breathing-label">Breathe out</p>
+    </div>
+    <div class="rhythms-grid">
+      <div class="rhythm-card">
+        <img src="https://breathe-app.com/assets/thumbnails/balance_480.webp" alt="Balance" loading="lazy">
+        <div class="rhythm-card-info">
+          <div class="rhythm-card-title"><span>5&middot;5</span> Balance</div>
+          <div class="rhythm-card-sub">5/5 second rhythm</div>
+        </div>
+      </div>
+      <div class="rhythm-card">
+        <img src="https://breathe-app.com/assets/thumbnails/relax_480.webp" alt="Relax" loading="lazy">
+        <div class="rhythm-card-info">
+          <div class="rhythm-card-title"><span>4&middot;6</span> Relax</div>
+          <div class="rhythm-card-sub">4/6 second rhythm</div>
+        </div>
+      </div>
+      <div class="rhythm-card">
+        <img src="https://breathe-app.com/assets/thumbnails/energy_480.webp" alt="Energy" loading="lazy">
+        <div class="rhythm-card-info">
+          <div class="rhythm-card-title"><span>6&middot;4</span> Energy</div>
+          <div class="rhythm-card-sub">6/4 second rhythm</div>
+        </div>
+      </div>
+      <div class="rhythm-card">
+        <img src="https://breathe-app.com/assets/thumbnails/sleep_480.webp" alt="Sleep" loading="lazy">
+        <div class="rhythm-card-info">
+          <div class="rhythm-card-title"><span>4&middot;7&middot;8</span> Sleep</div>
+          <div class="rhythm-card-sub">4/7/8s rhythm</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DOWNLOAD -->
+<section class="download-section" id="download">
+  <p class="download-label">iOS & Android &middot; Free</p>
+  <div class="download-badges">
+    <a href="https://apps.apple.com/us/app/breatherelax/id6758341605"><img src="https://breathe-app.com/assets/badges/app-store-en.svg" alt="Download on the App Store" loading="lazy"></a>
+    <a href="https://play.google.com/store/apps/details?id=com.breatheapp.breathe"><img src="https://breathe-app.com/assets/badges/google-play-en.svg" alt="Get it on Google Play" loading="lazy"></a>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="cta-container">
+    <h2>Take a breath. The good kind.</h2>
+    <p>A few minutes is all it takes. Download Breathe and start your first session today.</p>
+    <a href="/#download" class="cta-button">Get Breathe — it's free</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <a href="/" class="footer-brand">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="28" height="28">
+      <defs><linearGradient id="logo-f" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#a9d1da"/><stop offset="1" stop-color="#f6d9b6"/></linearGradient></defs>
+      <rect width="120" height="120" rx="28" fill="url(#logo-f)"/>
+      <circle cx="60" cy="60" r="28" fill="rgba(255,255,255,0.7)"/>
+      <path d="M30 62c10-14 20-14 30 0s20 14 30 0" fill="none" stroke="#1d7b8a" stroke-width="6" stroke-linecap="round"/>
+    </svg>
+    <span class="footer-brand-name">Breathe</span>
+  </a>
+  <nav class="footer-nav">
+    <a href="/#capabilities">Capabilities</a>
+    <a href="/#backgrounds">Backgrounds</a>
+    <a href="/support/">Support</a>
+    <a href="/privacy/">Privacy</a>
+  </nav>
+  <span class="footer-copy">&copy; 2026 Breathe &middot; Available in 27 languages</span>
+</footer>
+
+</body>
+</html>

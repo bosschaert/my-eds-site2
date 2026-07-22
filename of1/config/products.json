@@ -1,0 +1,433 @@
+[
+  {
+    "id": "rhythm-balance",
+    "name": "Balance",
+    "category": "Breathing rhythm",
+    "price": 0,
+    "currency": "USD",
+    "images": [
+      "https://main--of1-3dd20e77--of1-labs.aem.page/media/rhythm-balance-1.webp",
+      "https://main--of1-3dd20e77--of1-labs.aem.page/media/rhythm-balance-2.webp",
+      "https://main--of1-3dd20e77--of1-labs.aem.page/media/rhythm-balance-3.webp",
+      "https://main--of1-3dd20e77--of1-labs.aem.page/media/rhythm-balance-4.png",
+      "https://main--of1-3dd20e77--of1-labs.aem.page/media/rhythm-balance-5.png"
+    ],
+    "url": "https://breathe-app.com/#rhythms",
+    "description": "Balance is Breathe's 5-second-in, 5-second-out rhythm \u2014 an even, steady cadence designed as a neutral reset you can use any time of day. It's the default preset shown first because it works as a baseline for anyone new to guided breathing.",
+    "features": [
+      "Even 5/5 inhale-exhale ratio",
+      "No hold phase",
+      "Animated orb visualization guides pace",
+      "Works with any background atmosphere"
+    ],
+    "highlights": [
+      "Simplest rhythm to start with",
+      "Good for a quick midday reset"
+    ],
+    "persona": "focus-work-seeker",
+    "useCase": "focus-during-work",
+    "keywords": [
+      "balance breathing",
+      "5 5 rhythm",
+      "even breathing",
+      "steady breath",
+      "beginner breathing exercise",
+      "quick reset",
+      "midday break",
+      "simple breathing pattern"
+    ]
+  },
+  {
+    "id": "rhythm-relax",
+    "name": "Relax",
+    "category": "Breathing rhythm",
+    "price": 0,
+    "currency": "USD",
+    "images": [
+      "https://main--of1-3dd20e77--of1-labs.aem.page/media/rhythm-relax-1.webp",
+      "https://main--of1-3dd20e77--of1-labs.aem.page/media/rhythm-relax-2.webp",
+      "https://main--of1-3dd20e77--of1-labs.aem.page/media/rhythm-relax-3.webp",
+      "https://main--of1-3dd20e77--of1-labs.aem.page/media/rhythm-relax-4.png",
+      "https://main--of1-3dd20e77--of1-labs.aem.page/media/rhythm-relax-5.png"
+    ],
+    "url": "https://breathe-app.com/#rhythms",
+    "description": "Relax uses a 4-second inhale and 6-second exhale \u2014 a longer exhale to gently calm the nervous system after a stressful stretch of the day. It's the rhythm to reach for when tension builds up and you need a few minutes to unwind.",
+    "features": [
+      "4/6 inhale-exhale ratio",
+      "Longer exhale for calming effect",
+      "Animated orb visualization",
+      "Pairs well with calming backgrounds"
+    ],
+    "highlights": [
+      "Designed for stress relief",
+      "Longer exhale slows heart rate"
+    ],
+    "persona": "stress-relief-seeker",
+    "useCase": "quick-stress-reset",
+    "keywords": [
+      "relax breathing",
+      "4 6 rhythm",
+      "stress relief breathing",
+      "calm down",
+      "anxiety breathing exercise",
+      "longer exhale",
+      "unwind after work",
+      "afternoon stress"
+    ]
+  },
+  {
+    "id": "rhythm-energy",
+    "name": "Energy",
+    "category": "Breathing rhythm",
+    "price": 0,
+    "currency": "USD",
+    "images": [
+      "https://main--of1-3dd20e77--of1-labs.aem.page/media/rhythm-energy-1.webp",
+      "https://main--of1-3dd20e77--of1-labs.aem.page/media/rhythm-energy-2.webp",
+      "https://main--of1-3dd20e77--of1-labs.aem.page/media/rhythm-energy-3.webp",
+      "https://main--of1-3dd20e77--of1-labs.aem.page/media/rhythm-energy-4.png"
+    ],
+    "url": "https://breathe-app.com/#rhythms",
+    "description": "Energy flips the ratio to a 6-second inhale and 4-second exhale, giving sessions a brighter, more activating feel. It's built for mornings or slow afternoons when you want alertness rather than calm.",
+    "features": [
+      "6/4 inhale-exhale ratio",
+      "Shorter exhale for an activating effect",
+      "Animated orb visualization",
+      "Pairs well with bright, outdoor backgrounds"
+    ],
+    "highlights": [
+      "Morning energy boost",
+      "Faster-paced than Balance or Relax"
+    ],
+    "persona": "morning-energy-seeker",
+    "useCase": "morning-energy",
+    "keywords": [
+      "energy breathing",
+      "6 4 rhythm",
+      "morning energy",
+      "wake up breathing",
+      "alertness exercise",
+      "energizing breath work",
+      "quick morning routine",
+      "focus and alertness"
+    ]
+  },
+  {
+    "id": "rhythm-sleep",
+    "name": "Sleep",
+    "category": "Breathing rhythm",
+    "price": 0,
+    "currency": "USD",
+    "images": [
+      "https://main--of1-3dd20e77--of1-labs.aem.page/media/rhythm-sleep-1.webp",
+      "https://main--of1-3dd20e77--of1-labs.aem.page/media/rhythm-sleep-2.webp",
+      "https://main--of1-3dd20e77--of1-labs.aem.page/media/rhythm-sleep-3.webp",
+      "https://main--of1-3dd20e77--of1-labs.aem.page/media/rhythm-sleep-4.png",
+      "https://main--of1-3dd20e77--of1-labs.aem.page/media/rhythm-sleep-5.png"
+    ],
+    "url": "https://breathe-app.com/#rhythms",
+    "description": "Sleep is the 4/7/8 preset \u2014 a 4-second inhale, 7-second hold, and 8-second exhale, one of the most widely used patterns for winding down before bed. Pair it with a dim, quiet background like Fireplace or Space for an evening session.",
+    "features": [
+      "4/7/8 inhale-hold-exhale ratio",
+      "Includes a hold phase, unlike other presets",
+      "Animated orb visualization",
+      "Pairs well with dim, evening backgrounds"
+    ],
+    "highlights": [
+      "Built for pre-sleep wind-down",
+      "Only preset with a hold phase"
+    ],
+    "persona": "sleep-support-seeker",
+    "useCase": "better-sleep",
+    "keywords": [
+      "sleep breathing",
+      "4 7 8 rhythm",
+      "fall asleep faster",
+      "insomnia breathing exercise",
+      "bedtime routine",
+      "wind down before bed",
+      "evening breathing",
+      "relaxation for sleep"
+    ]
+  },
+  {
+    "id": "bg-beach",
+    "name": "Beach",
+    "category": "Background atmosphere",
+    "price": 0,
+    "currency": "USD",
+    "images": [
+      "https://main--of1-3dd20e77--of1-labs.aem.page/media/bg-beach-1.webp",
+      "https://main--of1-3dd20e77--of1-labs.aem.page/media/bg-beach-2.webp",
+      "https://main--of1-3dd20e77--of1-labs.aem.page/media/bg-beach-3.png",
+      "https://main--of1-3dd20e77--of1-labs.aem.page/media/bg-beach-4.png"
+    ],
+    "url": "https://breathe-app.com/#backgrounds",
+    "description": "Beach is a video atmosphere of gentle waves rolling onshore, downloaded once for fully offline sessions. Its bright, open feel makes it a favorite for morning or daytime breathing sessions.",
+    "features": [
+      "Full-motion video atmosphere",
+      "Downloads once for offline playback",
+      "Loops seamlessly during a session"
+    ],
+    "highlights": [
+      "Bright, open, energizing scene",
+      "One of 5 video atmospheres"
+    ],
+    "persona": "morning-energy-seeker",
+    "useCase": "morning-energy",
+    "keywords": [
+      "beach background",
+      "ocean waves",
+      "morning breathing scene",
+      "video atmosphere",
+      "offline background",
+      "calming ocean sounds",
+      "outdoor scene"
+    ]
+  },
+  {
+    "id": "bg-river",
+    "name": "River",
+    "category": "Background atmosphere",
+    "price": 0,
+    "currency": "USD",
+    "images": [
+      "https://main--of1-3dd20e77--of1-labs.aem.page/media/bg-river-1.webp",
+      "https://main--of1-3dd20e77--of1-labs.aem.page/media/bg-river-2.webp",
+      "https://main--of1-3dd20e77--of1-labs.aem.page/media/bg-river-3.png",
+      "https://main--of1-3dd20e77--of1-labs.aem.page/media/bg-river-4.webp"
+    ],
+    "url": "https://breathe-app.com/#backgrounds",
+    "description": "River is a video atmosphere of flowing water over smooth stones, offering a continuous, grounding motion for calming sessions. It downloads once and plays fully offline.",
+    "features": [
+      "Full-motion video atmosphere",
+      "Downloads once for offline playback",
+      "Continuous flowing-water motion"
+    ],
+    "highlights": [
+      "Grounding, steady motion",
+      "One of 5 video atmospheres"
+    ],
+    "persona": "stress-relief-seeker",
+    "useCase": "quick-stress-reset",
+    "keywords": [
+      "river background",
+      "flowing water",
+      "calming video scene",
+      "stress relief background",
+      "nature sounds",
+      "offline atmosphere",
+      "grounding visual"
+    ]
+  },
+  {
+    "id": "bg-fireplace",
+    "name": "Fireplace",
+    "category": "Background atmosphere",
+    "price": 0,
+    "currency": "USD",
+    "images": [
+      "https://main--of1-3dd20e77--of1-labs.aem.page/media/bg-fireplace-1.webp",
+      "https://main--of1-3dd20e77--of1-labs.aem.page/media/bg-fireplace-2.webp",
+      "https://main--of1-3dd20e77--of1-labs.aem.page/media/bg-fireplace-3.png",
+      "https://main--of1-3dd20e77--of1-labs.aem.page/media/bg-fireplace-4.png"
+    ],
+    "url": "https://breathe-app.com/#backgrounds",
+    "description": "Fireplace is a warm, dim video atmosphere of flickering flames, made for evening sessions when the goal is to wind down. It's a natural pairing with the Sleep rhythm ahead of bed.",
+    "features": [
+      "Full-motion video atmosphere",
+      "Downloads once for offline playback",
+      "Warm, low-light visual tone"
+    ],
+    "highlights": [
+      "Ideal for evening wind-down",
+      "Pairs naturally with the Sleep rhythm"
+    ],
+    "persona": "sleep-support-seeker",
+    "useCase": "evening-wind-down",
+    "keywords": [
+      "fireplace background",
+      "cozy video scene",
+      "evening wind down",
+      "bedtime atmosphere",
+      "warm ambience",
+      "relaxing fire video",
+      "offline night background"
+    ]
+  },
+  {
+    "id": "bg-earth",
+    "name": "Earth",
+    "category": "Background atmosphere",
+    "price": 0,
+    "currency": "USD",
+    "images": [
+      "https://main--of1-3dd20e77--of1-labs.aem.page/media/bg-earth-1.webp",
+      "https://main--of1-3dd20e77--of1-labs.aem.page/media/bg-earth-2.webp",
+      "https://main--of1-3dd20e77--of1-labs.aem.page/media/bg-earth-3.png",
+      "https://main--of1-3dd20e77--of1-labs.aem.page/media/bg-earth-4.png"
+    ],
+    "url": "https://breathe-app.com/#backgrounds",
+    "description": "Earth is a video atmosphere showing the planet slowly rotating from orbit, offering a sense of quiet scale that works well for a focused, centering session at any time of day.",
+    "features": [
+      "Full-motion video atmosphere",
+      "Downloads once for offline playback",
+      "Slow, wide-angle rotating visual"
+    ],
+    "highlights": [
+      "Centering, big-picture perspective",
+      "One of 5 video atmospheres"
+    ],
+    "persona": "focus-work-seeker",
+    "useCase": "focus-during-work",
+    "keywords": [
+      "earth background",
+      "planet view",
+      "space perspective",
+      "centering visual",
+      "focus breathing background",
+      "orbit video",
+      "calm workday break"
+    ]
+  },
+  {
+    "id": "bg-space",
+    "name": "Space",
+    "category": "Background atmosphere",
+    "price": 0,
+    "currency": "USD",
+    "images": [
+      "https://main--of1-3dd20e77--of1-labs.aem.page/media/bg-space-1.webp",
+      "https://main--of1-3dd20e77--of1-labs.aem.page/media/bg-space-2.webp",
+      "https://main--of1-3dd20e77--of1-labs.aem.page/media/bg-space-3.png",
+      "https://main--of1-3dd20e77--of1-labs.aem.page/media/bg-space-4.png"
+    ],
+    "url": "https://breathe-app.com/#backgrounds",
+    "description": "Space is a dark, star-filled video atmosphere with slow drifting motion \u2014 the deepest, quietest visual in the collection. It's a strong match for late-night sessions with the Sleep rhythm.",
+    "features": [
+      "Full-motion video atmosphere",
+      "Downloads once for offline playback",
+      "Dark, minimal-light visual tone"
+    ],
+    "highlights": [
+      "Deepest, darkest atmosphere",
+      "Well suited to late-night sessions"
+    ],
+    "persona": "sleep-support-seeker",
+    "useCase": "better-sleep",
+    "keywords": [
+      "space background",
+      "stars video",
+      "night sky atmosphere",
+      "dark calming visual",
+      "late night breathing",
+      "sleep background",
+      "deep relaxation scene"
+    ]
+  },
+  {
+    "id": "bg-seashore",
+    "name": "Seashore",
+    "category": "Background atmosphere",
+    "price": 0,
+    "currency": "USD",
+    "images": [
+      "https://main--of1-3dd20e77--of1-labs.aem.page/media/bg-seashore-1.webp",
+      "https://main--of1-3dd20e77--of1-labs.aem.page/media/bg-seashore-2.webp",
+      "https://main--of1-3dd20e77--of1-labs.aem.page/media/bg-seashore-3.webp",
+      "https://main--of1-3dd20e77--of1-labs.aem.page/media/bg-seashore-4.jpg"
+    ],
+    "url": "https://breathe-app.com/#backgrounds",
+    "description": "Seashore is a static photo atmosphere of a calm shoreline, offering a lighter-weight, still alternative to the video backgrounds for anyone who prefers a quieter visual during a session.",
+    "features": [
+      "Static photo atmosphere",
+      "Downloads once for offline use",
+      "Lower-motion alternative to video scenes"
+    ],
+    "highlights": [
+      "Quiet, still visual",
+      "One of 3 photo atmospheres"
+    ],
+    "persona": "stress-relief-seeker",
+    "useCase": "quick-stress-reset",
+    "keywords": [
+      "seashore background",
+      "beach photo",
+      "calm still image",
+      "quiet visual",
+      "photo atmosphere",
+      "coastal scene",
+      "offline photo background"
+    ]
+  },
+  {
+    "id": "bg-countryside",
+    "name": "Countryside",
+    "category": "Background atmosphere",
+    "price": 0,
+    "currency": "USD",
+    "images": [
+      "https://main--of1-3dd20e77--of1-labs.aem.page/media/bg-countryside-1.webp",
+      "https://main--of1-3dd20e77--of1-labs.aem.page/media/bg-countryside-2.webp",
+      "https://main--of1-3dd20e77--of1-labs.aem.page/media/bg-countryside-3.webp",
+      "https://main--of1-3dd20e77--of1-labs.aem.page/media/bg-countryside-4.png"
+    ],
+    "url": "https://breathe-app.com/#backgrounds",
+    "description": "Countryside is a static photo atmosphere of open rolling fields, a gentle, low-stimulation backdrop for sessions where you want the visual to stay out of the way.",
+    "features": [
+      "Static photo atmosphere",
+      "Downloads once for offline use",
+      "Open, low-stimulation scene"
+    ],
+    "highlights": [
+      "Gentle daytime visual",
+      "One of 3 photo atmospheres"
+    ],
+    "persona": "focus-work-seeker",
+    "useCase": "focus-during-work",
+    "keywords": [
+      "countryside background",
+      "field photo",
+      "rural scene",
+      "calm daytime visual",
+      "photo atmosphere",
+      "open landscape",
+      "quiet backdrop"
+    ]
+  },
+  {
+    "id": "bg-rainforest",
+    "name": "Rainforest",
+    "category": "Background atmosphere",
+    "price": 0,
+    "currency": "USD",
+    "images": [
+      "https://main--of1-3dd20e77--of1-labs.aem.page/media/bg-rainforest-1.webp",
+      "https://main--of1-3dd20e77--of1-labs.aem.page/media/bg-rainforest-2.webp",
+      "https://main--of1-3dd20e77--of1-labs.aem.page/media/bg-rainforest-3.webp",
+      "https://main--of1-3dd20e77--of1-labs.aem.page/media/bg-rainforest-4.png"
+    ],
+    "url": "https://breathe-app.com/#backgrounds",
+    "description": "Rainforest is a static photo atmosphere of dense green canopy, offering a lush, natural backdrop for sessions focused on grounding and refocusing during the day.",
+    "features": [
+      "Static photo atmosphere",
+      "Downloads once for offline use",
+      "Lush, green natural scene"
+    ],
+    "highlights": [
+      "Grounding natural visual",
+      "One of 3 photo atmospheres"
+    ],
+    "persona": "morning-energy-seeker",
+    "useCase": "morning-energy",
+    "keywords": [
+      "rainforest background",
+      "jungle photo",
+      "green nature scene",
+      "grounding visual",
+      "photo atmosphere",
+      "natural backdrop",
+      "refocus break"
+    ]
+  }
+]

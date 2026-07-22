@@ -1,0 +1,156 @@
+{
+  "_provenance": {
+    "renderedBy": "playwright",
+    "fetchedAt": "2026-07-22T07:35:33.077Z",
+    "waitMode": "medium",
+    "waitMs": 2500,
+    "httpStatus": 200
+  },
+  "slug": "support",
+  "url": "https://breathe-app.com/support/",
+  "renderedBy": "playwright",
+  "fetchedAt": "2026-07-22T07:35:33.077Z",
+  "finalUrl": "https://breathe-app.com/support/",
+  "title": "Help & Support — Breathe",
+  "description": "Get in touch or support the app — we appreciate every message. Have a question, a bug to report, or just want to share feedback? We'd love to hear from you.",
+  "og": {
+    "title": "Help & Support — Breathe",
+    "description": "Get in touch or support the app — we appreciate every message. Have a question, a bug to report, or just want to share feedback? We'd love to hear from you.",
+    "image": "https://www.breathe-app.com/assets/screenshots/home-og.jpg",
+    "type": "website"
+  },
+  "headings": [
+    {
+      "tag": "h1",
+      "text": "Help & Support"
+    },
+    {
+      "tag": "h2",
+      "text": "Contact us"
+    },
+    {
+      "tag": "h2",
+      "text": "Support the app"
+    },
+    {
+      "tag": "h2",
+      "text": "Also try RankingsHub"
+    }
+  ],
+  "body": [
+    "Get in touch or support the app — we appreciate every message.",
+    "Have a question, a bug to report, or just want to share feedback? We'd love to hear from you.",
+    "Breathe is free and ad-free. If it helps your daily practice, consider a small donation to keep it going.",
+    "RankingsHub tracks world sports rankings so you don't have to. Free for iOS & Android."
+  ],
+  "codeBlocks": [],
+  "ctas": [
+    {
+      "label": "Breathe Mobile breathing practice",
+      "href": "/"
+    },
+    {
+      "label": "Home",
+      "href": "/"
+    },
+    {
+      "label": "Capabilities",
+      "href": "/#capabilities"
+    },
+    {
+      "label": "Support",
+      "href": "/support/"
+    },
+    {
+      "label": "Privacy",
+      "href": "/privacy/"
+    },
+    {
+      "label": "Get the app",
+      "href": "/#download"
+    },
+    {
+      "label": "contact@breathe-app.com",
+      "href": "mailto:contact@breathe-app.com"
+    },
+    {
+      "label": "Donate",
+      "href": "https://buy.stripe.com/9B6aEWeUSbbx0kyg9J6Na01"
+    },
+    {
+      "label": "Visit RankingsHub",
+      "href": "https://rankingshub.app"
+    },
+    {
+      "label": "Breathe",
+      "href": "/"
+    },
+    {
+      "label": "Capabilities",
+      "href": "/#capabilities"
+    },
+    {
+      "label": "Support",
+      "href": "/support/"
+    },
+    {
+      "label": "Privacy",
+      "href": "/privacy/"
+    }
+  ],
+  "links": [
+    "https://breathe-app.com/",
+    "https://breathe-app.com/#capabilities",
+    "https://breathe-app.com/support/",
+    "https://breathe-app.com/privacy/",
+    "https://breathe-app.com/#download",
+    "mailto:contact@breathe-app.com",
+    "https://buy.stripe.com/9B6aEWeUSbbx0kyg9J6Na01",
+    "https://rankingshub.app/"
+  ],
+  "media": {
+    "imgs": [
+      {
+        "src": "https://breathe-app.com/assets/app-icon.webp",
+        "alt": "Breathe app icon",
+        "w": 96,
+        "h": 96
+      },
+      {
+        "src": "https://breathe-app.com/assets/app-icon.webp",
+        "alt": "Breathe app icon",
+        "w": 96,
+        "h": 96
+      }
+    ],
+    "allImgCount": 2,
+    "cssBackgrounds": [],
+    "modals": [],
+    "videos": [],
+    "iframes": []
+  },
+  "customProps": {
+    "--ink": "#233039",
+    "--muted": "rgba(35, 48, 57, .55)",
+    "--accent": "#3f6486",
+    "--accent-light": "#9fc4e0",
+    "--surface": "rgba(255, 255, 255, .75)",
+    "--dark-section": "#23323d",
+    "--dark-ink": "#e8f0f5",
+    "--dark-muted": "rgba(232, 240, 245, .6)",
+    "--stroke": "rgba(35, 48, 57, .09)",
+    "--shadow": "0 8px 28px rgba(35, 48, 57, .1)",
+    "--shadow-strong": "0 20px 56px rgba(35, 48, 57, .18)",
+    "--radius": "22px"
+  },
+  "_signals": {
+    "filteredInterstitials": 0,
+    "distinctHeadings": 4,
+    "mainTextLen": 718,
+    "realImageCount": 2,
+    "trackingOnlyMedia": false,
+    "spaShellSuspect": false,
+    "screenshotMode": "fullPage"
+  },
+  "screenshot": "assets/screenshots/support.png"
+}

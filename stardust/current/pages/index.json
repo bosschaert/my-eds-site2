@@ -1,0 +1,346 @@
+{
+  "_provenance": {
+    "renderedBy": "playwright",
+    "fetchedAt": "2026-07-22T07:35:39.361Z",
+    "waitMode": "medium",
+    "waitMs": 2500,
+    "httpStatus": 200
+  },
+  "slug": "index",
+  "url": "https://breathe-app.com/",
+  "renderedBy": "playwright",
+  "fetchedAt": "2026-07-22T07:35:39.361Z",
+  "finalUrl": "https://breathe-app.com/",
+  "title": "Breathe - Breathing App",
+  "description": "Breathe is a breathing app for iOS and Android with calm visuals, customizable rhythms, and offline-ready background media.",
+  "og": {
+    "title": "Breathe - Breathing App",
+    "description": "Breathe is a breathing app for iOS and Android with calm visuals, customizable rhythms, and offline-ready background media.",
+    "image": "https://www.breathe-app.com/assets/screenshots/home-og.jpg",
+    "type": "website"
+  },
+  "headings": [
+    {
+      "tag": "h1",
+      "text": "Find your calmin minutes."
+    },
+    {
+      "tag": "h2",
+      "text": "Everything you need,nothing you don't."
+    },
+    {
+      "tag": "h2",
+      "text": "Backgrounds"
+    },
+    {
+      "tag": "h3",
+      "text": "Beach"
+    },
+    {
+      "tag": "h3",
+      "text": "River"
+    },
+    {
+      "tag": "h3",
+      "text": "Fireplace"
+    },
+    {
+      "tag": "h3",
+      "text": "Earth"
+    },
+    {
+      "tag": "h3",
+      "text": "Space"
+    },
+    {
+      "tag": "h3",
+      "text": "Seashore"
+    },
+    {
+      "tag": "h3",
+      "text": "Countryside"
+    },
+    {
+      "tag": "h3",
+      "text": "Rainforest"
+    },
+    {
+      "tag": "h2",
+      "text": "Breathing rhythms"
+    },
+    {
+      "tag": "h2",
+      "text": "Take a breath. The good kind."
+    }
+  ],
+  "body": [
+    "Designed to keep the experience simple while still letting users tailor every session.",
+    "Background carousel with videos, images, and imports from the device library.",
+    "Breathing rhythm carousel with presets and configurable inhale/exhale timings.",
+    "Start breathing button with saved selections and a session summary line.",
+    "Offline-first media with download prompts, progress indicators, and status icons.",
+    "Advanced options for duration, soundtrack, and storage management.",
+    "Available in 27 languages to support breathing practices around the world.",
+    "Choose from video and photo atmospheres that download once for offline sessions."
+  ],
+  "codeBlocks": [],
+  "ctas": [
+    {
+      "label": "Breathe Mobile breathing practice",
+      "href": "/"
+    },
+    {
+      "label": "Home",
+      "href": "/"
+    },
+    {
+      "label": "Capabilities",
+      "href": "/#capabilities"
+    },
+    {
+      "label": "Support",
+      "href": "/support/"
+    },
+    {
+      "label": "Privacy",
+      "href": "/privacy/"
+    },
+    {
+      "label": "Get the app",
+      "href": "/#download"
+    },
+    {
+      "label": "5·5 Balance 5/5 second rhythm",
+      "href": null
+    },
+    {
+      "label": "4·6 Relax 4/6 second rhythm",
+      "href": null
+    },
+    {
+      "label": "6·4 Energy 6/4 second rhythm",
+      "href": null
+    },
+    {
+      "label": "4·7·8 Sleep 4/7/8s rhythm",
+      "href": null
+    },
+    {
+      "label": "Get Breathe — it's free",
+      "href": "/#download"
+    },
+    {
+      "label": "Breathe",
+      "href": "/"
+    },
+    {
+      "label": "Capabilities",
+      "href": "/#capabilities"
+    },
+    {
+      "label": "Backgrounds",
+      "href": "/#backgrounds"
+    },
+    {
+      "label": "Support",
+      "href": "/support/"
+    },
+    {
+      "label": "Privacy",
+      "href": "/privacy/"
+    }
+  ],
+  "links": [
+    "https://breathe-app.com/",
+    "https://breathe-app.com/#capabilities",
+    "https://breathe-app.com/support/",
+    "https://breathe-app.com/privacy/",
+    "https://breathe-app.com/#download",
+    "https://apps.apple.com/us/app/breatherelax/id6758341605",
+    "https://play.google.com/store/apps/details?id=com.breatheapp.breathe",
+    "https://breathe-app.com/#backgrounds"
+  ],
+  "media": {
+    "imgs": [
+      {
+        "src": "https://breathe-app.com/assets/app-icon.webp",
+        "alt": "Breathe app icon",
+        "w": 96,
+        "h": 96
+      },
+      {
+        "src": "https://breathe-app.com/assets/badges/app-store-en.svg",
+        "alt": "Download on the App Store",
+        "w": 120,
+        "h": 40
+      },
+      {
+        "src": "https://breathe-app.com/assets/badges/google-play-en.svg",
+        "alt": "Get it on Google Play",
+        "w": 300,
+        "h": 89
+      },
+      {
+        "src": "https://breathe-app.com/assets/screenshots/ios/en/home_2x.webp",
+        "alt": "Breathe home screen",
+        "w": 617,
+        "h": 1342
+      },
+      {
+        "src": "https://breathe-app.com/assets/screenshots/ios/en/config_2x.webp",
+        "alt": "Advanced options screen",
+        "w": 617,
+        "h": 1342
+      },
+      {
+        "src": "https://breathe-app.com/assets/screenshots/ios/en/beach_2x.webp",
+        "alt": "Beach background session",
+        "w": 617,
+        "h": 1342
+      },
+      {
+        "src": "https://breathe-app.com/assets/screenshots/ios/en/river_2x.webp",
+        "alt": "River background session",
+        "w": 617,
+        "h": 1342
+      },
+      {
+        "src": "https://breathe-app.com/assets/screenshots/ios/en/fireplace_2x.webp",
+        "alt": "Fireplace",
+        "w": 617,
+        "h": 1342
+      },
+      {
+        "src": "https://breathe-app.com/assets/screenshots/ios/en/earth_2x.webp",
+        "alt": "Earth",
+        "w": 617,
+        "h": 1342
+      },
+      {
+        "src": "https://breathe-app.com/assets/screenshots/ios/en/space_2x.webp",
+        "alt": "Space",
+        "w": 617,
+        "h": 1342
+      },
+      {
+        "src": "https://breathe-app.com/assets/thumbnails/beach_480.webp",
+        "alt": "Beach",
+        "w": 480,
+        "h": 270
+      },
+      {
+        "src": "https://breathe-app.com/assets/thumbnails/river_480.webp",
+        "alt": "River",
+        "w": 480,
+        "h": 270
+      },
+      {
+        "src": "https://breathe-app.com/assets/thumbnails/fireplace_480.webp",
+        "alt": "Fireplace",
+        "w": 480,
+        "h": 270
+      },
+      {
+        "src": "https://breathe-app.com/assets/thumbnails/earth_480.webp",
+        "alt": "Earth",
+        "w": 480,
+        "h": 270
+      },
+      {
+        "src": "https://breathe-app.com/assets/thumbnails/space_480.webp",
+        "alt": "Space",
+        "w": 480,
+        "h": 270
+      },
+      {
+        "src": "https://breathe-app.com/assets/thumbnails/seashore_480.webp",
+        "alt": "Seashore",
+        "w": 480,
+        "h": 270
+      },
+      {
+        "src": "https://breathe-app.com/assets/thumbnails/countryside_480.webp",
+        "alt": "Countryside",
+        "w": 480,
+        "h": 274
+      },
+      {
+        "src": "https://breathe-app.com/assets/thumbnails/rainforest_480.webp",
+        "alt": "Rainforest",
+        "w": 480,
+        "h": 274
+      },
+      {
+        "src": "https://breathe-app.com/assets/thumbnails/balance_480.webp",
+        "alt": "Balance",
+        "w": 480,
+        "h": 373
+      },
+      {
+        "src": "https://breathe-app.com/assets/thumbnails/relax_480.webp",
+        "alt": "Relax",
+        "w": 480,
+        "h": 373
+      },
+      {
+        "src": "https://breathe-app.com/assets/thumbnails/energy_480.webp",
+        "alt": "Energy",
+        "w": 480,
+        "h": 373
+      },
+      {
+        "src": "https://breathe-app.com/assets/thumbnails/sleep_480.webp",
+        "alt": "Sleep",
+        "w": 480,
+        "h": 373
+      },
+      {
+        "src": "https://breathe-app.com/assets/badges/app-store-en.svg",
+        "alt": "Download on the App Store",
+        "w": 120,
+        "h": 40
+      },
+      {
+        "src": "https://breathe-app.com/assets/badges/google-play-en.svg",
+        "alt": "Get it on Google Play",
+        "w": 300,
+        "h": 89
+      },
+      {
+        "src": "https://breathe-app.com/assets/app-icon.webp",
+        "alt": "Breathe app icon",
+        "w": 96,
+        "h": 96
+      }
+    ],
+    "allImgCount": 25,
+    "cssBackgrounds": [],
+    "modals": [],
+    "videos": [],
+    "iframes": []
+  },
+  "customProps": {
+    "--ink": "#233039",
+    "--muted": "rgba(35, 48, 57, .55)",
+    "--accent": "#3f6486",
+    "--accent-light": "#9fc4e0",
+    "--surface": "rgba(255, 255, 255, .75)",
+    "--dark-section": "#23323d",
+    "--dark-ink": "#e8f0f5",
+    "--dark-muted": "rgba(232, 240, 245, .6)",
+    "--stroke": "rgba(35, 48, 57, .09)",
+    "--shadow": "0 8px 28px rgba(35, 48, 57, .1)",
+    "--shadow-strong": "0 20px 56px rgba(35, 48, 57, .18)",
+    "--radius": "22px"
+  },
+  "_signals": {
+    "filteredInterstitials": 0,
+    "distinctHeadings": 13,
+    "mainTextLen": 804,
+    "realImageCount": 25,
+    "trackingOnlyMedia": false,
+    "spaShellSuspect": false,
+    "screenshotMode": "fullPage"
+  },
+  "screenshot": "assets/screenshots/index.png"
+}

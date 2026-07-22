@@ -1,0 +1,45 @@
+{
+  "personality": "calm, minimal, reassuring, intentional, trustworthy",
+  "tone": "Warm but understated — every sentence sounds like an exhale, not a pitch. Benefit-first, plain language, never hyped or urgent. Confidence comes from restraint, not superlatives.",
+  "vocabulary": [
+    "breathing rhythm",
+    "session",
+    "atmosphere",
+    "background",
+    "inhale",
+    "exhale",
+    "offline-ready",
+    "offline-first",
+    "ad-free",
+    "no account",
+    "guided breathing",
+    "preset",
+    "device library",
+    "download once",
+    "calm",
+    "practice"
+  ],
+  "avoidWords": [
+    "revolutionary",
+    "game-changing",
+    "addictive",
+    "streak",
+    "gamify",
+    "unlock",
+    "premium",
+    "subscribe now",
+    "limited time",
+    "act now",
+    "hurry",
+    "hack",
+    "supercharge",
+    "disrupt"
+  ],
+  "sentenceStyle": "Short, declarative sentences with minimal subordinate clauses. Frequent benefit-first framing (state the outcome, then the mechanism). Comfortable with fragments for emphasis, e.g. \"Free · No account · Works offline.\" Avoids exclamation points and hard-sell CTAs — buttons read as invitations (\"Get the app\", \"Get Breathe — it's free\") rather than commands.",
+  "toneByContext": {
+    "recommendations": "Gentle and non-prescriptive — presents a rhythm or atmosphere as a good fit for a stated need (\"stress relief\", \"sleep\", \"focus\") without insisting it's the only right choice. Frames suggestions as options to try, not directives to follow.",
+    "comparisons": "Understated and factual. Differentiates on simplicity and privacy (free, ad-free, no accounts, no tracking) rather than disparaging alternatives or leaning on superlatives.",
+    "educational": "Clear and reassuring. Explains a feature or policy in one or two plain sentences, then stops — no over-explaining, no jargon, no caveats stacked on caveats.",
+    "discovery": "Inviting and low-pressure. Uses verbs like \"choose\", \"try\", and \"find what works for you\" when surfacing backgrounds, rhythms, or new sessions; never rushes the user toward a decision."
+  }
+}

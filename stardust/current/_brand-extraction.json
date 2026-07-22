@@ -1,0 +1,118 @@
+{
+  "_provenance": {
+    "extractedAt": "2026-07-22T07:35:00Z",
+    "origin": "https://breathe-app.com",
+    "pagesCrawled": 3,
+    "totalDiscovered": 3,
+    "method": "stardust:extract via crawl.mjs"
+  },
+  "origins": [
+    {
+      "url": "https://breathe-app.com",
+      "role": "primary",
+      "pagesContributed": 3,
+      "contributedSignals": ["palette", "type", "motifs", "voice", "systemComponents"]
+    }
+  ],
+  "palette": {
+    "background": "#f3f7fa",
+    "surface": "rgba(255, 255, 255, 0.75)",
+    "text": "#233039",
+    "muted": "rgba(35, 48, 57, 0.55)",
+    "primary": "#3f6486",
+    "secondary": "#9fc4e0",
+    "accent": "#3f6486",
+    "darkSection": "#23323d",
+    "darkText": "#e8f0f5",
+    "darkMuted": "rgba(232, 240, 245, 0.6)",
+    "stroke": "rgba(35, 48, 57, 0.09)",
+    "_source": "CSS custom properties consistent across all 3 pages"
+  },
+  "type": {
+    "headingFamily": "Newsreader, Georgia, serif",
+    "bodyFamily": "Hanken Grotesk, Trebuchet MS, sans-serif",
+    "headingWeights": ["400"],
+    "bodyWeights": ["400", "500"],
+    "scaleAudit": {
+      "kind": "ad-hoc",
+      "notes": "Heading sizes vary per section context; no strict modular scale detected"
+    },
+    "files": [
+      {
+        "family": "Newsreader",
+        "url": "https://fonts.gstatic.com/s/newsreader/v26/cY9kfjOCX1hbuyalUrK439vogqC9yFZCYg7oRZaLP4obnf7fTXglsMx2T9ZHFjQ.woff2",
+        "format": "woff2",
+        "license": "Google Fonts (OFL)"
+      },
+      {
+        "family": "Hanken Grotesk",
+        "url": "https://fonts.gstatic.com/s/hankengrotesk/v12/ieVn2YZDLWuGJpnzaiwFXS9tYtpd59A.woff2",
+        "format": "woff2",
+        "license": "Google Fonts (OFL)"
+      }
+    ]
+  },
+  "motifs": {
+    "borderRadius": {
+      "signature": "22px",
+      "source": "--radius custom property, all pages",
+      "notes": "Consistently large radius used on cards, thumbnails, and containers"
+    },
+    "shadows": [
+      {
+        "value": "0 8px 28px rgba(35, 48, 57, 0.1)",
+        "usage": "standard card/surface elevation",
+        "source": "--shadow"
+      },
+      {
+        "value": "0 20px 56px rgba(35, 48, 57, 0.18)",
+        "usage": "strong elevation for hero/prominent elements",
+        "source": "--shadow-strong"
+      }
+    ],
+    "gradients": [
+      {
+        "value": "linear-gradient(135deg, #a9d1da, #f6d9b6)",
+        "usage": "logo background / brand mark",
+        "source": "logo.svg defs"
+      }
+    ],
+    "patterns": ["card-grid", "thumbnail-carousel", "dark-section-CTA-band", "numbered-feature-list"]
+  },
+  "voice": {
+    "heroHeadline": "Find your calm in minutes.",
+    "heroLede": "Breathe guides short, beautiful sessions — offline-ready atmospheres, smooth animations, and a clean flow that gets out of your way.",
+    "heroImage": "https://breathe-app.com/assets/screenshots/ios/en/home_2x.webp",
+    "ctaSamples": ["Get the app", "Get Breathe — it's free", "Donate"],
+    "register": "brand",
+    "tone": "Calm, minimal, reassuring. Short sentences. Benefit-first framing without hype.",
+    "samples": [
+      "Designed to keep the experience simple while still letting users tailor every session.",
+      "Choose from video and photo atmospheres that download once for offline sessions.",
+      "Breathe is free and ad-free. If it helps your daily practice, consider a small donation to keep it going."
+    ]
+  },
+  "systemComponents": [
+    {
+      "name": "site-header",
+      "description": "Brand link (icon + name + tagline), nav links (Home, Capabilities, Support, Privacy), language picker, Get the app CTA",
+      "pages": ["index", "support", "privacy"]
+    },
+    {
+      "name": "site-footer",
+      "description": "Brand link (icon + name), nav links (Capabilities, Backgrounds, Support, Privacy), copyright notice",
+      "pages": ["index", "support", "privacy"]
+    }
+  ],
+  "logo": {
+    "type": "svg",
+    "path": "assets/logo.svg",
+    "description": "Rounded-square gradient (teal-to-peach) with white circle and wave line",
+    "extractionMethod": "fetched from /assets/app-icon.svg"
+  },
+  "favicon": {
+    "type": "ico",
+    "path": "assets/favicon.ico",
+    "extractionMethod": "fetched from /favicon.ico"
+  }
+}

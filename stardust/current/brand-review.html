@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Brand Review — Breathe</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;1,400&family=Hanken+Grotesk:wght@400;500;600&display=swap');
+
+    :root {
+      --ink: #233039;
+      --muted: rgba(35, 48, 57, .55);
+      --accent: #3f6486;
+      --accent-light: #9fc4e0;
+      --surface: rgba(255, 255, 255, .75);
+      --dark-section: #23323d;
+      --dark-ink: #e8f0f5;
+      --stroke: rgba(35, 48, 57, .09);
+      --shadow: 0 8px 28px rgba(35, 48, 57, .1);
+      --radius: 22px;
+      --bg: #f3f7fa;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Hanken Grotesk', 'Trebuchet MS', sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.6;
+      padding: 0;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Newsreader', Georgia, serif;
+      font-weight: 400;
+    }
+
+    .review-header {
+      background: var(--dark-section);
+      color: var(--dark-ink);
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+    .review-header h1 { font-size: 2.2rem; margin-bottom: 0.5rem; }
+    .review-header p { opacity: 0.7; font-size: 0.9rem; }
+
+    .container { max-width: 1100px; margin: 0 auto; padding: 2rem; }
+
+    .coverage {
+      background: var(--surface);
+      border: 1px solid var(--stroke);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      font-size: 0.85rem;
+    }
+    .coverage strong { color: var(--accent); }
+
+    section { margin-bottom: 3rem; }
+    section h2 {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--stroke);
+    }
+    section h3 { font-size: 1.1rem; margin: 1rem 0 0.5rem; }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--stroke);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      box-shadow: var(--shadow);
+      margin-bottom: 1rem;
+    }
+
+    .palette-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      gap: 1rem;
+    }
+    .swatch {
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--stroke);
+    }
+    .swatch-color {
+      height: 60px;
+    }
+    .swatch-label {
+      padding: 0.5rem;
+      font-size: 0.75rem;
+      background: white;
+    }
+    .swatch-label strong { display: block; margin-bottom: 2px; }
+
+    .type-sample { margin: 1rem 0; }
+    .type-heading { font-family: 'Newsreader', Georgia, serif; font-size: 2rem; margin-bottom: 0.5rem; }
+    .type-body { font-family: 'Hanken Grotesk', sans-serif; font-size: 1rem; max-width: 500px; }
+
+    .motif-list { list-style: none; padding: 0; }
+    .motif-list li {
+      padding: 0.75rem 1rem;
+      background: var(--surface);
+      border: 1px solid var(--stroke);
+      border-radius: 12px;
+      margin-bottom: 0.5rem;
+      font-size: 0.9rem;
+    }
+
+    .screenshots {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+    .screenshots img {
+      width: 100%;
+      border-radius: var(--radius);
+      border: 1px solid var(--stroke);
+      box-shadow: var(--shadow);
+    }
+    .screenshots figcaption {
+      margin-top: 0.5rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .logo-display {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      padding: 1.5rem;
+    }
+    .logo-display img, .logo-display svg {
+      width: 80px;
+      height: 80px;
+      border-radius: 18px;
+    }
+
+    .tension-card {
+      background: #fff8f0;
+      border: 1px solid #f0d8b8;
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    .tension-card h3 { color: #8b5e2b; }
+
+    .source-cite {
+      font-size: 0.7rem;
+      color: var(--muted);
+      margin-top: 0.5rem;
+      font-style: italic;
+    }
+
+    .voice-sample {
+      border-left: 3px solid var(--accent-light);
+      padding-left: 1rem;
+      margin: 0.75rem 0;
+      font-style: italic;
+      color: var(--muted);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85rem;
+      margin: 1rem 0;
+    }
+    th, td {
+      padding: 0.5rem 0.75rem;
+      text-align: left;
+      border-bottom: 1px solid var(--stroke);
+    }
+    th { font-weight: 600; }
+  </style>
+</head>
+<body>
+  <div class="review-header">
+    <h1>Brand Review</h1>
+    <p>breathe-app.com &mdash; extracted 2026-07-22 &mdash; 3 pages crawled</p>
+  </div>
+
+  <div class="container">
+    <div class="coverage">
+      <strong>Coverage:</strong> 3 of 3 discovered pages extracted (homepage, support, privacy).
+      All pages rendered live via Playwright with full provenance. Logo SVG captured.
+      Font files captured (Newsreader, Hanken Grotesk via Google Fonts).
+    </div>
+
+    <!-- LOGO -->
+    <section>
+      <h2>Logo</h2>
+      <div class="card logo-display">
+        <img src="assets/logo.svg" alt="Breathe logo">
+        <div>
+          <strong>Breathe</strong><br>
+          <span style="color:var(--muted); font-size:0.85rem;">Gradient rounded-square (teal-to-peach) with white circle and wave motif</span>
+          <p class="source-cite">Source: /assets/app-icon.svg</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PALETTE -->
+    <section>
+      <h2>Palette</h2>
+      <div class="palette-grid">
+        <div class="swatch">
+          <div class="swatch-color" style="background:#f3f7fa;"></div>
+          <div class="swatch-label"><strong>Background</strong>#f3f7fa</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background:#233039;"></div>
+          <div class="swatch-label"><strong>Text / Ink</strong>#233039</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background:#3f6486;"></div>
+          <div class="swatch-label"><strong>Primary</strong>#3f6486</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background:#9fc4e0;"></div>
+          <div class="swatch-label"><strong>Secondary</strong>#9fc4e0</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background:#23323d;"></div>
+          <div class="swatch-label"><strong>Dark Section</strong>#23323d</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background:#e8f0f5;"></div>
+          <div class="swatch-label"><strong>Dark Text</strong>#e8f0f5</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background:rgba(255,255,255,0.75); border:1px solid #eee;"></div>
+          <div class="swatch-label"><strong>Surface</strong>rgba(255,255,255,.75)</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background:rgba(35,48,57,0.55);"></div>
+          <div class="swatch-label"><strong>Muted</strong>rgba(35,48,57,.55)</div>
+        </div>
+      </div>
+      <p class="source-cite">Source: _brand-extraction.json &sect; palette &mdash; CSS custom properties consistent across all 3 pages</p>
+    </section>
+
+    <!-- TYPOGRAPHY -->
+    <section>
+      <h2>Typography</h2>
+      <div class="card">
+        <div class="type-sample">
+          <div class="type-heading">Find your <em>calm</em> in minutes.</div>
+          <p class="source-cite">Newsreader (serif) &mdash; headings, 400 weight, italic for emphasis</p>
+        </div>
+        <div class="type-sample">
+          <div class="type-body">Designed to keep the experience simple while still letting users tailor every session.</div>
+          <p class="source-cite">Hanken Grotesk (sans-serif) &mdash; body, navigation, UI, 400-500 weight</p>
+        </div>
+      </div>
+      <table>
+        <tr><th>Role</th><th>Family</th><th>Weight</th><th>License</th></tr>
+        <tr><td>Headings</td><td>Newsreader</td><td>400</td><td>Google Fonts (OFL)</td></tr>
+        <tr><td>Body</td><td>Hanken Grotesk</td><td>400-500</td><td>Google Fonts (OFL)</td></tr>
+      </table>
+      <p class="source-cite">Source: _brand-extraction.json &sect; type</p>
+    </section>
+
+    <!-- SHAPES & MOTIFS -->
+    <section>
+      <h2>Shapes &amp; Motifs</h2>
+      <ul class="motif-list">
+        <li><strong>Border radius:</strong> 22px &mdash; consistently large and soft on all cards, buttons, thumbnails</li>
+        <li><strong>Shadow (standard):</strong> 0 8px 28px rgba(35,48,57,.1) &mdash; subtle card elevation</li>
+        <li><strong>Shadow (strong):</strong> 0 20px 56px rgba(35,48,57,.18) &mdash; hero/prominent elements</li>
+        <li><strong>Glass surface:</strong> Semi-transparent white with backdrop blur effect</li>
+        <li><strong>Dark CTA band:</strong> Navy background with serif headline and ghost button</li>
+        <li><strong>Numbered feature grid:</strong> 01&ndash;06 cards in 3-column layout</li>
+        <li><strong>Thumbnail carousel:</strong> 4-column grid with landscape images and text+badge labels</li>
+      </ul>
+      <p class="source-cite">Source: _brand-extraction.json &sect; motifs</p>
+    </section>
+
+    <!-- VOICE -->
+    <section>
+      <h2>Voice &amp; Tone</h2>
+      <div class="card">
+        <p><strong>Register:</strong> Brand (product marketing landing page)</p>
+        <p><strong>Tone:</strong> Calm, minimal, reassuring. Short sentences. Benefit-first framing without hype.</p>
+        <h3>Hero</h3>
+        <div class="voice-sample">"Find your calm in minutes."</div>
+        <h3>Body samples</h3>
+        <div class="voice-sample">"Designed to keep the experience simple while still letting users tailor every session."</div>
+        <div class="voice-sample">"Choose from video and photo atmospheres that download once for offline sessions."</div>
+        <div class="voice-sample">"Breathe is free and ad-free. If it helps your daily practice, consider a small donation to keep it going."</div>
+        <h3>CTAs</h3>
+        <p>Get the app &bull; Get Breathe &mdash; it's free &bull; Donate &bull; Visit RankingsHub</p>
+      </div>
+      <p class="source-cite">Source: _brand-extraction.json &sect; voice</p>
+    </section>
+
+    <!-- SYSTEM COMPONENTS -->
+    <section>
+      <h2>System Components</h2>
+      <div class="card">
+        <h3>Site Header</h3>
+        <p>Brand link (icon + name + tagline), nav links (Home, Capabilities, Support, Privacy), language picker dropdown, "Get the app" CTA button. Present on all pages.</p>
+      </div>
+      <div class="card">
+        <h3>Site Footer</h3>
+        <p>Brand link (icon + name), secondary nav (Capabilities, Backgrounds, Support, Privacy), copyright line. Present on all pages.</p>
+      </div>
+      <p class="source-cite">Source: _brand-extraction.json &sect; systemComponents</p>
+    </section>
+
+    <!-- SCREENSHOTS -->
+    <section>
+      <h2>Page Screenshots</h2>
+      <div class="screenshots">
+        <figure>
+          <img src="assets/screenshots/index.png" alt="Homepage screenshot">
+          <figcaption>/ (Homepage) &mdash; Landing page with hero, features, backgrounds, rhythms, CTA</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/screenshots/support.png" alt="Support page screenshot">
+          <figcaption>/support/ &mdash; Contact and donation page</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/screenshots/privacy.png" alt="Privacy page screenshot">
+          <figcaption>/privacy/ &mdash; Privacy policy and terms of use</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- TENSIONS -->
+    <section>
+      <h2>Tensions</h2>
+      <p style="color:var(--muted); margin-bottom:1rem;">Design tensions detected from mechanical analysis of the extraction data.</p>
+
+      <div class="tension-card">
+        <h3>Single-page depth</h3>
+        <p>The entire product story lives on one long landing page (homepage). The support and privacy pages are lightweight text. There is no dedicated features page, no blog, no comparison content. This concentrates SEO value and discoverability on a single URL.</p>
+      </div>
+
+      <div class="tension-card">
+        <h3>Cross-promotion section</h3>
+        <p>The support page includes an "Also try RankingsHub" section promoting a separate product. This is unusual for a focused single-product site and may dilute the brand narrative or confuse users seeking breathing-app help.</p>
+      </div>
+    </section>
+
+    <!-- PER-PAGE EVIDENCE -->
+    <section>
+      <h2>Per-Page Evidence</h2>
+      <table>
+        <tr><th>Slug</th><th>Live</th><th>Wait Mode</th><th>Wait ms</th><th>Status</th><th>Media (img/bg)</th></tr>
+        <tr><td>/</td><td>yes</td><td>medium</td><td>2500</td><td>200</td><td>25/0</td></tr>
+        <tr><td>/support/</td><td>yes</td><td>medium</td><td>2500</td><td>200</td><td>2/0</td></tr>
+        <tr><td>/privacy/</td><td>yes</td><td>medium</td><td>2500</td><td>200</td><td>2/0</td></tr>
+      </table>
+      <p class="source-cite">All pages rendered by Playwright with medium wait (2.5s). No failures. No fallbacks.</p>
+    </section>
+  </div>
+</body>
+</html>

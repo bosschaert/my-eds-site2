@@ -1,0 +1,312 @@
+@import url("/styles/of1-template-base.css");
+
+.of1-eyebrow {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-fg-dim);
+  margin-bottom: 12px;
+}
+
+.of1-cta {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 12px 28px;
+  border-radius: var(--radius);
+  transition: opacity 0.2s;
+}
+
+.of1-cta-primary {
+  background: var(--color-dark-section);
+  color: #fff;
+}
+
+.of1-cta-primary:hover { opacity: 0.85; }
+
+/* HERO */
+.of1-roi-story-hero {
+  padding: 60px 48px 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.of1-roi-story-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 40px;
+}
+
+.of1-roi-story-hero-grid h1 {
+  font-size: var(--size-h1);
+  line-height: var(--line-tight);
+  margin-bottom: 20px;
+}
+
+.of1-roi-story-hero-grid p {
+  font-size: var(--size-body);
+  line-height: var(--line-relaxed);
+  color: var(--color-fg-dim);
+  max-width: 420px;
+  margin-bottom: 28px;
+}
+
+.of1-roi-story-hero .of1-hero-media img {
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-strong);
+}
+
+/* SECTION shell */
+.of1-section {
+  padding: var(--space-section) 48px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* SPLIT STAT */
+.of1-roi-story-split-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.of1-roi-story-split-text h2 {
+  font-size: var(--size-h2);
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+
+.of1-roi-story-split-text p {
+  font-size: 14px;
+  color: var(--color-fg-dim);
+  line-height: 1.6;
+  max-width: 440px;
+}
+
+.of1-roi-story-split-stat {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 40px 32px;
+  text-align: center;
+}
+
+.of1-roi-story-stat-num {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  color: var(--color-accent);
+  margin-bottom: 8px;
+}
+
+.of1-roi-story-split-stat p:not(.of1-roi-story-stat-num) {
+  font-size: 13px;
+  color: var(--color-fg-dim);
+}
+
+/* TIMELINE */
+.of1-roi-story-timeline h2 {
+  font-size: var(--size-h2);
+  margin-bottom: 40px;
+}
+
+.of1-roi-story-timeline-items {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  position: relative;
+}
+
+.of1-roi-story-timeline-item {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 24px 20px;
+}
+
+.of1-roi-story-timeline-marker {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: 12px;
+}
+
+.of1-roi-story-timeline-marker::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-accent);
+}
+
+.of1-roi-story-timeline-item h3 {
+  font-size: 15px;
+  margin-bottom: 8px;
+}
+
+.of1-roi-story-timeline-item p:not(.of1-roi-story-timeline-marker) {
+  font-size: 13px;
+  color: var(--color-fg-dim);
+  line-height: 1.6;
+}
+
+/* TABS */
+.of1-roi-story-tabs h2 {
+  font-size: var(--size-h2);
+  margin-bottom: 24px;
+}
+
+.of1-roi-story-tablist {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.of1-roi-story-tab {
+  background: none;
+  border: none;
+  padding: 12px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-fg-dim);
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+}
+
+.of1-roi-story-tab.is-active {
+  color: var(--color-fg);
+  border-bottom-color: var(--color-accent);
+}
+
+.of1-roi-story-panel {
+  display: none;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 28px 32px;
+}
+
+.of1-roi-story-panel.is-active {
+  display: block;
+}
+
+.of1-roi-story-panel p {
+  font-size: 14px;
+  color: var(--color-fg-dim);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* QUOTE */
+.of1-roi-story-quote {
+  max-width: 800px;
+  text-align: center;
+}
+
+.of1-roi-story-quote blockquote {
+  margin: 0;
+}
+
+.of1-roi-story-quote p:first-child {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(1.3rem, 2.5vw, 1.7rem);
+  line-height: 1.4;
+  color: var(--color-fg);
+  margin-bottom: 16px;
+}
+
+.of1-roi-story-quote-attr {
+  font-size: 13px;
+  color: var(--color-fg-dim);
+}
+
+/* CTA */
+.of1-roi-story-cta {
+  max-width: 900px;
+}
+
+.of1-roi-story-cta-box {
+  background: var(--color-dark-section);
+  border-radius: var(--radius);
+  padding: 64px 48px;
+  text-align: center;
+}
+
+.of1-roi-story-cta-box h2 {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  color: var(--color-dark-fg);
+  margin-bottom: 12px;
+}
+
+.of1-roi-story-cta-box p {
+  font-size: 14px;
+  color: var(--color-dark-fg-dim);
+  margin-bottom: 28px;
+  max-width: 360px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.of1-roi-story-cta-box .of1-cta-primary {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: transparent;
+}
+
+.of1-roi-story-cta-box .of1-cta-primary:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.6);
+  opacity: 1;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .of1-roi-story-hero,
+  .of1-section {
+    padding: 48px 24px;
+  }
+
+  .of1-roi-story-hero-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .of1-roi-story-hero-grid p {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .of1-roi-story-split-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 24px;
+  }
+
+  .of1-roi-story-timeline-items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .of1-roi-story-tablist {
+    flex-wrap: wrap;
+  }
+
+  .of1-roi-story-cta-box {
+    padding: 48px 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .of1-roi-story-timeline-items {
+    grid-template-columns: 1fr;
+  }
+}

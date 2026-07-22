@@ -1,0 +1,72 @@
+[
+  {
+    "id": "is-breathe-free",
+    "question": "Is Breathe free to use?",
+    "answer": "Yes. Breathe is free and ad-free. No subscription or account is required — if it helps your daily practice, you can optionally support development with a small donation.",
+    "relatedProducts": [],
+    "category": "pricing"
+  },
+  {
+    "id": "does-breathe-require-account",
+    "question": "Do I need to create an account to use Breathe?",
+    "answer": "No. Breathe works without any account, sign-in, or personal information. Your breathing settings and downloaded media stay on your device.",
+    "relatedProducts": [],
+    "category": "privacy"
+  },
+  {
+    "id": "does-breathe-collect-data",
+    "question": "Does Breathe collect or track my data?",
+    "answer": "No. The app does not collect, track, or transmit personal data, and it does not use analytics, ads, or tracking SDKs.",
+    "relatedProducts": [],
+    "category": "privacy"
+  },
+  {
+    "id": "does-breathe-work-offline",
+    "question": "Can I use Breathe without an internet connection?",
+    "answer": "Yes. Background atmospheres (video and photo) download once, and sessions play fully offline afterward — with download prompts and progress indicators to make offline setup easy.",
+    "relatedProducts": ["bg-beach", "bg-river", "bg-fireplace", "bg-earth", "bg-space", "bg-seashore", "bg-countryside", "bg-rainforest"],
+    "category": "features"
+  },
+  {
+    "id": "which-rhythm-for-sleep",
+    "question": "Which breathing rhythm should I use to help fall asleep?",
+    "answer": "Sleep, the 4/7/8 preset (4-second inhale, 7-second hold, 8-second exhale), is designed for winding down before bed. Pairing it with a dim background like Fireplace or Space works well for an evening session.",
+    "relatedProducts": ["rhythm-sleep", "bg-fireplace", "bg-space"],
+    "category": "usage"
+  },
+  {
+    "id": "can-i-customize-rhythm",
+    "question": "Can I create my own breathing rhythm instead of using a preset?",
+    "answer": "Yes. Beyond the four presets (Balance, Relax, Energy, Sleep), Breathe lets you configure custom inhale, hold, and exhale timings to build your own rhythm.",
+    "relatedProducts": ["rhythm-balance", "rhythm-relax", "rhythm-energy", "rhythm-sleep"],
+    "category": "usage"
+  },
+  {
+    "id": "what-platforms",
+    "question": "What platforms is Breathe available on?",
+    "answer": "Breathe is available for iOS and Android, both as free downloads from the App Store and Google Play.",
+    "relatedProducts": [],
+    "category": "availability"
+  },
+  {
+    "id": "how-many-languages",
+    "question": "What languages is Breathe available in?",
+    "answer": "Breathe is available in 27 languages, supporting breathing practices for users around the world.",
+    "relatedProducts": [],
+    "category": "availability"
+  },
+  {
+    "id": "how-to-contact-support",
+    "question": "How do I contact Breathe for help or feedback?",
+    "answer": "You can reach out via email at contact@breathe-app.com with questions, bug reports, or feedback — every message is appreciated.",
+    "relatedProducts": [],
+    "category": "support"
+  },
+  {
+    "id": "is-breathe-medical-advice",
+    "question": "Is Breathe a substitute for medical advice?",
+    "answer": "No. Breathe provides guided breathing and relaxation content and is not medical advice. Use the app at your own discretion and stop if you feel unwell.",
+    "relatedProducts": [],
+    "category": "usage"
+  }
+]

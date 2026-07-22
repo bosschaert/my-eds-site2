@@ -1,0 +1,43 @@
+{
+  "site": {
+    "originUrl": "https://breathe-app.com",
+    "extractedAt": "2026-07-22T07:35:00Z",
+    "pageCap": 3,
+    "totalDiscovered": 3,
+    "crawled": 3
+  },
+  "pages": [
+    {
+      "slug": "index",
+      "url": "https://breathe-app.com/",
+      "status": "directed",
+      "type": null,
+      "currentStatePath": "stardust/current/pages/index.json",
+      "prototypePath": null,
+      "migratedPath": null
+    },
+    {
+      "slug": "support",
+      "url": "https://breathe-app.com/support/",
+      "status": "directed",
+      "type": null,
+      "currentStatePath": "stardust/current/pages/support.json",
+      "prototypePath": null,
+      "migratedPath": null
+    },
+    {
+      "slug": "privacy",
+      "url": "https://breathe-app.com/privacy/",
+      "status": "directed",
+      "type": null,
+      "currentStatePath": "stardust/current/pages/privacy.json",
+      "prototypePath": null,
+      "migratedPath": null
+    }
+  ],
+  "direction": {
+    "resolvedAt": "2026-07-22T07:41:35Z",
+    "phrase": "pixel-perfect faithful reproduction",
+    "directionFile": "stardust/direction.md"
+  }
+}

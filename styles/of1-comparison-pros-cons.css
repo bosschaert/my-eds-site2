@@ -1,0 +1,283 @@
+@import url("/styles/of1-template-base.css");
+
+.of1-eyebrow {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-fg-dim);
+  margin-bottom: 12px;
+}
+
+.of1-cta {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 12px 28px;
+  border-radius: var(--radius);
+  transition: opacity 0.2s, background 0.2s, border-color 0.2s;
+}
+
+.of1-cta-primary {
+  background: var(--color-dark-section);
+  color: #fff;
+}
+
+.of1-cta-primary:hover { opacity: 0.85; }
+
+/* HERO */
+.of1-comparison-pros-cons-hero {
+  padding: 60px 48px 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.of1-comparison-pros-cons-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 40px;
+}
+
+.of1-comparison-pros-cons-hero-grid h1 {
+  font-size: var(--size-h1);
+  line-height: var(--line-tight);
+  margin-bottom: 20px;
+}
+
+.of1-comparison-pros-cons-hero-grid p {
+  font-size: var(--size-body);
+  line-height: var(--line-relaxed);
+  color: var(--color-fg-dim);
+  max-width: 420px;
+  margin-bottom: 28px;
+}
+
+.of1-comparison-pros-cons-hero .of1-hero-media img {
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-strong);
+}
+
+/* SECTION shell */
+.of1-section {
+  padding: var(--space-section) 48px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* PROS/CONS COLUMNS */
+.of1-pc-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.of1-pc-column {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 32px;
+}
+
+.of1-pc-column h2 {
+  font-family: var(--font-display);
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.of1-pc-column-pros h2::before {
+  content: '01';
+  display: block;
+  font-style: italic;
+  font-size: 13px;
+  color: var(--color-fg-dim);
+  margin-bottom: 8px;
+}
+
+.of1-pc-column-cons h2::before {
+  content: '02';
+  display: block;
+  font-style: italic;
+  font-size: 13px;
+  color: var(--color-fg-dim);
+  margin-bottom: 8px;
+}
+
+.of1-pc-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.of1-pc-list li {
+  font-size: 14px;
+  color: var(--color-fg-dim);
+  line-height: var(--line-relaxed);
+  padding-left: 24px;
+  position: relative;
+}
+
+.of1-pc-column-pros .of1-pc-list li::before {
+  content: '+';
+  position: absolute;
+  left: 0;
+  top: -1px;
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--color-accent);
+}
+
+.of1-pc-column-cons .of1-pc-list li::before {
+  content: '\2013';
+  position: absolute;
+  left: 2px;
+  top: 0;
+  font-weight: 600;
+  color: var(--color-fg-dim);
+}
+
+/* VERDICT BANNER */
+.of1-comparison-pros-cons-verdict {
+  background: var(--color-dark-section);
+  padding: 80px 48px;
+  text-align: center;
+}
+
+.of1-comparison-pros-cons-verdict-inner {
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+.of1-comparison-pros-cons-verdict-inner .of1-eyebrow {
+  color: var(--color-dark-fg-dim);
+}
+
+.of1-comparison-pros-cons-verdict-stat {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  color: var(--color-dark-fg);
+  margin-bottom: 16px;
+}
+
+.of1-comparison-pros-cons-verdict-inner p:not(.of1-eyebrow):not(.of1-comparison-pros-cons-verdict-stat) {
+  font-size: 14px;
+  color: var(--color-dark-fg-dim);
+  line-height: 1.6;
+}
+
+/* TABS */
+.of1-comparison-pros-cons-tabs h2 {
+  font-size: var(--size-h2);
+  margin-bottom: 28px;
+}
+
+.of1-pc-tab-buttons {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.of1-pc-tab-btn {
+  background: none;
+  border: none;
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-fg-dim);
+  padding: 12px 4px;
+  margin-right: 24px;
+  cursor: pointer;
+  position: relative;
+}
+
+.of1-pc-tab-btn.is-active {
+  color: var(--color-fg);
+}
+
+.of1-pc-tab-btn.is-active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 2px;
+  background: var(--color-accent);
+}
+
+.of1-pc-tab-panel {
+  max-width: 560px;
+}
+
+.of1-pc-tab-panel[hidden] {
+  display: none;
+}
+
+/* CTA */
+.of1-comparison-pros-cons-cta {
+  max-width: 900px;
+}
+
+.of1-comparison-pros-cons-cta-box {
+  background: var(--color-dark-section);
+  border-radius: var(--radius);
+  padding: 64px 48px;
+  text-align: center;
+}
+
+.of1-comparison-pros-cons-cta-box h2 {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  color: var(--color-dark-fg);
+  margin-bottom: 12px;
+}
+
+.of1-comparison-pros-cons-cta-box p {
+  font-size: 14px;
+  color: var(--color-dark-fg-dim);
+  margin-bottom: 28px;
+  max-width: 360px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.of1-comparison-pros-cons-cta-box .of1-cta-primary {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: transparent;
+}
+
+.of1-comparison-pros-cons-cta-box .of1-cta-primary:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.6);
+  opacity: 1;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .of1-comparison-pros-cons-hero,
+  .of1-section {
+    padding: 48px 24px;
+  }
+
+  .of1-comparison-pros-cons-verdict {
+    padding: 60px 24px;
+  }
+
+  .of1-comparison-pros-cons-hero-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .of1-comparison-pros-cons-hero-grid p {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .of1-pc-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .of1-comparison-pros-cons-cta-box {
+    padding: 48px 24px;
+  }
+}

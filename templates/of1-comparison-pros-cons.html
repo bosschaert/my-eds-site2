@@ -1,0 +1,96 @@
+<main>
+<section class="of1-comparison-pros-cons-hero of1-hero">
+  <div class="of1-comparison-pros-cons-hero-grid of1-hero-grid">
+    <div>
+      <p class="of1-eyebrow" data-slot="hero.eyebrow">Pros &amp; cons</p>
+      <h1 data-slot="hero.title">Is Breathe actually right for you?</h1>
+      <p data-slot="hero.subtitle">No app is perfect for everyone. Here's an honest look at where Breathe shines, and where it doesn't try to be something it's not.</p>
+      <a class="of1-cta of1-cta-primary" data-slot="hero.cta-primary" href="#">Get the app</a>
+    </div>
+    <div class="of1-hero-media"><img data-slot="hero.image" src="" alt=""></div>
+  </div>
+</section>
+
+<section class="of1-comparison-pros-cons-columns of1-section">
+  <div class="of1-pc-columns" data-grid-items>
+    <article class="of1-pc-column of1-pc-column-pros" data-card="1">
+      <h2 data-slot="item-1.title">What works</h2>
+      <ul class="of1-pc-list" data-slot-list="item-1.list">
+        <li>Completely free, no subscription or trial</li>
+        <li>Offline-ready video and photo backgrounds</li>
+        <li>Custom inhale / exhale timings, not just presets</li>
+        <li>Available in 27 languages</li>
+      </ul>
+    </article>
+    <article class="of1-pc-column of1-pc-column-cons" data-card="2">
+      <h2 data-slot="item-2.title">What to know</h2>
+      <ul class="of1-pc-list" data-slot-list="item-2.list">
+        <li>No guided voice narration — visuals and rhythm only</li>
+        <li>No sleep-tracking or wearable integration</li>
+        <li>Smaller background library than some paid apps</li>
+      </ul>
+    </article>
+  </div>
+</section>
+
+<section class="of1-comparison-pros-cons-verdict">
+  <div class="of1-comparison-pros-cons-verdict-inner">
+    <p class="of1-eyebrow" data-slot="verdict.eyebrow">Bottom line</p>
+    <p class="of1-comparison-pros-cons-verdict-stat" data-slot="verdict.stat">Best for quiet, quick resets</p>
+    <p data-slot="verdict.body">If you want a calm breathing session without narration, subscriptions, or setup — Breathe is built for exactly that.</p>
+  </div>
+</section>
+
+<section class="of1-comparison-pros-cons-tabs of1-section">
+  <h2 data-slot="tabs.title">Good fit vs. not a fit</h2>
+  <div class="of1-pc-tabs">
+    <div class="of1-pc-tab-buttons" role="tablist">
+      <button class="of1-pc-tab-btn is-active" type="button" data-tab-target="good" role="tab" aria-selected="true" data-slot="tabs.tab-1-label">Good fit if</button>
+      <button class="of1-pc-tab-btn" type="button" data-tab-target="notfit" role="tab" aria-selected="false" data-slot="tabs.tab-2-label">Maybe not if</button>
+    </div>
+    <div class="of1-pc-tab-panel is-active" id="tab-good" role="tabpanel">
+      <ul class="of1-pc-list" data-slot-list="tabs.panel-1-list">
+        <li>You want something free that stays free</li>
+        <li>You like ambient visuals over spoken guidance</li>
+        <li>You practice offline or while traveling</li>
+      </ul>
+    </div>
+    <div class="of1-pc-tab-panel" id="tab-notfit" role="tabpanel" hidden>
+      <ul class="of1-pc-list" data-slot-list="tabs.panel-2-list">
+        <li>You specifically want narrated meditation sessions</li>
+        <li>You want sleep or heart-rate tracking built in</li>
+        <li>You need a huge, constantly-updated content library</li>
+      </ul>
+    </div>
+  </div>
+  <script>
+    (function () {
+      var root = document.currentScript.closest('.of1-comparison-pros-cons-tabs');
+      if (!root) return;
+      var btns = root.querySelectorAll('.of1-pc-tab-btn');
+      btns.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var target = btn.getAttribute('data-tab-target');
+          root.querySelectorAll('.of1-pc-tab-btn').forEach(function (b) {
+            b.classList.toggle('is-active', b === btn);
+            b.setAttribute('aria-selected', b === btn ? 'true' : 'false');
+          });
+          root.querySelectorAll('.of1-pc-tab-panel').forEach(function (p) {
+            var match = p.id === 'tab-' + target;
+            p.classList.toggle('is-active', match);
+            p.hidden = !match;
+          });
+        });
+      });
+    })();
+  </script>
+</section>
+
+<section class="of1-comparison-pros-cons-cta of1-section">
+  <div class="of1-comparison-pros-cons-cta-box">
+    <h2 data-slot="cta.title">Decide for yourself — it's free.</h2>
+    <p data-slot="cta.subtitle">No account, no trial clock, no risk in trying it.</p>
+    <a class="of1-cta of1-cta-primary" data-slot="cta.cta-primary" href="#">Get Breathe — it's free</a>
+  </div>
+</section>
+</main>

@@ -1,0 +1,42 @@
+[
+  {
+    "id": "quick-stress-reset",
+    "name": "Quick Stress Reset",
+    "description": "A short session to de-stress in the middle of a hard day — no scheduling, no account, just a few minutes with a calming rhythm and atmosphere.",
+    "keywords": ["stress reset", "quick calm", "de-stress", "anxious right now", "need to relax", "overwhelmed", "short breathing session", "calm down fast"],
+    "recommendedProducts": ["rhythm-relax", "bg-river", "bg-seashore"],
+    "relatedPersonas": ["stress-relief-seeker"]
+  },
+  {
+    "id": "better-sleep",
+    "name": "Better Sleep",
+    "description": "An evening wind-down session designed to help you fall asleep faster, using the 4/7/8 rhythm with a dim, quiet background.",
+    "keywords": ["sleep better", "fall asleep faster", "bedtime session", "insomnia help", "wind down for sleep", "night breathing", "pre-sleep routine"],
+    "recommendedProducts": ["rhythm-sleep", "bg-fireplace", "bg-space"],
+    "relatedPersonas": ["sleep-support-seeker"]
+  },
+  {
+    "id": "morning-energy",
+    "name": "Morning Energy",
+    "description": "A brief energizing session to start the day alert and focused, using the faster-paced Energy rhythm with a bright background.",
+    "keywords": ["morning energy", "wake up routine", "start my day", "morning boost", "energize in the morning", "alertness exercise", "before work routine"],
+    "recommendedProducts": ["rhythm-energy", "bg-beach", "bg-rainforest"],
+    "relatedPersonas": ["morning-energy-seeker"]
+  },
+  {
+    "id": "focus-during-work",
+    "name": "Focus During Work",
+    "description": "A short, distraction-free breathing break between meetings or tasks to reset concentration during the workday.",
+    "keywords": ["focus break", "work break breathing", "reset focus", "between meetings", "concentration exercise", "midday reset", "productivity break"],
+    "recommendedProducts": ["rhythm-balance", "bg-earth", "bg-countryside"],
+    "relatedPersonas": ["focus-work-seeker"]
+  },
+  {
+    "id": "evening-wind-down",
+    "name": "Evening Wind-Down",
+    "description": "A calming end-of-day ritual that transitions from the day's stress into a relaxed state before settling in for the night.",
+    "keywords": ["evening routine", "wind down", "after work relax", "end of day ritual", "transition to rest", "evening calm", "unwind before bed"],
+    "recommendedProducts": ["rhythm-sleep", "bg-fireplace", "rhythm-relax"],
+    "relatedPersonas": ["sleep-support-seeker", "stress-relief-seeker"]
+  }
+]

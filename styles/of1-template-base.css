@@ -1,0 +1,95 @@
+/* OF1 Template Base — shared design tokens + thin reset
+   Source of truth: styles/prototype-*.css (snowflake-extracted) + stardust/current/DESIGN.json
+   Every per-template stylesheet under styles/of1-*.css MUST @import this file. */
+
+:root {
+  /* Colors */
+  --color-bg: #f3f7fa;
+  --color-fg: #233039;
+  --color-fg-dim: rgba(35, 48, 57, 0.55);
+  --color-accent: #3f6486;
+  --color-accent-light: #9fc4e0;
+  --color-surface: rgba(255, 255, 255, 0.75);
+  --color-border: rgba(35, 48, 57, 0.09);
+  --color-dark-section: #23323d;
+  --color-dark-fg: #e8f0f5;
+  --color-dark-fg-dim: rgba(232, 240, 245, 0.6);
+
+  /* Typography */
+  --font-display: 'Newsreader', Georgia, serif;
+  --font-body: 'Hanken Grotesk', 'Trebuchet MS', sans-serif;
+  --weight-display: 400;
+  --weight-body: 400;
+
+  /* Scale */
+  --size-h1: clamp(2.5rem, 5vw, 3.5rem);
+  --size-h2: clamp(1.8rem, 3.5vw, 2.4rem);
+  --size-h3: 24px;
+  --size-body: 15px;
+  --line-tight: 1.15;
+  --line-relaxed: 1.6;
+
+  /* Spacing & shape */
+  --space-section: 80px;
+  --space-container: 48px;
+  --radius: 22px;
+  --shadow-card: 0 8px 28px rgba(35, 48, 57, 0.1);
+  --shadow-strong: 0 20px 56px rgba(35, 48, 57, 0.18);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  font-weight: var(--weight-body);
+  line-height: 1.5;
+  color: var(--color-fg);
+  background: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display);
+  font-weight: var(--weight-display);
+  color: var(--color-fg);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  font-family: inherit;
+}

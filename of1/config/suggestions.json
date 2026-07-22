@@ -1,0 +1,67 @@
+{
+  "title": "Find the right rhythm for how you feel",
+  "subtitle": "Ask about breathing rhythms, backgrounds, or what fits your day — no account needed.",
+  "placeholder": "Ask about rhythms, backgrounds, or how to use Breathe...",
+  "suggestions": [
+    {
+      "type": "explore",
+      "label": "Sleep rhythm explained",
+      "query": "Tell me about the Sleep breathing rhythm and how the 4-7-8 pattern works"
+    },
+    {
+      "type": "explore",
+      "label": "Fireplace atmosphere",
+      "query": "What is the Fireplace background atmosphere like?"
+    },
+    {
+      "type": "explore",
+      "label": "Relax vs Energy",
+      "query": "Compare the Relax and Energy breathing rhythms"
+    },
+    {
+      "type": "explore",
+      "label": "Beach vs Rainforest",
+      "query": "Compare the Beach and Rainforest backgrounds"
+    },
+    {
+      "type": "explore",
+      "label": "Best for stress relief",
+      "query": "What's the best breathing rhythm and background for a quick stress reset?"
+    },
+    {
+      "type": "explore",
+      "label": "Best for falling asleep",
+      "query": "Which rhythm and atmosphere help me fall asleep faster?"
+    },
+    {
+      "type": "explore",
+      "label": "All breathing rhythms",
+      "query": "Show me all the breathing rhythms in Breathe"
+    },
+    {
+      "type": "explore",
+      "label": "All backgrounds",
+      "query": "Show me all the background atmospheres available"
+    },
+    {
+      "type": "explore",
+      "label": "Morning energy boost",
+      "query": "What's a good morning routine to feel energized without coffee?"
+    },
+    {
+      "type": "explore",
+      "label": "Focus during work",
+      "query": "What's a short breathing break I can take between meetings to reset focus?"
+    },
+    {
+      "type": "explore",
+      "label": "Free with everything included?",
+      "query": "Is Breathe completely free, and do all rhythms and backgrounds come at no extra cost?"
+    },
+    {
+      "type": "explore",
+      "label": "Works without an account",
+      "query": "Do I need an account or an internet connection to use Breathe?"
+    }
+  ]
+}

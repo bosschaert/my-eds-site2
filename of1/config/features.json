@@ -1,0 +1,44 @@
+[
+  {
+    "id": "background-carousel",
+    "name": "Background Atmospheres",
+    "description": "A carousel of 8 calming atmospheres — 5 full-motion videos (Beach, River, Fireplace, Earth, Space) and 3 photos (Seashore, Countryside, Rainforest) — plus the ability to import your own media from your device library.",
+    "productIds": ["bg-beach", "bg-river", "bg-fireplace", "bg-earth", "bg-space", "bg-seashore", "bg-countryside", "bg-rainforest"],
+    "category": "atmosphere"
+  },
+  {
+    "id": "breathing-rhythms",
+    "name": "Breathing Rhythms",
+    "description": "Four presets — Balance (5/5), Relax (4/6), Energy (6/4), and Sleep (4/7/8) — plus fully configurable custom inhale, hold, and exhale timings for building your own rhythm.",
+    "productIds": ["rhythm-balance", "rhythm-relax", "rhythm-energy", "rhythm-sleep"],
+    "category": "rhythm"
+  },
+  {
+    "id": "offline-first-media",
+    "name": "Offline-First Media",
+    "description": "Every background atmosphere downloads once and plays fully offline afterward, with download prompts, progress indicators, and status icons so sessions never depend on a live connection.",
+    "productIds": ["bg-beach", "bg-river", "bg-fireplace", "bg-earth", "bg-space", "bg-seashore", "bg-countryside", "bg-rainforest"],
+    "category": "reliability"
+  },
+  {
+    "id": "advanced-session-options",
+    "name": "Advanced Session Options",
+    "description": "Fine-tune each session with controls for duration, soundtrack, and on-device storage management, so the app fits the exact ritual you want without extra clutter for everyone else.",
+    "productIds": ["rhythm-balance", "rhythm-relax", "rhythm-energy", "rhythm-sleep"],
+    "category": "customization"
+  },
+  {
+    "id": "privacy-first-design",
+    "name": "Privacy-First, No Accounts",
+    "description": "No accounts, no sign-ins, no analytics, and no ad or tracking SDKs — breathing settings and downloaded media stay entirely on your device.",
+    "productIds": [],
+    "category": "trust"
+  },
+  {
+    "id": "multilingual-support",
+    "name": "27 Languages",
+    "description": "The app and site are available in 27 languages, making guided breathing practice accessible to a global audience without translation friction.",
+    "productIds": [],
+    "category": "accessibility"
+  }
+]

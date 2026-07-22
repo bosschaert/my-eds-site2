@@ -1,0 +1,31 @@
+{
+  "name": "of1-comparison-pros-cons",
+  "intent": "comparison",
+  "description": "Two-column pros/cons breakdown of a single option, plus a good-fit-vs-not-a-fit tabbed panel.",
+  "minItems": 2,
+  "maxItems": 2,
+  "stylesheet": "/styles/of1-comparison-pros-cons.css",
+  "html": "/templates/of1-comparison-pros-cons.html",
+  "slots": [
+    { "key": "hero.eyebrow", "type": "text", "instruction": "Small label above headline, 1-3 words" },
+    { "key": "hero.title", "type": "text", "instruction": "Headline posing the fit question, <=8 words" },
+    { "key": "hero.subtitle", "type": "text", "instruction": "1-2 sentence supporting line" },
+    { "key": "hero.cta-primary", "type": "link", "instruction": "Primary CTA label + link" },
+    { "key": "hero.image", "type": "image", "instruction": "Hero image URL" },
+    { "key": "item-1.title", "type": "text", "instruction": "Pros column headline, <=4 words (e.g. What works)" },
+    { "key": "item-1.list", "type": "list", "instruction": "3-6 short pro bullets" },
+    { "key": "item-2.title", "type": "text", "instruction": "Cons column headline, <=4 words (e.g. What to know)" },
+    { "key": "item-2.list", "type": "list", "instruction": "2-5 short con/caveat bullets" },
+    { "key": "verdict.eyebrow", "type": "text", "instruction": "Small label, 1-3 words" },
+    { "key": "verdict.stat", "type": "text", "instruction": "Short verdict line, <=8 words" },
+    { "key": "verdict.body", "type": "text", "instruction": "1-2 sentence explanation of the verdict" },
+    { "key": "tabs.title", "type": "text", "instruction": "Tabs section headline, <=6 words" },
+    { "key": "tabs.tab-1-label", "type": "text", "instruction": "First tab label, 1-3 words" },
+    { "key": "tabs.panel-1-list", "type": "list", "instruction": "2-4 bullets describing who this is a good fit for" },
+    { "key": "tabs.tab-2-label", "type": "text", "instruction": "Second tab label, 1-3 words" },
+    { "key": "tabs.panel-2-list", "type": "list", "instruction": "2-4 bullets describing who this may not be a fit for" },
+    { "key": "cta.title", "type": "text", "instruction": "Closing CTA headline, <=8 words" },
+    { "key": "cta.subtitle", "type": "text", "instruction": "1 sentence closing line" },
+    { "key": "cta.cta-primary", "type": "link", "instruction": "Closing CTA label + link" }
+  ]
+}

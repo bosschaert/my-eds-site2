@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Config Review - breathe-app.com</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root { --bg:#1C1917;--fg:#F5F0E8;--accent:#FF3D00;--teal:#00E5A0;--dim:rgba(245,240,232,0.55);--faint:rgba(245,240,232,0.06);--border:rgba(245,240,232,0.1); }
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--fg);font-family:'JetBrains Mono',monospace;font-size:11px;line-height:1.6;padding:32px;max-width:1100px;margin:0 auto}
+h1{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:600;margin-bottom:8px}
+h2{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;margin:32px 0 12px;color:var(--teal)}
+h3{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:var(--dim);margin:16px 0 8px}
+h4{font-size:10px;font-weight:600;color:var(--dim);margin:10px 0 4px;text-transform:uppercase;letter-spacing:0.08em}
+.section{margin-bottom:24px;padding:16px;border:1px solid var(--border);border-radius:10px}
+.stats{display:flex;gap:16px;margin-bottom:24px;flex-wrap:wrap}
+.stat{text-align:center;padding:16px 24px;background:var(--faint);border-radius:10px;border:1px solid var(--border)}
+.stat-num{font-size:24px;font-weight:700;color:var(--accent)}
+.stat-label{font-size:9px;color:var(--dim);text-transform:uppercase;letter-spacing:0.1em;margin-top:4px}
+
+/* Products */
+.products-list{display:flex;flex-direction:column;gap:8px}
+.product-card{border:1px solid var(--border);border-radius:10px;overflow:hidden;cursor:pointer;transition:all 0.2s}
+.product-card:hover{border-color:rgba(0,229,160,0.3)}
+.product-card.expanded{border-color:var(--teal)}
+.product-card.expanded .expand-icon{transform:rotate(45deg)}
+.product-card.expanded .product-detail{display:grid}
+.product-summary{display:flex;align-items:center;gap:12px;padding:10px 14px}
+.product-thumb{width:48px;height:48px;object-fit:cover;border-radius:8px;background:#fff}
+.product-info{flex:1}
+.product-name{font-weight:600;font-size:11px}
+.product-meta{font-size:9px;color:var(--dim);display:flex;gap:8px;margin-top:2px}
+.product-meta .cat{text-transform:uppercase;letter-spacing:0.05em}
+.product-meta .price{color:var(--teal);font-weight:600}
+.product-meta .img-count{color:var(--accent)}
+.expand-icon{font-size:16px;color:var(--dim);transition:transform 0.2s}
+.product-detail{display:none;grid-template-columns:1fr 1fr;gap:16px;padding:16px;border-top:1px solid var(--border);background:var(--faint)}
+.product-gallery{display:flex;gap:8px;flex-wrap:wrap}
+.gallery-img{width:120px;height:120px;object-fit:cover;border-radius:8px;background:#fff;border:1px solid var(--border)}
+.product-desc{font-size:11px;color:var(--fg);margin-bottom:10px;line-height:1.6}
+.product-detail ul{list-style:none;padding:0;margin:4px 0 12px}
+.product-detail li{font-size:10px;color:var(--dim);padding:2px 0}
+.product-detail li::before{content:"→ ";color:var(--teal)}
+.kw{display:inline-block;padding:2px 8px;background:rgba(0,229,160,0.08);border:1px solid rgba(0,229,160,0.2);border-radius:12px;font-size:9px;color:var(--teal);margin:2px}
+.kw-list{margin:4px 0 8px}
+.product-persona,.product-usecase{font-size:9px;color:var(--dim);margin:4px 0}
+.product-link{display:inline-block;margin-top:8px;font-size:10px;color:var(--teal);text-decoration:none;border:1px solid rgba(0,229,160,0.3);padding:4px 12px;border-radius:20px}
+.product-link:hover{background:rgba(0,229,160,0.1)}
+
+/* Personas */
+.personas-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.persona-card{padding:12px;background:var(--faint);border-radius:8px;border:1px solid var(--border)}
+.persona-name{font-weight:600;color:var(--teal);margin-bottom:4px}
+.persona-desc{font-size:10px;color:var(--fg);margin-bottom:6px}
+.persona-kw{font-size:9px;color:var(--dim)}
+
+/* Suggestions */
+.suggestion-chip{display:inline-flex;flex-direction:column;padding:8px 14px;background:var(--faint);border:1px solid var(--border);border-radius:12px;margin:4px;max-width:320px;vertical-align:top}
+.sug-label{font-weight:600;font-size:11px;color:var(--fg)}
+.sug-query{font-size:9px;color:var(--dim);margin-top:2px}
+.sug-meta{margin-bottom:12px;padding:10px;background:var(--faint);border-radius:8px;border:1px solid var(--border)}
+.sug-meta span{display:block;margin:2px 0}
+.sug-meta .sug-title{font-weight:600;color:var(--fg)}
+.sug-meta .sug-sub{color:var(--dim);font-size:10px}
+.sug-meta .sug-ph{color:var(--accent);font-size:10px;font-style:italic}
+
+/* Brand */
+.brand-section p{margin-bottom:8px}
+
+/* Use cases */
+.usecase-card{padding:10px;background:var(--faint);border-radius:8px;border:1px solid var(--border);margin-bottom:8px}
+.usecase-name{font-weight:600;color:var(--fg);margin-bottom:4px}
+.usecase-desc{font-size:10px;color:var(--dim);margin-bottom:4px}
+.usecase-kw{font-size:9px;color:var(--dim)}
+
+/* Features */
+.feature-chip{display:inline-block;padding:4px 12px;background:var(--faint);border:1px solid var(--border);border-radius:20px;font-size:10px;color:var(--fg);margin:3px}
+</style>
+</head>
+<body>
+<h1>Config Review: <span style="color:var(--accent)">breathe-app.com</span></h1>
+<p style="color:var(--dim);margin-bottom:24px">Review all configuration before deploy. Click any product to expand details and see all assets.</p>
+
+<div class="stats">
+  <div class="stat"><div class="stat-num">12</div><div class="stat-label">Products</div></div>
+  <div class="stat"><div class="stat-num">51</div><div class="stat-label">Images</div></div>
+  <div class="stat"><div class="stat-num">4</div><div class="stat-label">Personas</div></div>
+  <div class="stat"><div class="stat-num">12</div><div class="stat-label">Suggestions</div></div>
+  <div class="stat"><div class="stat-num">6</div><div class="stat-label">Features</div></div>
+  <div class="stat"><div class="stat-num">5</div><div class="stat-label">Use Cases</div></div>
+</div>
+
+<h2>Products (12)</h2>
+<div class="section">
+  <p style="color:var(--dim);margin-bottom:12px;font-size:10px">Click any product to expand — see all images, description, features, keywords, and metadata.</p>
+  <div class="products-list"><div class="product-card">
+  <div class="product-summary">
+    <img src="https://main--of1-3dd20e77--of1-labs.aem.page/media/rhythm-balance-1.webp" alt="Balance" class="product-thumb" loading="lazy">
+    <div class="product-info">
+      <div class="product-name">Balance</div>
+      <div class="product-meta"><span class="cat">Breathing rhythm</span><span class="price">$0</span><span class="img-count">5 imgs</span></div>
+    </div>
+    <div class="expand-icon">+</div>
+  </div>
+  <div class="product-detail">
+    <div class="product-gallery"><img src="https://main--of1-3dd20e77--of1-labs.aem.page/media/rhythm-balance-1.webp" alt="Balance" class="gallery-img" loading="lazy"><img src="https://main--of1-3dd20e77--of1-labs.aem.page/media/rhythm-balance-2.webp" alt="Balance" class="gallery-img" loading="lazy"><img src="https://main--of1-3dd20e77--of1-labs.aem.page/media/rhythm-balance-3.webp" alt="Balance" class="gallery-img" loading="lazy"><img src="https://main--of1-3dd20e77--of1-labs.aem.page/media/rhythm-balance-4.png" alt="Balance" class="gallery-img" loading="lazy"><img src="https://main--of1-3dd20e77--of1-labs.aem.page/media/rhythm-balance-5.png" alt="Balance" class="gallery-img" loading="lazy"></div>
+    <div class="product-detail-content">
+      <p class="product-desc">Balance is Breathe&#x27;s 5-second-in, 5-second-out rhythm — an even, steady cadence designed as a neutral reset you can use any time of day. It&#x27;s the default preset shown first because it works as a baseline for anyone new to guided breathing.</p>
+      <h4>Features</h4><ul><li>Even 5/5 inhale-exhale ratio</li><li>No hold phase</li><li>Animated orb visualization guides pace</li><li>Works with any background atmosphere</li></ul>
+      <h4>Highlights</h4><ul><li>Simplest rhythm to start with</li><li>Good for a quick midday reset</li></ul>
+      <div class="product-tags">
+        <h4>Keywords</h4><div class='kw-list'><span class="kw">balance breathing</span><span class="kw">5 5 rhythm</span><span class="kw">even breathing</span><span class="kw">steady breath</span><span class="kw">beginner breathing exercise</span><span class="kw">quick reset</span><span class="kw">midday break</span><span class="kw">simple breathing pattern</span></div>
+        <div class='product-persona'>Persona: <strong>focus-work-seeker</strong></div>
+        <div class='product-usecase'>Use case: <strong>focus-during-work</strong></div>
+      </div>
+      <a href="https://breathe-app.com/#rhythms" class="product-link" target="_blank">View on site &rarr;</a>
+    </div>
+  </div>
+</div><div class="product-card">
+  <div class="product-summary">
+    <img src="https://main--of1-3dd20e77--of1-labs.aem.page/media/rhythm-relax-1.webp" alt="Relax" class="product-thumb" loading="lazy">
+    <div class="product-info">
+      <div class="product-name">Relax</div>
+      <div class="product-meta"><span class="cat">Breathing rhythm</span><span class="price">$0</span><span class="img-count">5 imgs</span></div>
+    </div>
+    <div class="expand-icon">+</div>
+  </div>
+  <div class="product-detail">
+    <div class="product-gallery"><img src="https://main--of1-3dd20e77--of1-labs.aem.page/media/rhythm-relax-1.webp" alt="Relax" class="gallery-img" loading="lazy"><img src="https://main--of1-3dd20e77--of1-labs.aem.page/media/rhythm-relax-2.webp" alt="Relax" class="gallery-img" loading="lazy"><img src="https://main--of1-3dd20e77--of1-labs.aem.page/media/rhythm-relax-3.webp" alt="Relax" class="gallery-img" loading="lazy"><img src="https://main--of1-3dd20e77--of1-labs.aem.page/media/rhythm-relax-4.png" alt="Relax" class="gallery-img" loading="lazy"><img src="https://main--of1-3dd20e77--of1-labs.aem.page/media/rhythm-relax-5.png" alt="Relax" class="gallery-img" loading="lazy"></div>
+    <div class="product-detail-content">
+      <p class="product-desc">Relax uses a 4-second inhale and 6-second exhale — a longer exhale to gently calm the nervous system after a stressful stretch of the day. It&#x27;s the rhythm to reach for when tension builds up and you need a few minutes to unwind.</p>
+      <h4>Features</h4><ul><li>4/6 inhale-exhale ratio</li><li>Longer exhale for calming effect</li><li>Animated orb visualization</li><li>Pairs well with calming backgrounds</li></ul>
+      <h4>Highlights</h4><ul><li>Designed for stress relief</li><li>Longer exhale slows heart rate</li></ul>
+      <div class="product-tags">
+        <h4>Keywords</h4><div class='kw-list'><span class="kw">relax breathing</span><span class="kw">4 6 rhythm</span><span class="kw">stress relief breathing</span><span class="kw">calm down</span><span class="kw">anxiety breathing exercise</span><span class="kw">longer exhale</span><span class="kw">unwind after work</span><span class="kw">afternoon stress</span></div>
+        <div class='product-persona'>Persona: <strong>stress-relief-seeker</strong></div>
+        <div class='product-usecase'>Use case: <strong>quick-stress-reset</strong></div>
+      </div>
+      <a href="https://breathe-app.com/#rhythms" class="product-link" target="_blank">View on site &rarr;</a>
+    </div>
+  </div>
+</div><div class="product-card">
+  <div class="product-summary">
+    <img src="https://main--of1-3dd20e77--of1-labs.aem.page/media/rhythm-energy-1.webp" alt="Energy" class="product-thumb" loading="lazy">
+    <div class="product-info">
+      <div class="product-name">Energy</div>
+      <div class="product-meta"><span class="cat">Breathing rhythm</span><span class="price">$0</span><span class="img-count">4 imgs</span></div>
+    </div>
+    <div class="expand-icon">+</div>
+  </div>
+  <div class="product-detail">
+    <div class="product-gallery"><img src="https://main--of1-3dd20e77--of1-labs.aem.page/media/rhythm-energy-1.webp" alt="Energy" class="gallery-img" loading="lazy"><img src="https://main--of1-3dd20e77--of1-labs.aem.page/media/rhythm-energy-2.webp" alt="Energy" class="gallery-img" loading="lazy"><img src="https://main--of1-3dd20e77--of1-labs.aem.page/media/rhythm-energy-3.webp" alt="Energy" class="gallery-img" loading="lazy"><img src="https://main--of1-3dd20e77--of1-labs.aem.page/media/rhythm-energy-4.png" alt="Energy" class="gallery-img" loading="lazy"></div>
+    <div class="product-detail-content">
+      <p class="product-desc">Energy flips the ratio to a 6-second inhale and 4-second exhale, giving sessions a brighter, more activating feel. It&#x27;s built for mornings or slow afternoons when you want alertness rather than calm.</p>
+      <h4>Features</h4><ul><li>6/4 inhale-exhale ratio</li><li>Shorter exhale for an activating effect</li><li>Animated orb visualization</li><li>Pairs well with bright, outdoor backgrounds</li></ul>
+      <h4>Highlights</h4><ul><li>Morning energy boost</li><li>Faster-paced than Balance or Relax</li></ul>
+      <div class="product-tags">
+        <h4>Keywords</h4><div class='kw-list'><span class="kw">energy breathing</span><span class="kw">6 4 rhythm</span><span class="kw">morning energy</span><span class="kw">wake up breathing</span><span class="kw">alertness exercise</span><span class="kw">energizing breath work</span><span class="kw">quick morning routine</span><span class="kw">focus and alertness</span></div>
+        <div class='product-persona'>Persona: <strong>morning-energy-seeker</strong></div>
+        <div class='product-usecase'>Use case: <strong>morning-energy</strong></div>
+      </div>
+      <a href="https://breathe-app.com/#rhythms" class="product-link" target="_blank">View on site &rarr;</a>
+    </div>
+  </div>
+</div><div class="product-card">
+  <div class="product-summary">
+    <img src="https://main--of1-3dd20e77--of1-labs.aem.page/media/rhythm-sleep-1.webp" alt="Sleep" class="product-thumb" loading="lazy">
+    <div class="product-info">
+      <div class="product-name">Sleep</div>
+      <div class="product-meta"><span class="cat">Breathing rhythm</span><span class="price">$0</span><span class="img-count">5 imgs</span></div>
+    </div>
+    <div class="expand-icon">+</div>
+  </div>
+  <div class="product-detail">
+    <div class="product-gallery"><img src="https://main--of1-3dd20e77--of1-labs.aem.page/media/rhythm-sleep-1.webp" alt="Sleep" class="gallery-img" loading="lazy"><img src="https://main--of1-3dd20e77--of1-labs.aem.page/media/rhythm-sleep-2.webp" alt="Sleep" class="gallery-img" loading="lazy"><img src="https://main--of1-3dd20e77--of1-labs.aem.page/media/rhythm-sleep-3.webp" alt="Sleep" class="gallery-img" loading="lazy"><img src="https://main--of1-3dd20e77--of1-labs.aem.page/media/rhythm-sleep-4.png" alt="Sleep" class="gallery-img" loading="lazy"><img src="https://main--of1-3dd20e77--of1-labs.aem.page/media/rhythm-sleep-5.png" alt="Sleep" class="gallery-img" loading="lazy"></div>
+    <div class="product-detail-content">
+      <p class="product-desc">Sleep is the 4/7/8 preset — a 4-second inhale, 7-second hold, and 8-second exhale, one of the most widely used patterns for winding down before bed. Pair it with a dim, quiet background like Fireplace or Space for an evening session.</p>
+      <h4>Features</h4><ul><li>4/7/8 inhale-hold-exhale ratio</li><li>Includes a hold phase, unlike other presets</li><li>Animated orb visualization</li><li>Pairs well with dim, evening backgrounds</li></ul>
+      <h4>Highlights</h4><ul><li>Built for pre-sleep wind-down</li><li>Only preset with a hold phase</li></ul>
+      <div class="product-tags">
+        <h4>Keywords</h4><div class='kw-list'><span class="kw">sleep breathing</span><span class="kw">4 7 8 rhythm</span><span class="kw">fall asleep faster</span><span class="kw">insomnia breathing exercise</span><span class="kw">bedtime routine</span><span class="kw">wind down before bed</span><span class="kw">evening breathing</span><span class="kw">relaxation for sleep</span></div>
+        <div class='product-persona'>Persona: <strong>sleep-support-seeker</strong></div>
+        <div class='product-usecase'>Use case: <strong>better-sleep</strong></div>
+      </div>
+      <a href="https://breathe-app.com/#rhythms" class="product-link" target="_blank">View on site &rarr;</a>
+    </div>
+  </div>
+</div><div class="product-card">
+  <div class="product-summary">
+    <img src="https://main--of1-3dd20e77--of1-labs.aem.page/media/bg-beach-1.webp" alt="Beach" class="product-thumb" loading="lazy">
+    <div class="product-info">
+      <div class="product-name">Beach</div>
+      <div class="product-meta"><span class="cat">Background atmosphere</span><span class="price">$0</span><span class="img-count">4 imgs</span></div>
+    </div>
+    <div class="expand-icon">+</div>
+  </div>
+  <div class="product-detail">
+    <div class="product-gallery"><img src="https://main--of1-3dd20e77--of1-labs.aem.page/media/bg-beach-1.webp" alt="Beach" class="gallery-img" loading="lazy"><img src="https://main--of1-3dd20e77--of1-labs.aem.page/media/bg-beach-2.webp" alt="Beach" class="gallery-img" loading="lazy"><img src="https://main--of1-3dd20e77--of1-labs.aem.page/media/bg-beach-3.png" alt="Beach" class="gallery-img" loading="lazy"><img src="https://main--of1-3dd20e77--of1-labs.aem.page/media/bg-beach-4.png" alt="Beach" class="gallery-img" loading="lazy"></div>
+    <div class="product-detail-content">
+      <p class="product-desc">Beach is a video atmosphere of gentle waves rolling onshore, downloaded once for fully offline sessions. Its bright, open feel makes it a favorite for morning or daytime breathing sessions.</p>
+      <h4>Features</h4><ul><li>Full-motion video atmosphere</li><li>Downloads once for offline playback</li><li>Loops seamlessly during a session</li></ul>
+      <h4>Highlights</h4><ul><li>Bright, open, energizing scene</li><li>One of 5 video atmospheres</li></ul>
+      <div class="product-tags">
+        <h4>Keywords</h4><div class='kw-list'><span class="kw">beach background</span><span class="kw">ocean waves</span><span class="kw">morning breathing scene</span><span class="kw">video atmosphere</span><span class="kw">offline background</span><span class="kw">calming ocean sounds</span><span class="kw">outdoor scene</span></div>
+        <div class='product-persona'>Persona: <strong>morning-energy-seeker</strong></div>
+        <div class='product-usecase'>Use case: <strong>morning-energy</strong></div>
+      </div>
+      <a href="https://breathe-app.com/#backgrounds" class="product-link" target="_blank">View on site &rarr;</a>
+    </div>
+  </div>
+</div><div class="product-card">
+  <div class="product-summary">
+    <img src="https://main--of1-3dd20e77--of1-labs.aem.page/media/bg-river-1.webp" alt="River" class="product-thumb" loading="lazy">
+    <div class="product-info">
+      <div class="product-name">River</div>
+      <div class="product-meta"><span class="cat">Background atmosphere</span><span class="price">$0</span><span class="img-count">4 imgs</span></div>
+    </div>
+    <div class="expand-icon">+</div>
+  </div>
+  <div class="product-detail">
+    <div class="product-gallery"><img src="https://main--of1-3dd20e77--of1-labs.aem.page/media/bg-river-1.webp" alt="River" class="gallery-img" loading="lazy"><img src="https://main--of1-3dd20e77--of1-labs.aem.page/media/bg-river-2.webp" alt="River" class="gallery-img" loading="lazy"><img src="https://main--of1-3dd20e77--of1-labs.aem.page/media/bg-river-3.png" alt="River" class="gallery-img" loading="lazy"><img src="https://main--of1-3dd20e77--of1-labs.aem.page/media/bg-river-4.webp" alt="River" class="gallery-img" loading="lazy"></div>
+    <div class="product-detail-content">
+      <p class="product-desc">River is a video atmosphere of flowing water over smooth stones, offering a continuous, grounding motion for calming sessions. It downloads once and plays fully offline.</p>
+      <h4>Features</h4><ul><li>Full-motion video atmosphere</li><li>Downloads once for offline playback</li><li>Continuous flowing-water motion</li></ul>
+      <h4>Highlights</h4><ul><li>Grounding, steady motion</li><li>One of 5 video atmospheres</li></ul>
+      <div class="product-tags">
+        <h4>Keywords</h4><div class='kw-list'><span class="kw">river background</span><span class="kw">flowing water</span><span class="kw">calming video scene</span><span class="kw">stress relief background</span><span class="kw">nature sounds</span><span class="kw">offline atmosphere</span><span class="kw">grounding visual</span></div>
+        <div class='product-persona'>Persona: <strong>stress-relief-seeker</strong></div>
+        <div class='product-usecase'>Use case: <strong>quick-stress-reset</strong></div>
+      </div>
+      <a href="https://breathe-app.com/#backgrounds" class="product-link" target="_blank">View on site &rarr;</a>
+    </div>
+  </div>
+</div><div class="product-card">
+  <div class="product-summary">
+    <img src="https://main--of1-3dd20e77--of1-labs.aem.page/media/bg-fireplace-1.webp" alt="Fireplace" class="product-thumb" loading="lazy">
+    <div class="product-info">
+      <div class="product-name">Fireplace</div>
+      <div class="product-meta"><span class="cat">Background atmosphere</span><span class="price">$0</span><span class="img-count">4 imgs</span></div>
+    </div>
+    <div class="expand-icon">+</div>
+  </div>
+  <div class="product-detail">
+    <div class="product-gallery"><img src="https://main--of1-3dd20e77--of1-labs.aem.page/media/bg-fireplace-1.webp" alt="Fireplace" class="gallery-img" loading="lazy"><img src="https://main--of1-3dd20e77--of1-labs.aem.page/media/bg-fireplace-2.webp" alt="Fireplace" class="gallery-img" loading="lazy"><img src="https://main--of1-3dd20e77--of1-labs.aem.page/media/bg-fireplace-3.png" alt="Fireplace" class="gallery-img" loading="lazy"><img src="https://main--of1-3dd20e77--of1-labs.aem.page/media/bg-fireplace-4.png" alt="Fireplace" class="gallery-img" loading="lazy"></div>
+    <div class="product-detail-content">
+      <p class="product-desc">Fireplace is a warm, dim video atmosphere of flickering flames, made for evening sessions when the goal is to wind down. It&#x27;s a natural pairing with the Sleep rhythm ahead of bed.</p>
+      <h4>Features</h4><ul><li>Full-motion video atmosphere</li><li>Downloads once for offline playback</li><li>Warm, low-light visual tone</li></ul>
+      <h4>Highlights</h4><ul><li>Ideal for evening wind-down</li><li>Pairs naturally with the Sleep rhythm</li></ul>
+      <div class="product-tags">
+        <h4>Keywords</h4><div class='kw-list'><span class="kw">fireplace background</span><span class="kw">cozy video scene</span><span class="kw">evening wind down</span><span class="kw">bedtime atmosphere</span><span class="kw">warm ambience</span><span class="kw">relaxing fire video</span><span class="kw">offline night background</span></div>
+        <div class='product-persona'>Persona: <strong>sleep-support-seeker</strong></div>
+        <div class='product-usecase'>Use case: <strong>evening-wind-down</strong></div>
+      </div>
+      <a href="https://breathe-app.com/#backgrounds" class="product-link" target="_blank">View on site &rarr;</a>
+    </div>
+  </div>
+</div><div class="product-card">
+  <div class="product-summary">
+    <img src="https://main--of1-3dd20e77--of1-labs.aem.page/media/bg-earth-1.webp" alt="Earth" class="product-thumb" loading="lazy">
+    <div class="product-info">
+      <div class="product-name">Earth</div>
+      <div class="product-meta"><span class="cat">Background atmosphere</span><span class="price">$0</span><span class="img-count">4 imgs</span></div>
+    </div>
+    <div class="expand-icon">+</div>
+  </div>
+  <div class="product-detail">
+    <div class="product-gallery"><img src="https://main--of1-3dd20e77--of1-labs.aem.page/media/bg-earth-1.webp" alt="Earth" class="gallery-img" loading="lazy"><img src="https://main--of1-3dd20e77--of1-labs.aem.page/media/bg-earth-2.webp" alt="Earth" class="gallery-img" loading="lazy"><img src="https://main--of1-3dd20e77--of1-labs.aem.page/media/bg-earth-3.png" alt="Earth" class="gallery-img" loading="lazy"><img src="https://main--of1-3dd20e77--of1-labs.aem.page/media/bg-earth-4.png" alt="Earth" class="gallery-img" loading="lazy"></div>
+    <div class="product-detail-content">
+      <p class="product-desc">Earth is a video atmosphere showing the planet slowly rotating from orbit, offering a sense of quiet scale that works well for a focused, centering session at any time of day.</p>
+      <h4>Features</h4><ul><li>Full-motion video atmosphere</li><li>Downloads once for offline playback</li><li>Slow, wide-angle rotating visual</li></ul>
+      <h4>Highlights</h4><ul><li>Centering, big-picture perspective</li><li>One of 5 video atmospheres</li></ul>
+      <div class="product-tags">
+        <h4>Keywords</h4><div class='kw-list'><span class="kw">earth background</span><span class="kw">planet view</span><span class="kw">space perspective</span><span class="kw">centering visual</span><span class="kw">focus breathing background</span><span class="kw">orbit video</span><span class="kw">calm workday break</span></div>
+        <div class='product-persona'>Persona: <strong>focus-work-seeker</strong></div>
+        <div class='product-usecase'>Use case: <strong>focus-during-work</strong></div>
+      </div>
+      <a href="https://breathe-app.com/#backgrounds" class="product-link" target="_blank">View on site &rarr;</a>
+    </div>
+  </div>
+</div><div class="product-card">
+  <div class="product-summary">
+    <img src="https://main--of1-3dd20e77--of1-labs.aem.page/media/bg-space-1.webp" alt="Space" class="product-thumb" loading="lazy">
+    <div class="product-info">
+      <div class="product-name">Space</div>
+      <div class="product-meta"><span class="cat">Background atmosphere</span><span class="price">$0</span><span class="img-count">4 imgs</span></div>
+    </div>
+    <div class="expand-icon">+</div>
+  </div>
+  <div class="product-detail">
+    <div class="product-gallery"><img src="https://main--of1-3dd20e77--of1-labs.aem.page/media/bg-space-1.webp" alt="Space" class="gallery-img" loading="lazy"><img src="https://main--of1-3dd20e77--of1-labs.aem.page/media/bg-space-2.webp" alt="Space" class="gallery-img" loading="lazy"><img src="https://main--of1-3dd20e77--of1-labs.aem.page/media/bg-space-3.png" alt="Space" class="gallery-img" loading="lazy"><img src="https://main--of1-3dd20e77--of1-labs.aem.page/media/bg-space-4.png" alt="Space" class="gallery-img" loading="lazy"></div>
+    <div class="product-detail-content">
+      <p class="product-desc">Space is a dark, star-filled video atmosphere with slow drifting motion — the deepest, quietest visual in the collection. It&#x27;s a strong match for late-night sessions with the Sleep rhythm.</p>
+      <h4>Features</h4><ul><li>Full-motion video atmosphere</li><li>Downloads once for offline playback</li><li>Dark, minimal-light visual tone</li></ul>
+      <h4>Highlights</h4><ul><li>Deepest, darkest atmosphere</li><li>Well suited to late-night sessions</li></ul>
+      <div class="product-tags">
+        <h4>Keywords</h4><div class='kw-list'><span class="kw">space background</span><span class="kw">stars video</span><span class="kw">night sky atmosphere</span><span class="kw">dark calming visual</span><span class="kw">late night breathing</span><span class="kw">sleep background</span><span class="kw">deep relaxation scene</span></div>
+        <div class='product-persona'>Persona: <strong>sleep-support-seeker</strong></div>
+        <div class='product-usecase'>Use case: <strong>better-sleep</strong></div>
+      </div>
+      <a href="https://breathe-app.com/#backgrounds" class="product-link" target="_blank">View on site &rarr;</a>
+    </div>
+  </div>
+</div><div class="product-card">
+  <div class="product-summary">
+    <img src="https://main--of1-3dd20e77--of1-labs.aem.page/media/bg-seashore-1.webp" alt="Seashore" class="product-thumb" loading="lazy">
+    <div class="product-info">
+      <div class="product-name">Seashore</div>
+      <div class="product-meta"><span class="cat">Background atmosphere</span><span class="price">$0</span><span class="img-count">4 imgs</span></div>
+    </div>
+    <div class="expand-icon">+</div>
+  </div>
+  <div class="product-detail">
+    <div class="product-gallery"><img src="https://main--of1-3dd20e77--of1-labs.aem.page/media/bg-seashore-1.webp" alt="Seashore" class="gallery-img" loading="lazy"><img src="https://main--of1-3dd20e77--of1-labs.aem.page/media/bg-seashore-2.webp" alt="Seashore" class="gallery-img" loading="lazy"><img src="https://main--of1-3dd20e77--of1-labs.aem.page/media/bg-seashore-3.webp" alt="Seashore" class="gallery-img" loading="lazy"><img src="https://main--of1-3dd20e77--of1-labs.aem.page/media/bg-seashore-4.jpg" alt="Seashore" class="gallery-img" loading="lazy"></div>
+    <div class="product-detail-content">
+      <p class="product-desc">Seashore is a static photo atmosphere of a calm shoreline, offering a lighter-weight, still alternative to the video backgrounds for anyone who prefers a quieter visual during a session.</p>
+      <h4>Features</h4><ul><li>Static photo atmosphere</li><li>Downloads once for offline use</li><li>Lower-motion alternative to video scenes</li></ul>
+      <h4>Highlights</h4><ul><li>Quiet, still visual</li><li>One of 3 photo atmospheres</li></ul>
+      <div class="product-tags">
+        <h4>Keywords</h4><div class='kw-list'><span class="kw">seashore background</span><span class="kw">beach photo</span><span class="kw">calm still image</span><span class="kw">quiet visual</span><span class="kw">photo atmosphere</span><span class="kw">coastal scene</span><span class="kw">offline photo background</span></div>
+        <div class='product-persona'>Persona: <strong>stress-relief-seeker</strong></div>
+        <div class='product-usecase'>Use case: <strong>quick-stress-reset</strong></div>
+      </div>
+      <a href="https://breathe-app.com/#backgrounds" class="product-link" target="_blank">View on site &rarr;</a>
+    </div>
+  </div>
+</div><div class="product-card">
+  <div class="product-summary">
+    <img src="https://main--of1-3dd20e77--of1-labs.aem.page/media/bg-countryside-1.webp" alt="Countryside" class="product-thumb" loading="lazy">
+    <div class="product-info">
+      <div class="product-name">Countryside</div>
+      <div class="product-meta"><span class="cat">Background atmosphere</span><span class="price">$0</span><span class="img-count">4 imgs</span></div>
+    </div>
+    <div class="expand-icon">+</div>
+  </div>
+  <div class="product-detail">
+    <div class="product-gallery"><img src="https://main--of1-3dd20e77--of1-labs.aem.page/media/bg-countryside-1.webp" alt="Countryside" class="gallery-img" loading="lazy"><img src="https://main--of1-3dd20e77--of1-labs.aem.page/media/bg-countryside-2.webp" alt="Countryside" class="gallery-img" loading="lazy"><img src="https://main--of1-3dd20e77--of1-labs.aem.page/media/bg-countryside-3.webp" alt="Countryside" class="gallery-img" loading="lazy"><img src="https://main--of1-3dd20e77--of1-labs.aem.page/media/bg-countryside-4.png" alt="Countryside" class="gallery-img" loading="lazy"></div>
+    <div class="product-detail-content">
+      <p class="product-desc">Countryside is a static photo atmosphere of open rolling fields, a gentle, low-stimulation backdrop for sessions where you want the visual to stay out of the way.</p>
+      <h4>Features</h4><ul><li>Static photo atmosphere</li><li>Downloads once for offline use</li><li>Open, low-stimulation scene</li></ul>
+      <h4>Highlights</h4><ul><li>Gentle daytime visual</li><li>One of 3 photo atmospheres</li></ul>
+      <div class="product-tags">
+        <h4>Keywords</h4><div class='kw-list'><span class="kw">countryside background</span><span class="kw">field photo</span><span class="kw">rural scene</span><span class="kw">calm daytime visual</span><span class="kw">photo atmosphere</span><span class="kw">open landscape</span><span class="kw">quiet backdrop</span></div>
+        <div class='product-persona'>Persona: <strong>focus-work-seeker</strong></div>
+        <div class='product-usecase'>Use case: <strong>focus-during-work</strong></div>
+      </div>
+      <a href="https://breathe-app.com/#backgrounds" class="product-link" target="_blank">View on site &rarr;</a>
+    </div>
+  </div>
+</div><div class="product-card">
+  <div class="product-summary">
+    <img src="https://main--of1-3dd20e77--of1-labs.aem.page/media/bg-rainforest-1.webp" alt="Rainforest" class="product-thumb" loading="lazy">
+    <div class="product-info">
+      <div class="product-name">Rainforest</div>
+      <div class="product-meta"><span class="cat">Background atmosphere</span><span class="price">$0</span><span class="img-count">4 imgs</span></div>
+    </div>
+    <div class="expand-icon">+</div>
+  </div>
+  <div class="product-detail">
+    <div class="product-gallery"><img src="https://main--of1-3dd20e77--of1-labs.aem.page/media/bg-rainforest-1.webp" alt="Rainforest" class="gallery-img" loading="lazy"><img src="https://main--of1-3dd20e77--of1-labs.aem.page/media/bg-rainforest-2.webp" alt="Rainforest" class="gallery-img" loading="lazy"><img src="https://main--of1-3dd20e77--of1-labs.aem.page/media/bg-rainforest-3.webp" alt="Rainforest" class="gallery-img" loading="lazy"><img src="https://main--of1-3dd20e77--of1-labs.aem.page/media/bg-rainforest-4.png" alt="Rainforest" class="gallery-img" loading="lazy"></div>
+    <div class="product-detail-content">
+      <p class="product-desc">Rainforest is a static photo atmosphere of dense green canopy, offering a lush, natural backdrop for sessions focused on grounding and refocusing during the day.</p>
+      <h4>Features</h4><ul><li>Static photo atmosphere</li><li>Downloads once for offline use</li><li>Lush, green natural scene</li></ul>
+      <h4>Highlights</h4><ul><li>Grounding natural visual</li><li>One of 3 photo atmospheres</li></ul>
+      <div class="product-tags">
+        <h4>Keywords</h4><div class='kw-list'><span class="kw">rainforest background</span><span class="kw">jungle photo</span><span class="kw">green nature scene</span><span class="kw">grounding visual</span><span class="kw">photo atmosphere</span><span class="kw">natural backdrop</span><span class="kw">refocus break</span></div>
+        <div class='product-persona'>Persona: <strong>morning-energy-seeker</strong></div>
+        <div class='product-usecase'>Use case: <strong>morning-energy</strong></div>
+      </div>
+      <a href="https://breathe-app.com/#backgrounds" class="product-link" target="_blank">View on site &rarr;</a>
+    </div>
+  </div>
+</div></div>
+</div>
+
+<h2>Brand Voice</h2>
+<div class="section brand-section">
+  <h3>Personality</h3><p>calm, minimal, reassuring, intentional, trustworthy</p>
+  <h3>Tone</h3><p>Warm but understated — every sentence sounds like an exhale, not a pitch. Benefit-first, plain language, never hyped or urgent. Confidence comes from restraint, not superlatives.</p>
+  <h3>Vocabulary</h3><p style="color:var(--teal)">breathing rhythm, session, atmosphere, background, inhale, exhale, offline-ready, offline-first, ad-free, no account</p>
+  <h3>Avoid Words</h3><p style="color:var(--accent)">revolutionary, game-changing, addictive, streak, gamify, unlock, premium, subscribe now, limited time, act now</p>
+</div>
+
+<h2>Personas (4)</h2>
+<div class="section"><div class="personas-grid"><div class="persona-card">
+  <div class="persona-name">Stress Relief Seeker</div>
+  <div class="persona-desc">Deals with afternoon tension and wants a fast, guided way to calm down without downloading a complicated app or creating an account.</div>
+  <div class="persona-kw">Keywords: stress, anxiety, overwhelmed, calm down, relax, tense, breathing exercise, anxious</div>
+</div><div class="persona-card">
+  <div class="persona-name">Sleep Support Seeker</div>
+  <div class="persona-desc">Struggles with occasional insomnia or a racing mind at night and is looking for a wind-down ritual that helps them fall asleep faster.</div>
+  <div class="persona-kw">Keywords: sleep, insomnia, can't sleep, bedtime, fall asleep, wind down, night routine, restless</div>
+</div><div class="persona-card">
+  <div class="persona-name">Morning Energy Seeker</div>
+  <div class="persona-desc">Wants a short, energizing ritual to start the day with focus instead of reaching for another cup of coffee.</div>
+  <div class="persona-kw">Keywords: morning routine, wake up, energy, start the day, alertness, morning ritual, before work, boost energy</div>
+</div><div class="persona-card">
+  <div class="persona-name">Focus &amp; Work-Break Seeker</div>
+  <div class="persona-desc">A busy professional who wants short, distraction-free breathing breaks during the workday to reset focus between meetings or tasks.</div>
+  <div class="persona-kw">Keywords: focus, work break, concentration, productivity, reset, midday break, mental clarity, distraction free</div>
+</div></div></div>
+
+<h2>Use Cases (5)</h2>
+<div class="section"><div class="usecase-card">
+  <div class="usecase-name">Quick Stress Reset</div>
+  <div class="usecase-desc">A short session to de-stress in the middle of a hard day — no scheduling, no account, just a few minutes with a calming rhythm and atmosphere.</div>
+  <div class='usecase-kw'>Keywords: stress reset, quick calm, de-stress, anxious right now, need to relax, overwhelmed</div>
+</div><div class="usecase-card">
+  <div class="usecase-name">Better Sleep</div>
+  <div class="usecase-desc">An evening wind-down session designed to help you fall asleep faster, using the 4/7/8 rhythm with a dim, quiet background.</div>
+  <div class='usecase-kw'>Keywords: sleep better, fall asleep faster, bedtime session, insomnia help, wind down for sleep, night breathing</div>
+</div><div class="usecase-card">
+  <div class="usecase-name">Morning Energy</div>
+  <div class="usecase-desc">A brief energizing session to start the day alert and focused, using the faster-paced Energy rhythm with a bright background.</div>
+  <div class='usecase-kw'>Keywords: morning energy, wake up routine, start my day, morning boost, energize in the morning, alertness exercise</div>
+</div><div class="usecase-card">
+  <div class="usecase-name">Focus During Work</div>
+  <div class="usecase-desc">A short, distraction-free breathing break between meetings or tasks to reset concentration during the workday.</div>
+  <div class='usecase-kw'>Keywords: focus break, work break breathing, reset focus, between meetings, concentration exercise, midday reset</div>
+</div><div class="usecase-card">
+  <div class="usecase-name">Evening Wind-Down</div>
+  <div class="usecase-desc">A calming end-of-day ritual that transitions from the day&#x27;s stress into a relaxed state before settling in for the night.</div>
+  <div class='usecase-kw'>Keywords: evening routine, wind down, after work relax, end of day ritual, transition to rest, evening calm</div>
+</div></div>
+
+<h2>Features (6)</h2>
+<div class="section"><div><span class="feature-chip">Background Atmospheres</span><span class="feature-chip">Breathing Rhythms</span><span class="feature-chip">Offline-First Media</span><span class="feature-chip">Advanced Session Options</span><span class="feature-chip">Privacy-First, No Accounts</span><span class="feature-chip">27 Languages</span></div></div>
+
+<h2>Suggestions (12)</h2>
+<div class="section">
+  <div class="sug-meta">
+    <span class="sug-title">Find the right rhythm for how you feel</span>
+    <span class="sug-sub">Ask about breathing rhythms, backgrounds, or what fits your day — no account needed.</span>
+    <span class="sug-ph">Placeholder: "Ask about rhythms, backgrounds, or how to use Breathe..."</span>
+  </div>
+  <div><div class="suggestion-chip"><span class="sug-label">Sleep rhythm explained</span><span class="sug-query">Tell me about the Sleep breathing rhythm and how the 4-7-8 pattern works</span></div><div class="suggestion-chip"><span class="sug-label">Fireplace atmosphere</span><span class="sug-query">What is the Fireplace background atmosphere like?</span></div><div class="suggestion-chip"><span class="sug-label">Relax vs Energy</span><span class="sug-query">Compare the Relax and Energy breathing rhythms</span></div><div class="suggestion-chip"><span class="sug-label">Beach vs Rainforest</span><span class="sug-query">Compare the Beach and Rainforest backgrounds</span></div><div class="suggestion-chip"><span class="sug-label">Best for stress relief</span><span class="sug-query">What&#x27;s the best breathing rhythm and background for a quick stress reset?</span></div><div class="suggestion-chip"><span class="sug-label">Best for falling asleep</span><span class="sug-query">Which rhythm and atmosphere help me fall asleep faster?</span></div><div class="suggestion-chip"><span class="sug-label">All breathing rhythms</span><span class="sug-query">Show me all the breathing rhythms in Breathe</span></div><div class="suggestion-chip"><span class="sug-label">All backgrounds</span><span class="sug-query">Show me all the background atmospheres available</span></div><div class="suggestion-chip"><span class="sug-label">Morning energy boost</span><span class="sug-query">What&#x27;s a good morning routine to feel energized without coffee?</span></div><div class="suggestion-chip"><span class="sug-label">Focus during work</span><span class="sug-query">What&#x27;s a short breathing break I can take between meetings to reset focus?</span></div><div class="suggestion-chip"><span class="sug-label">Free with everything included?</span><span class="sug-query">Is Breathe completely free, and do all rhythms and backgrounds come at no extra cost?</span></div><div class="suggestion-chip"><span class="sug-label">Works without an account</span><span class="sug-query">Do I need an account or an internet connection to use Breathe?</span></div></div>
+</div>
+
+<h2>CTA Template</h2>
+<div class="section"><pre style="font-size:10px;color:var(--dim);overflow-x:auto;white-space:pre-wrap">{
+  &quot;html&quot;: &quot;&lt;div style=\&quot;background:#23323d;padding:64px 48px;text-align:center;margin:0 auto;border-radius:22px;max-width:900px;\&quot;&gt;&lt;h2 style=\&quot;font-family:&#x27;Newsreader&#x27;,Georgia,serif;font-weight:400;font-size:2.2rem;color:#e8f0f5;margin:0 0 12px;line-height:1.3;\&quot;&gt;{{title}}&lt;/h2&gt;&lt;p style=\&quot;font-family:&#x27;Hanken Grotesk&#x27;,&#x27;Trebuchet MS&#x27;,sans-serif;font-size:1.1rem;color:rgba(232,240,245,0.6);margin:0 auto 28px;max-width:360px;line-height:1.5;\&quot;&gt;{{description}}&lt;/p&gt;&lt;a href=\&quot;{{href}}\&quot; style=\&quot;display:inline-block;border:1px solid rgba(255,255,255,0.4);color:#fff;background:transparent;font-family:&#x27;Hanken Grotesk&#x27;,&#x27;Trebuchet MS&#x27;,sans-serif;font-size:14px;font-weight:500;padding:12px 28px;border-radius:22px;text-decoration:none;\&quot;&gt;{{buttonText}}&lt;/a&gt;&lt;/div&gt;&quot;,
+  &quot;slots&quot;: [
+    &quot;title&quot;,
+    &quot;description&quot;,
+    &quot;buttonText&quot;
+  ],
+  &quot;fallback&quot;: {
+    &quot;title&quot;: &quot;Find your calm in minutes&quot;,
+    &quot;description&quot;: &quot;Discover offline-ready breathing sessions with calming atmospheres, tailored to how you want to feel.&quot;,
+    &quot;buttonText&quot;: &quot;Get the app&quot;
+  }
+}</pre></div>
+
+<script>
+document.querySelectorAll('.product-card').forEach(card => {
+  card.addEventListener('click', () => card.classList.toggle('expanded'));
+});
+</script>
+</body>
+</html>

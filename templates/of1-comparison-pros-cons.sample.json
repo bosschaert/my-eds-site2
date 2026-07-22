@@ -1,0 +1,40 @@
+{
+  "_meta": { "stylesheet": "/styles/of1-comparison-pros-cons.css" },
+  "hero.eyebrow": "Pros and cons",
+  "hero.title": "Is Breathe actually right for you?",
+  "hero.subtitle": "No app is perfect for everyone. Here's an honest look at where Breathe shines, and where it doesn't try to be something it's not.",
+  "hero.cta-primary": { "label": "Get the app", "href": "https://breathe-app.com/#download" },
+  "hero.image": "https://breathe-app.com/assets/screenshots/ios/en/beach_2x.webp",
+  "item-1.title": "What works",
+  "item-1.list": [
+    "Completely free, no subscription or trial",
+    "Offline-ready video and photo backgrounds",
+    "Custom inhale / exhale timings, not just presets",
+    "Available in 27 languages"
+  ],
+  "item-2.title": "What to know",
+  "item-2.list": [
+    "No guided voice narration - visuals and rhythm only",
+    "No sleep-tracking or wearable integration",
+    "Smaller background library than some paid apps"
+  ],
+  "verdict.eyebrow": "Bottom line",
+  "verdict.stat": "Best for quiet, quick resets",
+  "verdict.body": "If you want a calm breathing session without narration, subscriptions, or setup - Breathe is built for exactly that.",
+  "tabs.title": "Good fit vs. not a fit",
+  "tabs.tab-1-label": "Good fit if",
+  "tabs.panel-1-list": [
+    "You want something free that stays free",
+    "You like ambient visuals over spoken guidance",
+    "You practice offline or while traveling"
+  ],
+  "tabs.tab-2-label": "Maybe not if",
+  "tabs.panel-2-list": [
+    "You specifically want narrated meditation sessions",
+    "You want sleep or heart-rate tracking built in",
+    "You need a huge, constantly-updated content library"
+  ],
+  "cta.title": "Decide for yourself - it's free.",
+  "cta.subtitle": "No account, no trial clock, no risk in trying it.",
+  "cta.cta-primary": { "label": "Get Breathe - it's free", "href": "https://breathe-app.com/#download" }
+}

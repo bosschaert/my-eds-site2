@@ -1,0 +1,123 @@
+<main>
+<section class="of1-deep-dive-faq-explainer-hero of1-hero">
+  <div class="of1-ddf-hero-grid">
+    <div class="of1-ddf-hero-content">
+      <p class="of1-eyebrow" data-slot="hero.eyebrow">Explained</p>
+      <h1 data-slot="hero.title">Everything you're wondering about Breathe</h1>
+      <p class="of1-ddf-hero-sub" data-slot="hero.subtitle">How the rhythms work, what backgrounds are available, and how your data stays on your device.</p>
+      <a class="of1-cta of1-cta-primary" data-slot="hero.cta-primary" href="#faq">Jump to FAQs</a>
+    </div>
+    <div class="of1-ddf-hero-media">
+      <img data-slot="hero.image" src="" alt="">
+    </div>
+  </div>
+</section>
+
+<section class="of1-deep-dive-faq-explainer-tabs of1-section">
+  <h2 data-slot="tabs.title">Tabs section title</h2>
+  <div class="of1-ddf-tabs" data-tabs>
+    <div class="of1-ddf-tab-nav" role="tablist">
+      <button class="of1-ddf-tab-btn is-active" data-tab-btn="1" type="button" data-slot="tab-1.label">Tab one</button>
+      <button class="of1-ddf-tab-btn" data-tab-btn="2" type="button" data-slot="tab-2.label">Tab two</button>
+      <button class="of1-ddf-tab-btn" data-tab-btn="3" type="button" data-slot="tab-3.label">Tab three</button>
+    </div>
+    <div class="of1-ddf-tab-panels">
+      <div class="of1-ddf-tab-panel is-active" data-tab-panel="1">
+        <h3 data-slot="tab-1.title">Panel one title</h3>
+        <p data-slot="tab-1.body">Panel one body copy.</p>
+      </div>
+      <div class="of1-ddf-tab-panel" data-tab-panel="2">
+        <h3 data-slot="tab-2.title">Panel two title</h3>
+        <p data-slot="tab-2.body">Panel two body copy.</p>
+      </div>
+      <div class="of1-ddf-tab-panel" data-tab-panel="3">
+        <h3 data-slot="tab-3.title">Panel three title</h3>
+        <p data-slot="tab-3.body">Panel three body copy.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="of1-deep-dive-faq-explainer-faq of1-section" id="faq">
+  <h2 data-slot="faq.title">FAQ section title</h2>
+  <div class="of1-ddf-accordion" data-grid-items>
+    <article class="of1-ddf-accordion-item" data-card="1" data-accordion-item>
+      <button class="of1-ddf-accordion-trigger" type="button" data-accordion-trigger>
+        <span data-slot="item-1.title">Question one</span>
+        <span class="of1-ddf-accordion-icon" aria-hidden="true">+</span>
+      </button>
+      <div class="of1-ddf-accordion-panel" data-accordion-panel>
+        <p data-slot="item-1.body">Answer one.</p>
+      </div>
+    </article>
+    <article class="of1-ddf-accordion-item" data-card="2" data-accordion-item>
+      <button class="of1-ddf-accordion-trigger" type="button" data-accordion-trigger>
+        <span data-slot="item-2.title">Question two</span>
+        <span class="of1-ddf-accordion-icon" aria-hidden="true">+</span>
+      </button>
+      <div class="of1-ddf-accordion-panel" data-accordion-panel>
+        <p data-slot="item-2.body">Answer two.</p>
+      </div>
+    </article>
+    <article class="of1-ddf-accordion-item" data-card="3" data-accordion-item>
+      <button class="of1-ddf-accordion-trigger" type="button" data-accordion-trigger>
+        <span data-slot="item-3.title">Question three</span>
+        <span class="of1-ddf-accordion-icon" aria-hidden="true">+</span>
+      </button>
+      <div class="of1-ddf-accordion-panel" data-accordion-panel>
+        <p data-slot="item-3.body">Answer three.</p>
+      </div>
+    </article>
+    <article class="of1-ddf-accordion-item" data-card="4" data-accordion-item>
+      <button class="of1-ddf-accordion-trigger" type="button" data-accordion-trigger>
+        <span data-slot="item-4.title">Question four</span>
+        <span class="of1-ddf-accordion-icon" aria-hidden="true">+</span>
+      </button>
+      <div class="of1-ddf-accordion-panel" data-accordion-panel>
+        <p data-slot="item-4.body">Answer four.</p>
+      </div>
+    </article>
+    <article class="of1-ddf-accordion-item" data-card="5" data-accordion-item>
+      <button class="of1-ddf-accordion-trigger" type="button" data-accordion-trigger>
+        <span data-slot="item-5.title">Question five</span>
+        <span class="of1-ddf-accordion-icon" aria-hidden="true">+</span>
+      </button>
+      <div class="of1-ddf-accordion-panel" data-accordion-panel>
+        <p data-slot="item-5.body">Answer five.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="of1-deep-dive-faq-explainer-cta of1-cta-section">
+  <div class="of1-ddf-cta-inner">
+    <h2 data-slot="cta.title">Closing headline</h2>
+    <p data-slot="cta.body">Closing supporting line.</p>
+    <a class="of1-cta of1-cta-light" data-slot="cta.cta" href="#">Call to action</a>
+  </div>
+</section>
+
+<script>
+(function () {
+  var root = document.currentScript.closest('main');
+  var tabBtns = root.querySelectorAll('[data-tab-btn]');
+  tabBtns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var id = btn.getAttribute('data-tab-btn');
+      root.querySelectorAll('[data-tab-btn]').forEach(function (b) { b.classList.remove('is-active'); });
+      root.querySelectorAll('[data-tab-panel]').forEach(function (p) { p.classList.remove('is-active'); });
+      btn.classList.add('is-active');
+      var panel = root.querySelector('[data-tab-panel="' + id + '"]');
+      if (panel) panel.classList.add('is-active');
+    });
+  });
+  var accItems = root.querySelectorAll('[data-accordion-item]');
+  accItems.forEach(function (item) {
+    var trigger = item.querySelector('[data-accordion-trigger]');
+    trigger.addEventListener('click', function () {
+      item.classList.toggle('is-open');
+    });
+  });
+})();
+</script>
+</main>

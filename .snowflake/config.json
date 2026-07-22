@@ -1,0 +1,9 @@
+{
+  "projectsDir": ".snowflake/projects",
+  "branchPrefix": "snowflake-",
+  "trunkBranch": "main",
+  "tagPrefix": "snowflake-",
+  "substrateVersion": "1.1.0",
+  "substrateFlavor": "eds",
+  "installedAt": "2026-07-22T07:49:39.312Z"
+}

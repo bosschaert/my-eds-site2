@@ -1,0 +1,66 @@
+[
+  {
+    "id": "stress-relief-seeker",
+    "name": "Stress Relief Seeker",
+    "description": "Deals with afternoon tension and wants a fast, guided way to calm down without downloading a complicated app or creating an account.",
+    "keywords": ["stress", "anxiety", "overwhelmed", "calm down", "relax", "tense", "breathing exercise", "anxious", "reduce stress", "quick calm"],
+    "priorities": ["fast relief", "simplicity", "no account required", "works in a few minutes"],
+    "recommendedProducts": ["rhythm-relax", "bg-river", "bg-seashore"],
+    "intentProfile": {
+      "explore": 0.3,
+      "research": 0.3,
+      "compare": 0.2,
+      "purchase": 0.2,
+      "deals": 0.1,
+      "support": 0.8
+    }
+  },
+  {
+    "id": "sleep-support-seeker",
+    "name": "Sleep Support Seeker",
+    "description": "Struggles with occasional insomnia or a racing mind at night and is looking for a wind-down ritual that helps them fall asleep faster.",
+    "keywords": ["sleep", "insomnia", "can't sleep", "bedtime", "fall asleep", "wind down", "night routine", "restless", "sleep better", "before bed"],
+    "priorities": ["falling asleep faster", "a calming evening ritual", "dim, quiet visuals", "consistency at bedtime"],
+    "recommendedProducts": ["rhythm-sleep", "bg-fireplace", "bg-space"],
+    "intentProfile": {
+      "explore": 0.2,
+      "research": 0.8,
+      "compare": 0.3,
+      "purchase": 0.2,
+      "deals": 0.1,
+      "support": 0.3
+    }
+  },
+  {
+    "id": "morning-energy-seeker",
+    "name": "Morning Energy Seeker",
+    "description": "Wants a short, energizing ritual to start the day with focus instead of reaching for another cup of coffee.",
+    "keywords": ["morning routine", "wake up", "energy", "start the day", "alertness", "morning ritual", "before work", "boost energy", "energize", "morning breathing"],
+    "priorities": ["quick morning boost", "alertness without caffeine", "bright, energizing visuals", "consistency each morning"],
+    "recommendedProducts": ["rhythm-energy", "bg-beach", "bg-rainforest"],
+    "intentProfile": {
+      "explore": 0.6,
+      "research": 0.3,
+      "compare": 0.2,
+      "purchase": 0.7,
+      "deals": 0.1,
+      "support": 0.2
+    }
+  },
+  {
+    "id": "focus-work-seeker",
+    "name": "Focus & Work-Break Seeker",
+    "description": "A busy professional who wants short, distraction-free breathing breaks during the workday to reset focus between meetings or tasks.",
+    "keywords": ["focus", "work break", "concentration", "productivity", "reset", "midday break", "mental clarity", "distraction free", "work stress", "clear my head"],
+    "priorities": ["short sessions that fit a work break", "distraction-free interface", "no notifications or gamification", "mental clarity"],
+    "recommendedProducts": ["rhythm-balance", "bg-earth", "bg-countryside"],
+    "intentProfile": {
+      "explore": 0.2,
+      "research": 0.8,
+      "compare": 0.6,
+      "purchase": 0.3,
+      "deals": 0.2,
+      "support": 0.2
+    }
+  }
+]

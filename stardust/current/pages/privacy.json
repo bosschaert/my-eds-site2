@@ -1,0 +1,149 @@
+{
+  "_provenance": {
+    "renderedBy": "playwright",
+    "fetchedAt": "2026-07-22T07:35:43.555Z",
+    "waitMode": "medium",
+    "waitMs": 2500,
+    "httpStatus": 200
+  },
+  "slug": "privacy",
+  "url": "https://breathe-app.com/privacy/",
+  "renderedBy": "playwright",
+  "fetchedAt": "2026-07-22T07:35:43.555Z",
+  "finalUrl": "https://breathe-app.com/privacy/",
+  "title": "Privacy & Terms — Breathe",
+  "description": "This policy applies to the Breathe mobile app. The app does not collect, track, or transmit personal data. No accounts, sign-ins, or personal information are required to use the app.",
+  "og": {
+    "title": "Privacy & Terms — Breathe",
+    "description": "This policy applies to the Breathe mobile app. The app does not collect, track, or transmit personal data. No accounts, sign-ins, or personal information are required to use the app.",
+    "image": "https://www.breathe-app.com/assets/screenshots/home-og.jpg",
+    "type": "website"
+  },
+  "headings": [
+    {
+      "tag": "h1",
+      "text": "Privacy & Terms"
+    },
+    {
+      "tag": "h2",
+      "text": "Privacy Policy"
+    },
+    {
+      "tag": "h2",
+      "text": "Terms of Use"
+    },
+    {
+      "tag": "h2",
+      "text": "Questions"
+    }
+  ],
+  "body": [
+    "This policy applies to the Breathe mobile app. The app does not collect, track, or transmit personal data.",
+    "No accounts, sign-ins, or personal information are required to use the app.",
+    "No analytics, ads, or tracking SDKs are used in the app.",
+    "Breathing settings and media choices stay on your device.",
+    "Background media you download or import remains local to your device.",
+    "No data is sold or shared with third parties.",
+    "Breathe provides guided breathing and relaxation content and is not medical advice.",
+    "Use the app at your own discretion and stop if you feel unwell.",
+    "You are responsible for how you use the app and any content you add.",
+    "The app is provided \"as is\" without warranties; to the fullest extent permitted by law, we are not liable for damages arising from use.",
+    "We may update the app and this policy over time.",
+    "If you have questions about this policy, please reach out via the Support page."
+  ],
+  "codeBlocks": [],
+  "ctas": [
+    {
+      "label": "Breathe Mobile breathing practice",
+      "href": "/"
+    },
+    {
+      "label": "Home",
+      "href": "/"
+    },
+    {
+      "label": "Capabilities",
+      "href": "/#capabilities"
+    },
+    {
+      "label": "Support",
+      "href": "/support/"
+    },
+    {
+      "label": "Privacy",
+      "href": "/privacy/"
+    },
+    {
+      "label": "Get the app",
+      "href": "/#download"
+    },
+    {
+      "label": "Breathe",
+      "href": "/"
+    },
+    {
+      "label": "Capabilities",
+      "href": "/#capabilities"
+    },
+    {
+      "label": "Support",
+      "href": "/support/"
+    },
+    {
+      "label": "Privacy",
+      "href": "/privacy/"
+    }
+  ],
+  "links": [
+    "https://breathe-app.com/",
+    "https://breathe-app.com/#capabilities",
+    "https://breathe-app.com/support/",
+    "https://breathe-app.com/privacy/",
+    "https://breathe-app.com/#download"
+  ],
+  "media": {
+    "imgs": [
+      {
+        "src": "https://breathe-app.com/assets/app-icon.webp",
+        "alt": "Breathe app icon",
+        "w": 96,
+        "h": 96
+      },
+      {
+        "src": "https://breathe-app.com/assets/app-icon.webp",
+        "alt": "Breathe app icon",
+        "w": 96,
+        "h": 96
+      }
+    ],
+    "allImgCount": 2,
+    "cssBackgrounds": [],
+    "modals": [],
+    "videos": [],
+    "iframes": []
+  },
+  "customProps": {
+    "--ink": "#233039",
+    "--muted": "rgba(35, 48, 57, .55)",
+    "--accent": "#3f6486",
+    "--accent-light": "#9fc4e0",
+    "--surface": "rgba(255, 255, 255, .75)",
+    "--dark-section": "#23323d",
+    "--dark-ink": "#e8f0f5",
+    "--dark-muted": "rgba(232, 240, 245, .6)",
+    "--stroke": "rgba(35, 48, 57, .09)",
+    "--shadow": "0 8px 28px rgba(35, 48, 57, .1)",
+    "--shadow-strong": "0 20px 56px rgba(35, 48, 57, .18)",
+    "--radius": "22px"
+  },
+  "_signals": {
+    "filteredInterstitials": 0,
+    "distinctHeadings": 4,
+    "mainTextLen": 949,
+    "realImageCount": 2,
+    "trackingOnlyMedia": false,
+    "spaShellSuspect": false,
+    "screenshotMode": "fullPage"
+  },
+  "screenshot": "assets/screenshots/privacy.png"
+}

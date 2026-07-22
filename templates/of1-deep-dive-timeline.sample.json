@@ -1,0 +1,31 @@
+{
+  "_meta": { "stylesheet": "/styles/of1-deep-dive-timeline.css" },
+  "hero.eyebrow": "How it works",
+  "hero.title": "Inside a Breathe session, step by step",
+  "hero.subtitle": "From opening the app to the moment your shoulders drop, here's exactly what happens.",
+  "hero.cta-primary": { "label": "See the full flow", "href": "#" },
+  "hero.image": "https://breathe-app.com/assets/screenshots/ios/en/beach_2x.webp",
+  "intro.title": "Five steps, no setup required",
+  "intro.body": "Breathe is designed so the first session takes under a minute, with nothing to configure unless you want to.",
+  "item-1.title": "Open the app",
+  "item-1.body": "No account, no sign-in. Breathe opens straight to the session screen.",
+  "item-2.title": "Choose a background",
+  "item-2.body": "Pick from video and photo atmospheres like Beach, River, or Space, downloaded once for offline sessions.",
+  "item-3.title": "Set your rhythm",
+  "item-3.body": "Use a preset like Relax (4/6 second rhythm) or build a custom inhale/exhale timing.",
+  "item-4.title": "Follow the pulse",
+  "item-4.body": "A gentle breathing circle expands and contracts to guide your pace.",
+  "item-5.title": "Review your session",
+  "item-5.body": "See a short summary and your selections are saved for next time.",
+  "facts.title": "Built to stay out of your way",
+  "facts.body": "No ads, no tracking, and everything works without a connection.",
+  "facts.list": [
+    "Offline-ready media downloads once",
+    "Available in 27 languages",
+    "No account or sign-in required",
+    "Free on iOS and Android"
+  ],
+  "cta.title": "Take a breath. The good kind.",
+  "cta.body": "A few minutes is all it takes. Download Breathe and start your first session today.",
+  "cta.cta": { "label": "Get Breathe - it's free", "href": "/#download" }
+}

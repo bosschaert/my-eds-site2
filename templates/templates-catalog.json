@@ -1,0 +1,2830 @@
+{
+  "useRouting": true,
+  "baseUrl": "https://main--of1-3dd20e77--of1-labs.aem.page",
+  "generatedAt": "2026-07-22T08:12:50Z",
+  "count": 15,
+  "byIntent": {
+    "budget": [
+      "of1-budget-cost-breakdown",
+      "of1-budget-price-tiers",
+      "of1-budget-roi-story"
+    ],
+    "comparison": [
+      "of1-comparison-pros-cons",
+      "of1-comparison-table",
+      "of1-comparison-versus"
+    ],
+    "deep-dive": [
+      "of1-deep-dive-faq-explainer",
+      "of1-deep-dive-longform",
+      "of1-deep-dive-timeline"
+    ],
+    "discovery": [
+      "of1-discovery-by-category",
+      "of1-discovery-curated-collections",
+      "of1-discovery-gallery"
+    ],
+    "recommendation": [
+      "of1-recommendation-curated-bundle",
+      "of1-recommendation-hero-pick",
+      "of1-recommendation-ranked-list"
+    ]
+  },
+  "templates": [
+    {
+      "name": "of1-budget-cost-breakdown",
+      "intent": "budget",
+      "description": "Itemized annual-cost comparison table vs. competitor subscriptions, with a savings callout.",
+      "minItems": 2,
+      "maxItems": 6,
+      "stylesheet": "/styles/of1-budget-cost-breakdown.css",
+      "slots": [
+        {
+          "key": "hero.eyebrow",
+          "type": "text",
+          "instruction": "Small label above headline, 1-3 words"
+        },
+        {
+          "key": "hero.title",
+          "type": "text",
+          "instruction": "Headline framing cost comparison, <=10 words"
+        },
+        {
+          "key": "hero.subtitle",
+          "type": "text",
+          "instruction": "1-2 sentence supporting line"
+        },
+        {
+          "key": "hero.cta-primary",
+          "type": "link",
+          "instruction": "Primary CTA label + link"
+        },
+        {
+          "key": "hero.image",
+          "type": "image",
+          "instruction": "Hero product image URL"
+        },
+        {
+          "key": "table.title",
+          "type": "text",
+          "instruction": "Comparison table headline, <=6 words"
+        },
+        {
+          "key": "table.subtitle",
+          "type": "text",
+          "instruction": "1 sentence explaining the comparison basis"
+        },
+        {
+          "key": "table.col-1",
+          "type": "text",
+          "instruction": "Column 1 header, 1-2 words"
+        },
+        {
+          "key": "table.col-2",
+          "type": "text",
+          "instruction": "Column 2 header, 1-2 words"
+        },
+        {
+          "key": "table.col-3",
+          "type": "text",
+          "instruction": "Column 3 header, 1-2 words"
+        },
+        {
+          "key": "item-1.title",
+          "type": "text",
+          "instruction": "Competitor/row name"
+        },
+        {
+          "key": "item-1.body",
+          "type": "text",
+          "instruction": "Plan name, short"
+        },
+        {
+          "key": "item-1.price",
+          "type": "text",
+          "instruction": "Annual cost, short (e.g. $69.99)"
+        },
+        {
+          "key": "item-2.title",
+          "type": "text",
+          "instruction": "Competitor/row name"
+        },
+        {
+          "key": "item-2.body",
+          "type": "text",
+          "instruction": "Plan name, short"
+        },
+        {
+          "key": "item-2.price",
+          "type": "text",
+          "instruction": "Annual cost, short"
+        },
+        {
+          "key": "item-3.title",
+          "type": "text",
+          "instruction": "Competitor/row name"
+        },
+        {
+          "key": "item-3.body",
+          "type": "text",
+          "instruction": "Plan name, short"
+        },
+        {
+          "key": "item-3.price",
+          "type": "text",
+          "instruction": "Annual cost, short"
+        },
+        {
+          "key": "item-4.title",
+          "type": "text",
+          "instruction": "This brand's row name"
+        },
+        {
+          "key": "item-4.body",
+          "type": "text",
+          "instruction": "Plan name, short (e.g. Free forever)"
+        },
+        {
+          "key": "item-4.price",
+          "type": "text",
+          "instruction": "Annual cost, short (e.g. $0)"
+        },
+        {
+          "key": "savings.eyebrow",
+          "type": "text",
+          "instruction": "Small label, 1-3 words"
+        },
+        {
+          "key": "savings.stat",
+          "type": "text",
+          "instruction": "Large stat line, <=4 words (e.g. $0 spent)"
+        },
+        {
+          "key": "savings.body",
+          "type": "text",
+          "instruction": "1-2 sentence explanation of the savings"
+        },
+        {
+          "key": "included.title",
+          "type": "text",
+          "instruction": "Headline for included-features list, <=8 words"
+        },
+        {
+          "key": "included.items",
+          "type": "list",
+          "instruction": "3-6 short feature bullets"
+        },
+        {
+          "key": "cta.title",
+          "type": "text",
+          "instruction": "Closing CTA headline, <=8 words"
+        },
+        {
+          "key": "cta.subtitle",
+          "type": "text",
+          "instruction": "1 sentence closing line"
+        },
+        {
+          "key": "cta.cta-primary",
+          "type": "link",
+          "instruction": "Closing CTA label + link"
+        }
+      ],
+      "htmlContent": "<main>\n<section class=\"of1-cost-breakdown-hero of1-hero\">\n  <div class=\"of1-cost-breakdown-hero-grid of1-hero-grid\">\n    <div>\n      <p class=\"of1-eyebrow\" data-slot=\"hero.eyebrow\">Cost breakdown</p>\n      <h1 data-slot=\"hero.title\">What calm usually costs \u2014 and what it costs here.</h1>\n      <p data-slot=\"hero.subtitle\">Most breathing and meditation apps ask for a subscription within the first week. Breathe doesn't.</p>\n      <a class=\"of1-cta of1-cta-primary\" data-slot=\"hero.cta-primary\" href=\"#\">Get the app</a>\n    </div>\n    <div class=\"of1-hero-media\"><img data-slot=\"hero.image\" src=\"\" alt=\"\"></div>\n  </div>\n</section>\n\n<section class=\"of1-cost-breakdown-table of1-section\">\n  <h2 data-slot=\"table.title\">Annual cost, compared</h2>\n  <p data-slot=\"table.subtitle\">Typical pricing for similar apps, based on published subscription rates.</p>\n  <div class=\"of1-cost-row of1-cost-row-header\">\n    <span data-slot=\"table.col-1\">App</span>\n    <span data-slot=\"table.col-2\">Plan</span>\n    <span data-slot=\"table.col-3\">Cost / year</span>\n  </div>\n  <div class=\"of1-cost-breakdown-rows\" data-grid-items>\n    <article class=\"of1-cost-row\" data-card=\"1\">\n      <span data-slot=\"item-1.title\">Calm</span>\n      <span data-slot=\"item-1.body\">Premium subscription</span>\n      <span class=\"of1-cost-amount\" data-slot=\"item-1.price\">$69.99</span>\n    </article>\n    <article class=\"of1-cost-row\" data-card=\"2\">\n      <span data-slot=\"item-2.title\">Headspace</span>\n      <span data-slot=\"item-2.body\">Annual plan</span>\n      <span class=\"of1-cost-amount\" data-slot=\"item-2.price\">$69.99</span>\n    </article>\n    <article class=\"of1-cost-row\" data-card=\"3\">\n      <span data-slot=\"item-3.title\">Other breathing apps</span>\n      <span data-slot=\"item-3.body\">Typical in-app subscription</span>\n      <span class=\"of1-cost-amount\" data-slot=\"item-3.price\">$39.99+</span>\n    </article>\n    <article class=\"of1-cost-row of1-cost-row-highlight\" data-card=\"4\">\n      <span data-slot=\"item-4.title\">Breathe</span>\n      <span data-slot=\"item-4.body\">Free, forever</span>\n      <span class=\"of1-cost-amount\" data-slot=\"item-4.price\">$0</span>\n    </article>\n  </div>\n</section>\n\n<section class=\"of1-cost-breakdown-savings\">\n  <div class=\"of1-cost-breakdown-savings-inner\">\n    <p class=\"of1-eyebrow\" data-slot=\"savings.eyebrow\">Your savings</p>\n    <p class=\"of1-cost-breakdown-stat\" data-slot=\"savings.stat\">$0 spent</p>\n    <p data-slot=\"savings.body\">No trial that converts to a charge. No renewal to remember to cancel. Just a free app that stays free.</p>\n  </div>\n</section>\n\n<section class=\"of1-cost-breakdown-included of1-section\">\n  <h2 data-slot=\"included.title\">What you get for that $0</h2>\n  <ul class=\"of1-cost-breakdown-list\" data-slot-list=\"included.items\">\n    <li>Unlimited guided breathing sessions</li>\n    <li>Video and photo backgrounds, downloadable for offline use</li>\n    <li>Custom inhale / exhale timings</li>\n    <li>27 languages, no region lock</li>\n  </ul>\n</section>\n\n<section class=\"of1-cost-breakdown-cta of1-section\">\n  <div class=\"of1-cost-breakdown-cta-box\">\n    <h2 data-slot=\"cta.title\">Skip the subscription. Start today.</h2>\n    <p data-slot=\"cta.subtitle\">Download Breathe \u2014 free now, free later.</p>\n    <a class=\"of1-cta of1-cta-primary\" data-slot=\"cta.cta-primary\" href=\"#\">Get Breathe \u2014 it's free</a>\n  </div>\n</section>\n</main>\n"
+    },
+    {
+      "name": "of1-budget-price-tiers",
+      "intent": "budget",
+      "description": "Two-tier pricing cards (Free / optional donation) with an included-features list.",
+      "minItems": 2,
+      "maxItems": 3,
+      "stylesheet": "/styles/of1-budget-price-tiers.css",
+      "slots": [
+        {
+          "key": "hero.eyebrow",
+          "type": "text",
+          "instruction": "Small label above headline, 1-3 words"
+        },
+        {
+          "key": "hero.title",
+          "type": "text",
+          "instruction": "Headline emphasizing cost/free, <=8 words"
+        },
+        {
+          "key": "hero.subtitle",
+          "type": "text",
+          "instruction": "1-2 sentence supporting line about pricing model"
+        },
+        {
+          "key": "hero.cta-primary",
+          "type": "link",
+          "instruction": "Primary CTA label + link"
+        },
+        {
+          "key": "hero.image",
+          "type": "image",
+          "instruction": "Hero product image URL"
+        },
+        {
+          "key": "tiers.eyebrow",
+          "type": "text",
+          "instruction": "Small label above section title"
+        },
+        {
+          "key": "tiers.title",
+          "type": "text",
+          "instruction": "Section headline introducing the plans, <=8 words"
+        },
+        {
+          "key": "item-1.badge",
+          "type": "text",
+          "instruction": "Short badge/tag for tier 1, 1-3 words"
+        },
+        {
+          "key": "item-1.title",
+          "type": "text",
+          "instruction": "Tier 1 name"
+        },
+        {
+          "key": "item-1.price",
+          "type": "text",
+          "instruction": "Tier 1 price, short (e.g. $0)"
+        },
+        {
+          "key": "item-1.body",
+          "type": "text",
+          "instruction": "Tier 1 description, 1 sentence"
+        },
+        {
+          "key": "item-1.cta",
+          "type": "link",
+          "instruction": "Tier 1 CTA label + link"
+        },
+        {
+          "key": "item-2.badge",
+          "type": "text",
+          "instruction": "Short badge/tag for tier 2, 1-3 words"
+        },
+        {
+          "key": "item-2.title",
+          "type": "text",
+          "instruction": "Tier 2 name"
+        },
+        {
+          "key": "item-2.price",
+          "type": "text",
+          "instruction": "Tier 2 price, short"
+        },
+        {
+          "key": "item-2.body",
+          "type": "text",
+          "instruction": "Tier 2 description, 1 sentence"
+        },
+        {
+          "key": "item-2.cta",
+          "type": "link",
+          "instruction": "Tier 2 CTA label + link"
+        },
+        {
+          "key": "item-3.badge",
+          "type": "text",
+          "instruction": "Optional 3rd tier badge"
+        },
+        {
+          "key": "item-3.title",
+          "type": "text",
+          "instruction": "Optional 3rd tier name"
+        },
+        {
+          "key": "item-3.price",
+          "type": "text",
+          "instruction": "Optional 3rd tier price"
+        },
+        {
+          "key": "item-3.body",
+          "type": "text",
+          "instruction": "Optional 3rd tier description"
+        },
+        {
+          "key": "item-3.cta",
+          "type": "link",
+          "instruction": "Optional 3rd tier CTA"
+        },
+        {
+          "key": "included.title",
+          "type": "text",
+          "instruction": "Headline for included-features list, <=6 words"
+        },
+        {
+          "key": "included.subtitle",
+          "type": "text",
+          "instruction": "1 sentence reinforcing no-paywall message"
+        },
+        {
+          "key": "included.items",
+          "type": "list",
+          "instruction": "3-6 short feature bullets, no punctuation at end"
+        },
+        {
+          "key": "cta.title",
+          "type": "text",
+          "instruction": "Closing CTA headline, <=6 words"
+        },
+        {
+          "key": "cta.subtitle",
+          "type": "text",
+          "instruction": "1 sentence closing line"
+        },
+        {
+          "key": "cta.cta-primary",
+          "type": "link",
+          "instruction": "Closing CTA label + link"
+        }
+      ],
+      "htmlContent": "<main>\n<section class=\"of1-price-tiers-hero of1-hero\">\n  <div class=\"of1-price-tiers-hero-grid of1-hero-grid\">\n    <div>\n      <p class=\"of1-eyebrow\" data-slot=\"hero.eyebrow\">Pricing</p>\n      <h1 data-slot=\"hero.title\">Free. Actually free.</h1>\n      <p data-slot=\"hero.subtitle\">No subscriptions, no trials that quietly start charging you. Breathe is free to download and free to use, every day.</p>\n      <a class=\"of1-cta of1-cta-primary\" data-slot=\"hero.cta-primary\" href=\"#\">Get the app</a>\n    </div>\n    <div class=\"of1-hero-media\"><img data-slot=\"hero.image\" src=\"\" alt=\"\"></div>\n  </div>\n</section>\n\n<section class=\"of1-price-tiers-grid of1-section\">\n  <p class=\"of1-eyebrow\" data-slot=\"tiers.eyebrow\">Choose your plan</p>\n  <h2 data-slot=\"tiers.title\">Two ways to use Breathe</h2>\n  <div class=\"of1-price-tiers-cards\" data-grid-items>\n    <article class=\"of1-price-tier-card\" data-card=\"1\">\n      <p class=\"of1-price-tier-badge\" data-slot=\"item-1.badge\">Most people</p>\n      <h3 data-slot=\"item-1.title\">Free</h3>\n      <p class=\"of1-price-tier-price\" data-slot=\"item-1.price\">$0</p>\n      <p data-slot=\"item-1.body\">Every feature, every background, every rhythm. No paywall, ever.</p>\n      <a class=\"of1-cta of1-cta-primary\" data-slot=\"item-1.cta\" href=\"#\">Get the app</a>\n    </article>\n    <article class=\"of1-price-tier-card\" data-card=\"2\">\n      <p class=\"of1-price-tier-badge\" data-slot=\"item-2.badge\">Optional</p>\n      <h3 data-slot=\"item-2.title\">Support the app</h3>\n      <p class=\"of1-price-tier-price\" data-slot=\"item-2.price\">Your choice</p>\n      <p data-slot=\"item-2.body\">A one-time donation keeps development going. Nothing extra unlocks \u2014 you already have it all.</p>\n      <a class=\"of1-cta of1-cta-secondary\" data-slot=\"item-2.cta\" href=\"#\">Donate</a>\n    </article>\n    <article class=\"of1-price-tier-card\" data-card=\"3\">\n      <p class=\"of1-price-tier-badge\" data-slot=\"item-3.badge\"></p>\n      <h3 data-slot=\"item-3.title\"></h3>\n      <p class=\"of1-price-tier-price\" data-slot=\"item-3.price\"></p>\n      <p data-slot=\"item-3.body\"></p>\n      <a class=\"of1-cta of1-cta-secondary\" data-slot=\"item-3.cta\" href=\"#\"></a>\n    </article>\n  </div>\n</section>\n\n<section class=\"of1-price-tiers-included of1-section\">\n  <h2 data-slot=\"included.title\">What's included, always</h2>\n  <p data-slot=\"included.subtitle\">There's no upgrade tier hiding these behind a paywall.</p>\n  <ul class=\"of1-price-tiers-list\" data-slot-list=\"included.items\">\n    <li>Every breathing rhythm and preset</li>\n    <li>All video and photo backgrounds, downloadable for offline use</li>\n    <li>27 languages</li>\n  </ul>\n</section>\n\n<section class=\"of1-price-tiers-cta of1-section\">\n  <div class=\"of1-price-tiers-cta-box\">\n    <h2 data-slot=\"cta.title\">Start breathing, at no cost</h2>\n    <p data-slot=\"cta.subtitle\">Download Breathe today. If it helps, a donation is always welcome \u2014 never required.</p>\n    <a class=\"of1-cta of1-cta-primary\" data-slot=\"cta.cta-primary\" href=\"#\">Get Breathe \u2014 it's free</a>\n  </div>\n</section>\n</main>\n"
+    },
+    {
+      "name": "of1-budget-roi-story",
+      "intent": "budget",
+      "description": "Long-form ROI narrative: stat split, month-one timeline, plan comparison tabs, and testimonial.",
+      "minItems": 2,
+      "maxItems": 4,
+      "stylesheet": "/styles/of1-budget-roi-story.css",
+      "slots": [
+        {
+          "key": "hero.eyebrow",
+          "type": "text",
+          "instruction": "Small label above headline, 1-3 words"
+        },
+        {
+          "key": "hero.title",
+          "type": "text",
+          "instruction": "Headline framing the value story, <=8 words"
+        },
+        {
+          "key": "hero.subtitle",
+          "type": "text",
+          "instruction": "1-2 sentence supporting line"
+        },
+        {
+          "key": "hero.cta-primary",
+          "type": "link",
+          "instruction": "Primary CTA label + link"
+        },
+        {
+          "key": "hero.image",
+          "type": "image",
+          "instruction": "Hero product image URL"
+        },
+        {
+          "key": "cost-of-stress.eyebrow",
+          "type": "text",
+          "instruction": "Small label, 1-3 words"
+        },
+        {
+          "key": "cost-of-stress.title",
+          "type": "text",
+          "instruction": "Headline for the problem/value split, <=10 words"
+        },
+        {
+          "key": "cost-of-stress.body",
+          "type": "text",
+          "instruction": "1-2 sentence supporting copy"
+        },
+        {
+          "key": "cost-of-stress.stat",
+          "type": "text",
+          "instruction": "Short stat, <=3 words (e.g. 3 min)"
+        },
+        {
+          "key": "cost-of-stress.stat-label",
+          "type": "text",
+          "instruction": "Caption under the stat, <=6 words"
+        },
+        {
+          "key": "timeline.title",
+          "type": "text",
+          "instruction": "Timeline section headline, <=8 words"
+        },
+        {
+          "key": "item-1.badge",
+          "type": "text",
+          "instruction": "Timeline marker, e.g. Day 1"
+        },
+        {
+          "key": "item-1.title",
+          "type": "text",
+          "instruction": "Timeline step title, <=5 words"
+        },
+        {
+          "key": "item-1.body",
+          "type": "text",
+          "instruction": "Timeline step description, 1 sentence"
+        },
+        {
+          "key": "item-2.badge",
+          "type": "text",
+          "instruction": "Timeline marker, e.g. Week 1"
+        },
+        {
+          "key": "item-2.title",
+          "type": "text",
+          "instruction": "Timeline step title, <=5 words"
+        },
+        {
+          "key": "item-2.body",
+          "type": "text",
+          "instruction": "Timeline step description, 1 sentence"
+        },
+        {
+          "key": "item-3.badge",
+          "type": "text",
+          "instruction": "Timeline marker, e.g. Month 1"
+        },
+        {
+          "key": "item-3.title",
+          "type": "text",
+          "instruction": "Timeline step title, <=5 words"
+        },
+        {
+          "key": "item-3.body",
+          "type": "text",
+          "instruction": "Timeline step description, 1 sentence"
+        },
+        {
+          "key": "item-4.badge",
+          "type": "text",
+          "instruction": "Timeline marker, e.g. Ongoing"
+        },
+        {
+          "key": "item-4.title",
+          "type": "text",
+          "instruction": "Timeline step title, <=5 words"
+        },
+        {
+          "key": "item-4.body",
+          "type": "text",
+          "instruction": "Timeline step description, 1 sentence"
+        },
+        {
+          "key": "tabs.title",
+          "type": "text",
+          "instruction": "Tabs section headline, <=8 words"
+        },
+        {
+          "key": "tabs.tab-1-label",
+          "type": "text",
+          "instruction": "Tab 1 label, 1-3 words"
+        },
+        {
+          "key": "tabs.tab-1-body",
+          "type": "text",
+          "instruction": "Tab 1 panel copy, 1-2 sentences"
+        },
+        {
+          "key": "tabs.tab-2-label",
+          "type": "text",
+          "instruction": "Tab 2 label, 1-3 words"
+        },
+        {
+          "key": "tabs.tab-2-body",
+          "type": "text",
+          "instruction": "Tab 2 panel copy, 1-2 sentences"
+        },
+        {
+          "key": "quote.text",
+          "type": "text",
+          "instruction": "Short customer quote, 1 sentence"
+        },
+        {
+          "key": "quote.attribution",
+          "type": "text",
+          "instruction": "Quote source, <=4 words"
+        },
+        {
+          "key": "cta.title",
+          "type": "text",
+          "instruction": "Closing CTA headline, <=8 words"
+        },
+        {
+          "key": "cta.subtitle",
+          "type": "text",
+          "instruction": "1 sentence closing line"
+        },
+        {
+          "key": "cta.cta-primary",
+          "type": "link",
+          "instruction": "Closing CTA label + link"
+        }
+      ],
+      "htmlContent": "<main>\n<section class=\"of1-roi-story-hero of1-hero\">\n  <div class=\"of1-roi-story-hero-grid of1-hero-grid\">\n    <div>\n      <p class=\"of1-eyebrow\" data-slot=\"hero.eyebrow\">The real math</p>\n      <h1 data-slot=\"hero.title\">Calm shouldn't come with a bill.</h1>\n      <p data-slot=\"hero.subtitle\">Here's what a few minutes of breathing is worth \u2014 and why Breathe never charges for it.</p>\n      <a class=\"of1-cta of1-cta-primary\" data-slot=\"hero.cta-primary\" href=\"#\">Get the app</a>\n    </div>\n    <div class=\"of1-hero-media\"><img data-slot=\"hero.image\" src=\"\" alt=\"\"></div>\n  </div>\n</section>\n\n<section class=\"of1-roi-story-split of1-section\">\n  <div class=\"of1-roi-story-split-grid\">\n    <div class=\"of1-roi-story-split-text\">\n      <p class=\"of1-eyebrow\" data-slot=\"cost-of-stress.eyebrow\">The cost of stress</p>\n      <h2 data-slot=\"cost-of-stress.title\">Unmanaged stress is expensive \u2014 in time, focus, and sleep.</h2>\n      <p data-slot=\"cost-of-stress.body\">A short breathing session doesn't need a premium tier to help. Breathe gives you the tools without asking what they're worth to you.</p>\n    </div>\n    <div class=\"of1-roi-story-split-stat\">\n      <p class=\"of1-roi-story-stat-num\" data-slot=\"cost-of-stress.stat\">3 min</p>\n      <p data-slot=\"cost-of-stress.stat-label\">is enough for one full session</p>\n    </div>\n  </div>\n</section>\n\n<section class=\"of1-roi-story-timeline of1-section\">\n  <h2 data-slot=\"timeline.title\">Your first month, at no cost</h2>\n  <div class=\"of1-roi-story-timeline-items\" data-grid-items>\n    <article class=\"of1-roi-story-timeline-item\" data-card=\"1\">\n      <p class=\"of1-roi-story-timeline-marker\" data-slot=\"item-1.badge\">Day 1</p>\n      <h3 data-slot=\"item-1.title\">Download and breathe</h3>\n      <p data-slot=\"item-1.body\">Pick a background and a rhythm. No account, no card, no trial clock.</p>\n    </article>\n    <article class=\"of1-roi-story-timeline-item\" data-card=\"2\">\n      <p class=\"of1-roi-story-timeline-marker\" data-slot=\"item-2.badge\">Week 1</p>\n      <h3 data-slot=\"item-2.title\">Build the habit</h3>\n      <p data-slot=\"item-2.body\">Download a few atmospheres for offline use. Still free.</p>\n    </article>\n    <article class=\"of1-roi-story-timeline-item\" data-card=\"3\">\n      <p class=\"of1-roi-story-timeline-marker\" data-slot=\"item-3.badge\">Month 1</p>\n      <h3 data-slot=\"item-3.title\">Make it yours</h3>\n      <p data-slot=\"item-3.body\">Customize inhale and exhale timing. No feature was ever behind a paywall.</p>\n    </article>\n    <article class=\"of1-roi-story-timeline-item\" data-card=\"4\">\n      <p class=\"of1-roi-story-timeline-marker\" data-slot=\"item-4.badge\">Ongoing</p>\n      <h3 data-slot=\"item-4.title\">Support if you want to</h3>\n      <p data-slot=\"item-4.body\">A one-time donation is always optional \u2014 it never changes what you can use.</p>\n    </article>\n  </div>\n</section>\n\n<section class=\"of1-roi-story-tabs of1-section\">\n  <h2 data-slot=\"tabs.title\">Compare your two options</h2>\n  <div class=\"of1-roi-story-tablist\" role=\"tablist\">\n    <button class=\"of1-roi-story-tab is-active\" role=\"tab\" aria-selected=\"true\" data-tab=\"free\" data-slot=\"tabs.tab-1-label\">Free plan</button>\n    <button class=\"of1-roi-story-tab\" role=\"tab\" aria-selected=\"false\" data-tab=\"support\" data-slot=\"tabs.tab-2-label\">Support the app</button>\n  </div>\n  <div class=\"of1-roi-story-panel is-active\" data-panel=\"free\">\n    <p data-slot=\"tabs.tab-1-body\">Full access to every rhythm, background, and language. $0 today, $0 next year.</p>\n  </div>\n  <div class=\"of1-roi-story-panel\" data-panel=\"support\">\n    <p data-slot=\"tabs.tab-2-body\">Choose any amount, whenever you want. It funds new backgrounds and rhythms \u2014 it doesn't unlock anything you don't already have.</p>\n  </div>\n  <script>\n    (function () {\n      var root = document.currentScript.closest('.of1-roi-story-tabs');\n      if (!root) return;\n      var tabs = root.querySelectorAll('.of1-roi-story-tab');\n      var panels = root.querySelectorAll('.of1-roi-story-panel');\n      tabs.forEach(function (tab) {\n        tab.addEventListener('click', function () {\n          tabs.forEach(function (t) { t.classList.remove('is-active'); t.setAttribute('aria-selected', 'false'); });\n          panels.forEach(function (p) { p.classList.remove('is-active'); });\n          tab.classList.add('is-active');\n          tab.setAttribute('aria-selected', 'true');\n          var target = root.querySelector('.of1-roi-story-panel[data-panel=\"' + tab.dataset.tab + '\"]');\n          if (target) target.classList.add('is-active');\n        });\n      });\n    })();\n  </script>\n</section>\n\n<section class=\"of1-roi-story-quote of1-section\">\n  <blockquote>\n    <p data-slot=\"quote.text\">I stopped paying $8 a month for an app that did less than this one does for free.</p>\n    <p class=\"of1-roi-story-quote-attr\" data-slot=\"quote.attribution\">App Store review</p>\n  </blockquote>\n</section>\n\n<section class=\"of1-roi-story-cta of1-section\">\n  <div class=\"of1-roi-story-cta-box\">\n    <h2 data-slot=\"cta.title\">Do the math. It's $0.</h2>\n    <p data-slot=\"cta.subtitle\">Download Breathe and start your first free session today.</p>\n    <a class=\"of1-cta of1-cta-primary\" data-slot=\"cta.cta-primary\" href=\"#\">Get Breathe \u2014 it's free</a>\n  </div>\n</section>\n</main>\n"
+    },
+    {
+      "name": "of1-comparison-pros-cons",
+      "intent": "comparison",
+      "description": "Two-column pros/cons breakdown of a single option, plus a good-fit-vs-not-a-fit tabbed panel.",
+      "minItems": 2,
+      "maxItems": 2,
+      "stylesheet": "/styles/of1-comparison-pros-cons.css",
+      "slots": [
+        {
+          "key": "hero.eyebrow",
+          "type": "text",
+          "instruction": "Small label above headline, 1-3 words"
+        },
+        {
+          "key": "hero.title",
+          "type": "text",
+          "instruction": "Headline posing the fit question, <=8 words"
+        },
+        {
+          "key": "hero.subtitle",
+          "type": "text",
+          "instruction": "1-2 sentence supporting line"
+        },
+        {
+          "key": "hero.cta-primary",
+          "type": "link",
+          "instruction": "Primary CTA label + link"
+        },
+        {
+          "key": "hero.image",
+          "type": "image",
+          "instruction": "Hero image URL"
+        },
+        {
+          "key": "item-1.title",
+          "type": "text",
+          "instruction": "Pros column headline, <=4 words (e.g. What works)"
+        },
+        {
+          "key": "item-1.list",
+          "type": "list",
+          "instruction": "3-6 short pro bullets"
+        },
+        {
+          "key": "item-2.title",
+          "type": "text",
+          "instruction": "Cons column headline, <=4 words (e.g. What to know)"
+        },
+        {
+          "key": "item-2.list",
+          "type": "list",
+          "instruction": "2-5 short con/caveat bullets"
+        },
+        {
+          "key": "verdict.eyebrow",
+          "type": "text",
+          "instruction": "Small label, 1-3 words"
+        },
+        {
+          "key": "verdict.stat",
+          "type": "text",
+          "instruction": "Short verdict line, <=8 words"
+        },
+        {
+          "key": "verdict.body",
+          "type": "text",
+          "instruction": "1-2 sentence explanation of the verdict"
+        },
+        {
+          "key": "tabs.title",
+          "type": "text",
+          "instruction": "Tabs section headline, <=6 words"
+        },
+        {
+          "key": "tabs.tab-1-label",
+          "type": "text",
+          "instruction": "First tab label, 1-3 words"
+        },
+        {
+          "key": "tabs.panel-1-list",
+          "type": "list",
+          "instruction": "2-4 bullets describing who this is a good fit for"
+        },
+        {
+          "key": "tabs.tab-2-label",
+          "type": "text",
+          "instruction": "Second tab label, 1-3 words"
+        },
+        {
+          "key": "tabs.panel-2-list",
+          "type": "list",
+          "instruction": "2-4 bullets describing who this may not be a fit for"
+        },
+        {
+          "key": "cta.title",
+          "type": "text",
+          "instruction": "Closing CTA headline, <=8 words"
+        },
+        {
+          "key": "cta.subtitle",
+          "type": "text",
+          "instruction": "1 sentence closing line"
+        },
+        {
+          "key": "cta.cta-primary",
+          "type": "link",
+          "instruction": "Closing CTA label + link"
+        }
+      ],
+      "htmlContent": "<main>\n<section class=\"of1-comparison-pros-cons-hero of1-hero\">\n  <div class=\"of1-comparison-pros-cons-hero-grid of1-hero-grid\">\n    <div>\n      <p class=\"of1-eyebrow\" data-slot=\"hero.eyebrow\">Pros &amp; cons</p>\n      <h1 data-slot=\"hero.title\">Is Breathe actually right for you?</h1>\n      <p data-slot=\"hero.subtitle\">No app is perfect for everyone. Here's an honest look at where Breathe shines, and where it doesn't try to be something it's not.</p>\n      <a class=\"of1-cta of1-cta-primary\" data-slot=\"hero.cta-primary\" href=\"#\">Get the app</a>\n    </div>\n    <div class=\"of1-hero-media\"><img data-slot=\"hero.image\" src=\"\" alt=\"\"></div>\n  </div>\n</section>\n\n<section class=\"of1-comparison-pros-cons-columns of1-section\">\n  <div class=\"of1-pc-columns\" data-grid-items>\n    <article class=\"of1-pc-column of1-pc-column-pros\" data-card=\"1\">\n      <h2 data-slot=\"item-1.title\">What works</h2>\n      <ul class=\"of1-pc-list\" data-slot-list=\"item-1.list\">\n        <li>Completely free, no subscription or trial</li>\n        <li>Offline-ready video and photo backgrounds</li>\n        <li>Custom inhale / exhale timings, not just presets</li>\n        <li>Available in 27 languages</li>\n      </ul>\n    </article>\n    <article class=\"of1-pc-column of1-pc-column-cons\" data-card=\"2\">\n      <h2 data-slot=\"item-2.title\">What to know</h2>\n      <ul class=\"of1-pc-list\" data-slot-list=\"item-2.list\">\n        <li>No guided voice narration \u2014 visuals and rhythm only</li>\n        <li>No sleep-tracking or wearable integration</li>\n        <li>Smaller background library than some paid apps</li>\n      </ul>\n    </article>\n  </div>\n</section>\n\n<section class=\"of1-comparison-pros-cons-verdict\">\n  <div class=\"of1-comparison-pros-cons-verdict-inner\">\n    <p class=\"of1-eyebrow\" data-slot=\"verdict.eyebrow\">Bottom line</p>\n    <p class=\"of1-comparison-pros-cons-verdict-stat\" data-slot=\"verdict.stat\">Best for quiet, quick resets</p>\n    <p data-slot=\"verdict.body\">If you want a calm breathing session without narration, subscriptions, or setup \u2014 Breathe is built for exactly that.</p>\n  </div>\n</section>\n\n<section class=\"of1-comparison-pros-cons-tabs of1-section\">\n  <h2 data-slot=\"tabs.title\">Good fit vs. not a fit</h2>\n  <div class=\"of1-pc-tabs\">\n    <div class=\"of1-pc-tab-buttons\" role=\"tablist\">\n      <button class=\"of1-pc-tab-btn is-active\" type=\"button\" data-tab-target=\"good\" role=\"tab\" aria-selected=\"true\" data-slot=\"tabs.tab-1-label\">Good fit if</button>\n      <button class=\"of1-pc-tab-btn\" type=\"button\" data-tab-target=\"notfit\" role=\"tab\" aria-selected=\"false\" data-slot=\"tabs.tab-2-label\">Maybe not if</button>\n    </div>\n    <div class=\"of1-pc-tab-panel is-active\" id=\"tab-good\" role=\"tabpanel\">\n      <ul class=\"of1-pc-list\" data-slot-list=\"tabs.panel-1-list\">\n        <li>You want something free that stays free</li>\n        <li>You like ambient visuals over spoken guidance</li>\n        <li>You practice offline or while traveling</li>\n      </ul>\n    </div>\n    <div class=\"of1-pc-tab-panel\" id=\"tab-notfit\" role=\"tabpanel\" hidden>\n      <ul class=\"of1-pc-list\" data-slot-list=\"tabs.panel-2-list\">\n        <li>You specifically want narrated meditation sessions</li>\n        <li>You want sleep or heart-rate tracking built in</li>\n        <li>You need a huge, constantly-updated content library</li>\n      </ul>\n    </div>\n  </div>\n  <script>\n    (function () {\n      var root = document.currentScript.closest('.of1-comparison-pros-cons-tabs');\n      if (!root) return;\n      var btns = root.querySelectorAll('.of1-pc-tab-btn');\n      btns.forEach(function (btn) {\n        btn.addEventListener('click', function () {\n          var target = btn.getAttribute('data-tab-target');\n          root.querySelectorAll('.of1-pc-tab-btn').forEach(function (b) {\n            b.classList.toggle('is-active', b === btn);\n            b.setAttribute('aria-selected', b === btn ? 'true' : 'false');\n          });\n          root.querySelectorAll('.of1-pc-tab-panel').forEach(function (p) {\n            var match = p.id === 'tab-' + target;\n            p.classList.toggle('is-active', match);\n            p.hidden = !match;\n          });\n        });\n      });\n    })();\n  </script>\n</section>\n\n<section class=\"of1-comparison-pros-cons-cta of1-section\">\n  <div class=\"of1-comparison-pros-cons-cta-box\">\n    <h2 data-slot=\"cta.title\">Decide for yourself \u2014 it's free.</h2>\n    <p data-slot=\"cta.subtitle\">No account, no trial clock, no risk in trying it.</p>\n    <a class=\"of1-cta of1-cta-primary\" data-slot=\"cta.cta-primary\" href=\"#\">Get Breathe \u2014 it's free</a>\n  </div>\n</section>\n</main>\n"
+    },
+    {
+      "name": "of1-comparison-table",
+      "intent": "comparison",
+      "description": "Feature-by-feature comparison matrix for 2-4 options, with a savings/stat callout.",
+      "minItems": 2,
+      "maxItems": 4,
+      "stylesheet": "/styles/of1-comparison-table.css",
+      "slots": [
+        {
+          "key": "hero.eyebrow",
+          "type": "text",
+          "instruction": "Small label above headline, 1-3 words"
+        },
+        {
+          "key": "hero.title",
+          "type": "text",
+          "instruction": "Headline framing the comparison, <=8 words"
+        },
+        {
+          "key": "hero.subtitle",
+          "type": "text",
+          "instruction": "1-2 sentence supporting line"
+        },
+        {
+          "key": "hero.cta-primary",
+          "type": "link",
+          "instruction": "Primary CTA label + link"
+        },
+        {
+          "key": "hero.image",
+          "type": "image",
+          "instruction": "Hero product image URL"
+        },
+        {
+          "key": "table.title",
+          "type": "text",
+          "instruction": "Comparison matrix headline, <=6 words"
+        },
+        {
+          "key": "table.subtitle",
+          "type": "text",
+          "instruction": "1 sentence explaining the comparison basis"
+        },
+        {
+          "key": "table.row-1",
+          "type": "text",
+          "instruction": "Feature row 1 label, 1-3 words"
+        },
+        {
+          "key": "table.row-2",
+          "type": "text",
+          "instruction": "Feature row 2 label, 1-3 words"
+        },
+        {
+          "key": "table.row-3",
+          "type": "text",
+          "instruction": "Feature row 3 label, 1-3 words"
+        },
+        {
+          "key": "table.row-4",
+          "type": "text",
+          "instruction": "Feature row 4 label, 1-3 words"
+        },
+        {
+          "key": "table.row-5",
+          "type": "text",
+          "instruction": "Feature row 5 label, 1-3 words"
+        },
+        {
+          "key": "item-1.image",
+          "type": "image",
+          "instruction": "This brand's product/app icon image URL"
+        },
+        {
+          "key": "item-1.title",
+          "type": "text",
+          "instruction": "This brand's name"
+        },
+        {
+          "key": "item-1.body",
+          "type": "text",
+          "instruction": "Short tagline, <=4 words"
+        },
+        {
+          "key": "item-1.feature-1",
+          "type": "text",
+          "instruction": "Value for feature row 1, short"
+        },
+        {
+          "key": "item-1.feature-2",
+          "type": "text",
+          "instruction": "Value for feature row 2, short"
+        },
+        {
+          "key": "item-1.feature-3",
+          "type": "text",
+          "instruction": "Value for feature row 3, short"
+        },
+        {
+          "key": "item-1.feature-4",
+          "type": "text",
+          "instruction": "Value for feature row 4, short"
+        },
+        {
+          "key": "item-1.feature-5",
+          "type": "text",
+          "instruction": "Value for feature row 5, short"
+        },
+        {
+          "key": "item-1.cta",
+          "type": "link",
+          "instruction": "CTA label + link for this column"
+        },
+        {
+          "key": "item-2.title",
+          "type": "text",
+          "instruction": "Competitor name"
+        },
+        {
+          "key": "item-2.body",
+          "type": "text",
+          "instruction": "Short tagline, <=4 words"
+        },
+        {
+          "key": "item-2.feature-1",
+          "type": "text",
+          "instruction": "Value for feature row 1, short"
+        },
+        {
+          "key": "item-2.feature-2",
+          "type": "text",
+          "instruction": "Value for feature row 2, short"
+        },
+        {
+          "key": "item-2.feature-3",
+          "type": "text",
+          "instruction": "Value for feature row 3, short"
+        },
+        {
+          "key": "item-2.feature-4",
+          "type": "text",
+          "instruction": "Value for feature row 4, short"
+        },
+        {
+          "key": "item-2.feature-5",
+          "type": "text",
+          "instruction": "Value for feature row 5, short"
+        },
+        {
+          "key": "item-2.cta",
+          "type": "link",
+          "instruction": "CTA label + link for this column"
+        },
+        {
+          "key": "item-3.title",
+          "type": "text",
+          "instruction": "Competitor name"
+        },
+        {
+          "key": "item-3.body",
+          "type": "text",
+          "instruction": "Short tagline, <=4 words"
+        },
+        {
+          "key": "item-3.feature-1",
+          "type": "text",
+          "instruction": "Value for feature row 1, short"
+        },
+        {
+          "key": "item-3.feature-2",
+          "type": "text",
+          "instruction": "Value for feature row 2, short"
+        },
+        {
+          "key": "item-3.feature-3",
+          "type": "text",
+          "instruction": "Value for feature row 3, short"
+        },
+        {
+          "key": "item-3.feature-4",
+          "type": "text",
+          "instruction": "Value for feature row 4, short"
+        },
+        {
+          "key": "item-3.feature-5",
+          "type": "text",
+          "instruction": "Value for feature row 5, short"
+        },
+        {
+          "key": "item-3.cta",
+          "type": "link",
+          "instruction": "CTA label + link for this column"
+        },
+        {
+          "key": "item-4.title",
+          "type": "text",
+          "instruction": "Competitor name"
+        },
+        {
+          "key": "item-4.body",
+          "type": "text",
+          "instruction": "Short tagline, <=4 words"
+        },
+        {
+          "key": "item-4.feature-1",
+          "type": "text",
+          "instruction": "Value for feature row 1, short"
+        },
+        {
+          "key": "item-4.feature-2",
+          "type": "text",
+          "instruction": "Value for feature row 2, short"
+        },
+        {
+          "key": "item-4.feature-3",
+          "type": "text",
+          "instruction": "Value for feature row 3, short"
+        },
+        {
+          "key": "item-4.feature-4",
+          "type": "text",
+          "instruction": "Value for feature row 4, short"
+        },
+        {
+          "key": "item-4.feature-5",
+          "type": "text",
+          "instruction": "Value for feature row 5, short"
+        },
+        {
+          "key": "item-4.cta",
+          "type": "link",
+          "instruction": "CTA label + link for this column"
+        },
+        {
+          "key": "stat.eyebrow",
+          "type": "text",
+          "instruction": "Small label, 1-3 words"
+        },
+        {
+          "key": "stat.value",
+          "type": "text",
+          "instruction": "Large stat line contrasting the top two options, <=6 words"
+        },
+        {
+          "key": "stat.body",
+          "type": "text",
+          "instruction": "1-2 sentence explanation of the difference"
+        },
+        {
+          "key": "notes.title",
+          "type": "text",
+          "instruction": "Headline for the methodology notes, <=6 words"
+        },
+        {
+          "key": "notes.items",
+          "type": "list",
+          "instruction": "2-4 short methodology or caveat bullets"
+        },
+        {
+          "key": "cta.title",
+          "type": "text",
+          "instruction": "Closing CTA headline, <=8 words"
+        },
+        {
+          "key": "cta.subtitle",
+          "type": "text",
+          "instruction": "1 sentence closing line"
+        },
+        {
+          "key": "cta.cta-primary",
+          "type": "link",
+          "instruction": "Closing CTA label + link"
+        }
+      ],
+      "htmlContent": "<main>\n<section class=\"of1-comparison-table-hero of1-hero\">\n  <div class=\"of1-comparison-table-hero-grid of1-hero-grid\">\n    <div>\n      <p class=\"of1-eyebrow\" data-slot=\"hero.eyebrow\">Comparison</p>\n      <h1 data-slot=\"hero.title\">Breathe vs. the subscription apps.</h1>\n      <p data-slot=\"hero.subtitle\">Same idea \u2014 guided breathing sessions \u2014 very different price tag. Here's how Breathe stacks up against the apps you've probably already tried.</p>\n      <a class=\"of1-cta of1-cta-primary\" data-slot=\"hero.cta-primary\" href=\"#\">Get the app</a>\n    </div>\n    <div class=\"of1-hero-media\"><img data-slot=\"hero.image\" src=\"\" alt=\"\"></div>\n  </div>\n</section>\n\n<section class=\"of1-comparison-table-matrix of1-section\">\n  <h2 data-slot=\"table.title\">Feature by feature</h2>\n  <p data-slot=\"table.subtitle\">What you actually get, side by side.</p>\n  <div class=\"of1-cmp-table-wrap\">\n    <div class=\"of1-cmp-table-labels\">\n      <div class=\"of1-cmp-table-label-cell of1-cmp-table-label-head\">&nbsp;</div>\n      <div class=\"of1-cmp-table-label-cell\" data-slot=\"table.row-1\">Price / year</div>\n      <div class=\"of1-cmp-table-label-cell\" data-slot=\"table.row-2\">Offline sessions</div>\n      <div class=\"of1-cmp-table-label-cell\" data-slot=\"table.row-3\">Background library</div>\n      <div class=\"of1-cmp-table-label-cell\" data-slot=\"table.row-4\">Custom rhythms</div>\n      <div class=\"of1-cmp-table-label-cell\" data-slot=\"table.row-5\">Languages</div>\n    </div>\n    <div class=\"of1-cmp-table-cols\" data-grid-items>\n      <article class=\"of1-cmp-table-col of1-cmp-table-col-highlight\" data-card=\"1\">\n        <div class=\"of1-cmp-table-col-head\">\n          <img data-slot=\"item-1.image\" src=\"\" alt=\"\">\n          <h3 data-slot=\"item-1.title\">Breathe</h3>\n          <p class=\"of1-cmp-table-col-tagline\" data-slot=\"item-1.body\">Free, always</p>\n        </div>\n        <div class=\"of1-cmp-table-cell\" data-slot=\"item-1.feature-1\">$0</div>\n        <div class=\"of1-cmp-table-cell\" data-slot=\"item-1.feature-2\">Yes</div>\n        <div class=\"of1-cmp-table-cell\" data-slot=\"item-1.feature-3\">9 atmospheres</div>\n        <div class=\"of1-cmp-table-cell\" data-slot=\"item-1.feature-4\">Fully custom</div>\n        <div class=\"of1-cmp-table-cell\" data-slot=\"item-1.feature-5\">27</div>\n        <a class=\"of1-cta of1-cta-primary\" data-slot=\"item-1.cta\" href=\"#\">Get Breathe</a>\n      </article>\n      <article class=\"of1-cmp-table-col\" data-card=\"2\">\n        <div class=\"of1-cmp-table-col-head\">\n          <h3 data-slot=\"item-2.title\">Calm</h3>\n          <p class=\"of1-cmp-table-col-tagline\" data-slot=\"item-2.body\">Premium subscription</p>\n        </div>\n        <div class=\"of1-cmp-table-cell\" data-slot=\"item-2.feature-1\">$69.99</div>\n        <div class=\"of1-cmp-table-cell\" data-slot=\"item-2.feature-2\">Limited</div>\n        <div class=\"of1-cmp-table-cell\" data-slot=\"item-2.feature-3\">Handful, paywalled</div>\n        <div class=\"of1-cmp-table-cell\" data-slot=\"item-2.feature-4\">Presets only</div>\n        <div class=\"of1-cmp-table-cell\" data-slot=\"item-2.feature-5\">Few</div>\n        <a class=\"of1-cta of1-cta-secondary\" data-slot=\"item-2.cta\" href=\"#\">Learn more</a>\n      </article>\n      <article class=\"of1-cmp-table-col\" data-card=\"3\">\n        <div class=\"of1-cmp-table-col-head\">\n          <h3 data-slot=\"item-3.title\">Headspace</h3>\n          <p class=\"of1-cmp-table-col-tagline\" data-slot=\"item-3.body\">Annual plan</p>\n        </div>\n        <div class=\"of1-cmp-table-cell\" data-slot=\"item-3.feature-1\">$69.99</div>\n        <div class=\"of1-cmp-table-cell\" data-slot=\"item-3.feature-2\">Limited</div>\n        <div class=\"of1-cmp-table-cell\" data-slot=\"item-3.feature-3\">Curated packs</div>\n        <div class=\"of1-cmp-table-cell\" data-slot=\"item-3.feature-4\">Presets only</div>\n        <div class=\"of1-cmp-table-cell\" data-slot=\"item-3.feature-5\">Few</div>\n        <a class=\"of1-cta of1-cta-secondary\" data-slot=\"item-3.cta\" href=\"#\">Learn more</a>\n      </article>\n      <article class=\"of1-cmp-table-col\" data-card=\"4\">\n        <div class=\"of1-cmp-table-col-head\">\n          <h3 data-slot=\"item-4.title\">Other breathing apps</h3>\n          <p class=\"of1-cmp-table-col-tagline\" data-slot=\"item-4.body\">Typical in-app subscription</p>\n        </div>\n        <div class=\"of1-cmp-table-cell\" data-slot=\"item-4.feature-1\">$39.99+</div>\n        <div class=\"of1-cmp-table-cell\" data-slot=\"item-4.feature-2\">Varies</div>\n        <div class=\"of1-cmp-table-cell\" data-slot=\"item-4.feature-3\">Small set</div>\n        <div class=\"of1-cmp-table-cell\" data-slot=\"item-4.feature-4\">Presets only</div>\n        <div class=\"of1-cmp-table-cell\" data-slot=\"item-4.feature-5\">1-5</div>\n        <a class=\"of1-cta of1-cta-secondary\" data-slot=\"item-4.cta\" href=\"#\">Learn more</a>\n      </article>\n    </div>\n  </div>\n</section>\n\n<section class=\"of1-comparison-table-stat\">\n  <div class=\"of1-comparison-table-stat-inner\">\n    <p class=\"of1-eyebrow\" data-slot=\"stat.eyebrow\">The difference</p>\n    <p class=\"of1-comparison-table-stat-value\" data-slot=\"stat.value\">$0 vs. $69.99</p>\n    <p data-slot=\"stat.body\">Breathe includes everything a premium subscription usually gates behind a paywall \u2014 no trial, no renewal, no surprise charge.</p>\n  </div>\n</section>\n\n<section class=\"of1-comparison-table-notes of1-section\">\n  <h2 data-slot=\"notes.title\">Why it looks this way</h2>\n  <ul class=\"of1-comparison-table-notes-list\" data-slot-list=\"notes.items\">\n    <li>Pricing reflects published annual subscription rates at time of writing</li>\n    <li>Breathe has no in-app purchases, tiers, or locked content</li>\n    <li>Offline downloads apply to video and photo backgrounds alike</li>\n  </ul>\n</section>\n\n<section class=\"of1-comparison-table-cta of1-section\">\n  <div class=\"of1-comparison-table-cta-box\">\n    <h2 data-slot=\"cta.title\">See the difference yourself.</h2>\n    <p data-slot=\"cta.subtitle\">Free on iOS and Android \u2014 no account, no trial clock.</p>\n    <a class=\"of1-cta of1-cta-primary\" data-slot=\"cta.cta-primary\" href=\"#\">Get Breathe \u2014 it's free</a>\n  </div>\n</section>\n</main>\n"
+    },
+    {
+      "name": "of1-comparison-versus",
+      "intent": "comparison",
+      "description": "Head-to-head 1-vs-1 face-off between exactly two options, with a row-by-row breakdown and a verdict.",
+      "minItems": 2,
+      "maxItems": 2,
+      "stylesheet": "/styles/of1-comparison-versus.css",
+      "slots": [
+        {
+          "key": "hero.eyebrow",
+          "type": "text",
+          "instruction": "Small label above headline, 1-3 words"
+        },
+        {
+          "key": "hero.title",
+          "type": "text",
+          "instruction": "Headline framing the head-to-head, <=8 words"
+        },
+        {
+          "key": "hero.subtitle",
+          "type": "text",
+          "instruction": "1-2 sentence supporting line"
+        },
+        {
+          "key": "hero.cta-primary",
+          "type": "link",
+          "instruction": "Primary CTA label + link"
+        },
+        {
+          "key": "hero.image",
+          "type": "image",
+          "instruction": "Hero image URL"
+        },
+        {
+          "key": "item-1.image",
+          "type": "image",
+          "instruction": "Option A image URL"
+        },
+        {
+          "key": "item-1.tag",
+          "type": "text",
+          "instruction": "Small label for option A, 1-2 words (e.g. Option A)"
+        },
+        {
+          "key": "item-1.title",
+          "type": "text",
+          "instruction": "Option A name"
+        },
+        {
+          "key": "item-1.body",
+          "type": "text",
+          "instruction": "1-2 sentence description of option A"
+        },
+        {
+          "key": "item-1.cta",
+          "type": "link",
+          "instruction": "CTA label + link for option A"
+        },
+        {
+          "key": "versus.label",
+          "type": "text",
+          "instruction": "Divider label between the two options, 1-2 chars (e.g. vs)"
+        },
+        {
+          "key": "item-2.image",
+          "type": "image",
+          "instruction": "Option B image URL"
+        },
+        {
+          "key": "item-2.tag",
+          "type": "text",
+          "instruction": "Small label for option B, 1-2 words (e.g. Option B)"
+        },
+        {
+          "key": "item-2.title",
+          "type": "text",
+          "instruction": "Option B name"
+        },
+        {
+          "key": "item-2.body",
+          "type": "text",
+          "instruction": "1-2 sentence description of option B"
+        },
+        {
+          "key": "item-2.cta",
+          "type": "link",
+          "instruction": "CTA label + link for option B"
+        },
+        {
+          "key": "breakdown.title",
+          "type": "text",
+          "instruction": "Breakdown section headline, <=4 words"
+        },
+        {
+          "key": "breakdown.subtitle",
+          "type": "text",
+          "instruction": "1 sentence framing the breakdown"
+        },
+        {
+          "key": "breakdown.row-1-label",
+          "type": "text",
+          "instruction": "Row 1 label, 1-3 words"
+        },
+        {
+          "key": "breakdown.row-1-a",
+          "type": "text",
+          "instruction": "Row 1 value for option A, short"
+        },
+        {
+          "key": "breakdown.row-1-b",
+          "type": "text",
+          "instruction": "Row 1 value for option B, short"
+        },
+        {
+          "key": "breakdown.row-2-label",
+          "type": "text",
+          "instruction": "Row 2 label, 1-3 words"
+        },
+        {
+          "key": "breakdown.row-2-a",
+          "type": "text",
+          "instruction": "Row 2 value for option A, short"
+        },
+        {
+          "key": "breakdown.row-2-b",
+          "type": "text",
+          "instruction": "Row 2 value for option B, short"
+        },
+        {
+          "key": "breakdown.row-3-label",
+          "type": "text",
+          "instruction": "Row 3 label, 1-3 words"
+        },
+        {
+          "key": "breakdown.row-3-a",
+          "type": "text",
+          "instruction": "Row 3 value for option A, short"
+        },
+        {
+          "key": "breakdown.row-3-b",
+          "type": "text",
+          "instruction": "Row 3 value for option B, short"
+        },
+        {
+          "key": "breakdown.row-4-label",
+          "type": "text",
+          "instruction": "Row 4 label, 1-3 words"
+        },
+        {
+          "key": "breakdown.row-4-a",
+          "type": "text",
+          "instruction": "Row 4 value for option A, short"
+        },
+        {
+          "key": "breakdown.row-4-b",
+          "type": "text",
+          "instruction": "Row 4 value for option B, short"
+        },
+        {
+          "key": "verdict.eyebrow",
+          "type": "text",
+          "instruction": "Small label, 1-3 words"
+        },
+        {
+          "key": "verdict.title",
+          "type": "text",
+          "instruction": "Verdict headline, <=10 words"
+        },
+        {
+          "key": "verdict.body",
+          "type": "text",
+          "instruction": "1-2 sentence closing verdict"
+        },
+        {
+          "key": "cta.title",
+          "type": "text",
+          "instruction": "Closing CTA headline, <=8 words"
+        },
+        {
+          "key": "cta.subtitle",
+          "type": "text",
+          "instruction": "1 sentence closing line"
+        },
+        {
+          "key": "cta.cta-primary",
+          "type": "link",
+          "instruction": "Closing CTA label + link"
+        }
+      ],
+      "htmlContent": "<main>\n<section class=\"of1-comparison-versus-hero of1-hero\">\n  <div class=\"of1-comparison-versus-hero-grid of1-hero-grid\">\n    <div>\n      <p class=\"of1-eyebrow\" data-slot=\"hero.eyebrow\">Head to head</p>\n      <h1 data-slot=\"hero.title\">Two breathing rhythms. One decision.</h1>\n      <p data-slot=\"hero.subtitle\">Not sure which preset fits your evening? Put them side by side and pick the one that matches how you actually feel right now.</p>\n      <a class=\"of1-cta of1-cta-primary\" data-slot=\"hero.cta-primary\" href=\"#\">Get the app</a>\n    </div>\n    <div class=\"of1-hero-media\"><img data-slot=\"hero.image\" src=\"\" alt=\"\"></div>\n  </div>\n</section>\n\n<section class=\"of1-comparison-versus-face-off of1-section\">\n  <div class=\"of1-versus-grid\" data-grid-items>\n    <article class=\"of1-versus-side\" data-card=\"1\">\n      <img data-slot=\"item-1.image\" src=\"\" alt=\"\">\n      <p class=\"of1-versus-side-tag\" data-slot=\"item-1.tag\">Option A</p>\n      <h3 data-slot=\"item-1.title\">Relax 4&middot;6 + River</h3>\n      <p data-slot=\"item-1.body\">A gentler rhythm over flowing water \u2014 good for winding down earlier in the evening.</p>\n      <a class=\"of1-cta of1-cta-secondary\" data-slot=\"item-1.cta\" href=\"#\">Try this one</a>\n    </article>\n    <div class=\"of1-versus-divider\" aria-hidden=\"true\"><span data-slot=\"versus.label\">vs</span></div>\n    <article class=\"of1-versus-side\" data-card=\"2\">\n      <img data-slot=\"item-2.image\" src=\"\" alt=\"\">\n      <p class=\"of1-versus-side-tag\" data-slot=\"item-2.tag\">Option B</p>\n      <h3 data-slot=\"item-2.title\">Sleep 4&middot;7&middot;8 + Fireplace</h3>\n      <p data-slot=\"item-2.body\">Long exhales and a warm, crackling glow \u2014 built to ease evening stress right before bed.</p>\n      <a class=\"of1-cta of1-cta-secondary\" data-slot=\"item-2.cta\" href=\"#\">Try this one</a>\n    </article>\n  </div>\n</section>\n\n<section class=\"of1-comparison-versus-breakdown of1-section\">\n  <h2 data-slot=\"breakdown.title\">The breakdown</h2>\n  <p data-slot=\"breakdown.subtitle\">Same goal, different pace \u2014 here's what changes.</p>\n  <div class=\"of1-versus-rows\">\n    <div class=\"of1-versus-row\">\n      <span class=\"of1-versus-row-label\" data-slot=\"breakdown.row-1-label\">Best for</span>\n      <span data-slot=\"breakdown.row-1-a\">Winding down after work</span>\n      <span data-slot=\"breakdown.row-1-b\">Falling asleep faster</span>\n    </div>\n    <div class=\"of1-versus-row\">\n      <span class=\"of1-versus-row-label\" data-slot=\"breakdown.row-2-label\">Rhythm</span>\n      <span data-slot=\"breakdown.row-2-a\">4s inhale, 6s exhale</span>\n      <span data-slot=\"breakdown.row-2-b\">4s inhale, 7s hold, 8s exhale</span>\n    </div>\n    <div class=\"of1-versus-row\">\n      <span class=\"of1-versus-row-label\" data-slot=\"breakdown.row-3-label\">Setting</span>\n      <span data-slot=\"breakdown.row-3-a\">Flowing river, daylight</span>\n      <span data-slot=\"breakdown.row-3-b\">Crackling fireplace, dim</span>\n    </div>\n    <div class=\"of1-versus-row\">\n      <span class=\"of1-versus-row-label\" data-slot=\"breakdown.row-4-label\">Typical length</span>\n      <span data-slot=\"breakdown.row-4-a\">5-8 minutes</span>\n      <span data-slot=\"breakdown.row-4-b\">3-5 minutes</span>\n    </div>\n  </div>\n</section>\n\n<section class=\"of1-comparison-versus-verdict\">\n  <div class=\"of1-comparison-versus-verdict-inner\">\n    <p class=\"of1-eyebrow\" data-slot=\"verdict.eyebrow\">Our take</p>\n    <h2 data-slot=\"verdict.title\">Both are right \u2014 it depends on the hour.</h2>\n    <p data-slot=\"verdict.body\">Reach for Relax when you're closing your laptop. Reach for Sleep when you're closing your eyes.</p>\n  </div>\n</section>\n\n<section class=\"of1-comparison-versus-cta of1-section\">\n  <div class=\"of1-comparison-versus-cta-box\">\n    <h2 data-slot=\"cta.title\">Try them both tonight.</h2>\n    <p data-slot=\"cta.subtitle\">Every rhythm is free and available offline.</p>\n    <a class=\"of1-cta of1-cta-primary\" data-slot=\"cta.cta-primary\" href=\"#\">Get Breathe \u2014 it's free</a>\n  </div>\n</section>\n</main>\n"
+    },
+    {
+      "name": "of1-deep-dive-faq-explainer",
+      "intent": "deep-dive",
+      "description": "Tabbed explainer plus a 4-5 item FAQ accordion for question-driven deep dives.",
+      "minItems": 4,
+      "maxItems": 5,
+      "stylesheet": "/styles/of1-deep-dive-faq-explainer.css",
+      "slots": [
+        {
+          "key": "hero.eyebrow",
+          "type": "text",
+          "instruction": "Short label above the headline, 1-3 words"
+        },
+        {
+          "key": "hero.title",
+          "type": "text",
+          "instruction": "Headline framing this as an explainer, <=10 words"
+        },
+        {
+          "key": "hero.subtitle",
+          "type": "text",
+          "instruction": "1-2 sentence expansion of the headline"
+        },
+        {
+          "key": "hero.cta-primary",
+          "type": "link",
+          "instruction": "Primary call to action, e.g. jump to FAQs"
+        },
+        {
+          "key": "hero.image",
+          "type": "image",
+          "instruction": "Hero image URL representative of the topic"
+        },
+        {
+          "key": "tabs.title",
+          "type": "text",
+          "instruction": "Heading above the tabbed section"
+        },
+        {
+          "key": "tab-1.label",
+          "type": "text",
+          "instruction": "Tab 1 short label, 1-2 words"
+        },
+        {
+          "key": "tab-1.title",
+          "type": "text",
+          "instruction": "Tab 1 panel heading"
+        },
+        {
+          "key": "tab-1.body",
+          "type": "text",
+          "instruction": "Tab 1 panel body, 2-3 sentences"
+        },
+        {
+          "key": "tab-2.label",
+          "type": "text",
+          "instruction": "Tab 2 short label, 1-2 words"
+        },
+        {
+          "key": "tab-2.title",
+          "type": "text",
+          "instruction": "Tab 2 panel heading"
+        },
+        {
+          "key": "tab-2.body",
+          "type": "text",
+          "instruction": "Tab 2 panel body, 2-3 sentences"
+        },
+        {
+          "key": "tab-3.label",
+          "type": "text",
+          "instruction": "Tab 3 short label, 1-2 words"
+        },
+        {
+          "key": "tab-3.title",
+          "type": "text",
+          "instruction": "Tab 3 panel heading"
+        },
+        {
+          "key": "tab-3.body",
+          "type": "text",
+          "instruction": "Tab 3 panel body, 2-3 sentences"
+        },
+        {
+          "key": "faq.title",
+          "type": "text",
+          "instruction": "Heading above the FAQ accordion"
+        },
+        {
+          "key": "item-1.title",
+          "type": "text",
+          "instruction": "FAQ question 1"
+        },
+        {
+          "key": "item-1.body",
+          "type": "text",
+          "instruction": "FAQ answer 1, 1-2 sentences"
+        },
+        {
+          "key": "item-2.title",
+          "type": "text",
+          "instruction": "FAQ question 2"
+        },
+        {
+          "key": "item-2.body",
+          "type": "text",
+          "instruction": "FAQ answer 2, 1-2 sentences"
+        },
+        {
+          "key": "item-3.title",
+          "type": "text",
+          "instruction": "FAQ question 3"
+        },
+        {
+          "key": "item-3.body",
+          "type": "text",
+          "instruction": "FAQ answer 3, 1-2 sentences"
+        },
+        {
+          "key": "item-4.title",
+          "type": "text",
+          "instruction": "FAQ question 4"
+        },
+        {
+          "key": "item-4.body",
+          "type": "text",
+          "instruction": "FAQ answer 4, 1-2 sentences"
+        },
+        {
+          "key": "item-5.title",
+          "type": "text",
+          "instruction": "FAQ question 5"
+        },
+        {
+          "key": "item-5.body",
+          "type": "text",
+          "instruction": "FAQ answer 5, 1-2 sentences"
+        },
+        {
+          "key": "cta.title",
+          "type": "text",
+          "instruction": "Closing headline, <=8 words"
+        },
+        {
+          "key": "cta.body",
+          "type": "text",
+          "instruction": "1 sentence closing supporting line"
+        },
+        {
+          "key": "cta.cta",
+          "type": "link",
+          "instruction": "Final call-to-action link"
+        }
+      ],
+      "htmlContent": "<main>\n<section class=\"of1-deep-dive-faq-explainer-hero of1-hero\">\n  <div class=\"of1-ddf-hero-grid\">\n    <div class=\"of1-ddf-hero-content\">\n      <p class=\"of1-eyebrow\" data-slot=\"hero.eyebrow\">Explained</p>\n      <h1 data-slot=\"hero.title\">Everything you're wondering about Breathe</h1>\n      <p class=\"of1-ddf-hero-sub\" data-slot=\"hero.subtitle\">How the rhythms work, what backgrounds are available, and how your data stays on your device.</p>\n      <a class=\"of1-cta of1-cta-primary\" data-slot=\"hero.cta-primary\" href=\"#faq\">Jump to FAQs</a>\n    </div>\n    <div class=\"of1-ddf-hero-media\">\n      <img data-slot=\"hero.image\" src=\"\" alt=\"\">\n    </div>\n  </div>\n</section>\n\n<section class=\"of1-deep-dive-faq-explainer-tabs of1-section\">\n  <h2 data-slot=\"tabs.title\">Tabs section title</h2>\n  <div class=\"of1-ddf-tabs\" data-tabs>\n    <div class=\"of1-ddf-tab-nav\" role=\"tablist\">\n      <button class=\"of1-ddf-tab-btn is-active\" data-tab-btn=\"1\" type=\"button\" data-slot=\"tab-1.label\">Tab one</button>\n      <button class=\"of1-ddf-tab-btn\" data-tab-btn=\"2\" type=\"button\" data-slot=\"tab-2.label\">Tab two</button>\n      <button class=\"of1-ddf-tab-btn\" data-tab-btn=\"3\" type=\"button\" data-slot=\"tab-3.label\">Tab three</button>\n    </div>\n    <div class=\"of1-ddf-tab-panels\">\n      <div class=\"of1-ddf-tab-panel is-active\" data-tab-panel=\"1\">\n        <h3 data-slot=\"tab-1.title\">Panel one title</h3>\n        <p data-slot=\"tab-1.body\">Panel one body copy.</p>\n      </div>\n      <div class=\"of1-ddf-tab-panel\" data-tab-panel=\"2\">\n        <h3 data-slot=\"tab-2.title\">Panel two title</h3>\n        <p data-slot=\"tab-2.body\">Panel two body copy.</p>\n      </div>\n      <div class=\"of1-ddf-tab-panel\" data-tab-panel=\"3\">\n        <h3 data-slot=\"tab-3.title\">Panel three title</h3>\n        <p data-slot=\"tab-3.body\">Panel three body copy.</p>\n      </div>\n    </div>\n  </div>\n</section>\n\n<section class=\"of1-deep-dive-faq-explainer-faq of1-section\" id=\"faq\">\n  <h2 data-slot=\"faq.title\">FAQ section title</h2>\n  <div class=\"of1-ddf-accordion\" data-grid-items>\n    <article class=\"of1-ddf-accordion-item\" data-card=\"1\" data-accordion-item>\n      <button class=\"of1-ddf-accordion-trigger\" type=\"button\" data-accordion-trigger>\n        <span data-slot=\"item-1.title\">Question one</span>\n        <span class=\"of1-ddf-accordion-icon\" aria-hidden=\"true\">+</span>\n      </button>\n      <div class=\"of1-ddf-accordion-panel\" data-accordion-panel>\n        <p data-slot=\"item-1.body\">Answer one.</p>\n      </div>\n    </article>\n    <article class=\"of1-ddf-accordion-item\" data-card=\"2\" data-accordion-item>\n      <button class=\"of1-ddf-accordion-trigger\" type=\"button\" data-accordion-trigger>\n        <span data-slot=\"item-2.title\">Question two</span>\n        <span class=\"of1-ddf-accordion-icon\" aria-hidden=\"true\">+</span>\n      </button>\n      <div class=\"of1-ddf-accordion-panel\" data-accordion-panel>\n        <p data-slot=\"item-2.body\">Answer two.</p>\n      </div>\n    </article>\n    <article class=\"of1-ddf-accordion-item\" data-card=\"3\" data-accordion-item>\n      <button class=\"of1-ddf-accordion-trigger\" type=\"button\" data-accordion-trigger>\n        <span data-slot=\"item-3.title\">Question three</span>\n        <span class=\"of1-ddf-accordion-icon\" aria-hidden=\"true\">+</span>\n      </button>\n      <div class=\"of1-ddf-accordion-panel\" data-accordion-panel>\n        <p data-slot=\"item-3.body\">Answer three.</p>\n      </div>\n    </article>\n    <article class=\"of1-ddf-accordion-item\" data-card=\"4\" data-accordion-item>\n      <button class=\"of1-ddf-accordion-trigger\" type=\"button\" data-accordion-trigger>\n        <span data-slot=\"item-4.title\">Question four</span>\n        <span class=\"of1-ddf-accordion-icon\" aria-hidden=\"true\">+</span>\n      </button>\n      <div class=\"of1-ddf-accordion-panel\" data-accordion-panel>\n        <p data-slot=\"item-4.body\">Answer four.</p>\n      </div>\n    </article>\n    <article class=\"of1-ddf-accordion-item\" data-card=\"5\" data-accordion-item>\n      <button class=\"of1-ddf-accordion-trigger\" type=\"button\" data-accordion-trigger>\n        <span data-slot=\"item-5.title\">Question five</span>\n        <span class=\"of1-ddf-accordion-icon\" aria-hidden=\"true\">+</span>\n      </button>\n      <div class=\"of1-ddf-accordion-panel\" data-accordion-panel>\n        <p data-slot=\"item-5.body\">Answer five.</p>\n      </div>\n    </article>\n  </div>\n</section>\n\n<section class=\"of1-deep-dive-faq-explainer-cta of1-cta-section\">\n  <div class=\"of1-ddf-cta-inner\">\n    <h2 data-slot=\"cta.title\">Closing headline</h2>\n    <p data-slot=\"cta.body\">Closing supporting line.</p>\n    <a class=\"of1-cta of1-cta-light\" data-slot=\"cta.cta\" href=\"#\">Call to action</a>\n  </div>\n</section>\n\n<script>\n(function () {\n  var root = document.currentScript.closest('main');\n  var tabBtns = root.querySelectorAll('[data-tab-btn]');\n  tabBtns.forEach(function (btn) {\n    btn.addEventListener('click', function () {\n      var id = btn.getAttribute('data-tab-btn');\n      root.querySelectorAll('[data-tab-btn]').forEach(function (b) { b.classList.remove('is-active'); });\n      root.querySelectorAll('[data-tab-panel]').forEach(function (p) { p.classList.remove('is-active'); });\n      btn.classList.add('is-active');\n      var panel = root.querySelector('[data-tab-panel=\"' + id + '\"]');\n      if (panel) panel.classList.add('is-active');\n    });\n  });\n  var accItems = root.querySelectorAll('[data-accordion-item]');\n  accItems.forEach(function (item) {\n    var trigger = item.querySelector('[data-accordion-trigger]');\n    trigger.addEventListener('click', function () {\n      item.classList.toggle('is-open');\n    });\n  });\n})();\n</script>\n</main>\n"
+    },
+    {
+      "name": "of1-deep-dive-longform",
+      "intent": "deep-dive",
+      "description": "Editorial longform explainer with alternating image/text splits and a numbered 4-step flow.",
+      "minItems": 4,
+      "maxItems": 4,
+      "stylesheet": "/styles/of1-deep-dive-longform.css",
+      "slots": [
+        {
+          "key": "hero.eyebrow",
+          "type": "text",
+          "instruction": "Short label above the headline, 1-3 words"
+        },
+        {
+          "key": "hero.title",
+          "type": "text",
+          "instruction": "Headline explaining what this deep dive covers, <=10 words"
+        },
+        {
+          "key": "hero.subtitle",
+          "type": "text",
+          "instruction": "1-2 sentence expansion of the headline"
+        },
+        {
+          "key": "hero.cta-primary",
+          "type": "link",
+          "instruction": "Primary call to action, e.g. 'Explore the science'"
+        },
+        {
+          "key": "hero.image",
+          "type": "image",
+          "instruction": "Hero image URL representative of the topic"
+        },
+        {
+          "key": "lead.eyebrow",
+          "type": "text",
+          "instruction": "Short label, e.g. 'Why it works'"
+        },
+        {
+          "key": "lead.body",
+          "type": "text",
+          "instruction": "1-2 sentence pull-quote style lead paragraph, larger type"
+        },
+        {
+          "key": "split-1.eyebrow",
+          "type": "text",
+          "instruction": "Short numbered label, e.g. '01 \u2014 The physiology'"
+        },
+        {
+          "key": "split-1.title",
+          "type": "text",
+          "instruction": "Subheading for the first explanatory section"
+        },
+        {
+          "key": "split-1.body",
+          "type": "text",
+          "instruction": "2-3 sentence explanation"
+        },
+        {
+          "key": "split-1.image",
+          "type": "image",
+          "instruction": "Supporting image URL for the first section"
+        },
+        {
+          "key": "split-2.eyebrow",
+          "type": "text",
+          "instruction": "Short numbered label, e.g. '02 \u2014 The rhythms'"
+        },
+        {
+          "key": "split-2.title",
+          "type": "text",
+          "instruction": "Subheading for the second explanatory section"
+        },
+        {
+          "key": "split-2.body",
+          "type": "text",
+          "instruction": "2-3 sentence explanation"
+        },
+        {
+          "key": "split-2.image",
+          "type": "image",
+          "instruction": "Supporting image URL for the second section"
+        },
+        {
+          "key": "steps.title",
+          "type": "text",
+          "instruction": "Heading for the step-by-step flow section"
+        },
+        {
+          "key": "steps.subtitle",
+          "type": "text",
+          "instruction": "1 sentence subtitle"
+        },
+        {
+          "key": "item-1.title",
+          "type": "text",
+          "instruction": "Step 1 short title"
+        },
+        {
+          "key": "item-1.body",
+          "type": "text",
+          "instruction": "Step 1 short description"
+        },
+        {
+          "key": "item-2.title",
+          "type": "text",
+          "instruction": "Step 2 short title"
+        },
+        {
+          "key": "item-2.body",
+          "type": "text",
+          "instruction": "Step 2 short description"
+        },
+        {
+          "key": "item-3.title",
+          "type": "text",
+          "instruction": "Step 3 short title"
+        },
+        {
+          "key": "item-3.body",
+          "type": "text",
+          "instruction": "Step 3 short description"
+        },
+        {
+          "key": "item-4.title",
+          "type": "text",
+          "instruction": "Step 4 short title"
+        },
+        {
+          "key": "item-4.body",
+          "type": "text",
+          "instruction": "Step 4 short description"
+        },
+        {
+          "key": "cta.title",
+          "type": "text",
+          "instruction": "Closing headline, <=8 words"
+        },
+        {
+          "key": "cta.body",
+          "type": "text",
+          "instruction": "1 sentence closing supporting line"
+        },
+        {
+          "key": "cta.cta",
+          "type": "link",
+          "instruction": "Final call-to-action link"
+        }
+      ],
+      "htmlContent": "<main>\n<section class=\"of1-deep-dive-longform-hero of1-hero\">\n  <div class=\"of1-ddl-hero-grid\">\n    <div class=\"of1-ddl-hero-content\">\n      <p class=\"of1-eyebrow\" data-slot=\"hero.eyebrow\">Deep Dive</p>\n      <h1 data-slot=\"hero.title\">How Breathe guides your body into calm</h1>\n      <p class=\"of1-ddl-hero-sub\" data-slot=\"hero.subtitle\">A closer look at the breathing science, rhythm presets, and offline-first design behind every session.</p>\n      <a class=\"of1-cta of1-cta-primary\" data-slot=\"hero.cta-primary\" href=\"#\">Explore the science</a>\n    </div>\n    <div class=\"of1-ddl-hero-media\">\n      <img data-slot=\"hero.image\" src=\"\" alt=\"\">\n    </div>\n  </div>\n</section>\n\n<section class=\"of1-deep-dive-longform-lead of1-section\">\n  <p class=\"of1-eyebrow\" data-slot=\"lead.eyebrow\">Why it works</p>\n  <p class=\"of1-ddl-lead-body\" data-slot=\"lead.body\">Lead paragraph explaining the core idea.</p>\n</section>\n\n<section class=\"of1-deep-dive-longform-split of1-section\">\n  <div class=\"of1-ddl-split-grid\">\n    <div class=\"of1-ddl-split-media\"><img data-slot=\"split-1.image\" src=\"\" alt=\"\"></div>\n    <div class=\"of1-ddl-split-text\">\n      <p class=\"of1-eyebrow\" data-slot=\"split-1.eyebrow\">01 - The physiology</p>\n      <h2 data-slot=\"split-1.title\">A longer exhale tells your body it's safe</h2>\n      <p data-slot=\"split-1.body\">Explanation of the physiology behind the technique.</p>\n    </div>\n  </div>\n</section>\n\n<section class=\"of1-deep-dive-longform-split of1-deep-dive-longform-split-reverse of1-section\">\n  <div class=\"of1-ddl-split-grid of1-ddl-split-grid-reverse\">\n    <div class=\"of1-ddl-split-text\">\n      <p class=\"of1-eyebrow\" data-slot=\"split-2.eyebrow\">02 - The rhythms</p>\n      <h2 data-slot=\"split-2.title\">Every preset maps to a specific goal</h2>\n      <p data-slot=\"split-2.body\">Explanation of the rhythm presets.</p>\n    </div>\n    <div class=\"of1-ddl-split-media\"><img data-slot=\"split-2.image\" src=\"\" alt=\"\"></div>\n  </div>\n</section>\n\n<section class=\"of1-deep-dive-longform-steps of1-section\">\n  <div class=\"of1-ddl-steps-header\">\n    <h2 data-slot=\"steps.title\">How a session flows</h2>\n    <p data-slot=\"steps.subtitle\">Subtitle describing the flow.</p>\n  </div>\n  <div class=\"of1-ddl-steps-grid\" data-grid-items>\n    <article data-card=\"1\">\n      <div class=\"of1-ddl-step-num\">01</div>\n      <h3 data-slot=\"item-1.title\">Step title</h3>\n      <p data-slot=\"item-1.body\">Step description.</p>\n    </article>\n    <article data-card=\"2\">\n      <div class=\"of1-ddl-step-num\">02</div>\n      <h3 data-slot=\"item-2.title\">Step title</h3>\n      <p data-slot=\"item-2.body\">Step description.</p>\n    </article>\n    <article data-card=\"3\">\n      <div class=\"of1-ddl-step-num\">03</div>\n      <h3 data-slot=\"item-3.title\">Step title</h3>\n      <p data-slot=\"item-3.body\">Step description.</p>\n    </article>\n    <article data-card=\"4\">\n      <div class=\"of1-ddl-step-num\">04</div>\n      <h3 data-slot=\"item-4.title\">Step title</h3>\n      <p data-slot=\"item-4.body\">Step description.</p>\n    </article>\n  </div>\n</section>\n\n<section class=\"of1-deep-dive-longform-cta of1-cta-section\">\n  <div class=\"of1-ddl-cta-inner\">\n    <h2 data-slot=\"cta.title\">Closing headline</h2>\n    <p data-slot=\"cta.body\">Closing supporting line.</p>\n    <a class=\"of1-cta of1-cta-light\" data-slot=\"cta.cta\" href=\"#\">Call to action</a>\n  </div>\n</section>\n</main>\n"
+    },
+    {
+      "name": "of1-deep-dive-timeline",
+      "intent": "deep-dive",
+      "description": "Vertical timeline walking through 3-5 sequential steps of a process, plus a dark facts panel.",
+      "minItems": 3,
+      "maxItems": 5,
+      "stylesheet": "/styles/of1-deep-dive-timeline.css",
+      "slots": [
+        {
+          "key": "hero.eyebrow",
+          "type": "text",
+          "instruction": "Short label above the headline, 1-3 words"
+        },
+        {
+          "key": "hero.title",
+          "type": "text",
+          "instruction": "Headline framing this as a step-by-step explanation, <=10 words"
+        },
+        {
+          "key": "hero.subtitle",
+          "type": "text",
+          "instruction": "1-2 sentence expansion of the headline"
+        },
+        {
+          "key": "hero.cta-primary",
+          "type": "link",
+          "instruction": "Primary call to action"
+        },
+        {
+          "key": "hero.image",
+          "type": "image",
+          "instruction": "Hero image URL representative of the topic"
+        },
+        {
+          "key": "intro.title",
+          "type": "text",
+          "instruction": "Short intro heading"
+        },
+        {
+          "key": "intro.body",
+          "type": "text",
+          "instruction": "1-2 sentence introduction to the timeline"
+        },
+        {
+          "key": "item-1.title",
+          "type": "text",
+          "instruction": "Timeline step 1 title"
+        },
+        {
+          "key": "item-1.body",
+          "type": "text",
+          "instruction": "Timeline step 1 description"
+        },
+        {
+          "key": "item-2.title",
+          "type": "text",
+          "instruction": "Timeline step 2 title"
+        },
+        {
+          "key": "item-2.body",
+          "type": "text",
+          "instruction": "Timeline step 2 description"
+        },
+        {
+          "key": "item-3.title",
+          "type": "text",
+          "instruction": "Timeline step 3 title"
+        },
+        {
+          "key": "item-3.body",
+          "type": "text",
+          "instruction": "Timeline step 3 description"
+        },
+        {
+          "key": "item-4.title",
+          "type": "text",
+          "instruction": "Timeline step 4 title"
+        },
+        {
+          "key": "item-4.body",
+          "type": "text",
+          "instruction": "Timeline step 4 description"
+        },
+        {
+          "key": "item-5.title",
+          "type": "text",
+          "instruction": "Timeline step 5 title"
+        },
+        {
+          "key": "item-5.body",
+          "type": "text",
+          "instruction": "Timeline step 5 description"
+        },
+        {
+          "key": "facts.title",
+          "type": "text",
+          "instruction": "Heading for the supporting facts panel"
+        },
+        {
+          "key": "facts.body",
+          "type": "text",
+          "instruction": "1-2 sentence supporting copy"
+        },
+        {
+          "key": "facts.list",
+          "type": "list",
+          "instruction": "3-5 short standalone facts or stats, one per line"
+        },
+        {
+          "key": "cta.title",
+          "type": "text",
+          "instruction": "Closing headline, <=8 words"
+        },
+        {
+          "key": "cta.body",
+          "type": "text",
+          "instruction": "1 sentence closing supporting line"
+        },
+        {
+          "key": "cta.cta",
+          "type": "link",
+          "instruction": "Final call-to-action link"
+        }
+      ],
+      "htmlContent": "<main>\n<section class=\"of1-deep-dive-timeline-hero of1-hero\">\n  <div class=\"of1-ddt-hero-grid\">\n    <div class=\"of1-ddt-hero-content\">\n      <p class=\"of1-eyebrow\" data-slot=\"hero.eyebrow\">How it works</p>\n      <h1 data-slot=\"hero.title\">Inside a Breathe session, step by step</h1>\n      <p class=\"of1-ddt-hero-sub\" data-slot=\"hero.subtitle\">From opening the app to the moment your shoulders drop - here's exactly what happens.</p>\n      <a class=\"of1-cta of1-cta-primary\" data-slot=\"hero.cta-primary\" href=\"#\">See the full flow</a>\n    </div>\n    <div class=\"of1-ddt-hero-media\">\n      <img data-slot=\"hero.image\" src=\"\" alt=\"\">\n    </div>\n  </div>\n</section>\n\n<section class=\"of1-deep-dive-timeline-intro of1-section\">\n  <h2 data-slot=\"intro.title\">Intro title</h2>\n  <p data-slot=\"intro.body\">Intro body copy.</p>\n</section>\n\n<section class=\"of1-deep-dive-timeline-steps of1-section\">\n  <div class=\"of1-ddt-timeline\" data-grid-items>\n    <article class=\"of1-ddt-timeline-item\" data-card=\"1\">\n      <div class=\"of1-ddt-timeline-node\">01</div>\n      <div class=\"of1-ddt-timeline-body\">\n        <h3 data-slot=\"item-1.title\">Step title</h3>\n        <p data-slot=\"item-1.body\">Step description.</p>\n      </div>\n    </article>\n    <article class=\"of1-ddt-timeline-item\" data-card=\"2\">\n      <div class=\"of1-ddt-timeline-node\">02</div>\n      <div class=\"of1-ddt-timeline-body\">\n        <h3 data-slot=\"item-2.title\">Step title</h3>\n        <p data-slot=\"item-2.body\">Step description.</p>\n      </div>\n    </article>\n    <article class=\"of1-ddt-timeline-item\" data-card=\"3\">\n      <div class=\"of1-ddt-timeline-node\">03</div>\n      <div class=\"of1-ddt-timeline-body\">\n        <h3 data-slot=\"item-3.title\">Step title</h3>\n        <p data-slot=\"item-3.body\">Step description.</p>\n      </div>\n    </article>\n    <article class=\"of1-ddt-timeline-item\" data-card=\"4\">\n      <div class=\"of1-ddt-timeline-node\">04</div>\n      <div class=\"of1-ddt-timeline-body\">\n        <h3 data-slot=\"item-4.title\">Step title</h3>\n        <p data-slot=\"item-4.body\">Step description.</p>\n      </div>\n    </article>\n    <article class=\"of1-ddt-timeline-item\" data-card=\"5\">\n      <div class=\"of1-ddt-timeline-node\">05</div>\n      <div class=\"of1-ddt-timeline-body\">\n        <h3 data-slot=\"item-5.title\">Step title</h3>\n        <p data-slot=\"item-5.body\">Step description.</p>\n      </div>\n    </article>\n  </div>\n</section>\n\n<section class=\"of1-deep-dive-timeline-facts of1-section\">\n  <div class=\"of1-ddt-facts-inner\">\n    <div class=\"of1-ddt-facts-text\">\n      <h2 data-slot=\"facts.title\">Facts title</h2>\n      <p data-slot=\"facts.body\">Facts body copy.</p>\n    </div>\n    <ul class=\"of1-ddt-facts-list\" data-slot-list=\"facts.list\">\n      <li>Fact one</li>\n      <li>Fact two</li>\n    </ul>\n  </div>\n</section>\n\n<section class=\"of1-deep-dive-timeline-cta of1-cta-section\">\n  <div class=\"of1-ddt-cta-inner\">\n    <h2 data-slot=\"cta.title\">Closing headline</h2>\n    <p data-slot=\"cta.body\">Closing supporting line.</p>\n    <a class=\"of1-cta of1-cta-light\" data-slot=\"cta.cta\" href=\"#\">Call to action</a>\n  </div>\n</section>\n</main>\n"
+    },
+    {
+      "name": "of1-discovery-by-category",
+      "intent": "discovery",
+      "description": "Tabbed browse page switching between Scenes, Rhythms, and Sounds categories, plus a featured spotlight pick.",
+      "minItems": 4,
+      "maxItems": 9,
+      "stylesheet": "/styles/of1-discovery-by-category.css",
+      "slots": [
+        {
+          "key": "hero.eyebrow",
+          "type": "text",
+          "instruction": "Short badge label, 1-2 words"
+        },
+        {
+          "key": "hero.title",
+          "type": "text",
+          "instruction": "Headline, <=6 words, may include <em> for emphasis"
+        },
+        {
+          "key": "hero.subtitle",
+          "type": "text",
+          "instruction": "1-sentence supporting line"
+        },
+        {
+          "key": "hero.cta-primary",
+          "type": "link",
+          "instruction": "Primary call to action, short label"
+        },
+        {
+          "key": "tab-1.label",
+          "type": "text",
+          "instruction": "First category name, 1 word"
+        },
+        {
+          "key": "tab-2.label",
+          "type": "text",
+          "instruction": "Second category name, 1 word"
+        },
+        {
+          "key": "tab-3.label",
+          "type": "text",
+          "instruction": "Third category name, 1 word"
+        },
+        {
+          "key": "item-1.title",
+          "type": "text",
+          "instruction": "Item name, 1-2 words"
+        },
+        {
+          "key": "item-1.body",
+          "type": "text",
+          "instruction": "Short description, <=10 words"
+        },
+        {
+          "key": "item-1.image",
+          "type": "image",
+          "instruction": "Item image URL"
+        },
+        {
+          "key": "item-2.title",
+          "type": "text",
+          "instruction": "Item name, 1-2 words"
+        },
+        {
+          "key": "item-2.body",
+          "type": "text",
+          "instruction": "Short description, <=10 words"
+        },
+        {
+          "key": "item-2.image",
+          "type": "image",
+          "instruction": "Item image URL"
+        },
+        {
+          "key": "item-3.title",
+          "type": "text",
+          "instruction": "Item name, 1-2 words"
+        },
+        {
+          "key": "item-3.body",
+          "type": "text",
+          "instruction": "Short description, <=10 words"
+        },
+        {
+          "key": "item-3.image",
+          "type": "image",
+          "instruction": "Item image URL"
+        },
+        {
+          "key": "item-4.title",
+          "type": "text",
+          "instruction": "Item name, 1-2 words"
+        },
+        {
+          "key": "item-4.body",
+          "type": "text",
+          "instruction": "Short description, <=10 words"
+        },
+        {
+          "key": "item-4.image",
+          "type": "image",
+          "instruction": "Item image URL"
+        },
+        {
+          "key": "item-5.title",
+          "type": "text",
+          "instruction": "Item name, 1-2 words"
+        },
+        {
+          "key": "item-5.body",
+          "type": "text",
+          "instruction": "Short description, <=10 words"
+        },
+        {
+          "key": "item-5.image",
+          "type": "image",
+          "instruction": "Item image URL"
+        },
+        {
+          "key": "item-6.title",
+          "type": "text",
+          "instruction": "Item name, 1-2 words"
+        },
+        {
+          "key": "item-6.body",
+          "type": "text",
+          "instruction": "Short description, <=10 words"
+        },
+        {
+          "key": "item-6.image",
+          "type": "image",
+          "instruction": "Item image URL"
+        },
+        {
+          "key": "item-7.title",
+          "type": "text",
+          "instruction": "Item name, 1-2 words"
+        },
+        {
+          "key": "item-7.body",
+          "type": "text",
+          "instruction": "Short description, <=10 words"
+        },
+        {
+          "key": "item-7.image",
+          "type": "image",
+          "instruction": "Item image URL"
+        },
+        {
+          "key": "item-8.title",
+          "type": "text",
+          "instruction": "Item name, 1-2 words"
+        },
+        {
+          "key": "item-8.body",
+          "type": "text",
+          "instruction": "Short description, <=10 words"
+        },
+        {
+          "key": "item-8.image",
+          "type": "image",
+          "instruction": "Item image URL"
+        },
+        {
+          "key": "item-9.title",
+          "type": "text",
+          "instruction": "Sound item name, 1-2 words"
+        },
+        {
+          "key": "item-9.body",
+          "type": "text",
+          "instruction": "Short description, <=10 words"
+        },
+        {
+          "key": "spotlight.eyebrow",
+          "type": "text",
+          "instruction": "Short badge label, 1-2 words"
+        },
+        {
+          "key": "spotlight.title",
+          "type": "text",
+          "instruction": "Featured pick headline, <=8 words"
+        },
+        {
+          "key": "spotlight.body",
+          "type": "text",
+          "instruction": "1-2 sentence description"
+        },
+        {
+          "key": "spotlight.cta",
+          "type": "link",
+          "instruction": "Call to action, short label"
+        },
+        {
+          "key": "spotlight.image",
+          "type": "image",
+          "instruction": "Featured pick image URL"
+        },
+        {
+          "key": "quiet.title",
+          "type": "text",
+          "instruction": "Headline, <=6 words"
+        },
+        {
+          "key": "quiet.subtitle",
+          "type": "text",
+          "instruction": "1-sentence supporting line"
+        },
+        {
+          "key": "quiet.tags",
+          "type": "list",
+          "instruction": "3-6 short benefit tags, 1-2 words each"
+        },
+        {
+          "key": "cta.title",
+          "type": "text",
+          "instruction": "Closing headline, <=6 words"
+        },
+        {
+          "key": "cta.subtitle",
+          "type": "text",
+          "instruction": "1-sentence supporting line"
+        },
+        {
+          "key": "cta.primary",
+          "type": "link",
+          "instruction": "Primary call to action, short label"
+        }
+      ],
+      "htmlContent": "<main>\n<section class=\"of1-discovery-by-category-hero of1-hero\">\n  <p class=\"of1-eyebrow\" data-slot=\"hero.eyebrow\">Discover</p>\n  <h1 data-slot=\"hero.title\">Browse by <em>category.</em></h1>\n  <p data-slot=\"hero.subtitle\">Scenes, rhythms, and sounds - sorted so you can find your fit in seconds.</p>\n  <a class=\"of1-cta of1-cta-primary\" data-slot=\"hero.cta-primary\" href=\"#\">Start exploring</a>\n</section>\n\n<section class=\"of1-discovery-by-category-tabs of1-section\">\n  <div class=\"of1-discovery-by-category-tablist\" role=\"tablist\">\n    <button class=\"of1-discovery-by-category-tab is-active\" data-tab=\"1\" role=\"tab\" aria-selected=\"true\" data-slot=\"tab-1.label\">Scenes</button>\n    <button class=\"of1-discovery-by-category-tab\" data-tab=\"2\" role=\"tab\" aria-selected=\"false\" data-slot=\"tab-2.label\">Rhythms</button>\n    <button class=\"of1-discovery-by-category-tab\" data-tab=\"3\" role=\"tab\" aria-selected=\"false\" data-slot=\"tab-3.label\">Sounds</button>\n  </div>\n\n  <div class=\"of1-discovery-by-category-panel is-active\" data-panel=\"1\" role=\"tabpanel\">\n    <div class=\"of1-discovery-by-category-grid\" data-grid-items>\n      <article data-card=\"1\">\n        <img data-slot=\"item-1.image\" src=\"\" alt=\"\">\n        <h3 data-slot=\"item-1.title\">Item</h3>\n        <p data-slot=\"item-1.body\">Description</p>\n      </article>\n      <article data-card=\"2\">\n        <img data-slot=\"item-2.image\" src=\"\" alt=\"\">\n        <h3 data-slot=\"item-2.title\">Item</h3>\n        <p data-slot=\"item-2.body\">Description</p>\n      </article>\n      <article data-card=\"3\">\n        <img data-slot=\"item-3.image\" src=\"\" alt=\"\">\n        <h3 data-slot=\"item-3.title\">Item</h3>\n        <p data-slot=\"item-3.body\">Description</p>\n      </article>\n      <article data-card=\"4\">\n        <img data-slot=\"item-4.image\" src=\"\" alt=\"\">\n        <h3 data-slot=\"item-4.title\">Item</h3>\n        <p data-slot=\"item-4.body\">Description</p>\n      </article>\n    </div>\n  </div>\n\n  <div class=\"of1-discovery-by-category-panel\" data-panel=\"2\" role=\"tabpanel\" hidden>\n    <div class=\"of1-discovery-by-category-grid\" data-grid-items>\n      <article data-card=\"5\">\n        <img data-slot=\"item-5.image\" src=\"\" alt=\"\">\n        <h3 data-slot=\"item-5.title\">Item</h3>\n        <p data-slot=\"item-5.body\">Description</p>\n      </article>\n      <article data-card=\"6\">\n        <img data-slot=\"item-6.image\" src=\"\" alt=\"\">\n        <h3 data-slot=\"item-6.title\">Item</h3>\n        <p data-slot=\"item-6.body\">Description</p>\n      </article>\n      <article data-card=\"7\">\n        <img data-slot=\"item-7.image\" src=\"\" alt=\"\">\n        <h3 data-slot=\"item-7.title\">Item</h3>\n        <p data-slot=\"item-7.body\">Description</p>\n      </article>\n      <article data-card=\"8\">\n        <img data-slot=\"item-8.image\" src=\"\" alt=\"\">\n        <h3 data-slot=\"item-8.title\">Item</h3>\n        <p data-slot=\"item-8.body\">Description</p>\n      </article>\n    </div>\n  </div>\n\n  <div class=\"of1-discovery-by-category-panel\" data-panel=\"3\" role=\"tabpanel\" hidden>\n    <div class=\"of1-discovery-by-category-grid\" data-grid-items>\n      <article data-card=\"9\">\n        <h3 data-slot=\"item-9.title\">Item</h3>\n        <p data-slot=\"item-9.body\">Description</p>\n      </article>\n    </div>\n  </div>\n</section>\n\n<section class=\"of1-discovery-by-category-spotlight of1-section\">\n  <div class=\"of1-discovery-by-category-spotlight-inner\">\n    <div>\n      <p class=\"of1-eyebrow\" data-slot=\"spotlight.eyebrow\">Featured pick</p>\n      <h2 data-slot=\"spotlight.title\">This week: Sleep rhythm.</h2>\n      <p data-slot=\"spotlight.body\">A slower 4-7-8 second pattern designed to help you wind down before bed.</p>\n      <a class=\"of1-cta of1-cta-primary\" data-slot=\"spotlight.cta\" href=\"#\">Try it tonight</a>\n    </div>\n    <div class=\"of1-discovery-by-category-spotlight-media\">\n      <img data-slot=\"spotlight.image\" src=\"\" alt=\"\">\n    </div>\n  </div>\n</section>\n\n<section class=\"of1-discovery-by-category-quiet of1-section\">\n  <h2 data-slot=\"quiet.title\">All free. All offline.</h2>\n  <p data-slot=\"quiet.subtitle\">Every category on this page downloads once and works without a connection.</p>\n  <ul class=\"of1-discovery-by-category-tags\" data-slot-list=\"quiet.tags\">\n    <li>Item</li>\n  </ul>\n</section>\n\n<section class=\"of1-discovery-by-category-cta of1-section\">\n  <div class=\"of1-discovery-by-category-cta-container\">\n    <h2 data-slot=\"cta.title\">Ready to find yours?</h2>\n    <p data-slot=\"cta.subtitle\">Download Breathe and start browsing today.</p>\n    <a class=\"of1-cta of1-cta-primary\" data-slot=\"cta.primary\" href=\"#\">Get Breathe - it's free</a>\n  </div>\n</section>\n\n<script>\n(function () {\n  var root = document.currentScript.closest('main') || document;\n  var tabs = root.querySelectorAll('.of1-discovery-by-category-tab');\n  var panels = root.querySelectorAll('.of1-discovery-by-category-panel');\n  tabs.forEach(function (tab) {\n    tab.addEventListener('click', function () {\n      var id = tab.getAttribute('data-tab');\n      tabs.forEach(function (t) {\n        t.classList.toggle('is-active', t === tab);\n        t.setAttribute('aria-selected', t === tab ? 'true' : 'false');\n      });\n      panels.forEach(function (p) {\n        var match = p.getAttribute('data-panel') === id;\n        p.classList.toggle('is-active', match);\n        p.hidden = !match;\n      });\n    });\n  });\n})();\n</script>\n</main>\n"
+    },
+    {
+      "name": "of1-discovery-curated-collections",
+      "intent": "discovery",
+      "description": "Editorial split layout with 3 curated collections (image + description + tags), followed by a browse-all grid.",
+      "minItems": 3,
+      "maxItems": 6,
+      "stylesheet": "/styles/of1-discovery-curated-collections.css",
+      "slots": [
+        {
+          "key": "hero.eyebrow",
+          "type": "text",
+          "instruction": "Short badge label, 2-3 words"
+        },
+        {
+          "key": "hero.title",
+          "type": "text",
+          "instruction": "Headline, <=8 words, may include <em> for emphasis"
+        },
+        {
+          "key": "hero.subtitle",
+          "type": "text",
+          "instruction": "1-sentence supporting line"
+        },
+        {
+          "key": "hero.cta-primary",
+          "type": "link",
+          "instruction": "Primary call to action, short label"
+        },
+        {
+          "key": "collection-1.label",
+          "type": "text",
+          "instruction": "Collection number label, e.g. 'Collection 01'"
+        },
+        {
+          "key": "collection-1.title",
+          "type": "text",
+          "instruction": "Collection name, 1-3 words"
+        },
+        {
+          "key": "collection-1.description",
+          "type": "text",
+          "instruction": "1-sentence description of the collection"
+        },
+        {
+          "key": "collection-1.items",
+          "type": "list",
+          "instruction": "3-5 short item names in this collection"
+        },
+        {
+          "key": "collection-1.cta",
+          "type": "link",
+          "instruction": "Explore link, short label"
+        },
+        {
+          "key": "collection-1.image",
+          "type": "image",
+          "instruction": "Collection cover image URL"
+        },
+        {
+          "key": "collection-2.label",
+          "type": "text",
+          "instruction": "Collection number label, e.g. 'Collection 02'"
+        },
+        {
+          "key": "collection-2.title",
+          "type": "text",
+          "instruction": "Collection name, 1-3 words"
+        },
+        {
+          "key": "collection-2.description",
+          "type": "text",
+          "instruction": "1-sentence description of the collection"
+        },
+        {
+          "key": "collection-2.items",
+          "type": "list",
+          "instruction": "3-5 short item names in this collection"
+        },
+        {
+          "key": "collection-2.cta",
+          "type": "link",
+          "instruction": "Explore link, short label"
+        },
+        {
+          "key": "collection-2.image",
+          "type": "image",
+          "instruction": "Collection cover image URL"
+        },
+        {
+          "key": "collection-3.label",
+          "type": "text",
+          "instruction": "Collection number label, e.g. 'Collection 03'"
+        },
+        {
+          "key": "collection-3.title",
+          "type": "text",
+          "instruction": "Collection name, 1-3 words"
+        },
+        {
+          "key": "collection-3.description",
+          "type": "text",
+          "instruction": "1-sentence description of the collection"
+        },
+        {
+          "key": "collection-3.items",
+          "type": "list",
+          "instruction": "3-5 short item names in this collection"
+        },
+        {
+          "key": "collection-3.cta",
+          "type": "link",
+          "instruction": "Explore link, short label"
+        },
+        {
+          "key": "collection-3.image",
+          "type": "image",
+          "instruction": "Collection cover image URL"
+        },
+        {
+          "key": "more.title",
+          "type": "text",
+          "instruction": "Browse-all headline, <=8 words"
+        },
+        {
+          "key": "more.subtitle",
+          "type": "text",
+          "instruction": "1-sentence supporting line"
+        },
+        {
+          "key": "item-1.title",
+          "type": "text",
+          "instruction": "Item name, 1-2 words"
+        },
+        {
+          "key": "item-1.image",
+          "type": "image",
+          "instruction": "Item image URL"
+        },
+        {
+          "key": "item-2.title",
+          "type": "text",
+          "instruction": "Item name, 1-2 words"
+        },
+        {
+          "key": "item-2.image",
+          "type": "image",
+          "instruction": "Item image URL"
+        },
+        {
+          "key": "item-3.title",
+          "type": "text",
+          "instruction": "Item name, 1-2 words"
+        },
+        {
+          "key": "item-3.image",
+          "type": "image",
+          "instruction": "Item image URL"
+        },
+        {
+          "key": "item-4.title",
+          "type": "text",
+          "instruction": "Item name, 1-2 words"
+        },
+        {
+          "key": "item-4.image",
+          "type": "image",
+          "instruction": "Item image URL"
+        },
+        {
+          "key": "item-5.title",
+          "type": "text",
+          "instruction": "Item name, 1-2 words"
+        },
+        {
+          "key": "item-5.image",
+          "type": "image",
+          "instruction": "Item image URL"
+        },
+        {
+          "key": "item-6.title",
+          "type": "text",
+          "instruction": "Item name, 1-2 words"
+        },
+        {
+          "key": "item-6.image",
+          "type": "image",
+          "instruction": "Item image URL"
+        },
+        {
+          "key": "cta.title",
+          "type": "text",
+          "instruction": "Closing headline, <=6 words"
+        },
+        {
+          "key": "cta.subtitle",
+          "type": "text",
+          "instruction": "1-sentence supporting line"
+        },
+        {
+          "key": "cta.primary",
+          "type": "link",
+          "instruction": "Primary call to action, short label"
+        }
+      ],
+      "htmlContent": "<main>\n<section class=\"of1-discovery-curated-collections-hero of1-hero\">\n  <div class=\"of1-discovery-curated-collections-hero-inner\">\n    <p class=\"of1-eyebrow\" data-slot=\"hero.eyebrow\">Curated for you</p>\n    <h1 data-slot=\"hero.title\">Collections to help you <em>slow down.</em></h1>\n    <p data-slot=\"hero.subtitle\">We grouped our favorite scenes and rhythms into a few simple starting points.</p>\n    <a class=\"of1-cta of1-cta-primary\" data-slot=\"hero.cta-primary\" href=\"#\">See all collections</a>\n  </div>\n</section>\n\n<section class=\"of1-discovery-curated-collections-collection of1-section\" data-collection=\"1\">\n  <div class=\"of1-discovery-curated-collections-collection-media\">\n    <img data-slot=\"collection-1.image\" src=\"\" alt=\"\">\n  </div>\n  <div class=\"of1-discovery-curated-collections-collection-body\">\n    <p class=\"of1-discovery-curated-collections-collection-label\" data-slot=\"collection-1.label\">Collection 01</p>\n    <h2 data-slot=\"collection-1.title\">Wind down</h2>\n    <p data-slot=\"collection-1.description\">Slower rhythms and darker scenes built for the last hour before bed.</p>\n    <ul class=\"of1-discovery-curated-collections-collection-list\" data-slot-list=\"collection-1.items\">\n      <li>Item</li>\n    </ul>\n    <a class=\"of1-discovery-curated-collections-collection-cta\" data-slot=\"collection-1.cta\" href=\"#\">Explore this collection</a>\n  </div>\n</section>\n\n<section class=\"of1-discovery-curated-collections-collection of1-section is-reverse\" data-collection=\"2\">\n  <div class=\"of1-discovery-curated-collections-collection-media\">\n    <img data-slot=\"collection-2.image\" src=\"\" alt=\"\">\n  </div>\n  <div class=\"of1-discovery-curated-collections-collection-body\">\n    <p class=\"of1-discovery-curated-collections-collection-label\" data-slot=\"collection-2.label\">Collection 02</p>\n    <h2 data-slot=\"collection-2.title\">Reset midday</h2>\n    <p data-slot=\"collection-2.description\">Bright outdoor scenes and quick rhythms for a short break between tasks.</p>\n    <ul class=\"of1-discovery-curated-collections-collection-list\" data-slot-list=\"collection-2.items\">\n      <li>Item</li>\n    </ul>\n    <a class=\"of1-discovery-curated-collections-collection-cta\" data-slot=\"collection-2.cta\" href=\"#\">Explore this collection</a>\n  </div>\n</section>\n\n<section class=\"of1-discovery-curated-collections-collection of1-section\" data-collection=\"3\">\n  <div class=\"of1-discovery-curated-collections-collection-media\">\n    <img data-slot=\"collection-3.image\" src=\"\" alt=\"\">\n  </div>\n  <div class=\"of1-discovery-curated-collections-collection-body\">\n    <p class=\"of1-discovery-curated-collections-collection-label\" data-slot=\"collection-3.label\">Collection 03</p>\n    <h2 data-slot=\"collection-3.title\">Deep focus</h2>\n    <p data-slot=\"collection-3.description\">Steady, balanced rhythms paired with quiet, minimal backgrounds.</p>\n    <ul class=\"of1-discovery-curated-collections-collection-list\" data-slot-list=\"collection-3.items\">\n      <li>Item</li>\n    </ul>\n    <a class=\"of1-discovery-curated-collections-collection-cta\" data-slot=\"collection-3.cta\" href=\"#\">Explore this collection</a>\n  </div>\n</section>\n\n<section class=\"of1-discovery-curated-collections-grid-section of1-section\">\n  <h2 data-slot=\"more.title\">Or browse everything at once.</h2>\n  <p data-slot=\"more.subtitle\">Every scene and rhythm, in one place.</p>\n  <div class=\"of1-discovery-curated-collections-grid\" data-grid-items>\n    <article data-card=\"1\">\n      <img data-slot=\"item-1.image\" src=\"\" alt=\"\">\n      <h3 data-slot=\"item-1.title\">Item</h3>\n    </article>\n    <article data-card=\"2\">\n      <img data-slot=\"item-2.image\" src=\"\" alt=\"\">\n      <h3 data-slot=\"item-2.title\">Item</h3>\n    </article>\n    <article data-card=\"3\">\n      <img data-slot=\"item-3.image\" src=\"\" alt=\"\">\n      <h3 data-slot=\"item-3.title\">Item</h3>\n    </article>\n    <article data-card=\"4\">\n      <img data-slot=\"item-4.image\" src=\"\" alt=\"\">\n      <h3 data-slot=\"item-4.title\">Item</h3>\n    </article>\n    <article data-card=\"5\">\n      <img data-slot=\"item-5.image\" src=\"\" alt=\"\">\n      <h3 data-slot=\"item-5.title\">Item</h3>\n    </article>\n    <article data-card=\"6\">\n      <img data-slot=\"item-6.image\" src=\"\" alt=\"\">\n      <h3 data-slot=\"item-6.title\">Item</h3>\n    </article>\n  </div>\n</section>\n\n<section class=\"of1-discovery-curated-collections-cta of1-section\">\n  <div class=\"of1-discovery-curated-collections-cta-container\">\n    <h2 data-slot=\"cta.title\">Start with any collection.</h2>\n    <p data-slot=\"cta.subtitle\">A few minutes is all it takes. Download Breathe today.</p>\n    <a class=\"of1-cta of1-cta-primary\" data-slot=\"cta.primary\" href=\"#\">Get Breathe - it's free</a>\n  </div>\n</section>\n</main>\n"
+    },
+    {
+      "name": "of1-discovery-gallery",
+      "intent": "discovery",
+      "description": "Grid-based browse page: numbered feature grid plus an 8-item visual gallery of atmospheres.",
+      "minItems": 4,
+      "maxItems": 8,
+      "stylesheet": "/styles/of1-discovery-gallery.css",
+      "slots": [
+        {
+          "key": "hero.eyebrow",
+          "type": "text",
+          "instruction": "Short badge label, 2-4 words"
+        },
+        {
+          "key": "hero.title",
+          "type": "text",
+          "instruction": "Headline, <=8 words, may include <em> for emphasis"
+        },
+        {
+          "key": "hero.subtitle",
+          "type": "text",
+          "instruction": "1-sentence supporting line"
+        },
+        {
+          "key": "hero.cta-primary",
+          "type": "link",
+          "instruction": "Primary call to action, short label"
+        },
+        {
+          "key": "hero.image",
+          "type": "image",
+          "instruction": "Hero visual URL"
+        },
+        {
+          "key": "moods.title",
+          "type": "text",
+          "instruction": "Section headline, <=8 words"
+        },
+        {
+          "key": "moods.subtitle",
+          "type": "text",
+          "instruction": "1-sentence supporting line"
+        },
+        {
+          "key": "feature-1.title",
+          "type": "text",
+          "instruction": "Category name, 1-2 words"
+        },
+        {
+          "key": "feature-1.body",
+          "type": "text",
+          "instruction": "1-sentence description"
+        },
+        {
+          "key": "feature-2.title",
+          "type": "text",
+          "instruction": "Category name, 1-2 words"
+        },
+        {
+          "key": "feature-2.body",
+          "type": "text",
+          "instruction": "1-sentence description"
+        },
+        {
+          "key": "feature-3.title",
+          "type": "text",
+          "instruction": "Category name, 1-2 words"
+        },
+        {
+          "key": "feature-3.body",
+          "type": "text",
+          "instruction": "1-sentence description"
+        },
+        {
+          "key": "feature-4.title",
+          "type": "text",
+          "instruction": "Category name, 1-2 words"
+        },
+        {
+          "key": "feature-4.body",
+          "type": "text",
+          "instruction": "1-sentence description"
+        },
+        {
+          "key": "feature-5.title",
+          "type": "text",
+          "instruction": "Category name, 1-2 words"
+        },
+        {
+          "key": "feature-5.body",
+          "type": "text",
+          "instruction": "1-sentence description"
+        },
+        {
+          "key": "feature-6.title",
+          "type": "text",
+          "instruction": "Category name, 1-2 words"
+        },
+        {
+          "key": "feature-6.body",
+          "type": "text",
+          "instruction": "1-sentence description"
+        },
+        {
+          "key": "gallery.title",
+          "type": "text",
+          "instruction": "Gallery section headline, <=8 words"
+        },
+        {
+          "key": "gallery.subtitle",
+          "type": "text",
+          "instruction": "1-sentence supporting line"
+        },
+        {
+          "key": "item-1.title",
+          "type": "text",
+          "instruction": "Item name, 1-2 words"
+        },
+        {
+          "key": "item-1.body",
+          "type": "text",
+          "instruction": "Short description, <=12 words"
+        },
+        {
+          "key": "item-1.image",
+          "type": "image",
+          "instruction": "Item image URL"
+        },
+        {
+          "key": "item-1.cta",
+          "type": "link",
+          "instruction": "Preview link"
+        },
+        {
+          "key": "item-2.title",
+          "type": "text",
+          "instruction": "Item name, 1-2 words"
+        },
+        {
+          "key": "item-2.body",
+          "type": "text",
+          "instruction": "Short description, <=12 words"
+        },
+        {
+          "key": "item-2.image",
+          "type": "image",
+          "instruction": "Item image URL"
+        },
+        {
+          "key": "item-2.cta",
+          "type": "link",
+          "instruction": "Preview link"
+        },
+        {
+          "key": "item-3.title",
+          "type": "text",
+          "instruction": "Item name, 1-2 words"
+        },
+        {
+          "key": "item-3.body",
+          "type": "text",
+          "instruction": "Short description, <=12 words"
+        },
+        {
+          "key": "item-3.image",
+          "type": "image",
+          "instruction": "Item image URL"
+        },
+        {
+          "key": "item-3.cta",
+          "type": "link",
+          "instruction": "Preview link"
+        },
+        {
+          "key": "item-4.title",
+          "type": "text",
+          "instruction": "Item name, 1-2 words"
+        },
+        {
+          "key": "item-4.body",
+          "type": "text",
+          "instruction": "Short description, <=12 words"
+        },
+        {
+          "key": "item-4.image",
+          "type": "image",
+          "instruction": "Item image URL"
+        },
+        {
+          "key": "item-4.cta",
+          "type": "link",
+          "instruction": "Preview link"
+        },
+        {
+          "key": "item-5.title",
+          "type": "text",
+          "instruction": "Item name, 1-2 words"
+        },
+        {
+          "key": "item-5.body",
+          "type": "text",
+          "instruction": "Short description, <=12 words"
+        },
+        {
+          "key": "item-5.image",
+          "type": "image",
+          "instruction": "Item image URL"
+        },
+        {
+          "key": "item-5.cta",
+          "type": "link",
+          "instruction": "Preview link"
+        },
+        {
+          "key": "item-6.title",
+          "type": "text",
+          "instruction": "Item name, 1-2 words"
+        },
+        {
+          "key": "item-6.body",
+          "type": "text",
+          "instruction": "Short description, <=12 words"
+        },
+        {
+          "key": "item-6.image",
+          "type": "image",
+          "instruction": "Item image URL"
+        },
+        {
+          "key": "item-6.cta",
+          "type": "link",
+          "instruction": "Preview link"
+        },
+        {
+          "key": "item-7.title",
+          "type": "text",
+          "instruction": "Item name, 1-2 words"
+        },
+        {
+          "key": "item-7.body",
+          "type": "text",
+          "instruction": "Short description, <=12 words"
+        },
+        {
+          "key": "item-7.image",
+          "type": "image",
+          "instruction": "Item image URL"
+        },
+        {
+          "key": "item-7.cta",
+          "type": "link",
+          "instruction": "Preview link"
+        },
+        {
+          "key": "item-8.title",
+          "type": "text",
+          "instruction": "Item name, 1-2 words"
+        },
+        {
+          "key": "item-8.body",
+          "type": "text",
+          "instruction": "Short description, <=12 words"
+        },
+        {
+          "key": "item-8.image",
+          "type": "image",
+          "instruction": "Item image URL"
+        },
+        {
+          "key": "item-8.cta",
+          "type": "link",
+          "instruction": "Preview link"
+        },
+        {
+          "key": "quiet.title",
+          "type": "text",
+          "instruction": "Headline, <=6 words"
+        },
+        {
+          "key": "quiet.subtitle",
+          "type": "text",
+          "instruction": "1-sentence supporting line"
+        },
+        {
+          "key": "quiet.label",
+          "type": "text",
+          "instruction": "Short breathing cue, 1-2 words"
+        },
+        {
+          "key": "quiet.note",
+          "type": "text",
+          "instruction": "1-sentence reassurance line"
+        },
+        {
+          "key": "cta.title",
+          "type": "text",
+          "instruction": "Closing headline, <=6 words"
+        },
+        {
+          "key": "cta.subtitle",
+          "type": "text",
+          "instruction": "1-sentence supporting line"
+        },
+        {
+          "key": "cta.primary",
+          "type": "link",
+          "instruction": "Primary call to action, short label"
+        }
+      ],
+      "htmlContent": "<main>\n<section class=\"of1-discovery-gallery-hero of1-hero\">\n  <div class=\"of1-discovery-gallery-hero-grid of1-hero-grid\">\n    <div>\n      <p class=\"of1-eyebrow\" data-slot=\"hero.eyebrow\">Explore Breathe</p>\n      <h1 data-slot=\"hero.title\">Every mood, <em>one tap away.</em></h1>\n      <p data-slot=\"hero.subtitle\">Browse calming atmospheres and breathing rhythms \u2014 pick what fits how you feel right now.</p>\n      <a class=\"of1-cta of1-cta-primary\" data-slot=\"hero.cta-primary\" href=\"#\">Browse atmospheres</a>\n    </div>\n    <div class=\"of1-hero-media\"><img data-slot=\"hero.image\" src=\"\" alt=\"\"></div>\n  </div>\n</section>\n\n<section class=\"of1-discovery-gallery-moods of1-section\">\n  <div class=\"of1-discovery-gallery-moods-header\">\n    <h2 data-slot=\"moods.title\">A category for every kind of calm.</h2>\n    <p data-slot=\"moods.subtitle\">Designed to keep the experience simple while still letting you tailor every session.</p>\n  </div>\n  <div class=\"of1-discovery-gallery-moods-grid\">\n    <article class=\"of1-discovery-gallery-mood-card\">\n      <div class=\"of1-discovery-gallery-mood-num\">01</div>\n      <h3 data-slot=\"feature-1.title\">Scenes</h3>\n      <p data-slot=\"feature-1.body\">Video and photo atmospheres that download once for offline sessions.</p>\n    </article>\n    <article class=\"of1-discovery-gallery-mood-card\">\n      <div class=\"of1-discovery-gallery-mood-num\">02</div>\n      <h3 data-slot=\"feature-2.title\">Rhythms</h3>\n      <p data-slot=\"feature-2.body\">Presets with configurable inhale and exhale timings for any pace.</p>\n    </article>\n    <article class=\"of1-discovery-gallery-mood-card\">\n      <div class=\"of1-discovery-gallery-mood-num\">03</div>\n      <h3 data-slot=\"feature-3.title\">Sounds</h3>\n      <p data-slot=\"feature-3.body\">Soundtracks layered under every atmosphere, or silence if you prefer.</p>\n    </article>\n    <article class=\"of1-discovery-gallery-mood-card\">\n      <div class=\"of1-discovery-gallery-mood-num\">04</div>\n      <h3 data-slot=\"feature-4.title\">Durations</h3>\n      <p data-slot=\"feature-4.body\">From a one-minute reset to a full twenty-minute wind-down.</p>\n    </article>\n    <article class=\"of1-discovery-gallery-mood-card\">\n      <div class=\"of1-discovery-gallery-mood-num\">05</div>\n      <h3 data-slot=\"feature-5.title\">Offline</h3>\n      <p data-slot=\"feature-5.body\">Download once, breathe anywhere \u2014 no signal required.</p>\n    </article>\n    <article class=\"of1-discovery-gallery-mood-card\">\n      <div class=\"of1-discovery-gallery-mood-num\">06</div>\n      <h3 data-slot=\"feature-6.title\">Languages</h3>\n      <p data-slot=\"feature-6.body\">Available in 27 languages to support practice around the world.</p>\n    </article>\n  </div>\n</section>\n\n<section class=\"of1-discovery-gallery-grid-section of1-section\">\n  <h2 data-slot=\"gallery.title\">Backgrounds to get lost in.</h2>\n  <p data-slot=\"gallery.subtitle\">Choose from video and photo atmospheres \u2014 tap any to preview.</p>\n  <div class=\"of1-discovery-gallery-cards\" data-grid-items>\n    <article data-card=\"1\">\n      <img data-slot=\"item-1.image\" src=\"\" alt=\"\">\n      <h3 data-slot=\"item-1.title\">Item</h3>\n      <p data-slot=\"item-1.body\">Description</p>\n      <a class=\"of1-discovery-gallery-card-cta\" data-slot=\"item-1.cta\" href=\"#\">Preview</a>\n    </article>\n    <article data-card=\"2\">\n      <img data-slot=\"item-2.image\" src=\"\" alt=\"\">\n      <h3 data-slot=\"item-2.title\">Item</h3>\n      <p data-slot=\"item-2.body\">Description</p>\n      <a class=\"of1-discovery-gallery-card-cta\" data-slot=\"item-2.cta\" href=\"#\">Preview</a>\n    </article>\n    <article data-card=\"3\">\n      <img data-slot=\"item-3.image\" src=\"\" alt=\"\">\n      <h3 data-slot=\"item-3.title\">Item</h3>\n      <p data-slot=\"item-3.body\">Description</p>\n      <a class=\"of1-discovery-gallery-card-cta\" data-slot=\"item-3.cta\" href=\"#\">Preview</a>\n    </article>\n    <article data-card=\"4\">\n      <img data-slot=\"item-4.image\" src=\"\" alt=\"\">\n      <h3 data-slot=\"item-4.title\">Item</h3>\n      <p data-slot=\"item-4.body\">Description</p>\n      <a class=\"of1-discovery-gallery-card-cta\" data-slot=\"item-4.cta\" href=\"#\">Preview</a>\n    </article>\n    <article data-card=\"5\">\n      <img data-slot=\"item-5.image\" src=\"\" alt=\"\">\n      <h3 data-slot=\"item-5.title\">Item</h3>\n      <p data-slot=\"item-5.body\">Description</p>\n      <a class=\"of1-discovery-gallery-card-cta\" data-slot=\"item-5.cta\" href=\"#\">Preview</a>\n    </article>\n    <article data-card=\"6\">\n      <img data-slot=\"item-6.image\" src=\"\" alt=\"\">\n      <h3 data-slot=\"item-6.title\">Item</h3>\n      <p data-slot=\"item-6.body\">Description</p>\n      <a class=\"of1-discovery-gallery-card-cta\" data-slot=\"item-6.cta\" href=\"#\">Preview</a>\n    </article>\n    <article data-card=\"7\">\n      <img data-slot=\"item-7.image\" src=\"\" alt=\"\">\n      <h3 data-slot=\"item-7.title\">Item</h3>\n      <p data-slot=\"item-7.body\">Description</p>\n      <a class=\"of1-discovery-gallery-card-cta\" data-slot=\"item-7.cta\" href=\"#\">Preview</a>\n    </article>\n    <article data-card=\"8\">\n      <img data-slot=\"item-8.image\" src=\"\" alt=\"\">\n      <h3 data-slot=\"item-8.title\">Item</h3>\n      <p data-slot=\"item-8.body\">Description</p>\n      <a class=\"of1-discovery-gallery-card-cta\" data-slot=\"item-8.cta\" href=\"#\">Preview</a>\n    </article>\n  </div>\n</section>\n\n<section class=\"of1-discovery-gallery-quiet of1-section\">\n  <div class=\"of1-discovery-gallery-quiet-inner\">\n    <div class=\"of1-discovery-gallery-quiet-left\">\n      <h2 data-slot=\"quiet.title\">A quiet space to return to.</h2>\n      <p data-slot=\"quiet.subtitle\">Whatever you pick, the flow stays the same \u2014 calm, simple, and out of your way.</p>\n      <div class=\"of1-discovery-gallery-breathing-circle\">\n        <div class=\"of1-discovery-gallery-breathing-circle-inner\"></div>\n      </div>\n      <p class=\"of1-discovery-gallery-breathing-label\" data-slot=\"quiet.label\">Breathe out</p>\n    </div>\n    <div class=\"of1-discovery-gallery-quiet-right\">\n      <p data-slot=\"quiet.note\">Every atmosphere and rhythm on this page is available offline, free, with no account required.</p>\n    </div>\n  </div>\n</section>\n\n<section class=\"of1-discovery-gallery-cta of1-section\">\n  <div class=\"of1-discovery-gallery-cta-container\">\n    <h2 data-slot=\"cta.title\">Find the one that fits today.</h2>\n    <p data-slot=\"cta.subtitle\">A few minutes is all it takes. Download Breathe and start exploring.</p>\n    <a class=\"of1-cta of1-cta-primary\" data-slot=\"cta.primary\" href=\"#\">Get Breathe \u2014 it's free</a>\n  </div>\n</section>\n</main>\n"
+    },
+    {
+      "name": "of1-recommendation-curated-bundle",
+      "intent": "recommendation",
+      "description": "Tabbed bundle of 3 time-of-day picks plus a full grid summary \u2014 for recommending a set rather than a single item.",
+      "minItems": 3,
+      "maxItems": 3,
+      "stylesheet": "/styles/of1-recommendation-curated-bundle.css",
+      "slots": [
+        {
+          "key": "hero.eyebrow",
+          "type": "text",
+          "instruction": "Short label, e.g. 'Your curated bundle', 2-4 words"
+        },
+        {
+          "key": "hero.title",
+          "type": "text",
+          "instruction": "Headline framing a bundle of picks, <=10 words"
+        },
+        {
+          "key": "hero.subtitle",
+          "type": "text",
+          "instruction": "1-sentence framing of why a bundle (not one pick) fits"
+        },
+        {
+          "key": "hero.cta",
+          "type": "link",
+          "instruction": "Primary call to action"
+        },
+        {
+          "key": "hero.image",
+          "type": "image",
+          "instruction": "Hero image URL"
+        },
+        {
+          "key": "tabs.title",
+          "type": "text",
+          "instruction": "Section headline, e.g. 'Pick a moment'"
+        },
+        {
+          "key": "tab-1.label",
+          "type": "text",
+          "instruction": "Tab label, <=2 words, e.g. 'Morning'"
+        },
+        {
+          "key": "tab-1.image",
+          "type": "image",
+          "instruction": "Image for tab 1 panel"
+        },
+        {
+          "key": "tab-1.title",
+          "type": "text",
+          "instruction": "Tab 1 pick name, <=8 words"
+        },
+        {
+          "key": "tab-1.body",
+          "type": "text",
+          "instruction": "1-sentence description of tab 1 pick"
+        },
+        {
+          "key": "tab-1.cta",
+          "type": "link",
+          "instruction": "CTA for tab 1 pick"
+        },
+        {
+          "key": "tab-2.label",
+          "type": "text",
+          "instruction": "Tab label, <=2 words, e.g. 'Midday'"
+        },
+        {
+          "key": "tab-2.image",
+          "type": "image",
+          "instruction": "Image for tab 2 panel"
+        },
+        {
+          "key": "tab-2.title",
+          "type": "text",
+          "instruction": "Tab 2 pick name, <=8 words"
+        },
+        {
+          "key": "tab-2.body",
+          "type": "text",
+          "instruction": "1-sentence description of tab 2 pick"
+        },
+        {
+          "key": "tab-2.cta",
+          "type": "link",
+          "instruction": "CTA for tab 2 pick"
+        },
+        {
+          "key": "tab-3.label",
+          "type": "text",
+          "instruction": "Tab label, <=2 words, e.g. 'Evening'"
+        },
+        {
+          "key": "tab-3.image",
+          "type": "image",
+          "instruction": "Image for tab 3 panel"
+        },
+        {
+          "key": "tab-3.title",
+          "type": "text",
+          "instruction": "Tab 3 pick name, <=8 words"
+        },
+        {
+          "key": "tab-3.body",
+          "type": "text",
+          "instruction": "1-sentence description of tab 3 pick"
+        },
+        {
+          "key": "tab-3.cta",
+          "type": "link",
+          "instruction": "CTA for tab 3 pick"
+        },
+        {
+          "key": "grid.title",
+          "type": "text",
+          "instruction": "Section headline, e.g. 'The full bundle'"
+        },
+        {
+          "key": "item-1.image",
+          "type": "image",
+          "instruction": "Bundle item 1 image"
+        },
+        {
+          "key": "item-1.title",
+          "type": "text",
+          "instruction": "Bundle item 1 name, <=6 words"
+        },
+        {
+          "key": "item-1.body",
+          "type": "text",
+          "instruction": "1-sentence description"
+        },
+        {
+          "key": "item-2.image",
+          "type": "image",
+          "instruction": "Bundle item 2 image"
+        },
+        {
+          "key": "item-2.title",
+          "type": "text",
+          "instruction": "Bundle item 2 name, <=6 words"
+        },
+        {
+          "key": "item-2.body",
+          "type": "text",
+          "instruction": "1-sentence description"
+        },
+        {
+          "key": "item-3.image",
+          "type": "image",
+          "instruction": "Bundle item 3 image"
+        },
+        {
+          "key": "item-3.title",
+          "type": "text",
+          "instruction": "Bundle item 3 name, <=6 words"
+        },
+        {
+          "key": "item-3.body",
+          "type": "text",
+          "instruction": "1-sentence description"
+        },
+        {
+          "key": "cta.title",
+          "type": "text",
+          "instruction": "Closing CTA headline, <=8 words"
+        },
+        {
+          "key": "cta.subtitle",
+          "type": "text",
+          "instruction": "1-sentence supporting line"
+        },
+        {
+          "key": "cta.button",
+          "type": "link",
+          "instruction": "Final CTA button"
+        }
+      ],
+      "htmlContent": "<main>\n<section class=\"of1-recommendation-curated-bundle-hero of1-hero\">\n  <div class=\"of1-rcb-hero-grid\">\n    <div class=\"of1-rcb-hero-content\">\n      <p class=\"of1-eyebrow\" data-slot=\"hero.eyebrow\">Your curated bundle</p>\n      <h1 data-slot=\"hero.title\">A small set of sessions, chosen together.</h1>\n      <p class=\"of1-rcb-hero-sub\" data-slot=\"hero.subtitle\">Instead of one pick, we bundled a few rhythms and atmospheres that work well as a set for your week.</p>\n      <a class=\"of1-cta of1-cta-primary\" data-slot=\"hero.cta\" href=\"#\">Get Breathe \u2014 it's free</a>\n    </div>\n    <div class=\"of1-rcb-hero-media\">\n      <img data-slot=\"hero.image\" src=\"\" alt=\"\">\n    </div>\n  </div>\n</section>\n\n<section class=\"of1-recommendation-curated-bundle-tabs of1-section\">\n  <h2 data-slot=\"tabs.title\">Pick a moment</h2>\n  <div class=\"of1-rcb-tabs\" data-tabs>\n    <div class=\"of1-rcb-tablist\" role=\"tablist\">\n      <button type=\"button\" class=\"of1-rcb-tab is-active\" role=\"tab\" data-tab-target=\"morning\" data-slot=\"tab-1.label\">Morning</button>\n      <button type=\"button\" class=\"of1-rcb-tab\" role=\"tab\" data-tab-target=\"midday\" data-slot=\"tab-2.label\">Midday</button>\n      <button type=\"button\" class=\"of1-rcb-tab\" role=\"tab\" data-tab-target=\"evening\" data-slot=\"tab-3.label\">Evening</button>\n    </div>\n    <div class=\"of1-rcb-tabpanel is-active\" data-tab-panel=\"morning\">\n      <img data-slot=\"tab-1.image\" src=\"\" alt=\"\">\n      <div>\n        <h3 data-slot=\"tab-1.title\">Energy 6&middot;4 + Space</h3>\n        <p data-slot=\"tab-1.body\">A brisker rhythm to shake off morning grogginess, set against a quiet starfield.</p>\n        <a data-slot=\"tab-1.cta\" href=\"#\">Start this session</a>\n      </div>\n    </div>\n    <div class=\"of1-rcb-tabpanel\" data-tab-panel=\"midday\">\n      <img data-slot=\"tab-2.image\" src=\"\" alt=\"\">\n      <div>\n        <h3 data-slot=\"tab-2.title\">Balance 5&middot;5 + Beach</h3>\n        <p data-slot=\"tab-2.body\">An even rhythm and gentle waves \u2014 a short reset between meetings.</p>\n        <a data-slot=\"tab-2.cta\" href=\"#\">Start this session</a>\n      </div>\n    </div>\n    <div class=\"of1-rcb-tabpanel\" data-tab-panel=\"evening\">\n      <img data-slot=\"tab-3.image\" src=\"\" alt=\"\">\n      <div>\n        <h3 data-slot=\"tab-3.title\">Sleep 4&middot;7&middot;8 + Fireplace</h3>\n        <p data-slot=\"tab-3.body\">Long, slow exhales and warm firelight \u2014 built to ease you into sleep.</p>\n        <a data-slot=\"tab-3.cta\" href=\"#\">Start this session</a>\n      </div>\n    </div>\n  </div>\n</section>\n\n<section class=\"of1-recommendation-curated-bundle-grid of1-section\">\n  <h2 data-slot=\"grid.title\">The full bundle</h2>\n  <div class=\"of1-rcb-grid\" data-grid-items>\n    <article data-card=\"1\">\n      <img data-slot=\"item-1.image\" src=\"\" alt=\"\">\n      <h3 data-slot=\"item-1.title\">Energy + Space</h3>\n      <p data-slot=\"item-1.body\">A brisk 6/4 rhythm for mornings that need a lift.</p>\n    </article>\n    <article data-card=\"2\">\n      <img data-slot=\"item-2.image\" src=\"\" alt=\"\">\n      <h3 data-slot=\"item-2.title\">Balance + Beach</h3>\n      <p data-slot=\"item-2.body\">A steady 5/5 rhythm for a midday reset.</p>\n    </article>\n    <article data-card=\"3\">\n      <img data-slot=\"item-3.image\" src=\"\" alt=\"\">\n      <h3 data-slot=\"item-3.title\">Sleep + Fireplace</h3>\n      <p data-slot=\"item-3.body\">A slow 4/7/8 rhythm to wind down before bed.</p>\n    </article>\n  </div>\n</section>\n\n<section class=\"of1-recommendation-curated-bundle-cta of1-section of1-section-dark\">\n  <div class=\"of1-rcb-cta-container\">\n    <h2 data-slot=\"cta.title\">Take a breath. The good kind.</h2>\n    <p data-slot=\"cta.subtitle\">A few minutes is all it takes. Download Breathe and try your bundle today.</p>\n    <a class=\"of1-cta of1-cta-outline\" data-slot=\"cta.button\" href=\"#\">Get Breathe &mdash; it's free</a>\n  </div>\n</section>\n\n<script>\n(function () {\n  document.querySelectorAll('[data-tabs]').forEach(function (root) {\n    var tabs = root.querySelectorAll('[data-tab-target]');\n    var panels = root.querySelectorAll('[data-tab-panel]');\n    tabs.forEach(function (tab) {\n      tab.addEventListener('click', function () {\n        tabs.forEach(function (t) { t.classList.remove('is-active'); });\n        panels.forEach(function (p) { p.classList.remove('is-active'); });\n        tab.classList.add('is-active');\n        var target = tab.getAttribute('data-tab-target');\n        var panel = root.querySelector('[data-tab-panel=\"' + target + '\"]');\n        if (panel) panel.classList.add('is-active');\n      });\n    });\n  });\n})();\n</script>\n</main>\n"
+    },
+    {
+      "name": "of1-recommendation-hero-pick",
+      "intent": "recommendation",
+      "description": "Single hero-featured top pick with a reasons-why breakdown and a secondary grid of alternates.",
+      "minItems": 2,
+      "maxItems": 4,
+      "stylesheet": "/styles/of1-recommendation-hero-pick.css",
+      "slots": [
+        {
+          "key": "hero.eyebrow",
+          "type": "text",
+          "instruction": "Short label, e.g. 'Personalized for you', 2-4 words"
+        },
+        {
+          "key": "hero.title",
+          "type": "text",
+          "instruction": "Headline naming the personalization angle, <=10 words"
+        },
+        {
+          "key": "hero.subtitle",
+          "type": "text",
+          "instruction": "1-sentence framing of how the pick was chosen"
+        },
+        {
+          "key": "hero.cta",
+          "type": "link",
+          "instruction": "Primary call to action"
+        },
+        {
+          "key": "hero.image",
+          "type": "image",
+          "instruction": "Hero image URL relevant to the recommendation theme"
+        },
+        {
+          "key": "pick.badge",
+          "type": "text",
+          "instruction": "Short badge, e.g. 'Top pick for you', 2-4 words"
+        },
+        {
+          "key": "pick.eyebrow",
+          "type": "text",
+          "instruction": "1 short line stating the basis for the recommendation"
+        },
+        {
+          "key": "pick.image",
+          "type": "image",
+          "instruction": "Image representing the recommended item"
+        },
+        {
+          "key": "pick.title",
+          "type": "text",
+          "instruction": "Name of the recommended item/combo, <=8 words"
+        },
+        {
+          "key": "pick.body",
+          "type": "text",
+          "instruction": "1-2 sentence explanation of what it is and why it fits"
+        },
+        {
+          "key": "pick.meta",
+          "type": "text",
+          "instruction": "Short meta line, e.g. duration and offline note"
+        },
+        {
+          "key": "pick.cta",
+          "type": "link",
+          "instruction": "CTA to start/try the recommended item"
+        },
+        {
+          "key": "reasons.title",
+          "type": "text",
+          "instruction": "Section headline, e.g. 'Why we picked this for you'"
+        },
+        {
+          "key": "reason-1.title",
+          "type": "text",
+          "instruction": "Short reason title, <=5 words"
+        },
+        {
+          "key": "reason-1.body",
+          "type": "text",
+          "instruction": "1-sentence justification"
+        },
+        {
+          "key": "reason-2.title",
+          "type": "text",
+          "instruction": "Short reason title, <=5 words"
+        },
+        {
+          "key": "reason-2.body",
+          "type": "text",
+          "instruction": "1-sentence justification"
+        },
+        {
+          "key": "reason-3.title",
+          "type": "text",
+          "instruction": "Short reason title, <=5 words"
+        },
+        {
+          "key": "reason-3.body",
+          "type": "text",
+          "instruction": "1-sentence justification"
+        },
+        {
+          "key": "alt.title",
+          "type": "text",
+          "instruction": "Section headline for alternates, e.g. 'Other options worth trying'"
+        },
+        {
+          "key": "item-1.image",
+          "type": "image",
+          "instruction": "Alternate item image"
+        },
+        {
+          "key": "item-1.title",
+          "type": "text",
+          "instruction": "Alternate item name, <=6 words"
+        },
+        {
+          "key": "item-1.body",
+          "type": "text",
+          "instruction": "1-sentence description"
+        },
+        {
+          "key": "item-1.cta",
+          "type": "link",
+          "instruction": "Link to try the alternate"
+        },
+        {
+          "key": "item-2.image",
+          "type": "image",
+          "instruction": "Alternate item image"
+        },
+        {
+          "key": "item-2.title",
+          "type": "text",
+          "instruction": "Alternate item name, <=6 words"
+        },
+        {
+          "key": "item-2.body",
+          "type": "text",
+          "instruction": "1-sentence description"
+        },
+        {
+          "key": "item-2.cta",
+          "type": "link",
+          "instruction": "Link to try the alternate"
+        },
+        {
+          "key": "item-3.image",
+          "type": "image",
+          "instruction": "Alternate item image"
+        },
+        {
+          "key": "item-3.title",
+          "type": "text",
+          "instruction": "Alternate item name, <=6 words"
+        },
+        {
+          "key": "item-3.body",
+          "type": "text",
+          "instruction": "1-sentence description"
+        },
+        {
+          "key": "item-3.cta",
+          "type": "link",
+          "instruction": "Link to try the alternate"
+        },
+        {
+          "key": "item-4.image",
+          "type": "image",
+          "instruction": "Alternate item image"
+        },
+        {
+          "key": "item-4.title",
+          "type": "text",
+          "instruction": "Alternate item name, <=6 words"
+        },
+        {
+          "key": "item-4.body",
+          "type": "text",
+          "instruction": "1-sentence description"
+        },
+        {
+          "key": "item-4.cta",
+          "type": "link",
+          "instruction": "Link to try the alternate"
+        },
+        {
+          "key": "cta.title",
+          "type": "text",
+          "instruction": "Closing CTA headline, <=8 words"
+        },
+        {
+          "key": "cta.subtitle",
+          "type": "text",
+          "instruction": "1-sentence supporting line"
+        },
+        {
+          "key": "cta.button",
+          "type": "link",
+          "instruction": "Final CTA button"
+        }
+      ],
+      "htmlContent": "<main>\n<section class=\"of1-recommendation-hero-pick-hero of1-hero\">\n  <div class=\"of1-rhp-hero-grid\">\n    <div class=\"of1-rhp-hero-content\">\n      <p class=\"of1-eyebrow\" data-slot=\"hero.eyebrow\">Personalized for you</p>\n      <h1 data-slot=\"hero.title\">Find your <em>calm</em>, matched to how you feel.</h1>\n      <p class=\"of1-rhp-hero-sub\" data-slot=\"hero.subtitle\">Tell us how you're feeling and we'll match you to the rhythm and atmosphere that fits best.</p>\n      <a class=\"of1-cta of1-cta-primary\" data-slot=\"hero.cta\" href=\"#\">Get Breathe \u2014 it's free</a>\n    </div>\n    <div class=\"of1-rhp-hero-media\">\n      <img data-slot=\"hero.image\" src=\"\" alt=\"\">\n    </div>\n  </div>\n</section>\n\n<section class=\"of1-recommendation-hero-pick-pick of1-section\">\n  <div class=\"of1-rhp-pick-card\">\n    <div class=\"of1-rhp-pick-media\">\n      <img data-slot=\"pick.image\" src=\"\" alt=\"\">\n      <span class=\"of1-rhp-pick-badge\" data-slot=\"pick.badge\">Top pick for you</span>\n    </div>\n    <div class=\"of1-rhp-pick-content\">\n      <p class=\"of1-rhp-pick-eyebrow\" data-slot=\"pick.eyebrow\">Based on your evening wind-down</p>\n      <h2 data-slot=\"pick.title\">4&middot;7&middot;8 Sleep + Fireplace</h2>\n      <p data-slot=\"pick.body\">A slow 4-second inhale, 7-second hold, and 8-second exhale paired with a crackling fireplace atmosphere \u2014 built to ease you toward sleep.</p>\n      <p class=\"of1-rhp-pick-meta\" data-slot=\"pick.meta\">5 min session &middot; Works offline</p>\n      <a class=\"of1-cta of1-cta-primary\" data-slot=\"pick.cta\" href=\"#\">Start this session</a>\n    </div>\n  </div>\n</section>\n\n<section class=\"of1-recommendation-hero-pick-reasons of1-section\">\n  <h2 data-slot=\"reasons.title\">Why we picked this for you</h2>\n  <div class=\"of1-rhp-reasons-grid\">\n    <div class=\"of1-rhp-reason\">\n      <div class=\"of1-rhp-reason-num\">01</div>\n      <h3 data-slot=\"reason-1.title\">Matches your evenings</h3>\n      <p data-slot=\"reason-1.body\">Longer exhales calm the nervous system, which is exactly what late-day stress needs.</p>\n    </div>\n    <div class=\"of1-rhp-reason\">\n      <div class=\"of1-rhp-reason-num\">02</div>\n      <h3 data-slot=\"reason-2.title\">Built for winding down</h3>\n      <p data-slot=\"reason-2.body\">The 4/7/8 rhythm is the most requested preset before bedtime among Breathe users.</p>\n    </div>\n    <div class=\"of1-rhp-reason\">\n      <div class=\"of1-rhp-reason-num\">03</div>\n      <h3 data-slot=\"reason-3.title\">A softer atmosphere</h3>\n      <p data-slot=\"reason-3.body\">The fireplace backdrop downloads once and plays offline, so it's ready whenever you need it.</p>\n    </div>\n  </div>\n</section>\n\n<section class=\"of1-recommendation-hero-pick-alt of1-section\">\n  <h2 data-slot=\"alt.title\">Other options worth trying</h2>\n  <div class=\"of1-rhp-alt-grid\" data-grid-items>\n    <article data-card=\"1\">\n      <img data-slot=\"item-1.image\" src=\"\" alt=\"\">\n      <h3 data-slot=\"item-1.title\">Balance + Beach</h3>\n      <p data-slot=\"item-1.body\">An even 5/5 rhythm with gentle waves \u2014 a steady midday reset.</p>\n      <a data-slot=\"item-1.cta\" href=\"#\">Try this</a>\n    </article>\n    <article data-card=\"2\">\n      <img data-slot=\"item-2.image\" src=\"\" alt=\"\">\n      <h3 data-slot=\"item-2.title\">Relax + River</h3>\n      <p data-slot=\"item-2.body\">A 4/6 rhythm over flowing water, made for slowing down after a long day.</p>\n      <a data-slot=\"item-2.cta\" href=\"#\">Try this</a>\n    </article>\n    <article data-card=\"3\">\n      <img data-slot=\"item-3.image\" src=\"\" alt=\"\">\n      <h3 data-slot=\"item-3.title\">Energy + Space</h3>\n      <p data-slot=\"item-3.body\">A brisk 6/4 rhythm against a starfield \u2014 for mornings that need a lift.</p>\n      <a data-slot=\"item-3.cta\" href=\"#\">Try this</a>\n    </article>\n    <article data-card=\"4\">\n      <img data-slot=\"item-4.image\" src=\"\" alt=\"\">\n      <h3 data-slot=\"item-4.title\">Balance + Rainforest</h3>\n      <p data-slot=\"item-4.body\">Steady breathing under a forest canopy \u2014 a calm reset for any time of day.</p>\n      <a data-slot=\"item-4.cta\" href=\"#\">Try this</a>\n    </article>\n  </div>\n</section>\n\n<section class=\"of1-recommendation-hero-pick-cta of1-section of1-section-dark\">\n  <div class=\"of1-rhp-cta-container\">\n    <h2 data-slot=\"cta.title\">Take a breath. The good kind.</h2>\n    <p data-slot=\"cta.subtitle\">A few minutes is all it takes. Download Breathe and start your matched session today.</p>\n    <a class=\"of1-cta of1-cta-outline\" data-slot=\"cta.button\" href=\"#\">Get Breathe &mdash; it's free</a>\n  </div>\n</section>\n</main>\n"
+    },
+    {
+      "name": "of1-recommendation-ranked-list",
+      "intent": "recommendation",
+      "description": "Numbered ranked list of 3-4 matches with the top pick visually emphasized, plus a rationale section.",
+      "minItems": 3,
+      "maxItems": 4,
+      "stylesheet": "/styles/of1-recommendation-ranked-list.css",
+      "slots": [
+        {
+          "key": "hero.eyebrow",
+          "type": "text",
+          "instruction": "Short label, e.g. 'Your ranked picks', 2-4 words"
+        },
+        {
+          "key": "hero.title",
+          "type": "text",
+          "instruction": "Headline framing a ranked shortlist, <=10 words"
+        },
+        {
+          "key": "hero.subtitle",
+          "type": "text",
+          "instruction": "1-sentence framing of how the list was ranked"
+        },
+        {
+          "key": "hero.cta",
+          "type": "link",
+          "instruction": "Primary call to action"
+        },
+        {
+          "key": "item-1.tag",
+          "type": "text",
+          "instruction": "Short tag for rank 1, e.g. 'Best match', <=3 words"
+        },
+        {
+          "key": "item-1.image",
+          "type": "image",
+          "instruction": "Image for rank 1 item"
+        },
+        {
+          "key": "item-1.title",
+          "type": "text",
+          "instruction": "Rank 1 item name, <=8 words"
+        },
+        {
+          "key": "item-1.body",
+          "type": "text",
+          "instruction": "1-sentence description of rank 1 item"
+        },
+        {
+          "key": "item-1.cta",
+          "type": "link",
+          "instruction": "CTA to start rank 1 item"
+        },
+        {
+          "key": "item-2.tag",
+          "type": "text",
+          "instruction": "Short tag for rank 2, <=3 words"
+        },
+        {
+          "key": "item-2.image",
+          "type": "image",
+          "instruction": "Image for rank 2 item"
+        },
+        {
+          "key": "item-2.title",
+          "type": "text",
+          "instruction": "Rank 2 item name, <=8 words"
+        },
+        {
+          "key": "item-2.body",
+          "type": "text",
+          "instruction": "1-sentence description of rank 2 item"
+        },
+        {
+          "key": "item-2.cta",
+          "type": "link",
+          "instruction": "CTA to start rank 2 item"
+        },
+        {
+          "key": "item-3.tag",
+          "type": "text",
+          "instruction": "Short tag for rank 3, <=3 words"
+        },
+        {
+          "key": "item-3.image",
+          "type": "image",
+          "instruction": "Image for rank 3 item"
+        },
+        {
+          "key": "item-3.title",
+          "type": "text",
+          "instruction": "Rank 3 item name, <=8 words"
+        },
+        {
+          "key": "item-3.body",
+          "type": "text",
+          "instruction": "1-sentence description of rank 3 item"
+        },
+        {
+          "key": "item-3.cta",
+          "type": "link",
+          "instruction": "CTA to start rank 3 item"
+        },
+        {
+          "key": "item-4.tag",
+          "type": "text",
+          "instruction": "Short tag for rank 4, <=3 words"
+        },
+        {
+          "key": "item-4.image",
+          "type": "image",
+          "instruction": "Image for rank 4 item"
+        },
+        {
+          "key": "item-4.title",
+          "type": "text",
+          "instruction": "Rank 4 item name, <=8 words"
+        },
+        {
+          "key": "item-4.body",
+          "type": "text",
+          "instruction": "1-sentence description of rank 4 item"
+        },
+        {
+          "key": "item-4.cta",
+          "type": "link",
+          "instruction": "CTA to start rank 4 item"
+        },
+        {
+          "key": "why.title",
+          "type": "text",
+          "instruction": "Section headline, e.g. 'How we ranked these'"
+        },
+        {
+          "key": "why.body",
+          "type": "text",
+          "instruction": "1-2 sentence explanation of the ranking logic"
+        },
+        {
+          "key": "why.caption",
+          "type": "text",
+          "instruction": "Short caption under the visual, <=3 words"
+        },
+        {
+          "key": "cta.title",
+          "type": "text",
+          "instruction": "Closing CTA headline, <=8 words"
+        },
+        {
+          "key": "cta.subtitle",
+          "type": "text",
+          "instruction": "1-sentence supporting line"
+        },
+        {
+          "key": "cta.button",
+          "type": "link",
+          "instruction": "Final CTA button"
+        }
+      ],
+      "htmlContent": "<main>\n<section class=\"of1-recommendation-ranked-list-hero of1-hero\">\n  <p class=\"of1-eyebrow\" data-slot=\"hero.eyebrow\">Your ranked picks</p>\n  <h1 data-slot=\"hero.title\">Three sessions, ranked for right now.</h1>\n  <p class=\"of1-rrl-hero-sub\" data-slot=\"hero.subtitle\">We matched your mood to a shortlist of rhythms and atmospheres \u2014 start with #1 or explore the rest.</p>\n  <a class=\"of1-cta of1-cta-primary\" data-slot=\"hero.cta\" href=\"#\">Get Breathe \u2014 it's free</a>\n</section>\n\n<section class=\"of1-recommendation-ranked-list-list of1-section\">\n  <ol class=\"of1-rrl-list\" data-grid-items>\n    <li data-card=\"1\" class=\"of1-rrl-row of1-rrl-row-first\">\n      <span class=\"of1-rrl-rank\">01</span>\n      <img data-slot=\"item-1.image\" src=\"\" alt=\"\">\n      <div class=\"of1-rrl-row-body\">\n        <span class=\"of1-rrl-row-tag\" data-slot=\"item-1.tag\">Best match</span>\n        <h3 data-slot=\"item-1.title\">Sleep 4&middot;7&middot;8 + Fireplace</h3>\n        <p data-slot=\"item-1.body\">Long exhales and a warm, crackling glow \u2014 built to ease evening stress before bed.</p>\n      </div>\n      <a class=\"of1-rrl-row-cta\" data-slot=\"item-1.cta\" href=\"#\">Start</a>\n    </li>\n    <li data-card=\"2\" class=\"of1-rrl-row\">\n      <span class=\"of1-rrl-rank\">02</span>\n      <img data-slot=\"item-2.image\" src=\"\" alt=\"\">\n      <div class=\"of1-rrl-row-body\">\n        <span class=\"of1-rrl-row-tag\" data-slot=\"item-2.tag\">Also good</span>\n        <h3 data-slot=\"item-2.title\">Relax 4&middot;6 + River</h3>\n        <p data-slot=\"item-2.body\">A gentler rhythm over flowing water \u2014 good for unwinding earlier in the evening.</p>\n      </div>\n      <a class=\"of1-rrl-row-cta\" data-slot=\"item-2.cta\" href=\"#\">Start</a>\n    </li>\n    <li data-card=\"3\" class=\"of1-rrl-row\">\n      <span class=\"of1-rrl-rank\">03</span>\n      <img data-slot=\"item-3.image\" src=\"\" alt=\"\">\n      <div class=\"of1-rrl-row-body\">\n        <span class=\"of1-rrl-row-tag\" data-slot=\"item-3.tag\">Try next</span>\n        <h3 data-slot=\"item-3.title\">Balance 5&middot;5 + Seashore</h3>\n        <p data-slot=\"item-3.body\">An even rhythm and quiet shoreline \u2014 a steady middle-ground reset any time of day.</p>\n      </div>\n      <a class=\"of1-rrl-row-cta\" data-slot=\"item-3.cta\" href=\"#\">Start</a>\n    </li>\n    <li data-card=\"4\" class=\"of1-rrl-row\">\n      <span class=\"of1-rrl-rank\">04</span>\n      <img data-slot=\"item-4.image\" src=\"\" alt=\"\">\n      <div class=\"of1-rrl-row-body\">\n        <span class=\"of1-rrl-row-tag\" data-slot=\"item-4.tag\">Worth exploring</span>\n        <h3 data-slot=\"item-4.title\">Energy 6&middot;4 + Space</h3>\n        <p data-slot=\"item-4.body\">A brisker rhythm against a starfield \u2014 for mornings when you need a lift instead of a wind-down.</p>\n      </div>\n      <a class=\"of1-rrl-row-cta\" data-slot=\"item-4.cta\" href=\"#\">Start</a>\n    </li>\n  </ol>\n</section>\n\n<section class=\"of1-recommendation-ranked-list-why of1-section\">\n  <div class=\"of1-rrl-why-grid\">\n    <div>\n      <h2 data-slot=\"why.title\">How we ranked these</h2>\n      <p data-slot=\"why.body\">We look at the time of day, the mood you described, and which rhythms and atmospheres pair well together \u2014 then order the shortlist so the best match comes first.</p>\n    </div>\n    <div class=\"of1-rrl-why-circle\">\n      <div class=\"of1-rrl-breathing-circle\">\n        <div class=\"of1-rrl-breathing-circle-inner\"></div>\n      </div>\n      <p class=\"of1-rrl-breathing-label\" data-slot=\"why.caption\">Breathe out</p>\n    </div>\n  </div>\n</section>\n\n<section class=\"of1-recommendation-ranked-list-cta of1-section of1-section-dark\">\n  <div class=\"of1-rrl-cta-container\">\n    <h2 data-slot=\"cta.title\">Take a breath. The good kind.</h2>\n    <p data-slot=\"cta.subtitle\">A few minutes is all it takes. Download Breathe and start with your #1 match today.</p>\n    <a class=\"of1-cta of1-cta-outline\" data-slot=\"cta.button\" href=\"#\">Get Breathe &mdash; it's free</a>\n  </div>\n</section>\n</main>\n"
+    }
+  ]
+}
