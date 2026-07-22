@@ -1,0 +1,58 @@
+[
+  {
+    "id": "software-development",
+    "name": "Software Development",
+    "description": "Writing, debugging, reviewing, and shipping code faster with an AI agent embedded in the terminal, IDE, or CI pipeline.",
+    "keywords": ["write code", "debug", "fix bug", "code review", "refactor", "build a feature", "ship faster", "pull request", "unit tests", "codebase migration"],
+    "recommendedProducts": ["claude-code", "claude-platform-api", "claude-code-enterprise"],
+    "relatedPersonas": ["developer", "engineering-leader"]
+  },
+  {
+    "id": "enterprise-engineering",
+    "name": "Enterprise Engineering Rollout",
+    "description": "Deploying AI coding tools across an entire engineering organization with governance, observability, and compliance built in.",
+    "keywords": ["rollout ai coding", "team-wide adoption", "engineering compliance", "sso scim", "fleet-wide migration", "observability", "audit logs"],
+    "recommendedProducts": ["claude-code-enterprise", "claude-security"],
+    "relatedPersonas": ["engineering-leader", "security-engineer"]
+  },
+  {
+    "id": "task-automation",
+    "name": "Knowledge Work Automation",
+    "description": "Delegating multi-step research, analysis, and document creation tasks so they run end-to-end without manual babysitting.",
+    "keywords": ["automate tasks", "delegate work", "hands-off ai", "research automation", "document creation", "recurring reports", "background tasks"],
+    "recommendedProducts": ["claude-cowork", "claude-assistant"],
+    "relatedPersonas": ["knowledge-worker"]
+  },
+  {
+    "id": "everyday-productivity",
+    "name": "Everyday Productivity",
+    "description": "Using Claude as a daily assistant for writing, learning, research, and quick analysis across web, desktop, and mobile.",
+    "keywords": ["everyday ai", "writing assistant", "learn something", "study help", "quick research", "explain this", "personal productivity"],
+    "recommendedProducts": ["claude-assistant"],
+    "relatedPersonas": ["individual-professional"]
+  },
+  {
+    "id": "scientific-research",
+    "name": "Scientific Research",
+    "description": "Running reproducible, auditable scientific analyses — from data wrangling to publication — across genomics, proteomics, and cheminformatics.",
+    "keywords": ["scientific analysis", "reproducible research", "lab workflow", "genomics analysis", "manuscript drafting", "clinical data analysis"],
+    "recommendedProducts": ["claude-science"],
+    "relatedPersonas": ["researcher"]
+  },
+  {
+    "id": "design-prototyping",
+    "name": "Design & Prototyping",
+    "description": "Turning ideas into visual work — mockups, decks, and prototypes — through natural language, on-brand and ready to share.",
+    "keywords": ["make a prototype", "design a deck", "create mockup", "visual design", "brand assets", "wireframe flow"],
+    "recommendedProducts": ["claude-design"],
+    "relatedPersonas": ["designer"]
+  },
+  {
+    "id": "code-security",
+    "name": "Code Security & Compliance",
+    "description": "Finding and remediating vulnerabilities in codebases before they reach production, with human-approved patches.",
+    "keywords": ["find vulnerabilities", "security scan", "patch code", "compliance scan", "secure code review"],
+    "recommendedProducts": ["claude-security"],
+    "relatedPersonas": ["security-engineer", "engineering-leader"]
+  }
+]

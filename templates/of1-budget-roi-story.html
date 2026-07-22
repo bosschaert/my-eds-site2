@@ -1,0 +1,112 @@
+<main>
+<section class="of1-roi-story-hero of1-hero">
+  <p class="of1-eyebrow" data-slot="hero.eyebrow">Return on investment</p>
+  <h1 data-slot="hero.title">What teams get back for what they spend</h1>
+  <p class="of1-roi-story-hero-subtitle" data-slot="hero.subtitle">Real outcomes from teams who put a Claude subscription against their existing workflow.</p>
+  <a class="of1-cta of1-cta-primary" data-slot="hero.cta-primary" href="#">See pricing</a>
+</section>
+
+<section class="of1-roi-story-timeline of1-section">
+  <h2 data-slot="timeline.title">The ROI story, step by step</h2>
+  <div class="of1-roi-story-timeline-list">
+    <article class="of1-roi-story-step">
+      <span class="of1-roi-story-step-number">01</span>
+      <div>
+        <h3 data-slot="step-1.title">Start on a low-commitment plan</h3>
+        <p data-slot="step-1.body">Teams begin on Free or Pro at $17/month to validate fit before scaling spend.</p>
+      </div>
+    </article>
+    <article class="of1-roi-story-step">
+      <span class="of1-roi-story-step-number">02</span>
+      <div>
+        <h3 data-slot="step-2.title">Automate the repetitive work first</h3>
+        <p data-slot="step-2.body">Claude Cowork and Claude Code absorb recurring tasks: reports, boilerplate code, and routine reviews.</p>
+      </div>
+    </article>
+    <article class="of1-roi-story-step">
+      <span class="of1-roi-story-step-number">03</span>
+      <div>
+        <h3 data-slot="step-3.title">Measure the time saved</h3>
+        <p data-slot="step-3.body">Ramp's engineering team saved 1-2 days of routine work per model using Claude Code for pipeline conversion.</p>
+      </div>
+    </article>
+    <article class="of1-roi-story-step">
+      <span class="of1-roi-story-step-number">04</span>
+      <div>
+        <h3 data-slot="step-4.title">Scale to the plan that matches usage</h3>
+        <p data-slot="step-4.body">Rakuten moved to Claude Code for Enterprise and cut time-to-market from 24 days to 5.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="of1-roi-story-proof of1-section">
+  <div class="of1-roi-story-proof-grid" data-grid-items>
+    <article data-card="1" class="of1-roi-story-proof-card">
+      <p class="of1-roi-story-proof-stat" data-slot="proof-1.stat">5x faster</p>
+      <p class="of1-roi-story-proof-body" data-slot="proof-1.body">Rakuten's time-to-market dropped from 24 days to 5 days after adopting Claude Code.</p>
+    </article>
+    <article data-card="2" class="of1-roi-story-proof-card">
+      <p class="of1-roi-story-proof-stat" data-slot="proof-2.stat">89% adoption</p>
+      <p class="of1-roi-story-proof-body" data-slot="proof-2.body">Zapier reached 89 percent employee adoption with 800+ AI agents deployed internally.</p>
+    </article>
+    <article data-card="3" class="of1-roi-story-proof-card">
+      <p class="of1-roi-story-proof-stat" data-slot="proof-3.stat">1-2 days saved</p>
+      <p class="of1-roi-story-proof-body" data-slot="proof-3.body">Ramp's engineers save 1-2 days of routine work per model using Claude Code.</p>
+    </article>
+  </div>
+</section>
+
+<section class="of1-roi-story-faq of1-section">
+  <h2 data-slot="faq.title">Common budget questions</h2>
+  <div class="of1-roi-story-accordion">
+    <div class="of1-roi-story-accordion-item">
+      <button class="of1-roi-story-accordion-trigger" data-accordion-trigger aria-expanded="true">
+        <span data-slot="faq-1.question">How much does Claude Code cost?</span>
+        <span class="of1-roi-story-accordion-icon">+</span>
+      </button>
+      <div class="of1-roi-story-accordion-panel is-open" data-accordion-panel>
+        <p data-slot="faq-1.answer">Claude Code is included with the Pro plan ($17-20/month), Max plans (from $100/month), and Team/Enterprise plans. API access is billed at standard token rates.</p>
+      </div>
+    </div>
+    <div class="of1-roi-story-accordion-item">
+      <button class="of1-roi-story-accordion-trigger" data-accordion-trigger aria-expanded="false">
+        <span data-slot="faq-2.question">What Claude plans are available?</span>
+        <span class="of1-roi-story-accordion-icon">+</span>
+      </button>
+      <div class="of1-roi-story-accordion-panel" data-accordion-panel>
+        <p data-slot="faq-2.answer">Free gives basic chat access. Pro ($17-20/month) adds Claude Code, Cowork, Design, and Science. Max (from $100/month) offers 5x or 20x more usage. Team ($20-25/seat/month) adds admin controls. Enterprise offers custom pricing.</p>
+      </div>
+    </div>
+    <div class="of1-roi-story-accordion-item">
+      <button class="of1-roi-story-accordion-trigger" data-accordion-trigger aria-expanded="false">
+        <span data-slot="faq-3.question">Are there ways to reduce API costs?</span>
+        <span class="of1-roi-story-accordion-icon">+</span>
+      </button>
+      <div class="of1-roi-story-accordion-panel" data-accordion-panel>
+        <p data-slot="faq-3.answer">Prompt caching and batch processing can cut API costs by up to 50 percent for repeated or delayed workloads.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="of1-roi-story-cta of1-hero">
+  <h2 data-slot="cta.title">Calculate your own ROI</h2>
+  <p data-slot="cta.subtitle">Talk to our team about your usage patterns and expected savings.</p>
+  <a class="of1-cta of1-cta-primary" data-slot="cta.primary" href="#">Contact sales</a>
+</section>
+
+<script>
+(function () {
+  var triggers = document.querySelectorAll('[data-accordion-trigger]');
+  triggers.forEach(function (trigger) {
+    trigger.addEventListener('click', function () {
+      var panel = trigger.nextElementSibling;
+      var isOpen = trigger.getAttribute('aria-expanded') === 'true';
+      trigger.setAttribute('aria-expanded', String(!isOpen));
+      panel.classList.toggle('is-open', !isOpen);
+    });
+  });
+})();
+</script>
+</main>

@@ -1,0 +1,661 @@
+{
+  "slug": "research",
+  "url": "https://anthropic.com/research",
+  "renderedBy": "playwright",
+  "fetchedAt": "2026-07-17T11:53:19.873Z",
+  "finalUrl": "https://www.anthropic.com/research",
+  "title": "Research \\ Anthropic",
+  "description": "Anthropic is an AI safety and research company that's working to build reliable, interpretable, and steerable AI systems.",
+  "og": {
+    "title": "Research",
+    "description": "Anthropic is an AI safety and research company that's working to build reliable, interpretable, and steerable AI systems.",
+    "image": "https://cdn.sanity.io/images/4zrzovbb/website/6d4a0d28992ade92d6fa63646fd9c9d318245c6c-2400x1260.jpg",
+    "type": "website"
+  },
+  "headings": [
+    {
+      "tag": "h3",
+      "text": "Alignment"
+    },
+    {
+      "tag": "h3",
+      "text": "Economic Research"
+    },
+    {
+      "tag": "h3",
+      "text": "Frontier Red Team"
+    },
+    {
+      "tag": "h3",
+      "text": "Interpretability"
+    },
+    {
+      "tag": "h3",
+      "text": "Societal Impacts"
+    },
+    {
+      "tag": "h2",
+      "text": "A global workspace in language models"
+    },
+    {
+      "tag": "h4",
+      "text": "Anthropic Economic Index report: Cadences"
+    },
+    {
+      "tag": "h4",
+      "text": "Teaching Claude why"
+    },
+    {
+      "tag": "h4",
+      "text": "Project Deal"
+    },
+    {
+      "tag": "h4",
+      "text": "What 81,000 people want from AI"
+    },
+    {
+      "tag": "h2",
+      "text": "Publications"
+    },
+    {
+      "tag": "h3",
+      "text": "Products"
+    },
+    {
+      "tag": "h3",
+      "text": "Models"
+    },
+    {
+      "tag": "h3",
+      "text": "Solutions"
+    },
+    {
+      "tag": "h3",
+      "text": "Claude Platform"
+    },
+    {
+      "tag": "h3",
+      "text": "Resources"
+    },
+    {
+      "tag": "h3",
+      "text": "Programs"
+    },
+    {
+      "tag": "h3",
+      "text": "Help and security"
+    },
+    {
+      "tag": "h3",
+      "text": "Company"
+    },
+    {
+      "tag": "h3",
+      "text": "Terms and policies"
+    }
+  ],
+  "body": [
+    "The Alignment team works to understand the risks of AI models and develop ways to ensure that future ones remain helpful, honest, and harmless.",
+    "The Economic Research team studies how AI is reshaping the economy, including work, productivity, and economic opportunity.",
+    "The Frontier Red Team analyzes the implications of frontier AI models for cybersecurity, biosecurity, and autonomous systems.",
+    "The mission of the Interpretability team is to understand how large language models work internally, as a foundation for AI safety and positive outcomes.",
+    "Working closely with the Anthropic Policy and Safeguards teams, Societal Impacts is a technical research team that explores how AI is used in the real world.",
+    "New interpretability research reveals an emergent mental workspace in Claude that holds internal thoughts that don’t appear in the model’s output.",
+    "In our latest Economic Index report, we sample hourly for the first time to ask: When do people come to Claude? What do they produce with it? And how do they perceive AI's impact on their work?",
+    "New research on how we've reduced agentic misalignment.",
+    "We created a marketplace for employees in our San Francisco office, with one big twist. We tasked Claude with buying, selling and negotiating on our colleagues’ behalf.",
+    "We invited Claude.ai users to share how they use AI, what they dream it could make possible, and what they fear it might do. Nearly 81,000 people participated—the largest and most multilingual qualitative study of its kind. Here's what we found.",
+    "Jul 14, 2026Economic ResearchHow Canada uses Claude: Findings from the Anthropic Economic Index",
+    "Jul 13, 2026Societal ImpactsClaude’s values across models and languages",
+    "Jul 9, 2026Frontier Red TeamClaude plays robotics",
+    "Jul 8, 2026AlignmentAn off switch for dual-use knowledge in AI models",
+    "Jul 6, 2026InterpretabilityA global workspace in language models",
+    "Jun 26, 2026Economic ResearchAnthropic Economic Index report: Cadences",
+    "Jun 18, 2026Frontier Red TeamProject Fetch: Phase two",
+    "Jun 16, 2026Economic ResearchAgentic coding and persistent returns to expertise",
+    "Jun 8, 2026SciencePaving the way for agents in biology",
+    "Jun 8, 2026Frontier Red TeamMeasuring LLMs’ impact on N-day exploits",
+    "Join the Research team"
+  ],
+  "ctas": [
+    {
+      "label": "Skip to main content",
+      "href": "#main-content"
+    },
+    {
+      "label": "Skip to footer",
+      "href": "#footer"
+    },
+    {
+      "label": "Research",
+      "href": "/research"
+    },
+    {
+      "label": "Policy",
+      "href": "/policy"
+    },
+    {
+      "label": "Commitments",
+      "href": null
+    },
+    {
+      "label": "Learn",
+      "href": null
+    },
+    {
+      "label": "News",
+      "href": "/news"
+    },
+    {
+      "label": "Try Claude",
+      "href": "https://claude.ai/"
+    },
+    {
+      "label": "A global workspace in language modelsInterpretabilityJul 6, 2026New interpretability research reveals an emergent mental workspace in Claude that holds internal thoughts that don’t appear in the model’s output.",
+      "href": "/research/global-workspace"
+    },
+    {
+      "label": "Economic ResearchJun 26, 2026Anthropic Economic Index report: CadencesIn our latest Economic Index report, we sample hourly for the first time to ask: When do people come to Claude? What do they produce with it? And how do they perceive AI's impact on their work?",
+      "href": "/research/economic-index-june-2026-report"
+    },
+    {
+      "label": "AlignmentMay 8, 2026Teaching Claude whyNew research on how we've reduced agentic misalignment.",
+      "href": "/research/teaching-claude-why"
+    },
+    {
+      "label": "ResearchApr 24, 2026Project DealWe created a marketplace for employees in our San Francisco office, with one big twist. We tasked Claude with buying, selling and negotiating on our colleagues’ behalf.",
+      "href": "/features/project-deal"
+    },
+    {
+      "label": "Societal ImpactsMar 18, 2026What 81,000 people want from AIWe invited Claude.ai users to share how they use AI, what they dream it could make possible, and what they fear it might do. Nearly 81,000 people participated—the largest and most multilingual qualitative study of its kind. Here's what we found.",
+      "href": "/81k-interviews"
+    },
+    {
+      "label": "Jul 14, 2026Economic ResearchHow Canada uses Claude: Findings from the Anthropic Economic Index",
+      "href": "/research/how-canada-uses-claude"
+    },
+    {
+      "label": "Jul 13, 2026Societal ImpactsClaude’s values across models and languages",
+      "href": "/research/claude-values-models-languages"
+    },
+    {
+      "label": "Jul 9, 2026Frontier Red TeamClaude plays robotics",
+      "href": "/research/claude-plays-robotics"
+    },
+    {
+      "label": "Jul 8, 2026AlignmentAn off switch for dual-use knowledge in AI models",
+      "href": "/research/off-switch-dual-use"
+    },
+    {
+      "label": "Jul 6, 2026InterpretabilityA global workspace in language models",
+      "href": "/research/global-workspace"
+    },
+    {
+      "label": "Jun 26, 2026Economic ResearchAnthropic Economic Index report: Cadences",
+      "href": "/research/economic-index-june-2026-report"
+    },
+    {
+      "label": "Jun 18, 2026Frontier Red TeamProject Fetch: Phase two",
+      "href": "/research/project-fetch-phase-two"
+    },
+    {
+      "label": "Jun 16, 2026Economic ResearchAgentic coding and persistent returns to expertise",
+      "href": "/research/claude-code-expertise"
+    },
+    {
+      "label": "Jun 8, 2026SciencePaving the way for agents in biology",
+      "href": "/research/agents-in-biology"
+    },
+    {
+      "label": "Jun 8, 2026Frontier Red TeamMeasuring LLMs’ impact on N-day exploits",
+      "href": "/research/n-days"
+    },
+    {
+      "label": "See more",
+      "href": "#"
+    },
+    {
+      "label": "See open roles",
+      "href": "/jobs"
+    },
+    {
+      "label": "Claude",
+      "href": "https://claude.com/product/overview"
+    },
+    {
+      "label": "Claude Code",
+      "href": "https://claude.com/product/claude-code"
+    },
+    {
+      "label": "Claude Code Enterprise",
+      "href": "https://claude.com/product/claude-code/enterprise"
+    },
+    {
+      "label": "Claude Cowork",
+      "href": "https://claude.com/product/cowork"
+    },
+    {
+      "label": "@Claude",
+      "href": "https://claude.com/product/tag"
+    },
+    {
+      "label": "Claude Design",
+      "href": "https://claude.com/product/design"
+    },
+    {
+      "label": "Claude Science",
+      "href": "https://claude.com/product/claude-science"
+    },
+    {
+      "label": "Claude Security",
+      "href": "https://claude.com/product/claude-security"
+    },
+    {
+      "label": "Claude for Chrome",
+      "href": "https://claude.com/chrome"
+    },
+    {
+      "label": "Claude for Microsoft 365",
+      "href": "https://claude.com/claude-for-microsoft-365"
+    },
+    {
+      "label": "Skills",
+      "href": "https://www.claude.com/skills"
+    },
+    {
+      "label": "Download app",
+      "href": "https://claude.ai/download"
+    },
+    {
+      "label": "Pricing",
+      "href": "https://claude.com/pricing"
+    },
+    {
+      "label": "Log in to Claude",
+      "href": "https://claude.ai/"
+    },
+    {
+      "label": "Mythos",
+      "href": "https://www.anthropic.com/claude/mythos"
+    },
+    {
+      "label": "Fable",
+      "href": "https://www.anthropic.com/claude/fable"
+    },
+    {
+      "label": "Opus",
+      "href": "https://www.anthropic.com/claude/opus"
+    },
+    {
+      "label": "Sonnet",
+      "href": "https://www.anthropic.com/claude/sonnet"
+    },
+    {
+      "label": "Haiku",
+      "href": "https://www.anthropic.com/claude/haiku"
+    },
+    {
+      "label": "AI agents",
+      "href": "https://claude.com/solutions/agents"
+    },
+    {
+      "label": "Code modernization",
+      "href": "https://claude.com/solutions/code-modernization"
+    },
+    {
+      "label": "Coding",
+      "href": "https://claude.com/solutions/coding"
+    },
+    {
+      "label": "Customer support",
+      "href": "https://claude.com/solutions/customer-support"
+    },
+    {
+      "label": "Cybersecurity",
+      "href": "https://claude.com/solutions/cybersecurity"
+    },
+    {
+      "label": "Enterprise",
+      "href": "https://claude.com/solutions/enterprise"
+    },
+    {
+      "label": "Financial services",
+      "href": "https://claude.com/solutions/financial-services"
+    },
+    {
+      "label": "Government",
+      "href": "https://claude.com/solutions/government"
+    },
+    {
+      "label": "Healthcare",
+      "href": "https://claude.com/solutions/healthcare"
+    },
+    {
+      "label": "Higher education",
+      "href": "https://claude.com/solutions/education"
+    },
+    {
+      "label": "K-12 teachers",
+      "href": "https://claude.com/solutions/teachers"
+    },
+    {
+      "label": "Legal",
+      "href": "https://claude.com/solutions/legal"
+    },
+    {
+      "label": "Life sciences",
+      "href": "https://claude.com/solutions/life-sciences"
+    },
+    {
+      "label": "Nonprofits",
+      "href": "https://claude.com/solutions/nonprofits"
+    },
+    {
+      "label": "Small business",
+      "href": "https://claude.com/solutions/small-business"
+    },
+    {
+      "label": "Overview",
+      "href": "https://claude.com/platform/api"
+    },
+    {
+      "label": "Developer docs",
+      "href": "https://platform.claude.com/docs"
+    },
+    {
+      "label": "Pricing",
+      "href": "https://claude.com/pricing#api"
+    },
+    {
+      "label": "Ecosystem",
+      "href": "https://claude.com/ecosystem"
+    },
+    {
+      "label": "Marketplace",
+      "href": "https://claude.com/platform/marketplace"
+    },
+    {
+      "label": "Regional compliance",
+      "href": "https://claude.com/regional-compliance"
+    },
+    {
+      "label": "Claude on AWS",
+      "href": "https://claude.com/partners/claude-on-aws"
+    },
+    {
+      "label": "Google Cloud",
+      "href": "https://claude.com/partners/google-cloud-vertex-ai"
+    },
+    {
+      "label": "Microsoft Foundry",
+      "href": "https://claude.com/partners/microsoft-foundry"
+    },
+    {
+      "label": "Console login",
+      "href": "https://platform.claude.com/"
+    },
+    {
+      "label": "Blog",
+      "href": "https://claude.com/blog"
+    },
+    {
+      "label": "Claude partner network",
+      "href": "https://claude.com/partners"
+    },
+    {
+      "label": "Community",
+      "href": "https://claude.com/community"
+    },
+    {
+      "label": "Connectors",
+      "href": "https://claude.com/connectors"
+    },
+    {
+      "label": "Courses",
+      "href": "/learn"
+    },
+    {
+      "label": "Customer stories",
+      "href": "https://claude.com/customers"
+    },
+    {
+      "label": "Engineering at Anthropic",
+      "href": "/engineering"
+    },
+    {
+      "label": "Events",
+      "href": "/events"
+    },
+    {
+      "label": "Plugins",
+      "href": "https://claude.com/plugins"
+    },
+    {
+      "label": "Powered by Claude",
+      "href": "https://claude.com/partners/powered-by-claude"
+    },
+    {
+      "label": "Service partners",
+      "href": "https://claude.com/partners/services"
+    },
+    {
+      "label": "Tutorials",
+      "href": "https://claude.com/resources/tutorials"
+    },
+    {
+      "label": "Use cases",
+      "href": "https://claude.com/resources/use-cases"
+    },
+    {
+      "label": "Startups",
+      "href": "https://claude.com/programs/startups"
+    },
+    {
+      "label": "Research Labs",
+      "href": "https://claude.com/programs/claude-team-plan-for-research-labs"
+    },
+    {
+      "label": "Availability",
+      "href": "https://www.anthropic.com/supported-countries"
+    },
+    {
+      "label": "Status",
+      "href": "https://status.anthropic.com/"
+    },
+    {
+      "label": "Support center",
+      "href": "https://support.claude.com/en/"
+    },
+    {
+      "label": "Anthropic",
+      "href": "/company"
+    },
+    {
+      "label": "Careers",
+      "href": "/careers"
+    },
+    {
+      "label": "Policy",
+      "href": "/policy"
+    },
+    {
+      "label": "Economic Futures",
+      "href": "/economic-futures"
+    },
+    {
+      "label": "Research",
+      "href": "/research"
+    },
+    {
+      "label": "News",
+      "href": "/news"
+    },
+    {
+      "label": "Claude’s Constitution",
+      "href": "/constitution"
+    },
+    {
+      "label": "Claude Corps",
+      "href": "/claude-corps"
+    },
+    {
+      "label": "Keep thinking",
+      "href": "https://www.anthropic.com/path-to-hope"
+    },
+    {
+      "label": "Policy on the AI Exponential",
+      "href": "/policy-on-the-ai-exponential"
+    },
+    {
+      "label": "Responsible Scaling Policy",
+      "href": "https://www.anthropic.com/news/announcing-our-updated-responsible-scaling-policy"
+    },
+    {
+      "label": "Security and compliance",
+      "href": "https://trust.anthropic.com/"
+    },
+    {
+      "label": "Transparency",
+      "href": "/transparency"
+    }
+  ],
+  "links": [
+    "https://www.anthropic.com/research#main-content",
+    "https://www.anthropic.com/research#footer",
+    "https://www.anthropic.com/",
+    "https://www.anthropic.com/research",
+    "https://www.anthropic.com/policy",
+    "https://www.anthropic.com/news",
+    "https://claude.ai/",
+    "https://www.anthropic.com/research/team/alignment",
+    "https://www.anthropic.com/research/team/economic-research",
+    "https://www.anthropic.com/research/team/interpretability",
+    "https://www.anthropic.com/research/team/societal-impacts",
+    "https://www.anthropic.com/research/team/frontier-red-team",
+    "https://www.anthropic.com/research/global-workspace",
+    "https://www.anthropic.com/research/economic-index-june-2026-report",
+    "https://www.anthropic.com/research/teaching-claude-why",
+    "https://www.anthropic.com/features/project-deal",
+    "https://www.anthropic.com/81k-interviews",
+    "https://www.anthropic.com/research/how-canada-uses-claude",
+    "https://www.anthropic.com/research/claude-values-models-languages",
+    "https://www.anthropic.com/research/claude-plays-robotics",
+    "https://www.anthropic.com/research/off-switch-dual-use",
+    "https://www.anthropic.com/research/project-fetch-phase-two",
+    "https://www.anthropic.com/research/claude-code-expertise",
+    "https://www.anthropic.com/research/agents-in-biology",
+    "https://www.anthropic.com/research/n-days",
+    "https://www.anthropic.com/research#",
+    "https://www.anthropic.com/jobs",
+    "https://claude.com/product/overview",
+    "https://claude.com/product/claude-code",
+    "https://claude.com/product/claude-code/enterprise",
+    "https://claude.com/product/cowork",
+    "https://claude.com/product/tag",
+    "https://claude.com/product/design",
+    "https://claude.com/product/claude-science",
+    "https://claude.com/product/claude-security",
+    "https://claude.com/chrome",
+    "https://claude.com/claude-for-microsoft-365",
+    "https://www.claude.com/skills",
+    "https://claude.ai/download",
+    "https://claude.com/pricing",
+    "https://www.anthropic.com/claude/mythos",
+    "https://www.anthropic.com/claude/fable",
+    "https://www.anthropic.com/claude/opus",
+    "https://www.anthropic.com/claude/sonnet",
+    "https://www.anthropic.com/claude/haiku",
+    "https://claude.com/solutions/agents",
+    "https://claude.com/solutions/code-modernization",
+    "https://claude.com/solutions/coding",
+    "https://claude.com/solutions/customer-support",
+    "https://claude.com/solutions/cybersecurity",
+    "https://claude.com/solutions/enterprise",
+    "https://claude.com/solutions/financial-services",
+    "https://claude.com/solutions/government",
+    "https://claude.com/solutions/healthcare",
+    "https://claude.com/solutions/education",
+    "https://claude.com/solutions/teachers",
+    "https://claude.com/solutions/legal",
+    "https://claude.com/solutions/life-sciences",
+    "https://claude.com/solutions/nonprofits",
+    "https://claude.com/solutions/small-business",
+    "https://claude.com/platform/api",
+    "https://platform.claude.com/docs",
+    "https://claude.com/pricing#api",
+    "https://claude.com/ecosystem",
+    "https://claude.com/platform/marketplace",
+    "https://claude.com/regional-compliance",
+    "https://claude.com/partners/claude-on-aws",
+    "https://claude.com/partners/google-cloud-vertex-ai",
+    "https://claude.com/partners/microsoft-foundry",
+    "https://platform.claude.com/",
+    "https://claude.com/blog",
+    "https://claude.com/partners",
+    "https://claude.com/community",
+    "https://claude.com/connectors",
+    "https://www.anthropic.com/learn",
+    "https://claude.com/customers",
+    "https://www.anthropic.com/engineering",
+    "https://www.anthropic.com/events",
+    "https://claude.com/plugins",
+    "https://claude.com/partners/powered-by-claude",
+    "https://claude.com/partners/services",
+    "https://claude.com/resources/tutorials",
+    "https://claude.com/resources/use-cases",
+    "https://claude.com/programs/startups",
+    "https://claude.com/programs/claude-team-plan-for-research-labs",
+    "https://www.anthropic.com/supported-countries",
+    "https://status.anthropic.com/",
+    "https://support.claude.com/en/",
+    "https://www.anthropic.com/company",
+    "https://www.anthropic.com/careers",
+    "https://www.anthropic.com/economic-futures",
+    "https://www.anthropic.com/constitution",
+    "https://www.anthropic.com/claude-corps",
+    "https://www.anthropic.com/path-to-hope",
+    "https://www.anthropic.com/policy-on-the-ai-exponential",
+    "https://www.anthropic.com/news/announcing-our-updated-responsible-scaling-policy",
+    "https://trust.anthropic.com/",
+    "https://www.anthropic.com/transparency",
+    "https://www.anthropic.com/legal/privacy",
+    "https://www.anthropic.com/legal/consumer-health-data-privacy-policy",
+    "https://www.anthropic.com/responsible-disclosure-policy",
+    "https://www.anthropic.com/legal/commercial-terms",
+    "https://www.anthropic.com/legal/consumer-terms",
+    "https://anthropic.com/legal/k12-terms",
+    "https://anthropic.com/legal/k12-dpa",
+    "https://www.anthropic.com/legal/aup",
+    "https://www.linkedin.com/company/anthropicresearch",
+    "https://x.com/AnthropicAI",
+    "https://www.youtube.com/@anthropic-ai"
+  ],
+  "media": {
+    "imgs": [
+      {
+        "src": "https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F6071a582f06f7b7b9a7cf73e100ec1f25c281442-1280x720.jpg&w=1920&q=75",
+        "alt": "A global workspace in language models",
+        "w": 1280,
+        "h": 720
+      },
+      {
+        "src": "https://www-cdn.anthropic.com/images/4zrzovbb/website/a62b6eb169818f14c35b7a192af269e283f8fa93-1000x1000.svg",
+        "alt": "How Canada uses Claude: Findings from the Anthropic Economic Index",
+        "w": 1000,
+        "h": 1000
+      }
+    ],
+    "allImgCount": 2,
+    "cssBackgrounds": [],
+    "modals": []
+  },
+  "customProps": {},
+  "_signals": {
+    "filteredInterstitials": 0,
+    "distinctHeadings": 20,
+    "mainTextLen": 2879,
+    "realImageCount": 2,
+    "trackingOnlyMedia": false,
+    "spaShellSuspect": false
+  }
+}

@@ -1,0 +1,339 @@
+[
+  {
+    "id": "claude-assistant",
+    "name": "Claude",
+    "category": "AI Assistant",
+    "price": 20,
+    "currency": "USD",
+    "images": [
+      "https://cdn.sanity.io/images/4zrzovbb/website/150dfe21dd8e8ee77fe0edacc93765a038ee25bf-4800x2520.jpg",
+      "https://cdn.sanity.io/images/4zrzovbb/website/1cb9e73bbea501aa7d268e93235cc9070023d0c3-4800x2520.jpg",
+      "https://cdn.sanity.io/images/4zrzovbb/website/40ab6434838c7cd995e4ef74862e1df2d051f8b4-4800x2520.jpg",
+      "https://cdn.sanity.io/images/4zrzovbb/website/777a5cbda7fbf7dede631821f6de45f12991ede6-4800x2520.jpg",
+      "https://cdn.sanity.io/images/4zrzovbb/website/92ed261f46696d6cd181408764ab5abd048a82f5-4800x2520.jpg",
+      "https://cdn.sanity.io/images/4zrzovbb/website/c772aa1a4ce89077edc8731fcb832822ab77d4a3-4800x2520.jpg"
+    ],
+    "url": "https://claude.com/product/overview",
+    "description": "Claude is Anthropic's conversational AI assistant for everyday work: writing, learning, research, and analysis. Available on web, desktop (macOS, Windows), and mobile (iOS, Android), it supports voice mode, projects, artifacts, citations, and file uploads (PDF, Word, Excel, images). Free, Pro, Max, Team, and Enterprise plans scale from casual use to organization-wide deployment.",
+    "features": [
+      "Web search and Google Workspace integration",
+      "Voice mode, artifacts, and projects",
+      "File uploads: PDF, Word, Excel, images",
+      "Memory across conversations",
+      "Desktop apps for macOS and Windows; mobile apps for iOS and Android",
+      "Access to the full Claude model family (Haiku, Sonnet, Opus, Fable, Mythos)"
+    ],
+    "highlights": [
+      "Free tier available, Pro from $17/month",
+      "Import memory when switching from another AI provider",
+      "Extended thinking for complex problems"
+    ],
+    "persona": "individual-professional",
+    "useCase": "everyday-productivity",
+    "keywords": [
+      "claude",
+      "ai assistant",
+      "chatbot",
+      "chat",
+      "writing help",
+      "research assistant",
+      "ai chat",
+      "claude app",
+      "claude pricing",
+      "claude free",
+      "claude pro"
+    ]
+  },
+  {
+    "id": "claude-code",
+    "name": "Claude Code",
+    "category": "Developer Tools",
+    "price": 17,
+    "currency": "USD",
+    "images": [
+      "https://cdn.sanity.io/images/4zrzovbb/claude-com/050b07bf101bc4712abb3a7e1ba6f4d8dde33fcd-920x920.webp",
+      "https://cdn.sanity.io/images/4zrzovbb/claude-com/414e92e0a09c3fb2b45b93a9fcfaa8cb3531a341-920x920.webp",
+      "https://cdn.sanity.io/images/4zrzovbb/claude-com/ad5647024b50754209ac108ad151339a32fde625-920x920.webp",
+      "https://cdn.sanity.io/images/4zrzovbb/claude-com/6c36adaaf60ecdde313a93ad255eef573ea4de97-1200x630.jpg"
+    ],
+    "url": "https://claude.com/product/claude-code",
+    "description": "Claude Code is Anthropic's agentic coding assistant that works directly in your codebase \u2014 terminal, IDE, web, mobile, Slack, and GitHub. It reads, writes, and executes code, runs tasks across parallel subagents, maps and explains entire codebases, and opens pull requests end-to-end. Runs locally and talks directly to model APIs without a remote code index.",
+    "features": [
+      "Agentic multi-file editing and codebase understanding",
+      "Routines: scheduled or event-triggered automated tasks",
+      "Fast Mode: 2.5x faster Opus configuration for rapid iteration",
+      "Computer use: opens apps, navigates browsers, runs dev tools",
+      "IDE extensions for VS Code and JetBrains; GitHub Actions integration",
+      "Issue-to-PR workflows: reads issues, writes code, runs tests, submits PRs"
+    ],
+    "highlights": [
+      "Pro from $17/month (annual), Max plans from $100/month",
+      "Used by Spotify, Rakuten, Notion, Shopify, Ramp, HubSpot",
+      "Rakuten cut time-to-market from 24 days to 5 days"
+    ],
+    "persona": "developer",
+    "useCase": "software-development",
+    "keywords": [
+      "claude code",
+      "coding assistant",
+      "ai coding",
+      "developer tool",
+      "code generation",
+      "debugging",
+      "pair programming",
+      "cli coding agent",
+      "refactoring",
+      "pull requests",
+      "vs code extension"
+    ]
+  },
+  {
+    "id": "claude-cowork",
+    "name": "Claude Cowork",
+    "category": "Productivity",
+    "price": 20,
+    "currency": "USD",
+    "images": [
+      "https://cdn.prod.website-files.com/6889473510b50328dbb70ae6/696fc8952f473c6520149cfa_4f58536f1c08deac7a94811f4be57881_og-claude-cowork.jpg",
+      "https://cdn.prod.website-files.com/6889473510b50328dbb70ae6/698f768dee28d89a40269b46_image_blog-plugins.jpg",
+      "https://cdn.prod.website-files.com/6889473510b50328dbb70ae6/6a3ac21c45fd1a5c3fb1ed7c_marketing.jpg",
+      "https://cdn.prod.website-files.com/6889473510b50328dbb70ae6/6a3ac2232033d66d13fa34e5_legal.png",
+      "https://cdn.prod.website-files.com/6889473510b50328dbb70ae6/6a3ac22356fc915f8ef66f85_sales.png"
+    ],
+    "url": "https://claude.com/product/cowork",
+    "description": "Claude Cowork is an agentic productivity tool that completes multi-step knowledge work autonomously \u2014 reading, editing, and creating files directly in folders you specify, and connecting to external tools. Designed for non-coding professionals in marketing, sales, legal, and finance, it splits large projects into parallel sub-tasks and runs in the background, even when your laptop is closed.",
+    "features": [
+      "End-to-end task completion in your files and tools, not just chat",
+      "Background and scheduled/recurring task execution",
+      "Parallel execution of sub-tasks across a project",
+      "Plugin system bundling skills, connectors, and sub-agents",
+      "Cross-platform continuity across web, desktop, and mobile",
+      "Transparency: shows every step, file, and decision made"
+    ],
+    "highlights": [
+      "Included with Pro ($20/mo), Team ($20/seat/mo), and Enterprise",
+      "Used for marketing decks, sales briefs, legal audits, finance reconciliation",
+      "User approval required before deleting files"
+    ],
+    "persona": "knowledge-worker",
+    "useCase": "task-automation",
+    "keywords": [
+      "claude cowork",
+      "task automation",
+      "ai agent",
+      "autonomous tasks",
+      "document automation",
+      "knowledge work",
+      "workflow automation",
+      "ai productivity tool",
+      "delegate tasks"
+    ]
+  },
+  {
+    "id": "claude-platform-api",
+    "name": "Claude Platform (API)",
+    "category": "Developer Platform",
+    "price": 3,
+    "currency": "USD",
+    "images": [
+      "https://cdn.prod.website-files.com/6889473510b50328dbb70ae6/68c469d18f61fb5c21c81781_og-claude-api.jpg",
+      "https://cdn.prod.website-files.com/6889473510b50328dbb70ae6/696ab3c6f49d2f3d81e10a69_artifact_enterprise-rollout-mobile.webp",
+      "https://cdn.prod.website-files.com/6889473510b50328dbb70ae6/69e130b671817eddec5f2ec8_opus-4-7.webp",
+      "https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/690abdac9a60d37ccbb9f396_Amplitude.jpg"
+    ],
+    "url": "https://claude.com/platform/api",
+    "description": "The Claude Platform is Anthropic's developer-facing API for integrating Claude's model family into custom applications and workflows. It offers prompt caching, web search, advanced tool use, batch processing, memory, the Files API, structured outputs, and an MCP connector \u2014 plus the Claude Console workbench for building, testing, and evaluating prompts. Usage-based pricing scales from self-serve to sales-supported enterprise deployment.",
+    "features": [
+      "Claude Managed Agents: composable APIs for building agents at scale",
+      "Prompt caching and batch processing (50% cost savings)",
+      "Web search and fetch tools for real-time data",
+      "Files API and structured JSON outputs",
+      "MCP connector for remote tool servers",
+      "Code execution: run Python and generate visualizations in-call"
+    ],
+    "highlights": [
+      "Sonnet 5 at $2/MTok input introductory pricing",
+      "Used by Cursor, StubHub, Thomson Reuters, Databricks, Replit, Intercom",
+      "Self-serve or sales-assisted onboarding paths"
+    ],
+    "persona": "developer",
+    "useCase": "software-development",
+    "keywords": [
+      "claude api",
+      "developer platform",
+      "llm api",
+      "claude pricing api",
+      "build with claude",
+      "ai agents api",
+      "claude console",
+      "sonnet api",
+      "opus api",
+      "prompt caching",
+      "structured outputs"
+    ]
+  },
+  {
+    "id": "claude-science",
+    "name": "Claude Science",
+    "category": "Research Tools",
+    "price": null,
+    "currency": "USD",
+    "images": [
+      "https://cdn.prod.website-files.com/6889473510b50328dbb70ae6/6a43a5d45976daa13ef88f08_science-pillars-3.webp",
+      "https://cdn.prod.website-files.com/6889473510b50328dbb70ae6/6a43a5d70cb6b4480ed0f16f_science-pillars-2.webp",
+      "https://cdn.prod.website-files.com/6889473510b50328dbb70ae6/6a43a5d70ebe75212a0ec830_science-pillars-1.webp",
+      "https://cdn.prod.website-files.com/6889473510b50328dbb70ae6/6a43a5f25539c9423e18b8a0_Single-cell-RNA-seq.webp",
+      "https://cdn.prod.website-files.com/6889473510b50328dbb70ae6/6a43a5f2cb0de5291e56f344_Cheminformatics.webp",
+      "https://cdn.prod.website-files.com/6889473510b50328dbb70ae6/6a4e5fd1272ee71ecb504bef_the-briefing-ai-for-science.jpg"
+    ],
+    "url": "https://claude.com/product/claude-science",
+    "description": "Claude Science (beta) is a desktop research application \u2014 'your research partner for rigorous science.' It runs analyses, searches 60+ scientific databases, and maintains full reproducibility from data wrangling through publication, with native rendering for proteins, molecules, and structures. Pre-configured for genomics, single-cell, proteomics, structural biology, and cheminformatics workflows.",
+    "features": [
+      "Reproducible artifacts: exact code, environment, and conversation preserved",
+      "Background reviewer flags incorrect citations and untraceable numbers",
+      "Manages compute on laptops, HPC clusters, or Modal accounts via SSH",
+      "Persistent Python and R kernels across an analysis session",
+      "Manuscript drafting alongside underlying analysis with LaTeX preview",
+      "Query access to 60+ scientific databases"
+    ],
+    "highlights": [
+      "Available for macOS (Apple Silicon and Intel) and Linux",
+      "Pre-configured for single-cell RNA-seq, phylogenetics, protein structure, cheminformatics",
+      "Contact sales for enterprise research lab deployment"
+    ],
+    "persona": "researcher",
+    "useCase": "scientific-research",
+    "keywords": [
+      "claude science",
+      "research assistant",
+      "scientific computing",
+      "genomics ai",
+      "single-cell rna-seq",
+      "protein structure",
+      "cheminformatics",
+      "reproducible research",
+      "lab ai tool",
+      "phylogenetics"
+    ]
+  },
+  {
+    "id": "claude-design",
+    "name": "Claude Design",
+    "category": "Design Tools",
+    "price": null,
+    "currency": "USD",
+    "images": [
+      "https://cdn.prod.website-files.com/6889473510b50328dbb70ae6/6a32f0ce3acdbbc3c4395c05_og-claude-design.jpg",
+      "https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/68bb5eb091e9b1deda6f7435_Gamma-light-theme.svg",
+      "https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/68bb5f628079049002c70825_Lovable-light-theme.svg",
+      "https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/6a32e4d71f0791469e8be823_miro_light.svg"
+    ],
+    "url": "https://claude.com/product/design",
+    "description": "Claude Design (beta) lets teams collaborate with Claude to create visual work \u2014 designs, decks, prototypes, and documents \u2014 through natural language descriptions and iterative refinement. It imports design systems from GitHub or local codebases so output uses real components and brand styling, and syncs directly with Claude Code via /design-sync.",
+    "features": [
+      "Natural language to visual: describe what you need, refine the draft",
+      "Design system import from GitHub, design files, or codebases",
+      "Claude Code synchronization via /design and /design-sync commands",
+      "Fine-grained editing: comments, sliders, drag/resize/align",
+      "Export to PDF, PPTX, or HTML; connectors to Adobe, Canva, Figma-adjacent tools",
+      "Admin-locked design systems for brand consistency"
+    ],
+    "highlights": [
+      "Included with Pro, Max, Team, and Enterprise subscriptions",
+      "Used for prototypes, pitch decks, marketing collateral, wireframes",
+      "Enterprise admins enable it manually in Organization settings"
+    ],
+    "persona": "designer",
+    "useCase": "design-prototyping",
+    "keywords": [
+      "claude design",
+      "ai design tool",
+      "prototyping",
+      "mockups",
+      "pitch deck generator",
+      "design system",
+      "wireframes",
+      "ai presentation maker",
+      "figma alternative",
+      "landing page generator"
+    ]
+  },
+  {
+    "id": "claude-security",
+    "name": "Claude Security",
+    "category": "Security",
+    "price": null,
+    "currency": "USD",
+    "images": [
+      "https://cdn.prod.website-files.com/6889473510b50328dbb70ae6/69974e8e374fa7ebd6e107ca_og-claude-security.jpg",
+      "https://cdn.prod.website-files.com/6889473510b50328dbb70ae6/69c5ce5b40c4078ea6468b2f_og-security.jpg"
+    ],
+    "url": "https://claude.com/product/claude-security",
+    "description": "Claude Security (public beta) is an AI-driven code security scanner for Claude Enterprise customers. It traces data flows across files to find complex, multi-component vulnerabilities that traditional rule-based scanners miss, runs every finding through an adversarial self-verification pass to cut false positives, and proposes reviewable patches for each issue found.",
+    "features": [
+      "Context-aware scanning that traces data flow across files",
+      "Adversarial finding verification to reduce false positives",
+      "Patch generation with human approval required before implementation",
+      "Webhook integration with Slack and Jira; CSV/Markdown export",
+      "Scoped or scheduled scans on specific directories",
+      "Documented dismissals carried forward across tool runs"
+    ],
+    "highlights": [
+      "Public beta for Claude Enterprise customers",
+      "Team and Max plan access listed as coming soon",
+      "Finds memory corruption, injection flaws, auth bypasses, logic errors"
+    ],
+    "persona": "security-engineer",
+    "useCase": "code-security",
+    "keywords": [
+      "claude security",
+      "ai code scanner",
+      "vulnerability scanning",
+      "static analysis ai",
+      "security patch generator",
+      "enterprise security tool",
+      "code vulnerability detection",
+      "devsecops ai"
+    ]
+  },
+  {
+    "id": "claude-code-enterprise",
+    "name": "Claude Code for Enterprise",
+    "category": "Developer Tools",
+    "price": 100,
+    "currency": "USD",
+    "images": [
+      "https://cdn.sanity.io/images/4zrzovbb/claude-com/050b07bf101bc4712abb3a7e1ba6f4d8dde33fcd-920x920.webp",
+      "https://cdn.sanity.io/images/4zrzovbb/claude-com/414e92e0a09c3fb2b45b93a9fcfaa8cb3531a341-920x920.webp",
+      "https://cdn.sanity.io/images/4zrzovbb/claude-com/ad5647024b50754209ac108ad151339a32fde625-920x920.webp",
+      "https://cdn.sanity.io/images/4zrzovbb/claude-com/6c36adaaf60ecdde313a93ad255eef573ea4de97-1200x630.jpg"
+    ],
+    "url": "https://claude.com/product/claude-code/enterprise",
+    "description": "Claude Code for Enterprise brings agentic coding to large engineering organizations with centralized management: contribution metrics dashboards, server-managed tool permissions, OpenTelemetry monitoring, SSO/SCIM provisioning, and audit trails. SOC 2 Type II compliant with TLS 1.3 in transit and AES-256 at rest, plus bring-your-own-key deployment via Bedrock, Vertex AI, or Microsoft Foundry.",
+    "features": [
+      "Contribution metrics dashboard for usage, PRs, and committed code",
+      "Server-managed settings: tool permissions, file access, MCP configs",
+      "OpenTelemetry export for session activity, token usage, and cost",
+      "SSO (Okta, Azure AD, SAML 2.0) and SCIM automated provisioning",
+      "VPC isolation and private endpoints; no training on customer data",
+      "Role-based permissions and audit trails"
+    ],
+    "highlights": [
+      "Team plan from $100/person/month, Enterprise custom pricing",
+      "Rakuten: 24 days to 5 days time-to-market, 99.9% accuracy",
+      "Zapier: 89% employee adoption, 800+ AI agents deployed"
+    ],
+    "persona": "engineering-leader",
+    "useCase": "enterprise-engineering",
+    "keywords": [
+      "claude code enterprise",
+      "enterprise coding ai",
+      "engineering team ai",
+      "sso scim coding tool",
+      "soc 2 ai coding",
+      "enterprise dev platform",
+      "fleet migration ai",
+      "vpc ai deployment"
+    ]
+  }
+]

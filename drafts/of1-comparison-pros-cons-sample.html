@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pros and cons, side by side</title>
+  <link rel="stylesheet" href="/styles/of1-comparison-pros-cons.css">
+</head>
+<body>
+<main>
+<section class="of1-cmp-pc-hero of1-hero">
+  <p class="of1-eyebrow" data-slot="hero.eyebrow">Weigh your options</p>
+  <h1 data-slot="hero.title">Pros and cons, side by side</h1>
+  <p class="of1-cmp-pc-hero-subtitle" data-slot="hero.subtitle">Every Claude product has tradeoffs. Here&#x27;s how they break down.</p>
+</section>
+
+<section class="of1-cmp-pc-tabs of1-section">
+  <div class="of1-cmp-pc-tablist" role="tablist" data-slot-list="tabs.labels">
+    <button class="of1-cmp-pc-tab" role="tab" aria-selected="true" data-tab-target="1">Item 1</button>
+    <button class="of1-cmp-pc-tab" role="tab" aria-selected="false" data-tab-target="2">Item 2</button>
+    <button class="of1-cmp-pc-tab" role="tab" aria-selected="false" data-tab-target="3">Item 3</button>
+  </div>
+
+  <div class="of1-cmp-pc-panels" data-grid-items>
+    <article class="of1-cmp-pc-panel" data-card="1" data-tab-panel="1" style="display:block">
+      <div class="of1-cmp-pc-panel-head">
+        <img src="https://cdn.sanity.io/images/4zrzovbb/website/150dfe21dd8e8ee77fe0edacc93765a038ee25bf-4800x2520.jpg" alt="" data-slot="item-1.image">
+        <div>
+          <p class="of1-cmp-pc-panel-eyebrow" data-slot="item-1.subtitle">AI Assistant</p>
+          <h2 data-slot="item-1.title">Claude</h2>
+          <p class="of1-cmp-pc-panel-price" data-slot="item-1.price">$20/mo</p>
+        </div>
+      </div>
+      <div class="of1-cmp-pc-panel-cols">
+        <div class="of1-cmp-pc-col of1-cmp-pc-col-pro">
+          <h4>Pros</h4>
+          <ul data-slot-list="item-1.pros"><li>Free tier available, Pro from $17/mo</li><li>Voice mode, projects, artifacts</li><li>Works across web, desktop, and mobile</li></ul>
+        </div>
+        <div class="of1-cmp-pc-col of1-cmp-pc-col-con">
+          <h4>Cons</h4>
+          <ul data-slot-list="item-1.cons"><li>Not purpose-built for codebases</li><li>Complex automation needs Cowork or the API</li></ul>
+        </div>
+      </div>
+      <a href="https://claude.com/product/overview" class="of1-cta of1-cta-primary" data-slot="item-1.cta">Learn more</a>
+    </article>
+
+    <article class="of1-cmp-pc-panel" data-card="2" data-tab-panel="2" style="display:none">
+      <div class="of1-cmp-pc-panel-head">
+        <img src="https://cdn.sanity.io/images/4zrzovbb/claude-com/050b07bf101bc4712abb3a7e1ba6f4d8dde33fcd-920x920.webp" alt="" data-slot="item-2.image">
+        <div>
+          <p class="of1-cmp-pc-panel-eyebrow" data-slot="item-2.subtitle">Developer Tools</p>
+          <h2 data-slot="item-2.title">Claude Code</h2>
+          <p class="of1-cmp-pc-panel-price" data-slot="item-2.price">$17/mo</p>
+        </div>
+      </div>
+      <div class="of1-cmp-pc-panel-cols">
+        <div class="of1-cmp-pc-col of1-cmp-pc-col-pro">
+          <h4>Pros</h4>
+          <ul data-slot-list="item-2.pros"><li>Agentic multi-file editing and PR workflows</li><li>Fast Mode: 2.5x faster Opus configuration</li><li>GitHub Actions and CI integration</li></ul>
+        </div>
+        <div class="of1-cmp-pc-col of1-cmp-pc-col-con">
+          <h4>Cons</h4>
+          <ul data-slot-list="item-2.cons"><li>Requires comfort working in a codebase</li><li>Less useful for non-technical teams</li></ul>
+        </div>
+      </div>
+      <a href="https://claude.com/product/claude-code" class="of1-cta of1-cta-primary" data-slot="item-2.cta">Learn more</a>
+    </article>
+
+    <article class="of1-cmp-pc-panel" data-card="3" data-tab-panel="3" style="display:none">
+      <div class="of1-cmp-pc-panel-head">
+        <img src="https://cdn.prod.website-files.com/6889473510b50328dbb70ae6/68c469d18f61fb5c21c81781_og-claude-api.jpg" alt="" data-slot="item-3.image">
+        <div>
+          <p class="of1-cmp-pc-panel-eyebrow" data-slot="item-3.subtitle">Developer Platform</p>
+          <h2 data-slot="item-3.title">Claude Platform API</h2>
+          <p class="of1-cmp-pc-panel-price" data-slot="item-3.price">$3/MTok</p>
+        </div>
+      </div>
+      <div class="of1-cmp-pc-panel-cols">
+        <div class="of1-cmp-pc-col of1-cmp-pc-col-pro">
+          <h4>Pros</h4>
+          <ul data-slot-list="item-3.pros"><li>Usage-based pricing, no seat minimums</li><li>Prompt caching cuts costs up to 50 percent</li><li>MCP connector for remote tool servers</li></ul>
+        </div>
+        <div class="of1-cmp-pc-col of1-cmp-pc-col-con">
+          <h4>Cons</h4>
+          <ul data-slot-list="item-3.cons"><li>Requires engineering resources to integrate</li><li>Costs scale with usage, harder to predict</li></ul>
+        </div>
+      </div>
+      <a href="https://claude.com/platform/api" class="of1-cta of1-cta-primary" data-slot="item-3.cta">Learn more</a>
+    </article>
+  </div>
+</section>
+
+<section class="of1-cmp-pc-summary of1-section">
+  <h2 data-slot="summary.title">Quick summary</h2>
+  <ul class="of1-cmp-pc-summary-list" data-slot-list="summary.points"><li>Claude fits everyday individual work best</li><li>Claude Code fits teams shipping software</li><li>The Platform API fits custom integrations</li><li>All three share the same underlying models</li></ul>
+</section>
+
+<section class="of1-cmp-pc-cta of1-hero">
+  <h2 data-slot="cta.title">Ready to decide?</h2>
+  <p data-slot="cta.subtitle">Pick the option that fits, then get moving.</p>
+  <a href="https://claude.com/product/overview" class="of1-cta of1-cta-primary" data-slot="cta.cta-primary">Get started</a>
+</section>
+
+<script>
+(function () {
+  var tabs = document.querySelectorAll('.of1-cmp-pc-tab');
+  var panels = document.querySelectorAll('.of1-cmp-pc-panel');
+  tabs.forEach(function (tab) {
+    tab.addEventListener('click', function () {
+      var target = tab.getAttribute('data-tab-target');
+      tabs.forEach(function (t) { t.setAttribute('aria-selected', String(t === tab)); });
+      panels.forEach(function (p) {
+        p.style.display = p.getAttribute('data-tab-panel') === target ? 'block' : 'none';
+      });
+    });
+  });
+})();
+</script>
+</main>
+
+</body>
+</html>

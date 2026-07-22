@@ -1,0 +1,58 @@
+[
+  {
+    "id": "developer",
+    "name": "Developer / Engineer",
+    "description": "Individual contributors and engineering teams who write, review, and ship code and want an AI pair programmer embedded in their existing toolchain.",
+    "keywords": ["developer", "engineer", "coding", "code", "programmer", "software engineer", "debug", "refactor", "pull request", "github", "terminal", "ide", "vs code", "codebase"],
+    "priorities": ["speed", "codebase accuracy", "integrates with existing tools", "minimal workflow disruption", "reliability"],
+    "recommendedProducts": ["claude-code", "claude-platform-api", "claude-code-enterprise"]
+  },
+  {
+    "id": "engineering-leader",
+    "name": "Engineering Leader",
+    "description": "VPs of Engineering and technical directors evaluating AI tools to accelerate their team's development velocity while managing security, compliance, and cost.",
+    "keywords": ["vp of engineering", "engineering manager", "cto", "team lead", "rollout", "adoption", "engineering productivity", "developer platform", "scale coding", "fleet migration"],
+    "priorities": ["team-wide adoption", "security and compliance", "observability", "measurable ROI", "admin controls"],
+    "recommendedProducts": ["claude-code-enterprise", "claude-code", "claude-platform-api"]
+  },
+  {
+    "id": "knowledge-worker",
+    "name": "Knowledge Worker",
+    "description": "Non-coding professionals in marketing, sales, legal, and finance who need research, analysis, and document creation automated end-to-end.",
+    "keywords": ["marketing", "sales", "legal", "finance", "operations", "admin work", "reports", "documents", "spreadsheets", "presentations", "automate my work", "productivity"],
+    "priorities": ["hands-off automation", "file and tool access", "reliability", "transparency into steps taken"],
+    "recommendedProducts": ["claude-cowork", "claude-assistant", "claude-design"]
+  },
+  {
+    "id": "individual-professional",
+    "name": "Individual Professional",
+    "description": "Writers, learners, and everyday problem-solvers who use Claude as a conversational assistant for writing, research, and learning.",
+    "keywords": ["writer", "student", "learner", "everyday use", "personal assistant", "writing help", "study", "brainstorm", "chatbot", "free ai"],
+    "priorities": ["ease of use", "affordability", "helpful and accurate answers", "mobile access"],
+    "recommendedProducts": ["claude-assistant", "claude-design"]
+  },
+  {
+    "id": "researcher",
+    "name": "Researcher / Scientist",
+    "description": "Life sciences and academic researchers running rigorous, reproducible analyses across genomics, proteomics, and cheminformatics.",
+    "keywords": ["researcher", "scientist", "phd", "lab", "genomics", "bioinformatics", "reproducibility", "academic research", "clinical research", "data analysis science"],
+    "priorities": ["reproducibility", "domain-specific tooling", "database integration", "publication-ready output"],
+    "recommendedProducts": ["claude-science", "claude-platform-api", "claude-assistant"]
+  },
+  {
+    "id": "designer",
+    "name": "Designer / Product Team",
+    "description": "Designers, product managers, and marketers who need to turn ideas into visual work quickly — decks, prototypes, and marketing assets.",
+    "keywords": ["designer", "product manager", "prototype", "mockup", "pitch deck", "marketing collateral", "wireframe", "visual design", "brand consistency"],
+    "priorities": ["speed to first draft", "brand/design system fidelity", "easy iteration", "export flexibility"],
+    "recommendedProducts": ["claude-design", "claude-assistant"]
+  },
+  {
+    "id": "security-engineer",
+    "name": "Security Engineer",
+    "description": "Application security and DevSecOps teams responsible for finding and remediating vulnerabilities before they ship.",
+    "keywords": ["security engineer", "appsec", "devsecops", "vulnerability", "penetration testing", "code scanning", "compliance security", "patch management"],
+    "priorities": ["low false-positive rate", "context-aware analysis", "workflow integration", "human-approved remediation"],
+    "recommendedProducts": ["claude-security", "claude-code-enterprise"]
+  }
+]

@@ -1,0 +1,3030 @@
+{
+  "useRouting": true,
+  "baseUrl": "https://main--labs-00f0f66f--of1-labs.aem.page",
+  "generatedAt": "2026-07-17T12:55:22Z",
+  "count": 15,
+  "byIntent": {
+    "budget": [
+      "of1-budget-cost-breakdown",
+      "of1-budget-price-tiers",
+      "of1-budget-roi-story"
+    ],
+    "comparison": [
+      "of1-comparison-pros-cons",
+      "of1-comparison-table",
+      "of1-comparison-versus"
+    ],
+    "deep-dive": [
+      "of1-deep-dive-faq-explainer",
+      "of1-deep-dive-longform",
+      "of1-deep-dive-timeline"
+    ],
+    "discovery": [
+      "of1-discovery-by-category",
+      "of1-discovery-curated-collections",
+      "of1-discovery-gallery"
+    ],
+    "recommendation": [
+      "of1-recommendation-curated-bundle",
+      "of1-recommendation-hero-pick",
+      "of1-recommendation-ranked-list"
+    ]
+  },
+  "templates": [
+    {
+      "name": "of1-budget-cost-breakdown",
+      "intent": "budget",
+      "description": "Stacked line-item cost breakdown with stat callouts and money-saving tips, no card grid of tiers.",
+      "minItems": 3,
+      "maxItems": 4,
+      "stylesheet": "/styles/of1-budget-cost-breakdown.css",
+      "slots": [
+        {
+          "key": "hero.eyebrow",
+          "type": "text",
+          "instruction": "Short label, e.g. Cost breakdown"
+        },
+        {
+          "key": "hero.title",
+          "type": "text",
+          "instruction": "Headline about transparent costs, <=8 words"
+        },
+        {
+          "key": "hero.subtitle",
+          "type": "text",
+          "instruction": "1-sentence framing"
+        },
+        {
+          "key": "hero.cta-primary",
+          "type": "link",
+          "instruction": "Primary CTA"
+        },
+        {
+          "key": "stat-1.value",
+          "type": "text",
+          "instruction": "Big number, e.g. $17"
+        },
+        {
+          "key": "stat-1.label",
+          "type": "text",
+          "instruction": "Short label under the number"
+        },
+        {
+          "key": "stat-2.value",
+          "type": "text",
+          "instruction": "Big number"
+        },
+        {
+          "key": "stat-2.label",
+          "type": "text",
+          "instruction": "Short label"
+        },
+        {
+          "key": "stat-3.value",
+          "type": "text",
+          "instruction": "Big number or percent"
+        },
+        {
+          "key": "stat-3.label",
+          "type": "text",
+          "instruction": "Short label"
+        },
+        {
+          "key": "table.title",
+          "type": "text",
+          "instruction": "Section heading, e.g. Where the cost comes from"
+        },
+        {
+          "key": "item-1.title",
+          "type": "text",
+          "instruction": "Cost line item name"
+        },
+        {
+          "key": "item-1.price",
+          "type": "text",
+          "instruction": "Price or range for this line item"
+        },
+        {
+          "key": "item-1.body",
+          "type": "text",
+          "instruction": "1-sentence explanation"
+        },
+        {
+          "key": "item-2.title",
+          "type": "text",
+          "instruction": "Cost line item name"
+        },
+        {
+          "key": "item-2.price",
+          "type": "text",
+          "instruction": "Price or range"
+        },
+        {
+          "key": "item-2.body",
+          "type": "text",
+          "instruction": "1-sentence explanation"
+        },
+        {
+          "key": "item-3.title",
+          "type": "text",
+          "instruction": "Cost line item name"
+        },
+        {
+          "key": "item-3.price",
+          "type": "text",
+          "instruction": "Price or range"
+        },
+        {
+          "key": "item-3.body",
+          "type": "text",
+          "instruction": "1-sentence explanation"
+        },
+        {
+          "key": "item-4.title",
+          "type": "text",
+          "instruction": "Cost line item name"
+        },
+        {
+          "key": "item-4.price",
+          "type": "text",
+          "instruction": "Price or range"
+        },
+        {
+          "key": "item-4.body",
+          "type": "text",
+          "instruction": "1-sentence explanation"
+        },
+        {
+          "key": "savings.title",
+          "type": "text",
+          "instruction": "Section heading about saving money"
+        },
+        {
+          "key": "tip-1.title",
+          "type": "text",
+          "instruction": "Short tip title"
+        },
+        {
+          "key": "tip-1.body",
+          "type": "text",
+          "instruction": "1-sentence tip explanation"
+        },
+        {
+          "key": "tip-2.title",
+          "type": "text",
+          "instruction": "Short tip title"
+        },
+        {
+          "key": "tip-2.body",
+          "type": "text",
+          "instruction": "1-sentence tip explanation"
+        },
+        {
+          "key": "tip-3.title",
+          "type": "text",
+          "instruction": "Short tip title"
+        },
+        {
+          "key": "tip-3.body",
+          "type": "text",
+          "instruction": "1-sentence tip explanation"
+        },
+        {
+          "key": "cta.title",
+          "type": "text",
+          "instruction": "Closing headline, <=8 words"
+        },
+        {
+          "key": "cta.subtitle",
+          "type": "text",
+          "instruction": "1-sentence supporting line"
+        },
+        {
+          "key": "cta.primary",
+          "type": "link",
+          "instruction": "Final CTA label + link"
+        }
+      ],
+      "htmlContent": "<main>\n<section class=\"of1-cost-breakdown-hero of1-hero\">\n  <p class=\"of1-eyebrow\" data-slot=\"hero.eyebrow\">Cost breakdown</p>\n  <h1 data-slot=\"hero.title\">See exactly what you're paying for</h1>\n  <p class=\"of1-cost-breakdown-hero-subtitle\" data-slot=\"hero.subtitle\">A line-by-line look at where your subscription or API spend goes, and how to keep it lean.</p>\n  <a class=\"of1-cta of1-cta-primary\" data-slot=\"hero.cta-primary\" href=\"#\">See full pricing</a>\n</section>\n\n<section class=\"of1-cost-breakdown-summary of1-section\">\n  <div class=\"of1-cost-breakdown-summary-row\">\n    <div class=\"of1-cost-breakdown-stat\">\n      <p class=\"of1-cost-breakdown-stat-value\" data-slot=\"stat-1.value\">$17</p>\n      <p class=\"of1-cost-breakdown-stat-label\" data-slot=\"stat-1.label\">Pro plan, per month (annual)</p>\n    </div>\n    <div class=\"of1-cost-breakdown-stat\">\n      <p class=\"of1-cost-breakdown-stat-value\" data-slot=\"stat-2.value\">$2</p>\n      <p class=\"of1-cost-breakdown-stat-label\" data-slot=\"stat-2.label\">Sonnet 5 API, per million input tokens</p>\n    </div>\n    <div class=\"of1-cost-breakdown-stat\">\n      <p class=\"of1-cost-breakdown-stat-value\" data-slot=\"stat-3.value\">50%</p>\n      <p class=\"of1-cost-breakdown-stat-label\" data-slot=\"stat-3.label\">Savings from prompt caching</p>\n    </div>\n  </div>\n</section>\n\n<section class=\"of1-cost-breakdown-table-section of1-section\">\n  <h2 data-slot=\"table.title\">Where the cost comes from</h2>\n  <div class=\"of1-cost-breakdown-table\" data-grid-items>\n    <article data-card=\"1\" class=\"of1-cost-breakdown-row\">\n      <p class=\"of1-cost-breakdown-row-name\" data-slot=\"item-1.title\">Base subscription</p>\n      <p class=\"of1-cost-breakdown-row-cost\" data-slot=\"item-1.price\">$17-100/mo</p>\n      <p class=\"of1-cost-breakdown-row-body\" data-slot=\"item-1.body\">Covers chat access, usage limits, and bundled tools like Claude Code and Cowork.</p>\n    </article>\n    <article data-card=\"2\" class=\"of1-cost-breakdown-row\">\n      <p class=\"of1-cost-breakdown-row-name\" data-slot=\"item-2.title\">Seats (Team plan)</p>\n      <p class=\"of1-cost-breakdown-row-cost\" data-slot=\"item-2.price\">$20-25/seat/mo</p>\n      <p class=\"of1-cost-breakdown-row-body\" data-slot=\"item-2.body\">Scales linearly with headcount; includes SSO and centralized admin controls.</p>\n    </article>\n    <article data-card=\"3\" class=\"of1-cost-breakdown-row\">\n      <p class=\"of1-cost-breakdown-row-name\" data-slot=\"item-3.title\">API token usage</p>\n      <p class=\"of1-cost-breakdown-row-cost\" data-slot=\"item-3.price\">Usage-based</p>\n      <p class=\"of1-cost-breakdown-row-body\" data-slot=\"item-3.body\">Billed per million tokens; varies by model choice and prompt caching.</p>\n    </article>\n    <article data-card=\"4\" class=\"of1-cost-breakdown-row\">\n      <p class=\"of1-cost-breakdown-row-name\" data-slot=\"item-4.title\">Enterprise add-ons</p>\n      <p class=\"of1-cost-breakdown-row-cost\" data-slot=\"item-4.price\">Custom</p>\n      <p class=\"of1-cost-breakdown-row-body\" data-slot=\"item-4.body\">Audit logs, dedicated support, and compliance certifications priced by contract.</p>\n    </article>\n  </div>\n</section>\n\n<section class=\"of1-cost-breakdown-savings of1-section\">\n  <h2 data-slot=\"savings.title\">Lower your bill without losing capability</h2>\n  <div class=\"of1-cost-breakdown-savings-grid\" data-grid-items>\n    <article data-card=\"1\" class=\"of1-cost-breakdown-tip\">\n      <h3 data-slot=\"tip-1.title\">Cache repeated prompts</h3>\n      <p data-slot=\"tip-1.body\">Prompt caching and batch processing cut API costs by up to 50 percent for repeated context.</p>\n    </article>\n    <article data-card=\"2\" class=\"of1-cost-breakdown-tip\">\n      <h3 data-slot=\"tip-2.title\">Match the model to the task</h3>\n      <p data-slot=\"tip-2.body\">Haiku for quick answers, Sonnet for everyday coding, Opus only when you need deep analysis.</p>\n    </article>\n    <article data-card=\"3\" class=\"of1-cost-breakdown-tip\">\n      <h3 data-slot=\"tip-3.title\">Pay annually</h3>\n      <p data-slot=\"tip-3.body\">Annual billing brings Pro down from $20/mo to $17/mo, with no change in features.</p>\n    </article>\n  </div>\n</section>\n\n<section class=\"of1-cost-breakdown-cta of1-hero\">\n  <h2 data-slot=\"cta.title\">Estimate your real cost</h2>\n  <p data-slot=\"cta.subtitle\">Talk to us about usage patterns and we'll help you pick the most cost-effective setup.</p>\n  <a class=\"of1-cta of1-cta-primary\" data-slot=\"cta.primary\" href=\"#\">Contact sales</a>\n</section>\n</main>\n"
+    },
+    {
+      "name": "of1-budget-price-tiers",
+      "intent": "budget",
+      "description": "5-tier pricing card grid from Free to Enterprise, with a savings tips panel and a customer quote.",
+      "minItems": 3,
+      "maxItems": 5,
+      "stylesheet": "/styles/of1-budget-price-tiers.css",
+      "slots": [
+        {
+          "key": "hero.eyebrow",
+          "type": "text",
+          "instruction": "Short label, 1-2 words, e.g. Pricing"
+        },
+        {
+          "key": "hero.title",
+          "type": "text",
+          "instruction": "Headline about finding the right plan, <=8 words"
+        },
+        {
+          "key": "hero.subtitle",
+          "type": "text",
+          "instruction": "1-sentence framing of how pricing scales"
+        },
+        {
+          "key": "hero.cta-primary",
+          "type": "link",
+          "instruction": "Primary CTA, e.g. Compare plans"
+        },
+        {
+          "key": "hero.image",
+          "type": "image",
+          "instruction": "Optional supporting image URL"
+        },
+        {
+          "key": "tiers.title",
+          "type": "text",
+          "instruction": "Section heading, e.g. Plans and pricing"
+        },
+        {
+          "key": "tiers.subtitle",
+          "type": "text",
+          "instruction": "1-sentence note on what's shared across plans"
+        },
+        {
+          "key": "item-1.title",
+          "type": "text",
+          "instruction": "Tier name, e.g. Free"
+        },
+        {
+          "key": "item-1.price",
+          "type": "text",
+          "instruction": "Price, e.g. $0 or Custom"
+        },
+        {
+          "key": "item-1.period",
+          "type": "text",
+          "instruction": "Billing period, e.g. per month"
+        },
+        {
+          "key": "item-1.body",
+          "type": "text",
+          "instruction": "1-sentence description of who the tier is for"
+        },
+        {
+          "key": "item-1.features",
+          "type": "list",
+          "instruction": "2-4 short feature bullets"
+        },
+        {
+          "key": "item-1.cta",
+          "type": "link",
+          "instruction": "CTA label + link for this tier"
+        },
+        {
+          "key": "item-2.title",
+          "type": "text",
+          "instruction": "Tier name"
+        },
+        {
+          "key": "item-2.price",
+          "type": "text",
+          "instruction": "Price"
+        },
+        {
+          "key": "item-2.period",
+          "type": "text",
+          "instruction": "Billing period"
+        },
+        {
+          "key": "item-2.body",
+          "type": "text",
+          "instruction": "1-sentence description"
+        },
+        {
+          "key": "item-2.features",
+          "type": "list",
+          "instruction": "2-4 short feature bullets"
+        },
+        {
+          "key": "item-2.cta",
+          "type": "link",
+          "instruction": "CTA label + link"
+        },
+        {
+          "key": "item-3.title",
+          "type": "text",
+          "instruction": "Tier name"
+        },
+        {
+          "key": "item-3.price",
+          "type": "text",
+          "instruction": "Price"
+        },
+        {
+          "key": "item-3.period",
+          "type": "text",
+          "instruction": "Billing period"
+        },
+        {
+          "key": "item-3.body",
+          "type": "text",
+          "instruction": "1-sentence description"
+        },
+        {
+          "key": "item-3.features",
+          "type": "list",
+          "instruction": "2-4 short feature bullets"
+        },
+        {
+          "key": "item-3.cta",
+          "type": "link",
+          "instruction": "CTA label + link"
+        },
+        {
+          "key": "item-4.title",
+          "type": "text",
+          "instruction": "Tier name"
+        },
+        {
+          "key": "item-4.price",
+          "type": "text",
+          "instruction": "Price"
+        },
+        {
+          "key": "item-4.period",
+          "type": "text",
+          "instruction": "Billing period"
+        },
+        {
+          "key": "item-4.body",
+          "type": "text",
+          "instruction": "1-sentence description"
+        },
+        {
+          "key": "item-4.features",
+          "type": "list",
+          "instruction": "2-4 short feature bullets"
+        },
+        {
+          "key": "item-4.cta",
+          "type": "link",
+          "instruction": "CTA label + link"
+        },
+        {
+          "key": "item-5.title",
+          "type": "text",
+          "instruction": "Tier name"
+        },
+        {
+          "key": "item-5.price",
+          "type": "text",
+          "instruction": "Price or Custom"
+        },
+        {
+          "key": "item-5.period",
+          "type": "text",
+          "instruction": "Billing period or contact note"
+        },
+        {
+          "key": "item-5.body",
+          "type": "text",
+          "instruction": "1-sentence description"
+        },
+        {
+          "key": "item-5.features",
+          "type": "list",
+          "instruction": "2-4 short feature bullets"
+        },
+        {
+          "key": "item-5.cta",
+          "type": "link",
+          "instruction": "CTA label + link"
+        },
+        {
+          "key": "savings.title",
+          "type": "text",
+          "instruction": "Section heading, e.g. Ways to save"
+        },
+        {
+          "key": "savings.tips",
+          "type": "list",
+          "instruction": "2-4 short cost-saving tips"
+        },
+        {
+          "key": "quote.text",
+          "type": "text",
+          "instruction": "Short customer quote about value/ROI"
+        },
+        {
+          "key": "quote.author",
+          "type": "text",
+          "instruction": "Name, role, company"
+        },
+        {
+          "key": "cta.title",
+          "type": "text",
+          "instruction": "Closing headline, <=8 words"
+        },
+        {
+          "key": "cta.subtitle",
+          "type": "text",
+          "instruction": "1-sentence supporting line"
+        },
+        {
+          "key": "cta.primary",
+          "type": "link",
+          "instruction": "Final CTA label + link"
+        }
+      ],
+      "htmlContent": "<main>\n<section class=\"of1-price-tiers-hero of1-hero\">\n  <div class=\"of1-price-tiers-hero-grid of1-hero-grid\">\n    <div>\n      <p class=\"of1-eyebrow\" data-slot=\"hero.eyebrow\">Pricing</p>\n      <h1 data-slot=\"hero.title\">Find the plan that fits your budget</h1>\n      <p data-slot=\"hero.subtitle\">From free access to enterprise-scale deployment, Claude plans scale with how much you use it and how many people need it.</p>\n      <a class=\"of1-cta of1-cta-primary\" data-slot=\"hero.cta-primary\" href=\"#\">Compare plans</a>\n    </div>\n    <div class=\"of1-hero-media\"><img data-slot=\"hero.image\" src=\"\" alt=\"\"></div>\n  </div>\n</section>\n\n<section class=\"of1-price-tiers-grid of1-section\">\n  <h2 data-slot=\"tiers.title\">Plans and pricing</h2>\n  <p class=\"of1-price-tiers-intro\" data-slot=\"tiers.subtitle\">Every plan includes the full Claude model family. Upgrade for more usage, more seats, or enterprise controls.</p>\n  <div class=\"of1-price-tiers-cards\" data-grid-items>\n    <article data-card=\"1\" class=\"of1-price-tier-card\">\n      <p class=\"of1-price-tier-name\" data-slot=\"item-1.title\">Free</p>\n      <p class=\"of1-price-tier-price\" data-slot=\"item-1.price\">$0</p>\n      <p class=\"of1-price-tier-period\" data-slot=\"item-1.period\">forever</p>\n      <p class=\"of1-price-tier-body\" data-slot=\"item-1.body\">Basic chat access to try Claude before you commit to a paid plan.</p>\n      <ul class=\"of1-price-tier-features\" data-slot-list=\"item-1.features\">\n        <li>Chat with Claude on web and mobile</li>\n        <li>Access to the Claude model family</li>\n      </ul>\n      <a class=\"of1-cta of1-cta-secondary\" data-slot=\"item-1.cta\" href=\"#\">Get started</a>\n    </article>\n    <article data-card=\"2\" class=\"of1-price-tier-card of1-price-tier-card--featured\">\n      <p class=\"of1-price-tier-name\" data-slot=\"item-2.title\">Pro</p>\n      <p class=\"of1-price-tier-price\" data-slot=\"item-2.price\">$17</p>\n      <p class=\"of1-price-tier-period\" data-slot=\"item-2.period\">per month, billed annually</p>\n      <p class=\"of1-price-tier-body\" data-slot=\"item-2.body\">More usage plus Claude Code, Cowork, Design, and Science for everyday work.</p>\n      <ul class=\"of1-price-tier-features\" data-slot-list=\"item-2.features\">\n        <li>5x more usage than Free</li>\n        <li>Claude Code, Cowork, Design, Science included</li>\n        <li>Extended thinking for complex problems</li>\n      </ul>\n      <a class=\"of1-cta of1-cta-primary\" data-slot=\"item-2.cta\" href=\"#\">Start Pro</a>\n    </article>\n    <article data-card=\"3\" class=\"of1-price-tier-card\">\n      <p class=\"of1-price-tier-name\" data-slot=\"item-3.title\">Max</p>\n      <p class=\"of1-price-tier-price\" data-slot=\"item-3.price\">$100</p>\n      <p class=\"of1-price-tier-period\" data-slot=\"item-3.period\">per month, 5x usage tier</p>\n      <p class=\"of1-price-tier-body\" data-slot=\"item-3.body\">Higher usage ceilings for people who run Claude all day, every day.</p>\n      <ul class=\"of1-price-tier-features\" data-slot-list=\"item-3.features\">\n        <li>5x or 20x usage options</li>\n        <li>Priority access during high-traffic periods</li>\n      </ul>\n      <a class=\"of1-cta of1-cta-secondary\" data-slot=\"item-3.cta\" href=\"#\">Start Max</a>\n    </article>\n    <article data-card=\"4\" class=\"of1-price-tier-card\">\n      <p class=\"of1-price-tier-name\" data-slot=\"item-4.title\">Team</p>\n      <p class=\"of1-price-tier-price\" data-slot=\"item-4.price\">$20</p>\n      <p class=\"of1-price-tier-period\" data-slot=\"item-4.period\">per seat, per month</p>\n      <p class=\"of1-price-tier-body\" data-slot=\"item-4.body\">Shared workspace controls for teams of 2 to 150 people.</p>\n      <ul class=\"of1-price-tier-features\" data-slot-list=\"item-4.features\">\n        <li>SSO and admin controls</li>\n        <li>Centralized billing for the whole team</li>\n      </ul>\n      <a class=\"of1-cta of1-cta-secondary\" data-slot=\"item-4.cta\" href=\"#\">Start Team</a>\n    </article>\n    <article data-card=\"5\" class=\"of1-price-tier-card\">\n      <p class=\"of1-price-tier-name\" data-slot=\"item-5.title\">Enterprise</p>\n      <p class=\"of1-price-tier-price\" data-slot=\"item-5.price\">Custom</p>\n      <p class=\"of1-price-tier-period\" data-slot=\"item-5.period\">contact sales</p>\n      <p class=\"of1-price-tier-body\" data-slot=\"item-5.body\">Compliance, audit logs, and dedicated support at organization scale.</p>\n      <ul class=\"of1-price-tier-features\" data-slot-list=\"item-5.features\">\n        <li>SOC 2 Type II, SSO, SCIM provisioning</li>\n        <li>Dedicated support and custom contracts</li>\n      </ul>\n      <a class=\"of1-cta of1-cta-secondary\" data-slot=\"item-5.cta\" href=\"#\">Contact sales</a>\n    </article>\n  </div>\n</section>\n\n<section class=\"of1-price-tiers-savings of1-section\">\n  <div class=\"of1-price-tiers-savings-panel\">\n    <h2 data-slot=\"savings.title\">Ways to save</h2>\n    <ul class=\"of1-price-tiers-savings-list\" data-slot-list=\"savings.tips\">\n      <li>Pay annually to drop Pro from $20/mo to $17/mo</li>\n      <li>Prompt caching cuts API costs by up to 50 percent</li>\n      <li>Start on Free, upgrade only once you hit usage limits</li>\n    </ul>\n  </div>\n</section>\n\n<section class=\"of1-price-tiers-quote of1-section\">\n  <blockquote class=\"of1-price-tiers-quote-text\" data-slot=\"quote.text\">Claude Code has dramatically accelerated our team's coding efficiency. This saves 1-2 days of routine work per model.</blockquote>\n  <p class=\"of1-price-tiers-quote-author\" data-slot=\"quote.author\">Anton Biryukov, Staff Software Engineer, Ramp</p>\n</section>\n\n<section class=\"of1-price-tiers-cta of1-hero\">\n  <h2 data-slot=\"cta.title\">Not sure which plan fits?</h2>\n  <p data-slot=\"cta.subtitle\">Start free and upgrade whenever you need more.</p>\n  <a class=\"of1-cta of1-cta-primary\" data-slot=\"cta.primary\" href=\"#\">Compare all plans</a>\n</section>\n</main>\n"
+    },
+    {
+      "name": "of1-budget-roi-story",
+      "intent": "budget",
+      "description": "Narrative timeline of ROI outcomes with a proof-stat grid and an accordion FAQ for budget questions.",
+      "minItems": 3,
+      "maxItems": 4,
+      "stylesheet": "/styles/of1-budget-roi-story.css",
+      "slots": [
+        {
+          "key": "hero.eyebrow",
+          "type": "text",
+          "instruction": "Short label, e.g. Return on investment"
+        },
+        {
+          "key": "hero.title",
+          "type": "text",
+          "instruction": "Headline about ROI/value, <=8 words"
+        },
+        {
+          "key": "hero.subtitle",
+          "type": "text",
+          "instruction": "1-sentence framing"
+        },
+        {
+          "key": "hero.cta-primary",
+          "type": "link",
+          "instruction": "Primary CTA"
+        },
+        {
+          "key": "timeline.title",
+          "type": "text",
+          "instruction": "Section heading for the ROI timeline"
+        },
+        {
+          "key": "step-1.title",
+          "type": "text",
+          "instruction": "Short step title"
+        },
+        {
+          "key": "step-1.body",
+          "type": "text",
+          "instruction": "1-sentence description of this step"
+        },
+        {
+          "key": "step-2.title",
+          "type": "text",
+          "instruction": "Short step title"
+        },
+        {
+          "key": "step-2.body",
+          "type": "text",
+          "instruction": "1-sentence description"
+        },
+        {
+          "key": "step-3.title",
+          "type": "text",
+          "instruction": "Short step title"
+        },
+        {
+          "key": "step-3.body",
+          "type": "text",
+          "instruction": "1-sentence description"
+        },
+        {
+          "key": "step-4.title",
+          "type": "text",
+          "instruction": "Short step title"
+        },
+        {
+          "key": "step-4.body",
+          "type": "text",
+          "instruction": "1-sentence description"
+        },
+        {
+          "key": "proof-1.stat",
+          "type": "text",
+          "instruction": "Short proof stat, e.g. 5x faster"
+        },
+        {
+          "key": "proof-1.body",
+          "type": "text",
+          "instruction": "1-sentence proof point with a named customer"
+        },
+        {
+          "key": "proof-2.stat",
+          "type": "text",
+          "instruction": "Short proof stat"
+        },
+        {
+          "key": "proof-2.body",
+          "type": "text",
+          "instruction": "1-sentence proof point"
+        },
+        {
+          "key": "proof-3.stat",
+          "type": "text",
+          "instruction": "Short proof stat"
+        },
+        {
+          "key": "proof-3.body",
+          "type": "text",
+          "instruction": "1-sentence proof point"
+        },
+        {
+          "key": "faq.title",
+          "type": "text",
+          "instruction": "Section heading, e.g. Common budget questions"
+        },
+        {
+          "key": "faq-1.question",
+          "type": "text",
+          "instruction": "Budget-related question"
+        },
+        {
+          "key": "faq-1.answer",
+          "type": "text",
+          "instruction": "1-2 sentence answer"
+        },
+        {
+          "key": "faq-2.question",
+          "type": "text",
+          "instruction": "Budget-related question"
+        },
+        {
+          "key": "faq-2.answer",
+          "type": "text",
+          "instruction": "1-2 sentence answer"
+        },
+        {
+          "key": "faq-3.question",
+          "type": "text",
+          "instruction": "Budget-related question"
+        },
+        {
+          "key": "faq-3.answer",
+          "type": "text",
+          "instruction": "1-2 sentence answer"
+        },
+        {
+          "key": "cta.title",
+          "type": "text",
+          "instruction": "Closing headline, <=8 words"
+        },
+        {
+          "key": "cta.subtitle",
+          "type": "text",
+          "instruction": "1-sentence supporting line"
+        },
+        {
+          "key": "cta.primary",
+          "type": "link",
+          "instruction": "Final CTA label + link"
+        }
+      ],
+      "htmlContent": "<main>\n<section class=\"of1-roi-story-hero of1-hero\">\n  <p class=\"of1-eyebrow\" data-slot=\"hero.eyebrow\">Return on investment</p>\n  <h1 data-slot=\"hero.title\">What teams get back for what they spend</h1>\n  <p class=\"of1-roi-story-hero-subtitle\" data-slot=\"hero.subtitle\">Real outcomes from teams who put a Claude subscription against their existing workflow.</p>\n  <a class=\"of1-cta of1-cta-primary\" data-slot=\"hero.cta-primary\" href=\"#\">See pricing</a>\n</section>\n\n<section class=\"of1-roi-story-timeline of1-section\">\n  <h2 data-slot=\"timeline.title\">The ROI story, step by step</h2>\n  <div class=\"of1-roi-story-timeline-list\">\n    <article class=\"of1-roi-story-step\">\n      <span class=\"of1-roi-story-step-number\">01</span>\n      <div>\n        <h3 data-slot=\"step-1.title\">Start on a low-commitment plan</h3>\n        <p data-slot=\"step-1.body\">Teams begin on Free or Pro at $17/month to validate fit before scaling spend.</p>\n      </div>\n    </article>\n    <article class=\"of1-roi-story-step\">\n      <span class=\"of1-roi-story-step-number\">02</span>\n      <div>\n        <h3 data-slot=\"step-2.title\">Automate the repetitive work first</h3>\n        <p data-slot=\"step-2.body\">Claude Cowork and Claude Code absorb recurring tasks: reports, boilerplate code, and routine reviews.</p>\n      </div>\n    </article>\n    <article class=\"of1-roi-story-step\">\n      <span class=\"of1-roi-story-step-number\">03</span>\n      <div>\n        <h3 data-slot=\"step-3.title\">Measure the time saved</h3>\n        <p data-slot=\"step-3.body\">Ramp's engineering team saved 1-2 days of routine work per model using Claude Code for pipeline conversion.</p>\n      </div>\n    </article>\n    <article class=\"of1-roi-story-step\">\n      <span class=\"of1-roi-story-step-number\">04</span>\n      <div>\n        <h3 data-slot=\"step-4.title\">Scale to the plan that matches usage</h3>\n        <p data-slot=\"step-4.body\">Rakuten moved to Claude Code for Enterprise and cut time-to-market from 24 days to 5.</p>\n      </div>\n    </article>\n  </div>\n</section>\n\n<section class=\"of1-roi-story-proof of1-section\">\n  <div class=\"of1-roi-story-proof-grid\" data-grid-items>\n    <article data-card=\"1\" class=\"of1-roi-story-proof-card\">\n      <p class=\"of1-roi-story-proof-stat\" data-slot=\"proof-1.stat\">5x faster</p>\n      <p class=\"of1-roi-story-proof-body\" data-slot=\"proof-1.body\">Rakuten's time-to-market dropped from 24 days to 5 days after adopting Claude Code.</p>\n    </article>\n    <article data-card=\"2\" class=\"of1-roi-story-proof-card\">\n      <p class=\"of1-roi-story-proof-stat\" data-slot=\"proof-2.stat\">89% adoption</p>\n      <p class=\"of1-roi-story-proof-body\" data-slot=\"proof-2.body\">Zapier reached 89 percent employee adoption with 800+ AI agents deployed internally.</p>\n    </article>\n    <article data-card=\"3\" class=\"of1-roi-story-proof-card\">\n      <p class=\"of1-roi-story-proof-stat\" data-slot=\"proof-3.stat\">1-2 days saved</p>\n      <p class=\"of1-roi-story-proof-body\" data-slot=\"proof-3.body\">Ramp's engineers save 1-2 days of routine work per model using Claude Code.</p>\n    </article>\n  </div>\n</section>\n\n<section class=\"of1-roi-story-faq of1-section\">\n  <h2 data-slot=\"faq.title\">Common budget questions</h2>\n  <div class=\"of1-roi-story-accordion\">\n    <div class=\"of1-roi-story-accordion-item\">\n      <button class=\"of1-roi-story-accordion-trigger\" data-accordion-trigger aria-expanded=\"true\">\n        <span data-slot=\"faq-1.question\">How much does Claude Code cost?</span>\n        <span class=\"of1-roi-story-accordion-icon\">+</span>\n      </button>\n      <div class=\"of1-roi-story-accordion-panel is-open\" data-accordion-panel>\n        <p data-slot=\"faq-1.answer\">Claude Code is included with the Pro plan ($17-20/month), Max plans (from $100/month), and Team/Enterprise plans. API access is billed at standard token rates.</p>\n      </div>\n    </div>\n    <div class=\"of1-roi-story-accordion-item\">\n      <button class=\"of1-roi-story-accordion-trigger\" data-accordion-trigger aria-expanded=\"false\">\n        <span data-slot=\"faq-2.question\">What Claude plans are available?</span>\n        <span class=\"of1-roi-story-accordion-icon\">+</span>\n      </button>\n      <div class=\"of1-roi-story-accordion-panel\" data-accordion-panel>\n        <p data-slot=\"faq-2.answer\">Free gives basic chat access. Pro ($17-20/month) adds Claude Code, Cowork, Design, and Science. Max (from $100/month) offers 5x or 20x more usage. Team ($20-25/seat/month) adds admin controls. Enterprise offers custom pricing.</p>\n      </div>\n    </div>\n    <div class=\"of1-roi-story-accordion-item\">\n      <button class=\"of1-roi-story-accordion-trigger\" data-accordion-trigger aria-expanded=\"false\">\n        <span data-slot=\"faq-3.question\">Are there ways to reduce API costs?</span>\n        <span class=\"of1-roi-story-accordion-icon\">+</span>\n      </button>\n      <div class=\"of1-roi-story-accordion-panel\" data-accordion-panel>\n        <p data-slot=\"faq-3.answer\">Prompt caching and batch processing can cut API costs by up to 50 percent for repeated or delayed workloads.</p>\n      </div>\n    </div>\n  </div>\n</section>\n\n<section class=\"of1-roi-story-cta of1-hero\">\n  <h2 data-slot=\"cta.title\">Calculate your own ROI</h2>\n  <p data-slot=\"cta.subtitle\">Talk to our team about your usage patterns and expected savings.</p>\n  <a class=\"of1-cta of1-cta-primary\" data-slot=\"cta.primary\" href=\"#\">Contact sales</a>\n</section>\n\n<script>\n(function () {\n  var triggers = document.querySelectorAll('[data-accordion-trigger]');\n  triggers.forEach(function (trigger) {\n    trigger.addEventListener('click', function () {\n      var panel = trigger.nextElementSibling;\n      var isOpen = trigger.getAttribute('aria-expanded') === 'true';\n      trigger.setAttribute('aria-expanded', String(!isOpen));\n      panel.classList.toggle('is-open', !isOpen);\n    });\n  });\n})();\n</script>\n</main>\n"
+    },
+    {
+      "name": "of1-comparison-pros-cons",
+      "intent": "comparison",
+      "description": "Tabbed pros/cons breakdown for 2-3 options \u2014 one detailed panel visible at a time, switchable via pill tabs.",
+      "minItems": 2,
+      "maxItems": 3,
+      "stylesheet": "/styles/of1-comparison-pros-cons.css",
+      "slots": [
+        {
+          "key": "hero.eyebrow",
+          "type": "text",
+          "instruction": "Short label above the title, 1-3 words"
+        },
+        {
+          "key": "hero.title",
+          "type": "text",
+          "instruction": "Headline, <=8 words"
+        },
+        {
+          "key": "hero.subtitle",
+          "type": "text",
+          "instruction": "1-sentence framing of the tradeoffs being compared"
+        },
+        {
+          "key": "item-1.image",
+          "type": "image",
+          "instruction": "Image URL for option 1"
+        },
+        {
+          "key": "item-1.subtitle",
+          "type": "text",
+          "instruction": "Category label, 1-3 words"
+        },
+        {
+          "key": "item-1.title",
+          "type": "text",
+          "instruction": "Name of option 1"
+        },
+        {
+          "key": "item-1.price",
+          "type": "text",
+          "instruction": "Starting price string"
+        },
+        {
+          "key": "item-1.pros",
+          "type": "list",
+          "instruction": "3-4 short strengths"
+        },
+        {
+          "key": "item-1.cons",
+          "type": "list",
+          "instruction": "2-3 short tradeoffs"
+        },
+        {
+          "key": "item-1.cta",
+          "type": "link",
+          "instruction": "Link to option 1's page"
+        },
+        {
+          "key": "item-2.image",
+          "type": "image",
+          "instruction": "Image URL for option 2"
+        },
+        {
+          "key": "item-2.subtitle",
+          "type": "text",
+          "instruction": "Category label, 1-3 words"
+        },
+        {
+          "key": "item-2.title",
+          "type": "text",
+          "instruction": "Name of option 2"
+        },
+        {
+          "key": "item-2.price",
+          "type": "text",
+          "instruction": "Starting price string"
+        },
+        {
+          "key": "item-2.pros",
+          "type": "list",
+          "instruction": "3-4 short strengths"
+        },
+        {
+          "key": "item-2.cons",
+          "type": "list",
+          "instruction": "2-3 short tradeoffs"
+        },
+        {
+          "key": "item-2.cta",
+          "type": "link",
+          "instruction": "Link to option 2's page"
+        },
+        {
+          "key": "item-3.image",
+          "type": "image",
+          "instruction": "Image URL for option 3"
+        },
+        {
+          "key": "item-3.subtitle",
+          "type": "text",
+          "instruction": "Category label, 1-3 words"
+        },
+        {
+          "key": "item-3.title",
+          "type": "text",
+          "instruction": "Name of option 3"
+        },
+        {
+          "key": "item-3.price",
+          "type": "text",
+          "instruction": "Starting price string"
+        },
+        {
+          "key": "item-3.pros",
+          "type": "list",
+          "instruction": "3-4 short strengths"
+        },
+        {
+          "key": "item-3.cons",
+          "type": "list",
+          "instruction": "2-3 short tradeoffs"
+        },
+        {
+          "key": "item-3.cta",
+          "type": "link",
+          "instruction": "Link to option 3's page"
+        },
+        {
+          "key": "summary.title",
+          "type": "text",
+          "instruction": "Section heading, e.g. 'Quick summary'"
+        },
+        {
+          "key": "summary.points",
+          "type": "list",
+          "instruction": "3-4 one-line takeaways across all options"
+        },
+        {
+          "key": "cta.title",
+          "type": "text",
+          "instruction": "Closing headline, <=6 words"
+        },
+        {
+          "key": "cta.subtitle",
+          "type": "text",
+          "instruction": "1-sentence supporting line"
+        },
+        {
+          "key": "cta.cta-primary",
+          "type": "link",
+          "instruction": "Final CTA label + link"
+        }
+      ],
+      "htmlContent": "<main>\n<section class=\"of1-cmp-pc-hero of1-hero\">\n  <p class=\"of1-eyebrow\" data-slot=\"hero.eyebrow\">Weigh your options</p>\n  <h1 data-slot=\"hero.title\">Pros and cons, side by side</h1>\n  <p class=\"of1-cmp-pc-hero-subtitle\" data-slot=\"hero.subtitle\">Every option has tradeoffs. Here's how they break down.</p>\n</section>\n\n<section class=\"of1-cmp-pc-tabs of1-section\">\n  <div class=\"of1-cmp-pc-tablist\" role=\"tablist\" data-slot-list=\"tabs.labels\">\n    <button class=\"of1-cmp-pc-tab\" role=\"tab\" aria-selected=\"true\" data-tab-target=\"1\">Item 1</button>\n    <button class=\"of1-cmp-pc-tab\" role=\"tab\" aria-selected=\"false\" data-tab-target=\"2\">Item 2</button>\n    <button class=\"of1-cmp-pc-tab\" role=\"tab\" aria-selected=\"false\" data-tab-target=\"3\">Item 3</button>\n  </div>\n\n  <div class=\"of1-cmp-pc-panels\" data-grid-items>\n    <article class=\"of1-cmp-pc-panel\" data-card=\"1\" data-tab-panel=\"1\" style=\"display:block\">\n      <div class=\"of1-cmp-pc-panel-head\">\n        <img data-slot=\"item-1.image\" src=\"\" alt=\"\">\n        <div>\n          <p class=\"of1-cmp-pc-panel-eyebrow\" data-slot=\"item-1.subtitle\">Category</p>\n          <h2 data-slot=\"item-1.title\">Item name</h2>\n          <p class=\"of1-cmp-pc-panel-price\" data-slot=\"item-1.price\">$0/mo</p>\n        </div>\n      </div>\n      <div class=\"of1-cmp-pc-panel-cols\">\n        <div class=\"of1-cmp-pc-col of1-cmp-pc-col-pro\">\n          <h4>Pros</h4>\n          <ul data-slot-list=\"item-1.pros\">\n            <li>Strength</li>\n          </ul>\n        </div>\n        <div class=\"of1-cmp-pc-col of1-cmp-pc-col-con\">\n          <h4>Cons</h4>\n          <ul data-slot-list=\"item-1.cons\">\n            <li>Tradeoff</li>\n          </ul>\n        </div>\n      </div>\n      <a class=\"of1-cta of1-cta-primary\" data-slot=\"item-1.cta\" href=\"#\">Learn more</a>\n    </article>\n\n    <article class=\"of1-cmp-pc-panel\" data-card=\"2\" data-tab-panel=\"2\" style=\"display:none\">\n      <div class=\"of1-cmp-pc-panel-head\">\n        <img data-slot=\"item-2.image\" src=\"\" alt=\"\">\n        <div>\n          <p class=\"of1-cmp-pc-panel-eyebrow\" data-slot=\"item-2.subtitle\">Category</p>\n          <h2 data-slot=\"item-2.title\">Item name</h2>\n          <p class=\"of1-cmp-pc-panel-price\" data-slot=\"item-2.price\">$0/mo</p>\n        </div>\n      </div>\n      <div class=\"of1-cmp-pc-panel-cols\">\n        <div class=\"of1-cmp-pc-col of1-cmp-pc-col-pro\">\n          <h4>Pros</h4>\n          <ul data-slot-list=\"item-2.pros\">\n            <li>Strength</li>\n          </ul>\n        </div>\n        <div class=\"of1-cmp-pc-col of1-cmp-pc-col-con\">\n          <h4>Cons</h4>\n          <ul data-slot-list=\"item-2.cons\">\n            <li>Tradeoff</li>\n          </ul>\n        </div>\n      </div>\n      <a class=\"of1-cta of1-cta-primary\" data-slot=\"item-2.cta\" href=\"#\">Learn more</a>\n    </article>\n\n    <article class=\"of1-cmp-pc-panel\" data-card=\"3\" data-tab-panel=\"3\" style=\"display:none\">\n      <div class=\"of1-cmp-pc-panel-head\">\n        <img data-slot=\"item-3.image\" src=\"\" alt=\"\">\n        <div>\n          <p class=\"of1-cmp-pc-panel-eyebrow\" data-slot=\"item-3.subtitle\">Category</p>\n          <h2 data-slot=\"item-3.title\">Item name</h2>\n          <p class=\"of1-cmp-pc-panel-price\" data-slot=\"item-3.price\">$0/mo</p>\n        </div>\n      </div>\n      <div class=\"of1-cmp-pc-panel-cols\">\n        <div class=\"of1-cmp-pc-col of1-cmp-pc-col-pro\">\n          <h4>Pros</h4>\n          <ul data-slot-list=\"item-3.pros\">\n            <li>Strength</li>\n          </ul>\n        </div>\n        <div class=\"of1-cmp-pc-col of1-cmp-pc-col-con\">\n          <h4>Cons</h4>\n          <ul data-slot-list=\"item-3.cons\">\n            <li>Tradeoff</li>\n          </ul>\n        </div>\n      </div>\n      <a class=\"of1-cta of1-cta-primary\" data-slot=\"item-3.cta\" href=\"#\">Learn more</a>\n    </article>\n  </div>\n</section>\n\n<section class=\"of1-cmp-pc-summary of1-section\">\n  <h2 data-slot=\"summary.title\">Quick summary</h2>\n  <ul class=\"of1-cmp-pc-summary-list\" data-slot-list=\"summary.points\">\n    <li>Summary point</li>\n  </ul>\n</section>\n\n<section class=\"of1-cmp-pc-cta of1-hero\">\n  <h2 data-slot=\"cta.title\">Ready to decide?</h2>\n  <p data-slot=\"cta.subtitle\">Pick the option that fits, then get moving.</p>\n  <a class=\"of1-cta of1-cta-primary\" data-slot=\"cta.cta-primary\" href=\"#\">Get started</a>\n</section>\n\n<script>\n(function () {\n  var tabs = document.querySelectorAll('.of1-cmp-pc-tab');\n  var panels = document.querySelectorAll('.of1-cmp-pc-panel');\n  tabs.forEach(function (tab) {\n    tab.addEventListener('click', function () {\n      var target = tab.getAttribute('data-tab-target');\n      tabs.forEach(function (t) { t.setAttribute('aria-selected', String(t === tab)); });\n      panels.forEach(function (p) {\n        p.style.display = p.getAttribute('data-tab-panel') === target ? 'block' : 'none';\n      });\n    });\n  });\n})();\n</script>\n</main>\n"
+    },
+    {
+      "name": "of1-comparison-table",
+      "intent": "comparison",
+      "description": "Dense side-by-side spec table with a shared row-label column for 2-4 products, plus insight callouts and FAQ.",
+      "minItems": 2,
+      "maxItems": 4,
+      "stylesheet": "/styles/of1-comparison-table.css",
+      "slots": [
+        {
+          "key": "hero.eyebrow",
+          "type": "text",
+          "instruction": "Short label above the title, 1-3 words"
+        },
+        {
+          "key": "hero.title",
+          "type": "text",
+          "instruction": "Comparison headline, <=9 words"
+        },
+        {
+          "key": "hero.subtitle",
+          "type": "text",
+          "instruction": "1-sentence framing of what's being compared"
+        },
+        {
+          "key": "hero.cta-primary",
+          "type": "link",
+          "instruction": "Primary CTA, e.g. Try it free"
+        },
+        {
+          "key": "hero.cta-secondary",
+          "type": "link",
+          "instruction": "Secondary CTA, e.g. Talk to sales"
+        },
+        {
+          "key": "table.row-labels",
+          "type": "list",
+          "instruction": "4 short row labels shared across all items, e.g. Best for, Starting price, Key strength, Deployment"
+        },
+        {
+          "key": "item-1.image",
+          "type": "image",
+          "instruction": "Product image URL"
+        },
+        {
+          "key": "item-1.subtitle",
+          "type": "text",
+          "instruction": "Category label, 1-3 words"
+        },
+        {
+          "key": "item-1.title",
+          "type": "text",
+          "instruction": "Product name"
+        },
+        {
+          "key": "item-1.price",
+          "type": "text",
+          "instruction": "Starting price string, e.g. $20/mo"
+        },
+        {
+          "key": "item-1.features",
+          "type": "list",
+          "instruction": "4 short values matching table.row-labels order"
+        },
+        {
+          "key": "item-1.cta",
+          "type": "link",
+          "instruction": "Link to product page"
+        },
+        {
+          "key": "item-2.image",
+          "type": "image",
+          "instruction": "Product image URL"
+        },
+        {
+          "key": "item-2.subtitle",
+          "type": "text",
+          "instruction": "Category label, 1-3 words"
+        },
+        {
+          "key": "item-2.title",
+          "type": "text",
+          "instruction": "Product name"
+        },
+        {
+          "key": "item-2.price",
+          "type": "text",
+          "instruction": "Starting price string, e.g. $20/mo"
+        },
+        {
+          "key": "item-2.features",
+          "type": "list",
+          "instruction": "4 short values matching table.row-labels order"
+        },
+        {
+          "key": "item-2.cta",
+          "type": "link",
+          "instruction": "Link to product page"
+        },
+        {
+          "key": "item-3.image",
+          "type": "image",
+          "instruction": "Product image URL"
+        },
+        {
+          "key": "item-3.subtitle",
+          "type": "text",
+          "instruction": "Category label, 1-3 words"
+        },
+        {
+          "key": "item-3.title",
+          "type": "text",
+          "instruction": "Product name"
+        },
+        {
+          "key": "item-3.price",
+          "type": "text",
+          "instruction": "Starting price string, e.g. $20/mo"
+        },
+        {
+          "key": "item-3.features",
+          "type": "list",
+          "instruction": "4 short values matching table.row-labels order"
+        },
+        {
+          "key": "item-3.cta",
+          "type": "link",
+          "instruction": "Link to product page"
+        },
+        {
+          "key": "item-4.image",
+          "type": "image",
+          "instruction": "Product image URL"
+        },
+        {
+          "key": "item-4.subtitle",
+          "type": "text",
+          "instruction": "Category label, 1-3 words"
+        },
+        {
+          "key": "item-4.title",
+          "type": "text",
+          "instruction": "Product name"
+        },
+        {
+          "key": "item-4.price",
+          "type": "text",
+          "instruction": "Starting price string, e.g. $20/mo"
+        },
+        {
+          "key": "item-4.features",
+          "type": "list",
+          "instruction": "4 short values matching table.row-labels order"
+        },
+        {
+          "key": "item-4.cta",
+          "type": "link",
+          "instruction": "Link to product page"
+        },
+        {
+          "key": "insight-1.title",
+          "type": "text",
+          "instruction": "Short insight headline"
+        },
+        {
+          "key": "insight-1.body",
+          "type": "text",
+          "instruction": "1-2 sentence insight explaining a key differentiator"
+        },
+        {
+          "key": "insight-2.title",
+          "type": "text",
+          "instruction": "Short insight headline"
+        },
+        {
+          "key": "insight-2.body",
+          "type": "text",
+          "instruction": "1-2 sentence insight explaining a key differentiator"
+        },
+        {
+          "key": "insight-3.title",
+          "type": "text",
+          "instruction": "Short insight headline"
+        },
+        {
+          "key": "insight-3.body",
+          "type": "text",
+          "instruction": "1-2 sentence insight explaining a key differentiator"
+        },
+        {
+          "key": "faq.title",
+          "type": "text",
+          "instruction": "Section heading, e.g. Common questions"
+        },
+        {
+          "key": "faq-1.question",
+          "type": "text",
+          "instruction": "Frequently asked question"
+        },
+        {
+          "key": "faq-1.answer",
+          "type": "text",
+          "instruction": "1-2 sentence answer"
+        },
+        {
+          "key": "faq-2.question",
+          "type": "text",
+          "instruction": "Frequently asked question"
+        },
+        {
+          "key": "faq-2.answer",
+          "type": "text",
+          "instruction": "1-2 sentence answer"
+        },
+        {
+          "key": "cta.title",
+          "type": "text",
+          "instruction": "Closing headline, <=6 words"
+        },
+        {
+          "key": "cta.subtitle",
+          "type": "text",
+          "instruction": "1-sentence supporting line"
+        },
+        {
+          "key": "cta.cta-primary",
+          "type": "link",
+          "instruction": "Final CTA label + link"
+        }
+      ],
+      "htmlContent": "<main>\n<section class=\"of1-cmp-table-hero of1-hero\">\n  <div class=\"of1-cmp-table-hero-inner\">\n    <p class=\"of1-eyebrow\" data-slot=\"hero.eyebrow\">Compare</p>\n    <h1 data-slot=\"hero.title\">Which Claude product is right for your team?</h1>\n    <p class=\"of1-cmp-table-hero-subtitle\" data-slot=\"hero.subtitle\">Side-by-side specs, pricing, and strengths so you can pick with confidence.</p>\n    <div class=\"of1-cmp-table-hero-ctas\">\n      <a class=\"of1-cta of1-cta-primary\" data-slot=\"hero.cta-primary\" href=\"#\">Try Claude</a>\n      <a class=\"of1-cta of1-cta-secondary\" data-slot=\"hero.cta-secondary\" href=\"#\">Talk to sales</a>\n    </div>\n  </div>\n</section>\n\n<section class=\"of1-cmp-table-grid of1-section\">\n  <div class=\"of1-cmp-table-wrap\">\n    <div class=\"of1-cmp-table-labels\">\n      <div class=\"of1-cmp-table-labels-spacer\" aria-hidden=\"true\"></div>\n      <ul class=\"of1-cmp-table-labels-list\" data-slot-list=\"table.row-labels\">\n        <li>Best for</li>\n        <li>Starting price</li>\n        <li>Key strength</li>\n        <li>Deployment</li>\n      </ul>\n    </div>\n    <div class=\"of1-cmp-table-items\" data-grid-items>\n      <article class=\"of1-cmp-table-item\" data-card=\"1\">\n        <img data-slot=\"item-1.image\" src=\"\" alt=\"\">\n        <p class=\"of1-cmp-table-item-eyebrow\" data-slot=\"item-1.subtitle\">Category</p>\n        <h3 data-slot=\"item-1.title\">Product name</h3>\n        <p class=\"of1-cmp-table-item-price\" data-slot=\"item-1.price\">$0/mo</p>\n        <ul class=\"of1-cmp-table-item-features\" data-slot-list=\"item-1.features\">\n          <li>Feature row value</li>\n        </ul>\n        <a class=\"of1-cta of1-cta-primary of1-cmp-table-item-cta\" data-slot=\"item-1.cta\" href=\"#\">Learn more</a>\n      </article>\n      <article class=\"of1-cmp-table-item\" data-card=\"2\">\n        <img data-slot=\"item-2.image\" src=\"\" alt=\"\">\n        <p class=\"of1-cmp-table-item-eyebrow\" data-slot=\"item-2.subtitle\">Category</p>\n        <h3 data-slot=\"item-2.title\">Product name</h3>\n        <p class=\"of1-cmp-table-item-price\" data-slot=\"item-2.price\">$0/mo</p>\n        <ul class=\"of1-cmp-table-item-features\" data-slot-list=\"item-2.features\">\n          <li>Feature row value</li>\n        </ul>\n        <a class=\"of1-cta of1-cta-primary of1-cmp-table-item-cta\" data-slot=\"item-2.cta\" href=\"#\">Learn more</a>\n      </article>\n      <article class=\"of1-cmp-table-item\" data-card=\"3\">\n        <img data-slot=\"item-3.image\" src=\"\" alt=\"\">\n        <p class=\"of1-cmp-table-item-eyebrow\" data-slot=\"item-3.subtitle\">Category</p>\n        <h3 data-slot=\"item-3.title\">Product name</h3>\n        <p class=\"of1-cmp-table-item-price\" data-slot=\"item-3.price\">$0/mo</p>\n        <ul class=\"of1-cmp-table-item-features\" data-slot-list=\"item-3.features\">\n          <li>Feature row value</li>\n        </ul>\n        <a class=\"of1-cta of1-cta-primary of1-cmp-table-item-cta\" data-slot=\"item-3.cta\" href=\"#\">Learn more</a>\n      </article>\n      <article class=\"of1-cmp-table-item\" data-card=\"4\">\n        <img data-slot=\"item-4.image\" src=\"\" alt=\"\">\n        <p class=\"of1-cmp-table-item-eyebrow\" data-slot=\"item-4.subtitle\">Category</p>\n        <h3 data-slot=\"item-4.title\">Product name</h3>\n        <p class=\"of1-cmp-table-item-price\" data-slot=\"item-4.price\">$0/mo</p>\n        <ul class=\"of1-cmp-table-item-features\" data-slot-list=\"item-4.features\">\n          <li>Feature row value</li>\n        </ul>\n        <a class=\"of1-cta of1-cta-primary of1-cmp-table-item-cta\" data-slot=\"item-4.cta\" href=\"#\">Learn more</a>\n      </article>\n    </div>\n  </div>\n</section>\n\n<section class=\"of1-cmp-table-insights of1-section\">\n  <div class=\"of1-cmp-table-insights-grid\">\n    <article class=\"of1-cmp-table-insight\" data-card=\"1\" data-card-key=\"insight-1.title\">\n      <h3 data-slot=\"insight-1.title\">Insight title</h3>\n      <p data-slot=\"insight-1.body\">Insight body copy.</p>\n    </article>\n    <article class=\"of1-cmp-table-insight\" data-card=\"2\" data-card-key=\"insight-2.title\">\n      <h3 data-slot=\"insight-2.title\">Insight title</h3>\n      <p data-slot=\"insight-2.body\">Insight body copy.</p>\n    </article>\n    <article class=\"of1-cmp-table-insight\" data-card=\"3\" data-card-key=\"insight-3.title\">\n      <h3 data-slot=\"insight-3.title\">Insight title</h3>\n      <p data-slot=\"insight-3.body\">Insight body copy.</p>\n    </article>\n  </div>\n</section>\n\n<section class=\"of1-cmp-table-faq of1-section\">\n  <h2 data-slot=\"faq.title\">Common questions</h2>\n  <div class=\"of1-cmp-table-faq-grid\">\n    <article class=\"of1-cmp-table-faq-item\" data-card=\"1\" data-card-key=\"faq-1.question\">\n      <h3 data-slot=\"faq-1.question\">Question</h3>\n      <p data-slot=\"faq-1.answer\">Answer</p>\n    </article>\n    <article class=\"of1-cmp-table-faq-item\" data-card=\"2\" data-card-key=\"faq-2.question\">\n      <h3 data-slot=\"faq-2.question\">Question</h3>\n      <p data-slot=\"faq-2.answer\">Answer</p>\n    </article>\n  </div>\n</section>\n\n<section class=\"of1-cmp-table-cta of1-hero\">\n  <h2 data-slot=\"cta.title\">Ready to choose?</h2>\n  <p data-slot=\"cta.subtitle\">Start free, upgrade whenever your team is ready.</p>\n  <a class=\"of1-cta of1-cta-primary\" data-slot=\"cta.cta-primary\" href=\"#\">Get started</a>\n</section>\n</main>\n"
+    },
+    {
+      "name": "of1-comparison-versus",
+      "intent": "comparison",
+      "description": "Head-to-head split layout for exactly 2 options with a VS divider, pros/cons columns, and a verdict callout.",
+      "minItems": 2,
+      "maxItems": 2,
+      "stylesheet": "/styles/of1-comparison-versus.css",
+      "slots": [
+        {
+          "key": "hero.eyebrow",
+          "type": "text",
+          "instruction": "Short label above the title, 1-3 words"
+        },
+        {
+          "key": "hero.title",
+          "type": "text",
+          "instruction": "Headline naming both options, e.g. 'Claude Code vs. Claude Cowork'"
+        },
+        {
+          "key": "hero.subtitle",
+          "type": "text",
+          "instruction": "1-sentence framing of the comparison"
+        },
+        {
+          "key": "item-1.image",
+          "type": "image",
+          "instruction": "Image URL for option A"
+        },
+        {
+          "key": "item-1.subtitle",
+          "type": "text",
+          "instruction": "Category label for option A, 1-3 words"
+        },
+        {
+          "key": "item-1.title",
+          "type": "text",
+          "instruction": "Name of option A"
+        },
+        {
+          "key": "item-1.price",
+          "type": "text",
+          "instruction": "Starting price string for option A"
+        },
+        {
+          "key": "item-1.body",
+          "type": "text",
+          "instruction": "1-2 sentence description of option A"
+        },
+        {
+          "key": "item-1.cta",
+          "type": "link",
+          "instruction": "Link to option A's page"
+        },
+        {
+          "key": "item-1.title-repeat",
+          "type": "text",
+          "instruction": "Same value as item-1.title, repeated for the pros/cons column header"
+        },
+        {
+          "key": "item-1.pros",
+          "type": "list",
+          "instruction": "3-4 short strengths of option A"
+        },
+        {
+          "key": "item-1.cons",
+          "type": "list",
+          "instruction": "2-3 short tradeoffs of option A"
+        },
+        {
+          "key": "item-2.image",
+          "type": "image",
+          "instruction": "Image URL for option B"
+        },
+        {
+          "key": "item-2.subtitle",
+          "type": "text",
+          "instruction": "Category label for option B, 1-3 words"
+        },
+        {
+          "key": "item-2.title",
+          "type": "text",
+          "instruction": "Name of option B"
+        },
+        {
+          "key": "item-2.price",
+          "type": "text",
+          "instruction": "Starting price string for option B"
+        },
+        {
+          "key": "item-2.body",
+          "type": "text",
+          "instruction": "1-2 sentence description of option B"
+        },
+        {
+          "key": "item-2.cta",
+          "type": "link",
+          "instruction": "Link to option B's page"
+        },
+        {
+          "key": "item-2.title-repeat",
+          "type": "text",
+          "instruction": "Same value as item-2.title, repeated for the pros/cons column header"
+        },
+        {
+          "key": "item-2.pros",
+          "type": "list",
+          "instruction": "3-4 short strengths of option B"
+        },
+        {
+          "key": "item-2.cons",
+          "type": "list",
+          "instruction": "2-3 short tradeoffs of option B"
+        },
+        {
+          "key": "verdict.eyebrow",
+          "type": "text",
+          "instruction": "Short label, e.g. 'The verdict'"
+        },
+        {
+          "key": "verdict.title",
+          "type": "text",
+          "instruction": "Headline framing the recommendation, <=8 words"
+        },
+        {
+          "key": "verdict.body",
+          "type": "text",
+          "instruction": "1-2 sentence guidance on which to pick and when"
+        },
+        {
+          "key": "cta.title",
+          "type": "text",
+          "instruction": "Closing headline, <=6 words"
+        },
+        {
+          "key": "cta.subtitle",
+          "type": "text",
+          "instruction": "1-sentence supporting line"
+        },
+        {
+          "key": "cta.cta-primary",
+          "type": "link",
+          "instruction": "Final CTA label + link"
+        }
+      ],
+      "htmlContent": "<main>\n<section class=\"of1-cmp-versus-hero of1-hero\">\n  <p class=\"of1-eyebrow\" data-slot=\"hero.eyebrow\">Head to head</p>\n  <h1 data-slot=\"hero.title\">Item A vs. Item B</h1>\n  <p class=\"of1-cmp-versus-hero-subtitle\" data-slot=\"hero.subtitle\">A closer look at how these two stack up.</p>\n</section>\n\n<section class=\"of1-cmp-versus-split of1-section\">\n  <div class=\"of1-cmp-versus-split-grid\" data-grid-items>\n    <article class=\"of1-cmp-versus-side\" data-card=\"1\">\n      <img data-slot=\"item-1.image\" src=\"\" alt=\"\">\n      <p class=\"of1-cmp-versus-side-eyebrow\" data-slot=\"item-1.subtitle\">Category</p>\n      <h2 data-slot=\"item-1.title\">Item A</h2>\n      <p class=\"of1-cmp-versus-side-price\" data-slot=\"item-1.price\">$0/mo</p>\n      <p data-slot=\"item-1.body\">Short description of this option.</p>\n      <a class=\"of1-cta of1-cta-primary\" data-slot=\"item-1.cta\" href=\"#\">Learn more</a>\n    </article>\n    <div class=\"of1-cmp-versus-vs\" aria-hidden=\"true\">VS</div>\n    <article class=\"of1-cmp-versus-side\" data-card=\"2\">\n      <img data-slot=\"item-2.image\" src=\"\" alt=\"\">\n      <p class=\"of1-cmp-versus-side-eyebrow\" data-slot=\"item-2.subtitle\">Category</p>\n      <h2 data-slot=\"item-2.title\">Item B</h2>\n      <p class=\"of1-cmp-versus-side-price\" data-slot=\"item-2.price\">$0/mo</p>\n      <p data-slot=\"item-2.body\">Short description of this option.</p>\n      <a class=\"of1-cta of1-cta-primary\" data-slot=\"item-2.cta\" href=\"#\">Learn more</a>\n    </article>\n  </div>\n</section>\n\n<section class=\"of1-cmp-versus-proscons of1-section\">\n  <div class=\"of1-cmp-versus-proscons-grid\">\n    <div class=\"of1-cmp-versus-proscons-col\">\n      <h3 data-slot=\"item-1.title-repeat\">Item A</h3>\n      <ul class=\"of1-cmp-versus-pros\" data-slot-list=\"item-1.pros\">\n        <li>Strength</li>\n      </ul>\n      <ul class=\"of1-cmp-versus-cons\" data-slot-list=\"item-1.cons\">\n        <li>Tradeoff</li>\n      </ul>\n    </div>\n    <div class=\"of1-cmp-versus-proscons-col\">\n      <h3 data-slot=\"item-2.title-repeat\">Item B</h3>\n      <ul class=\"of1-cmp-versus-pros\" data-slot-list=\"item-2.pros\">\n        <li>Strength</li>\n      </ul>\n      <ul class=\"of1-cmp-versus-cons\" data-slot-list=\"item-2.cons\">\n        <li>Tradeoff</li>\n      </ul>\n    </div>\n  </div>\n</section>\n\n<section class=\"of1-cmp-versus-verdict of1-section\">\n  <div class=\"of1-cmp-versus-verdict-inner\">\n    <p class=\"of1-eyebrow\" data-slot=\"verdict.eyebrow\">The verdict</p>\n    <h2 data-slot=\"verdict.title\">Which should you pick?</h2>\n    <p data-slot=\"verdict.body\">Guidance on which option fits which situation.</p>\n  </div>\n</section>\n\n<section class=\"of1-cmp-versus-cta of1-hero\">\n  <h2 data-slot=\"cta.title\">Still deciding?</h2>\n  <p data-slot=\"cta.subtitle\">Try both and see which fits your workflow.</p>\n  <a class=\"of1-cta of1-cta-primary\" data-slot=\"cta.cta-primary\" href=\"#\">Get started</a>\n</section>\n</main>\n"
+    },
+    {
+      "name": "of1-deep-dive-faq-explainer",
+      "intent": "deep-dive",
+      "description": "Tabbed overview/how-it-works/security explainer plus a fact grid and an FAQ accordion.",
+      "minItems": 3,
+      "maxItems": 4,
+      "stylesheet": "/styles/of1-deep-dive-faq-explainer.css",
+      "slots": [
+        {
+          "key": "hero.eyebrow",
+          "type": "text",
+          "instruction": "Small label above title, e.g. 'Deep dive', 2-3 words"
+        },
+        {
+          "key": "hero.title",
+          "type": "text",
+          "instruction": "Headline phrased as a question or topic, <=8 words"
+        },
+        {
+          "key": "hero.subtitle",
+          "type": "text",
+          "instruction": "1-sentence framing of what this explains"
+        },
+        {
+          "key": "hero.cta-primary",
+          "type": "link",
+          "instruction": "Primary CTA to the product page"
+        },
+        {
+          "key": "tab-1.label",
+          "type": "text",
+          "instruction": "Tab label, 1-2 words, e.g. 'Overview'"
+        },
+        {
+          "key": "tab-1.body",
+          "type": "text",
+          "instruction": "2-3 sentence panel content for tab 1"
+        },
+        {
+          "key": "tab-2.label",
+          "type": "text",
+          "instruction": "Tab label, 1-2 words, e.g. 'How it works'"
+        },
+        {
+          "key": "tab-2.body",
+          "type": "text",
+          "instruction": "2-3 sentence panel content for tab 2"
+        },
+        {
+          "key": "tab-3.label",
+          "type": "text",
+          "instruction": "Tab label, 1-2 words, e.g. 'Security'"
+        },
+        {
+          "key": "tab-3.body",
+          "type": "text",
+          "instruction": "2-3 sentence panel content for tab 3"
+        },
+        {
+          "key": "facts.title",
+          "type": "text",
+          "instruction": "Section heading, e.g. 'At a glance'"
+        },
+        {
+          "key": "item-1.title",
+          "type": "text",
+          "instruction": "Fact label, <=5 words"
+        },
+        {
+          "key": "item-1.body",
+          "type": "text",
+          "instruction": "1-sentence supporting detail"
+        },
+        {
+          "key": "item-2.title",
+          "type": "text",
+          "instruction": "Fact label, <=5 words"
+        },
+        {
+          "key": "item-2.body",
+          "type": "text",
+          "instruction": "1-sentence supporting detail"
+        },
+        {
+          "key": "item-3.title",
+          "type": "text",
+          "instruction": "Fact label, <=5 words"
+        },
+        {
+          "key": "item-3.body",
+          "type": "text",
+          "instruction": "1-sentence supporting detail"
+        },
+        {
+          "key": "faq.title",
+          "type": "text",
+          "instruction": "Section heading, e.g. 'Frequently asked questions'"
+        },
+        {
+          "key": "faq-1.question",
+          "type": "text",
+          "instruction": "FAQ question"
+        },
+        {
+          "key": "faq-1.answer",
+          "type": "text",
+          "instruction": "1-2 sentence answer"
+        },
+        {
+          "key": "faq-2.question",
+          "type": "text",
+          "instruction": "FAQ question"
+        },
+        {
+          "key": "faq-2.answer",
+          "type": "text",
+          "instruction": "1-2 sentence answer"
+        },
+        {
+          "key": "faq-3.question",
+          "type": "text",
+          "instruction": "FAQ question"
+        },
+        {
+          "key": "faq-3.answer",
+          "type": "text",
+          "instruction": "1-2 sentence answer"
+        },
+        {
+          "key": "faq-4.question",
+          "type": "text",
+          "instruction": "FAQ question"
+        },
+        {
+          "key": "faq-4.answer",
+          "type": "text",
+          "instruction": "1-2 sentence answer"
+        },
+        {
+          "key": "cta.title",
+          "type": "text",
+          "instruction": "Closing headline, <=6 words"
+        },
+        {
+          "key": "cta.link",
+          "type": "link",
+          "instruction": "Closing call-to-action link and label"
+        }
+      ],
+      "htmlContent": "<main>\n<section class=\"of1-deep-dive-faq-explainer-hero of1-hero\">\n  <div class=\"of1-hero-grid\">\n    <p class=\"of1-eyebrow\" data-slot=\"hero.eyebrow\">Deep dive</p>\n    <h1 data-slot=\"hero.title\">Is Claude Code safe for proprietary code</h1>\n    <p data-slot=\"hero.subtitle\">Everything you need to know about security, compliance, and how Claude Code handles your codebase.</p>\n    <a class=\"of1-cta of1-cta-primary\" data-slot=\"hero.cta-primary\" href=\"#\">Try Claude Code</a>\n  </div>\n</section>\n\n<section class=\"of1-deep-dive-faq-explainer-tabs of1-section\">\n  <div class=\"of1-dd-tabs\" data-of1-tabs>\n    <div class=\"of1-dd-tab-nav\" role=\"tablist\">\n      <button class=\"of1-dd-tab-btn is-active\" data-tab-btn=\"1\" type=\"button\" data-slot=\"tab-1.label\">Overview</button>\n      <button class=\"of1-dd-tab-btn\" data-tab-btn=\"2\" type=\"button\" data-slot=\"tab-2.label\">How it works</button>\n      <button class=\"of1-dd-tab-btn\" data-tab-btn=\"3\" type=\"button\" data-slot=\"tab-3.label\">Security</button>\n    </div>\n    <div class=\"of1-dd-tab-panel is-active\" data-tab-panel=\"1\">\n      <p data-slot=\"tab-1.body\">Panel one content.</p>\n    </div>\n    <div class=\"of1-dd-tab-panel\" data-tab-panel=\"2\" hidden>\n      <p data-slot=\"tab-2.body\">Panel two content.</p>\n    </div>\n    <div class=\"of1-dd-tab-panel\" data-tab-panel=\"3\" hidden>\n      <p data-slot=\"tab-3.body\">Panel three content.</p>\n    </div>\n  </div>\n</section>\n\n<section class=\"of1-deep-dive-faq-explainer-facts of1-section\">\n  <h2 data-slot=\"facts.title\">At a glance</h2>\n  <div class=\"of1-dd-cap-grid\" data-grid-items>\n    <article data-card=\"1\">\n      <h3 data-slot=\"item-1.title\">Fact</h3>\n      <p data-slot=\"item-1.body\">Detail.</p>\n    </article>\n    <article data-card=\"2\">\n      <h3 data-slot=\"item-2.title\">Fact</h3>\n      <p data-slot=\"item-2.body\">Detail.</p>\n    </article>\n    <article data-card=\"3\">\n      <h3 data-slot=\"item-3.title\">Fact</h3>\n      <p data-slot=\"item-3.body\">Detail.</p>\n    </article>\n  </div>\n</section>\n\n<section class=\"of1-deep-dive-faq-explainer-faq of1-section\">\n  <h2 data-slot=\"faq.title\">Frequently asked questions</h2>\n  <div class=\"of1-dd-accordion\" data-of1-accordion>\n    <div class=\"of1-dd-accordion-item is-open\" data-acc-item=\"1\">\n      <button class=\"of1-dd-accordion-trigger\" data-acc-trigger=\"1\" type=\"button\">\n        <span data-slot=\"faq-1.question\">Question one</span>\n        <span class=\"of1-dd-accordion-icon\">+</span>\n      </button>\n      <div class=\"of1-dd-accordion-panel\" data-acc-panel=\"1\">\n        <p data-slot=\"faq-1.answer\">Answer one.</p>\n      </div>\n    </div>\n    <div class=\"of1-dd-accordion-item\" data-acc-item=\"2\">\n      <button class=\"of1-dd-accordion-trigger\" data-acc-trigger=\"2\" type=\"button\">\n        <span data-slot=\"faq-2.question\">Question two</span>\n        <span class=\"of1-dd-accordion-icon\">+</span>\n      </button>\n      <div class=\"of1-dd-accordion-panel\" data-acc-panel=\"2\" hidden>\n        <p data-slot=\"faq-2.answer\">Answer two.</p>\n      </div>\n    </div>\n    <div class=\"of1-dd-accordion-item\" data-acc-item=\"3\">\n      <button class=\"of1-dd-accordion-trigger\" data-acc-trigger=\"3\" type=\"button\">\n        <span data-slot=\"faq-3.question\">Question three</span>\n        <span class=\"of1-dd-accordion-icon\">+</span>\n      </button>\n      <div class=\"of1-dd-accordion-panel\" data-acc-panel=\"3\" hidden>\n        <p data-slot=\"faq-3.answer\">Answer three.</p>\n      </div>\n    </div>\n    <div class=\"of1-dd-accordion-item\" data-acc-item=\"4\">\n      <button class=\"of1-dd-accordion-trigger\" data-acc-trigger=\"4\" type=\"button\">\n        <span data-slot=\"faq-4.question\">Question four</span>\n        <span class=\"of1-dd-accordion-icon\">+</span>\n      </button>\n      <div class=\"of1-dd-accordion-panel\" data-acc-panel=\"4\" hidden>\n        <p data-slot=\"faq-4.answer\">Answer four.</p>\n      </div>\n    </div>\n  </div>\n</section>\n\n<section class=\"of1-deep-dive-faq-explainer-cta of1-section\">\n  <h2 data-slot=\"cta.title\">Still have questions</h2>\n  <a class=\"of1-cta of1-cta-primary\" data-slot=\"cta.link\" href=\"#\">Contact sales</a>\n</section>\n\n<script>\n(function () {\n  var root = document.currentScript.closest('main');\n  var tabs = root.querySelector('[data-of1-tabs]');\n  if (tabs) {\n    tabs.querySelectorAll('[data-tab-btn]').forEach(function (btn) {\n      btn.addEventListener('click', function () {\n        var id = btn.getAttribute('data-tab-btn');\n        tabs.querySelectorAll('[data-tab-btn]').forEach(function (b) { b.classList.remove('is-active'); });\n        tabs.querySelectorAll('[data-tab-panel]').forEach(function (p) {\n          p.classList.remove('is-active');\n          p.hidden = true;\n        });\n        btn.classList.add('is-active');\n        var panel = tabs.querySelector('[data-tab-panel=\"' + id + '\"]');\n        panel.classList.add('is-active');\n        panel.hidden = false;\n      });\n    });\n  }\n  var accordion = root.querySelector('[data-of1-accordion]');\n  if (accordion) {\n    accordion.querySelectorAll('[data-acc-trigger]').forEach(function (btn) {\n      btn.addEventListener('click', function () {\n        var id = btn.getAttribute('data-acc-trigger');\n        var item = accordion.querySelector('[data-acc-item=\"' + id + '\"]');\n        var panel = accordion.querySelector('[data-acc-panel=\"' + id + '\"]');\n        var isOpen = item.classList.contains('is-open');\n        item.classList.toggle('is-open', !isOpen);\n        panel.hidden = isOpen;\n      });\n    });\n  }\n})();\n</script>\n</main>\n"
+    },
+    {
+      "name": "of1-deep-dive-longform",
+      "intent": "deep-dive",
+      "description": "Single-column editorial explainer: overview + fact list, capability grid, pull-quote essay, related reading.",
+      "minItems": 3,
+      "maxItems": 4,
+      "stylesheet": "/styles/of1-deep-dive-longform.css",
+      "slots": [
+        {
+          "key": "hero.eyebrow",
+          "type": "text",
+          "instruction": "Small label above title, e.g. 'Deep dive', 2-3 words"
+        },
+        {
+          "key": "hero.title",
+          "type": "text",
+          "instruction": "Headline naming the product/topic, <=8 words"
+        },
+        {
+          "key": "hero.subtitle",
+          "type": "text",
+          "instruction": "1-sentence framing of what this explains"
+        },
+        {
+          "key": "hero.cta-primary",
+          "type": "link",
+          "instruction": "Primary CTA to the product page"
+        },
+        {
+          "key": "hero.image",
+          "type": "image",
+          "instruction": "Representative product image URL"
+        },
+        {
+          "key": "overview.title",
+          "type": "text",
+          "instruction": "Section heading, e.g. 'What it is', <=4 words"
+        },
+        {
+          "key": "overview.body-1",
+          "type": "text",
+          "instruction": "1-2 sentence explanation, plain language"
+        },
+        {
+          "key": "overview.body-2",
+          "type": "text",
+          "instruction": "1-2 sentence follow-up detail"
+        },
+        {
+          "key": "fact-1.label",
+          "type": "text",
+          "instruction": "Spec label, e.g. 'Platform'"
+        },
+        {
+          "key": "fact-1.value",
+          "type": "text",
+          "instruction": "Spec value"
+        },
+        {
+          "key": "fact-2.label",
+          "type": "text",
+          "instruction": "Spec label, e.g. 'Pricing'"
+        },
+        {
+          "key": "fact-2.value",
+          "type": "text",
+          "instruction": "Spec value"
+        },
+        {
+          "key": "fact-3.label",
+          "type": "text",
+          "instruction": "Spec label, e.g. 'Best for'"
+        },
+        {
+          "key": "fact-3.value",
+          "type": "text",
+          "instruction": "Spec value"
+        },
+        {
+          "key": "fact-4.label",
+          "type": "text",
+          "instruction": "Spec label, e.g. 'Category'"
+        },
+        {
+          "key": "fact-4.value",
+          "type": "text",
+          "instruction": "Spec value"
+        },
+        {
+          "key": "capabilities.title",
+          "type": "text",
+          "instruction": "Section heading, e.g. 'Key capabilities'"
+        },
+        {
+          "key": "item-1.title",
+          "type": "text",
+          "instruction": "Capability name, <=5 words"
+        },
+        {
+          "key": "item-1.body",
+          "type": "text",
+          "instruction": "1-sentence capability description"
+        },
+        {
+          "key": "item-2.title",
+          "type": "text",
+          "instruction": "Capability name, <=5 words"
+        },
+        {
+          "key": "item-2.body",
+          "type": "text",
+          "instruction": "1-sentence capability description"
+        },
+        {
+          "key": "item-3.title",
+          "type": "text",
+          "instruction": "Capability name, <=5 words"
+        },
+        {
+          "key": "item-3.body",
+          "type": "text",
+          "instruction": "1-sentence capability description"
+        },
+        {
+          "key": "item-4.title",
+          "type": "text",
+          "instruction": "Capability name, <=5 words"
+        },
+        {
+          "key": "item-4.body",
+          "type": "text",
+          "instruction": "1-sentence capability description"
+        },
+        {
+          "key": "explainer.title",
+          "type": "text",
+          "instruction": "Section heading, e.g. 'Under the hood'"
+        },
+        {
+          "key": "explainer.body-1",
+          "type": "text",
+          "instruction": "2-3 sentence deeper explanation paragraph"
+        },
+        {
+          "key": "quote.text",
+          "type": "text",
+          "instruction": "Real customer/testimonial quote, 1-2 sentences"
+        },
+        {
+          "key": "quote.author",
+          "type": "text",
+          "instruction": "Quote author name"
+        },
+        {
+          "key": "quote.role",
+          "type": "text",
+          "instruction": "Author role and company"
+        },
+        {
+          "key": "explainer.body-2",
+          "type": "text",
+          "instruction": "2-3 sentence closing explanation paragraph"
+        },
+        {
+          "key": "related.title",
+          "type": "text",
+          "instruction": "Section heading, e.g. 'Go deeper'"
+        },
+        {
+          "key": "related-1",
+          "type": "link",
+          "instruction": "Related resource link and label"
+        },
+        {
+          "key": "related-2",
+          "type": "link",
+          "instruction": "Related resource link and label"
+        },
+        {
+          "key": "related-3",
+          "type": "link",
+          "instruction": "Related resource link and label"
+        },
+        {
+          "key": "cta.final",
+          "type": "link",
+          "instruction": "Closing call-to-action link and label"
+        }
+      ],
+      "htmlContent": "<main>\n<section class=\"of1-deep-dive-longform-hero of1-hero\">\n  <div class=\"of1-deep-dive-longform-hero-grid of1-hero-grid\">\n    <div>\n      <p class=\"of1-eyebrow\" data-slot=\"hero.eyebrow\">Deep dive</p>\n      <h1 data-slot=\"hero.title\">How Claude Code works</h1>\n      <p data-slot=\"hero.subtitle\">An agentic coding assistant that reads, writes, and executes code directly in your terminal, IDE, and GitHub workflow.</p>\n      <a class=\"of1-cta of1-cta-primary\" data-slot=\"hero.cta-primary\" href=\"#\">Try Claude Code</a>\n    </div>\n    <div class=\"of1-hero-media\"><img data-slot=\"hero.image\" src=\"\" alt=\"\"></div>\n  </div>\n</section>\n\n<section class=\"of1-deep-dive-longform-overview of1-section\">\n  <div class=\"of1-dd-overview-grid\">\n    <div class=\"of1-dd-overview-copy\">\n      <h2 data-slot=\"overview.title\">What it is</h2>\n      <p data-slot=\"overview.body-1\">Description goes here.</p>\n      <p data-slot=\"overview.body-2\">Second paragraph goes here.</p>\n    </div>\n    <aside class=\"of1-dd-fact-list\">\n      <div class=\"of1-dd-fact-row\">\n        <span class=\"of1-dd-fact-label\" data-slot=\"fact-1.label\">Label</span>\n        <span class=\"of1-dd-fact-value\" data-slot=\"fact-1.value\">Value</span>\n      </div>\n      <div class=\"of1-dd-fact-row\">\n        <span class=\"of1-dd-fact-label\" data-slot=\"fact-2.label\">Label</span>\n        <span class=\"of1-dd-fact-value\" data-slot=\"fact-2.value\">Value</span>\n      </div>\n      <div class=\"of1-dd-fact-row\">\n        <span class=\"of1-dd-fact-label\" data-slot=\"fact-3.label\">Label</span>\n        <span class=\"of1-dd-fact-value\" data-slot=\"fact-3.value\">Value</span>\n      </div>\n      <div class=\"of1-dd-fact-row\">\n        <span class=\"of1-dd-fact-label\" data-slot=\"fact-4.label\">Label</span>\n        <span class=\"of1-dd-fact-value\" data-slot=\"fact-4.value\">Value</span>\n      </div>\n    </aside>\n  </div>\n</section>\n\n<section class=\"of1-deep-dive-longform-capabilities of1-section\">\n  <h2 data-slot=\"capabilities.title\">Key capabilities</h2>\n  <div class=\"of1-dd-cap-grid\" data-grid-items>\n    <article data-card=\"1\">\n      <h3 data-slot=\"item-1.title\">Capability</h3>\n      <p data-slot=\"item-1.body\">Description of capability.</p>\n    </article>\n    <article data-card=\"2\">\n      <h3 data-slot=\"item-2.title\">Capability</h3>\n      <p data-slot=\"item-2.body\">Description of capability.</p>\n    </article>\n    <article data-card=\"3\">\n      <h3 data-slot=\"item-3.title\">Capability</h3>\n      <p data-slot=\"item-3.body\">Description of capability.</p>\n    </article>\n    <article data-card=\"4\">\n      <h3 data-slot=\"item-4.title\">Capability</h3>\n      <p data-slot=\"item-4.body\">Description of capability.</p>\n    </article>\n  </div>\n</section>\n\n<section class=\"of1-deep-dive-longform-explainer of1-section\">\n  <div class=\"of1-dd-explainer-body\">\n    <h2 data-slot=\"explainer.title\">Under the hood</h2>\n    <p data-slot=\"explainer.body-1\">Explainer paragraph one.</p>\n    <blockquote class=\"of1-dd-pullquote\">\n      <p data-slot=\"quote.text\">A representative quote about the product.</p>\n      <footer>\n        <span data-slot=\"quote.author\">Name</span>, <span data-slot=\"quote.role\">Role</span>\n      </footer>\n    </blockquote>\n    <p data-slot=\"explainer.body-2\">Explainer paragraph two.</p>\n  </div>\n</section>\n\n<section class=\"of1-deep-dive-longform-related of1-section\">\n  <h2 data-slot=\"related.title\">Go deeper</h2>\n  <div class=\"of1-dd-related-list\">\n    <a class=\"of1-dd-related-item\" data-slot=\"related-1\" href=\"#\">\n      <span>Related resource</span>\n      <span class=\"of1-dd-related-arrow\">&rarr;</span>\n    </a>\n    <a class=\"of1-dd-related-item\" data-slot=\"related-2\" href=\"#\">\n      <span>Related resource</span>\n      <span class=\"of1-dd-related-arrow\">&rarr;</span>\n    </a>\n    <a class=\"of1-dd-related-item\" data-slot=\"related-3\" href=\"#\">\n      <span>Related resource</span>\n      <span class=\"of1-dd-related-arrow\">&rarr;</span>\n    </a>\n  </div>\n  <div class=\"of1-dd-final-cta\">\n    <a class=\"of1-cta of1-cta-primary\" data-slot=\"cta.final\" href=\"#\">Get started</a>\n  </div>\n</section>\n</main>\n"
+    },
+    {
+      "name": "of1-deep-dive-timeline",
+      "intent": "deep-dive",
+      "description": "Vertical numbered timeline walking through how a product/process works, plus recent milestones list.",
+      "minItems": 3,
+      "maxItems": 5,
+      "stylesheet": "/styles/of1-deep-dive-timeline.css",
+      "slots": [
+        {
+          "key": "hero.eyebrow",
+          "type": "text",
+          "instruction": "Small label above title, e.g. 'Deep dive', 2-3 words"
+        },
+        {
+          "key": "hero.title",
+          "type": "text",
+          "instruction": "Headline naming the topic, <=8 words"
+        },
+        {
+          "key": "hero.subtitle",
+          "type": "text",
+          "instruction": "1-sentence framing of what this explains"
+        },
+        {
+          "key": "hero.cta-primary",
+          "type": "link",
+          "instruction": "Primary CTA to the product page"
+        },
+        {
+          "key": "intro.body",
+          "type": "text",
+          "instruction": "2-3 sentence intro paragraph, sets up the step-by-step explanation"
+        },
+        {
+          "key": "steps.title",
+          "type": "text",
+          "instruction": "Section heading, e.g. 'How it works, step by step'"
+        },
+        {
+          "key": "item-1.title",
+          "type": "text",
+          "instruction": "Step name, <=5 words"
+        },
+        {
+          "key": "item-1.body",
+          "type": "text",
+          "instruction": "1-2 sentence step description"
+        },
+        {
+          "key": "item-2.title",
+          "type": "text",
+          "instruction": "Step name, <=5 words"
+        },
+        {
+          "key": "item-2.body",
+          "type": "text",
+          "instruction": "1-2 sentence step description"
+        },
+        {
+          "key": "item-3.title",
+          "type": "text",
+          "instruction": "Step name, <=5 words"
+        },
+        {
+          "key": "item-3.body",
+          "type": "text",
+          "instruction": "1-2 sentence step description"
+        },
+        {
+          "key": "item-4.title",
+          "type": "text",
+          "instruction": "Step name, <=5 words"
+        },
+        {
+          "key": "item-4.body",
+          "type": "text",
+          "instruction": "1-2 sentence step description"
+        },
+        {
+          "key": "item-5.title",
+          "type": "text",
+          "instruction": "Step name, <=5 words"
+        },
+        {
+          "key": "item-5.body",
+          "type": "text",
+          "instruction": "1-2 sentence step description"
+        },
+        {
+          "key": "milestones.title",
+          "type": "text",
+          "instruction": "Section heading, e.g. 'Recent milestones'"
+        },
+        {
+          "key": "milestone-1.date",
+          "type": "text",
+          "instruction": "Date, e.g. 'Jun 30, 2026'"
+        },
+        {
+          "key": "milestone-1.category",
+          "type": "text",
+          "instruction": "Category tag, 1-2 words"
+        },
+        {
+          "key": "milestone-1.link",
+          "type": "link",
+          "instruction": "Milestone title and link"
+        },
+        {
+          "key": "milestone-2.date",
+          "type": "text",
+          "instruction": "Date, e.g. 'Jun 30, 2026'"
+        },
+        {
+          "key": "milestone-2.category",
+          "type": "text",
+          "instruction": "Category tag, 1-2 words"
+        },
+        {
+          "key": "milestone-2.link",
+          "type": "link",
+          "instruction": "Milestone title and link"
+        },
+        {
+          "key": "milestone-3.date",
+          "type": "text",
+          "instruction": "Date, e.g. 'Jun 30, 2026'"
+        },
+        {
+          "key": "milestone-3.category",
+          "type": "text",
+          "instruction": "Category tag, 1-2 words"
+        },
+        {
+          "key": "milestone-3.link",
+          "type": "link",
+          "instruction": "Milestone title and link"
+        },
+        {
+          "key": "cta.title",
+          "type": "text",
+          "instruction": "Closing headline, <=6 words"
+        },
+        {
+          "key": "cta.link",
+          "type": "link",
+          "instruction": "Closing call-to-action link and label"
+        }
+      ],
+      "htmlContent": "<main>\n<section class=\"of1-deep-dive-timeline-hero of1-hero\">\n  <div class=\"of1-hero-grid\">\n    <p class=\"of1-eyebrow\" data-slot=\"hero.eyebrow\">Deep dive</p>\n    <h1 data-slot=\"hero.title\">The story behind Claude Science</h1>\n    <p data-slot=\"hero.subtitle\">A customizable research workbench built for the tools scientists already use.</p>\n    <a class=\"of1-cta of1-cta-primary\" data-slot=\"hero.cta-primary\" href=\"#\">Explore Claude Science</a>\n  </div>\n</section>\n\n<section class=\"of1-deep-dive-timeline-intro of1-section\">\n  <p data-slot=\"intro.body\">Introductory paragraph framing the topic.</p>\n</section>\n\n<section class=\"of1-deep-dive-timeline-steps of1-section\">\n  <h2 data-slot=\"steps.title\">How it works, step by step</h2>\n  <ol class=\"of1-dd-timeline\">\n    <li class=\"of1-dd-timeline-step\" data-card=\"1\">\n      <div class=\"of1-dd-timeline-marker\">1</div>\n      <div class=\"of1-dd-timeline-content\">\n        <span class=\"of1-dd-timeline-tag\" data-slot=\"item-1.title\">Step name</span>\n        <p data-slot=\"item-1.body\">Step description.</p>\n      </div>\n    </li>\n    <li class=\"of1-dd-timeline-step\" data-card=\"2\">\n      <div class=\"of1-dd-timeline-marker\">2</div>\n      <div class=\"of1-dd-timeline-content\">\n        <span class=\"of1-dd-timeline-tag\" data-slot=\"item-2.title\">Step name</span>\n        <p data-slot=\"item-2.body\">Step description.</p>\n      </div>\n    </li>\n    <li class=\"of1-dd-timeline-step\" data-card=\"3\">\n      <div class=\"of1-dd-timeline-marker\">3</div>\n      <div class=\"of1-dd-timeline-content\">\n        <span class=\"of1-dd-timeline-tag\" data-slot=\"item-3.title\">Step name</span>\n        <p data-slot=\"item-3.body\">Step description.</p>\n      </div>\n    </li>\n    <li class=\"of1-dd-timeline-step\" data-card=\"4\">\n      <div class=\"of1-dd-timeline-marker\">4</div>\n      <div class=\"of1-dd-timeline-content\">\n        <span class=\"of1-dd-timeline-tag\" data-slot=\"item-4.title\">Step name</span>\n        <p data-slot=\"item-4.body\">Step description.</p>\n      </div>\n    </li>\n    <li class=\"of1-dd-timeline-step\" data-card=\"5\">\n      <div class=\"of1-dd-timeline-marker\">5</div>\n      <div class=\"of1-dd-timeline-content\">\n        <span class=\"of1-dd-timeline-tag\" data-slot=\"item-5.title\">Step name</span>\n        <p data-slot=\"item-5.body\">Step description.</p>\n      </div>\n    </li>\n  </ol>\n</section>\n\n<section class=\"of1-deep-dive-timeline-milestones of1-section\">\n  <h2 data-slot=\"milestones.title\">Recent milestones</h2>\n  <div class=\"of1-dd-milestone-list\">\n    <article class=\"of1-dd-milestone-row\">\n      <span class=\"of1-dd-milestone-date\" data-slot=\"milestone-1.date\">Date</span>\n      <span class=\"of1-dd-milestone-category\" data-slot=\"milestone-1.category\">Category</span>\n      <a class=\"of1-dd-milestone-title\" data-slot=\"milestone-1.link\" href=\"#\">Milestone title</a>\n    </article>\n    <article class=\"of1-dd-milestone-row\">\n      <span class=\"of1-dd-milestone-date\" data-slot=\"milestone-2.date\">Date</span>\n      <span class=\"of1-dd-milestone-category\" data-slot=\"milestone-2.category\">Category</span>\n      <a class=\"of1-dd-milestone-title\" data-slot=\"milestone-2.link\" href=\"#\">Milestone title</a>\n    </article>\n    <article class=\"of1-dd-milestone-row\">\n      <span class=\"of1-dd-milestone-date\" data-slot=\"milestone-3.date\">Date</span>\n      <span class=\"of1-dd-milestone-category\" data-slot=\"milestone-3.category\">Category</span>\n      <a class=\"of1-dd-milestone-title\" data-slot=\"milestone-3.link\" href=\"#\">Milestone title</a>\n    </article>\n  </div>\n</section>\n\n<section class=\"of1-deep-dive-timeline-cta of1-section\">\n  <h2 data-slot=\"cta.title\">Ready to see it in action</h2>\n  <a class=\"of1-cta of1-cta-primary\" data-slot=\"cta.link\" href=\"#\">Get started</a>\n</section>\n</main>\n"
+    },
+    {
+      "name": "of1-discovery-by-category",
+      "intent": "discovery",
+      "description": "Tabbed browsing by audience category (developers, knowledge work, research, enterprise) plus a team overview grid.",
+      "minItems": 5,
+      "maxItems": 5,
+      "stylesheet": "/styles/of1-discovery-by-category.css",
+      "slots": [
+        {
+          "key": "hero.eyebrow",
+          "type": "text",
+          "instruction": "Short label, 2-4 words, e.g. 'Browse by category'"
+        },
+        {
+          "key": "hero.title",
+          "type": "text",
+          "instruction": "Headline, <=8 words"
+        },
+        {
+          "key": "hero.subtitle",
+          "type": "text",
+          "instruction": "1-2 sentence framing of the categories"
+        },
+        {
+          "key": "hero.cta-primary",
+          "type": "link",
+          "instruction": "Primary CTA, e.g. 'Try Claude'"
+        },
+        {
+          "key": "tab-1.label",
+          "type": "text",
+          "instruction": "Tab label, 1-2 words"
+        },
+        {
+          "key": "tab-2.label",
+          "type": "text",
+          "instruction": "Tab label, 1-2 words"
+        },
+        {
+          "key": "tab-3.label",
+          "type": "text",
+          "instruction": "Tab label, 1-2 words"
+        },
+        {
+          "key": "tab-4.label",
+          "type": "text",
+          "instruction": "Tab label, 1-2 words"
+        },
+        {
+          "key": "tab-1.item-1.image",
+          "type": "image",
+          "instruction": "Card image for tab 1, item 1"
+        },
+        {
+          "key": "tab-1.item-1.title",
+          "type": "text",
+          "instruction": "Item name"
+        },
+        {
+          "key": "tab-1.item-1.body",
+          "type": "text",
+          "instruction": "1-sentence description"
+        },
+        {
+          "key": "tab-1.item-1.cta",
+          "type": "link",
+          "instruction": "Link to the item"
+        },
+        {
+          "key": "tab-1.item-2.image",
+          "type": "image",
+          "instruction": "Card image for tab 1, item 2"
+        },
+        {
+          "key": "tab-1.item-2.title",
+          "type": "text",
+          "instruction": "Item name"
+        },
+        {
+          "key": "tab-1.item-2.body",
+          "type": "text",
+          "instruction": "1-sentence description"
+        },
+        {
+          "key": "tab-1.item-2.cta",
+          "type": "link",
+          "instruction": "Link to the item"
+        },
+        {
+          "key": "tab-2.item-1.image",
+          "type": "image",
+          "instruction": "Card image for tab 2, item 1"
+        },
+        {
+          "key": "tab-2.item-1.title",
+          "type": "text",
+          "instruction": "Item name"
+        },
+        {
+          "key": "tab-2.item-1.body",
+          "type": "text",
+          "instruction": "1-sentence description"
+        },
+        {
+          "key": "tab-2.item-1.cta",
+          "type": "link",
+          "instruction": "Link to the item"
+        },
+        {
+          "key": "tab-2.item-2.image",
+          "type": "image",
+          "instruction": "Card image for tab 2, item 2"
+        },
+        {
+          "key": "tab-2.item-2.title",
+          "type": "text",
+          "instruction": "Item name"
+        },
+        {
+          "key": "tab-2.item-2.body",
+          "type": "text",
+          "instruction": "1-sentence description"
+        },
+        {
+          "key": "tab-2.item-2.cta",
+          "type": "link",
+          "instruction": "Link to the item"
+        },
+        {
+          "key": "tab-3.item-1.image",
+          "type": "image",
+          "instruction": "Card image for tab 3, item 1"
+        },
+        {
+          "key": "tab-3.item-1.title",
+          "type": "text",
+          "instruction": "Item name"
+        },
+        {
+          "key": "tab-3.item-1.body",
+          "type": "text",
+          "instruction": "1-sentence description"
+        },
+        {
+          "key": "tab-3.item-1.cta",
+          "type": "link",
+          "instruction": "Link to the item"
+        },
+        {
+          "key": "tab-3.item-2.image",
+          "type": "image",
+          "instruction": "Card image for tab 3, item 2"
+        },
+        {
+          "key": "tab-3.item-2.title",
+          "type": "text",
+          "instruction": "Item name"
+        },
+        {
+          "key": "tab-3.item-2.body",
+          "type": "text",
+          "instruction": "1-sentence description"
+        },
+        {
+          "key": "tab-3.item-2.cta",
+          "type": "link",
+          "instruction": "Link to the item"
+        },
+        {
+          "key": "tab-4.item-1.image",
+          "type": "image",
+          "instruction": "Card image for tab 4, item 1"
+        },
+        {
+          "key": "tab-4.item-1.title",
+          "type": "text",
+          "instruction": "Item name"
+        },
+        {
+          "key": "tab-4.item-1.body",
+          "type": "text",
+          "instruction": "1-sentence description"
+        },
+        {
+          "key": "tab-4.item-1.cta",
+          "type": "link",
+          "instruction": "Link to the item"
+        },
+        {
+          "key": "tab-4.item-2.image",
+          "type": "image",
+          "instruction": "Card image for tab 4, item 2"
+        },
+        {
+          "key": "tab-4.item-2.title",
+          "type": "text",
+          "instruction": "Item name"
+        },
+        {
+          "key": "tab-4.item-2.body",
+          "type": "text",
+          "instruction": "1-sentence description"
+        },
+        {
+          "key": "tab-4.item-2.cta",
+          "type": "link",
+          "instruction": "Link to the item"
+        },
+        {
+          "key": "teams.title",
+          "type": "text",
+          "instruction": "Section title, <=6 words"
+        },
+        {
+          "key": "item-1.title",
+          "type": "text",
+          "instruction": "Team or category name"
+        },
+        {
+          "key": "item-1.body",
+          "type": "text",
+          "instruction": "1-sentence description of the team's mission"
+        },
+        {
+          "key": "item-2.title",
+          "type": "text",
+          "instruction": "Team or category name"
+        },
+        {
+          "key": "item-2.body",
+          "type": "text",
+          "instruction": "1-sentence description of the team's mission"
+        },
+        {
+          "key": "item-3.title",
+          "type": "text",
+          "instruction": "Team or category name"
+        },
+        {
+          "key": "item-3.body",
+          "type": "text",
+          "instruction": "1-sentence description of the team's mission"
+        },
+        {
+          "key": "item-4.title",
+          "type": "text",
+          "instruction": "Team or category name"
+        },
+        {
+          "key": "item-4.body",
+          "type": "text",
+          "instruction": "1-sentence description of the team's mission"
+        },
+        {
+          "key": "item-5.title",
+          "type": "text",
+          "instruction": "Team or category name"
+        },
+        {
+          "key": "item-5.body",
+          "type": "text",
+          "instruction": "1-sentence description of the team's mission"
+        },
+        {
+          "key": "cta.title",
+          "type": "text",
+          "instruction": "Closing CTA headline, <=8 words"
+        },
+        {
+          "key": "cta.link",
+          "type": "link",
+          "instruction": "Closing CTA link"
+        }
+      ],
+      "htmlContent": "<main>\n<section class=\"of1-discovery-by-category-hero of1-hero\">\n  <p class=\"of1-eyebrow\" data-slot=\"hero.eyebrow\">Browse by category</p>\n  <h1 data-slot=\"hero.title\">Find your way into Claude</h1>\n  <p class=\"of1-discovery-by-category-hero-subtitle\" data-slot=\"hero.subtitle\">Whether you write code, run research, or lead a team, there's a Claude product built for it.</p>\n  <a class=\"of1-cta of1-cta-primary\" data-slot=\"hero.cta-primary\" href=\"#\">Try Claude</a>\n</section>\n\n<section class=\"of1-discovery-by-category-tabs of1-section\">\n  <div class=\"of1-discovery-by-category-tablist\" role=\"tablist\">\n    <button class=\"of1-discovery-by-category-tab of1-discovery-by-category-tab--active\" data-tab=\"1\" role=\"tab\" aria-selected=\"true\" data-slot=\"tab-1.label\">Developers</button>\n    <button class=\"of1-discovery-by-category-tab\" data-tab=\"2\" role=\"tab\" aria-selected=\"false\" data-slot=\"tab-2.label\">Knowledge work</button>\n    <button class=\"of1-discovery-by-category-tab\" data-tab=\"3\" role=\"tab\" aria-selected=\"false\" data-slot=\"tab-3.label\">Research</button>\n    <button class=\"of1-discovery-by-category-tab\" data-tab=\"4\" role=\"tab\" aria-selected=\"false\" data-slot=\"tab-4.label\">Enterprise</button>\n  </div>\n\n  <div class=\"of1-discovery-by-category-panel of1-discovery-by-category-panel--active\" data-panel=\"1\">\n    <div class=\"of1-discovery-by-category-panel-grid\">\n      <article class=\"of1-discovery-by-category-card\">\n        <img data-slot=\"tab-1.item-1.image\" src=\"\" alt=\"\">\n        <h3 data-slot=\"tab-1.item-1.title\">Item</h3>\n        <p data-slot=\"tab-1.item-1.body\">Description</p>\n        <a data-slot=\"tab-1.item-1.cta\" href=\"#\">Learn more</a>\n      </article>\n      <article class=\"of1-discovery-by-category-card\">\n        <img data-slot=\"tab-1.item-2.image\" src=\"\" alt=\"\">\n        <h3 data-slot=\"tab-1.item-2.title\">Item</h3>\n        <p data-slot=\"tab-1.item-2.body\">Description</p>\n        <a data-slot=\"tab-1.item-2.cta\" href=\"#\">Learn more</a>\n      </article>\n    </div>\n  </div>\n  <div class=\"of1-discovery-by-category-panel\" data-panel=\"2\" hidden>\n    <div class=\"of1-discovery-by-category-panel-grid\">\n      <article class=\"of1-discovery-by-category-card\">\n        <img data-slot=\"tab-2.item-1.image\" src=\"\" alt=\"\">\n        <h3 data-slot=\"tab-2.item-1.title\">Item</h3>\n        <p data-slot=\"tab-2.item-1.body\">Description</p>\n        <a data-slot=\"tab-2.item-1.cta\" href=\"#\">Learn more</a>\n      </article>\n      <article class=\"of1-discovery-by-category-card\">\n        <img data-slot=\"tab-2.item-2.image\" src=\"\" alt=\"\">\n        <h3 data-slot=\"tab-2.item-2.title\">Item</h3>\n        <p data-slot=\"tab-2.item-2.body\">Description</p>\n        <a data-slot=\"tab-2.item-2.cta\" href=\"#\">Learn more</a>\n      </article>\n    </div>\n  </div>\n  <div class=\"of1-discovery-by-category-panel\" data-panel=\"3\" hidden>\n    <div class=\"of1-discovery-by-category-panel-grid\">\n      <article class=\"of1-discovery-by-category-card\">\n        <img data-slot=\"tab-3.item-1.image\" src=\"\" alt=\"\">\n        <h3 data-slot=\"tab-3.item-1.title\">Item</h3>\n        <p data-slot=\"tab-3.item-1.body\">Description</p>\n        <a data-slot=\"tab-3.item-1.cta\" href=\"#\">Learn more</a>\n      </article>\n      <article class=\"of1-discovery-by-category-card\">\n        <img data-slot=\"tab-3.item-2.image\" src=\"\" alt=\"\">\n        <h3 data-slot=\"tab-3.item-2.title\">Item</h3>\n        <p data-slot=\"tab-3.item-2.body\">Description</p>\n        <a data-slot=\"tab-3.item-2.cta\" href=\"#\">Learn more</a>\n      </article>\n    </div>\n  </div>\n  <div class=\"of1-discovery-by-category-panel\" data-panel=\"4\" hidden>\n    <div class=\"of1-discovery-by-category-panel-grid\">\n      <article class=\"of1-discovery-by-category-card\">\n        <img data-slot=\"tab-4.item-1.image\" src=\"\" alt=\"\">\n        <h3 data-slot=\"tab-4.item-1.title\">Item</h3>\n        <p data-slot=\"tab-4.item-1.body\">Description</p>\n        <a data-slot=\"tab-4.item-1.cta\" href=\"#\">Learn more</a>\n      </article>\n      <article class=\"of1-discovery-by-category-card\">\n        <img data-slot=\"tab-4.item-2.image\" src=\"\" alt=\"\">\n        <h3 data-slot=\"tab-4.item-2.title\">Item</h3>\n        <p data-slot=\"tab-4.item-2.body\">Description</p>\n        <a data-slot=\"tab-4.item-2.cta\" href=\"#\">Learn more</a>\n      </article>\n    </div>\n  </div>\n</section>\n\n<section class=\"of1-discovery-by-category-teams of1-section\">\n  <h2 class=\"of1-discovery-by-category-teams-title\" data-slot=\"teams.title\">Teams behind the research</h2>\n  <div class=\"of1-discovery-by-category-teams-grid\" data-grid-items>\n    <article data-card=\"1\">\n      <h3 data-slot=\"item-1.title\">Item</h3>\n      <p data-slot=\"item-1.body\">Description</p>\n    </article>\n    <article data-card=\"2\">\n      <h3 data-slot=\"item-2.title\">Item</h3>\n      <p data-slot=\"item-2.body\">Description</p>\n    </article>\n    <article data-card=\"3\">\n      <h3 data-slot=\"item-3.title\">Item</h3>\n      <p data-slot=\"item-3.body\">Description</p>\n    </article>\n    <article data-card=\"4\">\n      <h3 data-slot=\"item-4.title\">Item</h3>\n      <p data-slot=\"item-4.body\">Description</p>\n    </article>\n    <article data-card=\"5\">\n      <h3 data-slot=\"item-5.title\">Item</h3>\n      <p data-slot=\"item-5.body\">Description</p>\n    </article>\n  </div>\n</section>\n\n<section class=\"of1-discovery-by-category-cta of1-section\">\n  <div class=\"of1-discovery-by-category-cta-inner\">\n    <h2 data-slot=\"cta.title\">Not sure which category fits?</h2>\n    <a class=\"of1-discovery-by-category-cta-link\" data-slot=\"cta.link\" href=\"#\">Talk to our team</a>\n  </div>\n</section>\n\n<script>\n(function () {\n  var tabs = document.querySelectorAll('.of1-discovery-by-category-tab');\n  var panels = document.querySelectorAll('.of1-discovery-by-category-panel');\n  tabs.forEach(function (tab) {\n    tab.addEventListener('click', function () {\n      tabs.forEach(function (t) {\n        t.classList.remove('of1-discovery-by-category-tab--active');\n        t.setAttribute('aria-selected', 'false');\n      });\n      panels.forEach(function (p) {\n        p.classList.remove('of1-discovery-by-category-panel--active');\n        p.hidden = true;\n      });\n      tab.classList.add('of1-discovery-by-category-tab--active');\n      tab.setAttribute('aria-selected', 'true');\n      var panel = document.querySelector('.of1-discovery-by-category-panel[data-panel=\"' + tab.dataset.tab + '\"]');\n      if (panel) {\n        panel.classList.add('of1-discovery-by-category-panel--active');\n        panel.hidden = false;\n      }\n    });\n  });\n})();\n</script>\n</main>\n"
+    },
+    {
+      "name": "of1-discovery-curated-collections",
+      "intent": "discovery",
+      "description": "Stacked horizontal collection rows (3 items each) grouped by theme, with a pull quote and closing CTA.",
+      "minItems": 6,
+      "maxItems": 9,
+      "stylesheet": "/styles/of1-discovery-curated-collections.css",
+      "slots": [
+        {
+          "key": "hero.eyebrow",
+          "type": "text",
+          "instruction": "Short label, 2-4 words, e.g. 'Curated collections'"
+        },
+        {
+          "key": "hero.title",
+          "type": "text",
+          "instruction": "Headline, <=8 words"
+        },
+        {
+          "key": "hero.subtitle",
+          "type": "text",
+          "instruction": "1-2 sentence framing of the collections"
+        },
+        {
+          "key": "hero.cta-primary",
+          "type": "link",
+          "instruction": "Primary CTA, e.g. 'Try Claude'"
+        },
+        {
+          "key": "hero.image",
+          "type": "image",
+          "instruction": "Hero image"
+        },
+        {
+          "key": "collection-1.title",
+          "type": "text",
+          "instruction": "Collection name, <=5 words"
+        },
+        {
+          "key": "collection-1.body",
+          "type": "text",
+          "instruction": "1-sentence description of the collection"
+        },
+        {
+          "key": "collection-1.item-1.image",
+          "type": "image",
+          "instruction": "Item image"
+        },
+        {
+          "key": "collection-1.item-1.title",
+          "type": "text",
+          "instruction": "Item name"
+        },
+        {
+          "key": "collection-1.item-1.cta",
+          "type": "link",
+          "instruction": "Link to the item"
+        },
+        {
+          "key": "collection-1.item-2.image",
+          "type": "image",
+          "instruction": "Item image"
+        },
+        {
+          "key": "collection-1.item-2.title",
+          "type": "text",
+          "instruction": "Item name"
+        },
+        {
+          "key": "collection-1.item-2.cta",
+          "type": "link",
+          "instruction": "Link to the item"
+        },
+        {
+          "key": "collection-1.item-3.image",
+          "type": "image",
+          "instruction": "Item image"
+        },
+        {
+          "key": "collection-1.item-3.title",
+          "type": "text",
+          "instruction": "Item name"
+        },
+        {
+          "key": "collection-1.item-3.cta",
+          "type": "link",
+          "instruction": "Link to the item"
+        },
+        {
+          "key": "collection-2.title",
+          "type": "text",
+          "instruction": "Collection name, <=5 words"
+        },
+        {
+          "key": "collection-2.body",
+          "type": "text",
+          "instruction": "1-sentence description of the collection"
+        },
+        {
+          "key": "collection-2.item-1.image",
+          "type": "image",
+          "instruction": "Item image"
+        },
+        {
+          "key": "collection-2.item-1.title",
+          "type": "text",
+          "instruction": "Item name"
+        },
+        {
+          "key": "collection-2.item-1.cta",
+          "type": "link",
+          "instruction": "Link to the item"
+        },
+        {
+          "key": "collection-2.item-2.image",
+          "type": "image",
+          "instruction": "Item image"
+        },
+        {
+          "key": "collection-2.item-2.title",
+          "type": "text",
+          "instruction": "Item name"
+        },
+        {
+          "key": "collection-2.item-2.cta",
+          "type": "link",
+          "instruction": "Link to the item"
+        },
+        {
+          "key": "collection-2.item-3.image",
+          "type": "image",
+          "instruction": "Item image"
+        },
+        {
+          "key": "collection-2.item-3.title",
+          "type": "text",
+          "instruction": "Item name"
+        },
+        {
+          "key": "collection-2.item-3.cta",
+          "type": "link",
+          "instruction": "Link to the item"
+        },
+        {
+          "key": "collection-3.title",
+          "type": "text",
+          "instruction": "Collection name, <=5 words"
+        },
+        {
+          "key": "collection-3.body",
+          "type": "text",
+          "instruction": "1-sentence description of the collection"
+        },
+        {
+          "key": "collection-3.item-1.image",
+          "type": "image",
+          "instruction": "Item image"
+        },
+        {
+          "key": "collection-3.item-1.title",
+          "type": "text",
+          "instruction": "Item name"
+        },
+        {
+          "key": "collection-3.item-1.cta",
+          "type": "link",
+          "instruction": "Link to the item"
+        },
+        {
+          "key": "collection-3.item-2.image",
+          "type": "image",
+          "instruction": "Item image"
+        },
+        {
+          "key": "collection-3.item-2.title",
+          "type": "text",
+          "instruction": "Item name"
+        },
+        {
+          "key": "collection-3.item-2.cta",
+          "type": "link",
+          "instruction": "Link to the item"
+        },
+        {
+          "key": "collection-3.item-3.image",
+          "type": "image",
+          "instruction": "Item image"
+        },
+        {
+          "key": "collection-3.item-3.title",
+          "type": "text",
+          "instruction": "Item name"
+        },
+        {
+          "key": "collection-3.item-3.cta",
+          "type": "link",
+          "instruction": "Link to the item"
+        },
+        {
+          "key": "quote.text",
+          "type": "text",
+          "instruction": "Short pull quote, <=25 words"
+        },
+        {
+          "key": "quote.author",
+          "type": "text",
+          "instruction": "Quote attribution"
+        },
+        {
+          "key": "cta.title",
+          "type": "text",
+          "instruction": "Closing CTA headline, <=8 words"
+        },
+        {
+          "key": "cta.link",
+          "type": "link",
+          "instruction": "Closing CTA link"
+        }
+      ],
+      "htmlContent": "<main>\n<section class=\"of1-discovery-curated-collections-hero of1-hero\">\n  <div class=\"of1-discovery-curated-collections-hero-grid\">\n    <div>\n      <p class=\"of1-eyebrow\" data-slot=\"hero.eyebrow\">Curated collections</p>\n      <h1 data-slot=\"hero.title\">Anthropic, organized for you</h1>\n      <p class=\"of1-discovery-curated-collections-hero-subtitle\" data-slot=\"hero.subtitle\">We've grouped products, research, and releases into collections so you can go deep on what matters to you.</p>\n      <a class=\"of1-cta of1-cta-primary\" data-slot=\"hero.cta-primary\" href=\"#\">Try Claude</a>\n    </div>\n    <div class=\"of1-hero-media\"><img data-slot=\"hero.image\" src=\"\" alt=\"\"></div>\n  </div>\n</section>\n\n<section class=\"of1-discovery-curated-collections-row of1-section\" data-collection=\"1\">\n  <div class=\"of1-discovery-curated-collections-row-header\">\n    <h2 data-slot=\"collection-1.title\">Collection title</h2>\n    <p data-slot=\"collection-1.body\">Collection description</p>\n  </div>\n  <div class=\"of1-discovery-curated-collections-row-items\">\n    <a class=\"of1-discovery-curated-collections-item\" data-slot=\"collection-1.item-1.cta\" href=\"#\">\n      <img data-slot=\"collection-1.item-1.image\" src=\"\" alt=\"\">\n      <span data-slot=\"collection-1.item-1.title\">Item</span>\n    </a>\n    <a class=\"of1-discovery-curated-collections-item\" data-slot=\"collection-1.item-2.cta\" href=\"#\">\n      <img data-slot=\"collection-1.item-2.image\" src=\"\" alt=\"\">\n      <span data-slot=\"collection-1.item-2.title\">Item</span>\n    </a>\n    <a class=\"of1-discovery-curated-collections-item\" data-slot=\"collection-1.item-3.cta\" href=\"#\">\n      <img data-slot=\"collection-1.item-3.image\" src=\"\" alt=\"\">\n      <span data-slot=\"collection-1.item-3.title\">Item</span>\n    </a>\n  </div>\n</section>\n\n<section class=\"of1-discovery-curated-collections-row of1-section\" data-collection=\"2\">\n  <div class=\"of1-discovery-curated-collections-row-header\">\n    <h2 data-slot=\"collection-2.title\">Collection title</h2>\n    <p data-slot=\"collection-2.body\">Collection description</p>\n  </div>\n  <div class=\"of1-discovery-curated-collections-row-items\">\n    <a class=\"of1-discovery-curated-collections-item\" data-slot=\"collection-2.item-1.cta\" href=\"#\">\n      <img data-slot=\"collection-2.item-1.image\" src=\"\" alt=\"\">\n      <span data-slot=\"collection-2.item-1.title\">Item</span>\n    </a>\n    <a class=\"of1-discovery-curated-collections-item\" data-slot=\"collection-2.item-2.cta\" href=\"#\">\n      <img data-slot=\"collection-2.item-2.image\" src=\"\" alt=\"\">\n      <span data-slot=\"collection-2.item-2.title\">Item</span>\n    </a>\n    <a class=\"of1-discovery-curated-collections-item\" data-slot=\"collection-2.item-3.cta\" href=\"#\">\n      <img data-slot=\"collection-2.item-3.image\" src=\"\" alt=\"\">\n      <span data-slot=\"collection-2.item-3.title\">Item</span>\n    </a>\n  </div>\n</section>\n\n<section class=\"of1-discovery-curated-collections-row of1-section\" data-collection=\"3\">\n  <div class=\"of1-discovery-curated-collections-row-header\">\n    <h2 data-slot=\"collection-3.title\">Collection title</h2>\n    <p data-slot=\"collection-3.body\">Collection description</p>\n  </div>\n  <div class=\"of1-discovery-curated-collections-row-items\">\n    <a class=\"of1-discovery-curated-collections-item\" data-slot=\"collection-3.item-1.cta\" href=\"#\">\n      <img data-slot=\"collection-3.item-1.image\" src=\"\" alt=\"\">\n      <span data-slot=\"collection-3.item-1.title\">Item</span>\n    </a>\n    <a class=\"of1-discovery-curated-collections-item\" data-slot=\"collection-3.item-2.cta\" href=\"#\">\n      <img data-slot=\"collection-3.item-2.image\" src=\"\" alt=\"\">\n      <span data-slot=\"collection-3.item-2.title\">Item</span>\n    </a>\n    <a class=\"of1-discovery-curated-collections-item\" data-slot=\"collection-3.item-3.cta\" href=\"#\">\n      <img data-slot=\"collection-3.item-3.image\" src=\"\" alt=\"\">\n      <span data-slot=\"collection-3.item-3.title\">Item</span>\n    </a>\n  </div>\n</section>\n\n<section class=\"of1-discovery-curated-collections-quote of1-section\">\n  <blockquote>\n    <p data-slot=\"quote.text\">Quote text</p>\n    <cite data-slot=\"quote.author\">Author</cite>\n  </blockquote>\n</section>\n\n<section class=\"of1-discovery-curated-collections-cta of1-section\">\n  <div class=\"of1-discovery-curated-collections-cta-inner\">\n    <h2 data-slot=\"cta.title\">Keep exploring</h2>\n    <a class=\"of1-discovery-curated-collections-cta-link\" data-slot=\"cta.link\" href=\"#\">See all collections</a>\n  </div>\n</section>\n</main>\n"
+    },
+    {
+      "name": "of1-discovery-gallery",
+      "intent": "discovery",
+      "description": "Filterable card gallery with chips, a spotlight feature, and a closing CTA \u2014 for browsing everything at once.",
+      "minItems": 4,
+      "maxItems": 9,
+      "stylesheet": "/styles/of1-discovery-gallery.css",
+      "slots": [
+        {
+          "key": "hero.eyebrow",
+          "type": "text",
+          "instruction": "Short label, 2-4 words, e.g. 'Explore Claude'"
+        },
+        {
+          "key": "hero.title",
+          "type": "text",
+          "instruction": "Headline, <=8 words"
+        },
+        {
+          "key": "hero.subtitle",
+          "type": "text",
+          "instruction": "1-2 sentence framing of what the visitor can browse"
+        },
+        {
+          "key": "hero.cta-primary",
+          "type": "link",
+          "instruction": "Primary CTA, e.g. 'Try Claude'"
+        },
+        {
+          "key": "chip-1",
+          "type": "text",
+          "instruction": "Filter label, 1-2 words, e.g. 'All'"
+        },
+        {
+          "key": "chip-2",
+          "type": "text",
+          "instruction": "Filter label, 1-2 words"
+        },
+        {
+          "key": "chip-3",
+          "type": "text",
+          "instruction": "Filter label, 1-2 words"
+        },
+        {
+          "key": "chip-4",
+          "type": "text",
+          "instruction": "Filter label, 1-2 words"
+        },
+        {
+          "key": "chip-5",
+          "type": "text",
+          "instruction": "Filter label, 1-2 words"
+        },
+        {
+          "key": "item-1.image",
+          "type": "image",
+          "instruction": "Card image"
+        },
+        {
+          "key": "item-1.category",
+          "type": "text",
+          "instruction": "Short category label"
+        },
+        {
+          "key": "item-1.title",
+          "type": "text",
+          "instruction": "Item name, <=6 words"
+        },
+        {
+          "key": "item-1.body",
+          "type": "text",
+          "instruction": "1-sentence description"
+        },
+        {
+          "key": "item-1.cta",
+          "type": "link",
+          "instruction": "Link to the item"
+        },
+        {
+          "key": "item-2.image",
+          "type": "image",
+          "instruction": "Card image"
+        },
+        {
+          "key": "item-2.category",
+          "type": "text",
+          "instruction": "Short category label"
+        },
+        {
+          "key": "item-2.title",
+          "type": "text",
+          "instruction": "Item name, <=6 words"
+        },
+        {
+          "key": "item-2.body",
+          "type": "text",
+          "instruction": "1-sentence description"
+        },
+        {
+          "key": "item-2.cta",
+          "type": "link",
+          "instruction": "Link to the item"
+        },
+        {
+          "key": "item-3.image",
+          "type": "image",
+          "instruction": "Card image"
+        },
+        {
+          "key": "item-3.category",
+          "type": "text",
+          "instruction": "Short category label"
+        },
+        {
+          "key": "item-3.title",
+          "type": "text",
+          "instruction": "Item name, <=6 words"
+        },
+        {
+          "key": "item-3.body",
+          "type": "text",
+          "instruction": "1-sentence description"
+        },
+        {
+          "key": "item-3.cta",
+          "type": "link",
+          "instruction": "Link to the item"
+        },
+        {
+          "key": "item-4.image",
+          "type": "image",
+          "instruction": "Card image"
+        },
+        {
+          "key": "item-4.category",
+          "type": "text",
+          "instruction": "Short category label"
+        },
+        {
+          "key": "item-4.title",
+          "type": "text",
+          "instruction": "Item name, <=6 words"
+        },
+        {
+          "key": "item-4.body",
+          "type": "text",
+          "instruction": "1-sentence description"
+        },
+        {
+          "key": "item-4.cta",
+          "type": "link",
+          "instruction": "Link to the item"
+        },
+        {
+          "key": "item-5.image",
+          "type": "image",
+          "instruction": "Card image"
+        },
+        {
+          "key": "item-5.category",
+          "type": "text",
+          "instruction": "Short category label"
+        },
+        {
+          "key": "item-5.title",
+          "type": "text",
+          "instruction": "Item name, <=6 words"
+        },
+        {
+          "key": "item-5.body",
+          "type": "text",
+          "instruction": "1-sentence description"
+        },
+        {
+          "key": "item-5.cta",
+          "type": "link",
+          "instruction": "Link to the item"
+        },
+        {
+          "key": "item-6.image",
+          "type": "image",
+          "instruction": "Card image"
+        },
+        {
+          "key": "item-6.category",
+          "type": "text",
+          "instruction": "Short category label"
+        },
+        {
+          "key": "item-6.title",
+          "type": "text",
+          "instruction": "Item name, <=6 words"
+        },
+        {
+          "key": "item-6.body",
+          "type": "text",
+          "instruction": "1-sentence description"
+        },
+        {
+          "key": "item-6.cta",
+          "type": "link",
+          "instruction": "Link to the item"
+        },
+        {
+          "key": "item-7.image",
+          "type": "image",
+          "instruction": "Card image"
+        },
+        {
+          "key": "item-7.category",
+          "type": "text",
+          "instruction": "Short category label"
+        },
+        {
+          "key": "item-7.title",
+          "type": "text",
+          "instruction": "Item name, <=6 words"
+        },
+        {
+          "key": "item-7.body",
+          "type": "text",
+          "instruction": "1-sentence description"
+        },
+        {
+          "key": "item-7.cta",
+          "type": "link",
+          "instruction": "Link to the item"
+        },
+        {
+          "key": "item-8.image",
+          "type": "image",
+          "instruction": "Card image"
+        },
+        {
+          "key": "item-8.category",
+          "type": "text",
+          "instruction": "Short category label"
+        },
+        {
+          "key": "item-8.title",
+          "type": "text",
+          "instruction": "Item name, <=6 words"
+        },
+        {
+          "key": "item-8.body",
+          "type": "text",
+          "instruction": "1-sentence description"
+        },
+        {
+          "key": "item-8.cta",
+          "type": "link",
+          "instruction": "Link to the item"
+        },
+        {
+          "key": "item-9.image",
+          "type": "image",
+          "instruction": "Card image"
+        },
+        {
+          "key": "item-9.category",
+          "type": "text",
+          "instruction": "Short category label"
+        },
+        {
+          "key": "item-9.title",
+          "type": "text",
+          "instruction": "Item name, <=6 words"
+        },
+        {
+          "key": "item-9.body",
+          "type": "text",
+          "instruction": "1-sentence description"
+        },
+        {
+          "key": "item-9.cta",
+          "type": "link",
+          "instruction": "Link to the item"
+        },
+        {
+          "key": "spotlight.image",
+          "type": "image",
+          "instruction": "Large feature image"
+        },
+        {
+          "key": "spotlight.eyebrow",
+          "type": "text",
+          "instruction": "Short label, e.g. 'Featured'"
+        },
+        {
+          "key": "spotlight.title",
+          "type": "text",
+          "instruction": "Feature headline, <=8 words"
+        },
+        {
+          "key": "spotlight.body",
+          "type": "text",
+          "instruction": "1-2 sentence description"
+        },
+        {
+          "key": "spotlight.cta",
+          "type": "link",
+          "instruction": "Link to the featured item"
+        },
+        {
+          "key": "cta.title",
+          "type": "text",
+          "instruction": "Closing CTA headline, <=8 words"
+        },
+        {
+          "key": "cta.link",
+          "type": "link",
+          "instruction": "Closing CTA link"
+        }
+      ],
+      "htmlContent": "<main>\n<section class=\"of1-discovery-gallery-hero of1-hero\">\n  <p class=\"of1-eyebrow\" data-slot=\"hero.eyebrow\">Explore Claude</p>\n  <h1 data-slot=\"hero.title\">See what Claude can do</h1>\n  <p class=\"of1-discovery-gallery-hero-subtitle\" data-slot=\"hero.subtitle\">Browse products, research, and releases across Anthropic, then dive into whatever catches your eye.</p>\n  <a class=\"of1-cta of1-cta-primary\" data-slot=\"hero.cta-primary\" href=\"#\">Try Claude</a>\n</section>\n\n<section class=\"of1-discovery-gallery-grid of1-section\">\n  <div class=\"of1-discovery-gallery-chips\">\n    <span class=\"of1-discovery-gallery-chip of1-discovery-gallery-chip--active\" data-slot=\"chip-1\">All</span>\n    <span class=\"of1-discovery-gallery-chip\" data-slot=\"chip-2\">Products</span>\n    <span class=\"of1-discovery-gallery-chip\" data-slot=\"chip-3\">Research</span>\n    <span class=\"of1-discovery-gallery-chip\" data-slot=\"chip-4\">Models</span>\n    <span class=\"of1-discovery-gallery-chip\" data-slot=\"chip-5\">News</span>\n  </div>\n  <div class=\"of1-discovery-gallery-items\" data-grid-items>\n    <article class=\"of1-discovery-gallery-card\" data-card=\"1\">\n      <img data-slot=\"item-1.image\" src=\"\" alt=\"\">\n      <span class=\"of1-discovery-gallery-card-category\" data-slot=\"item-1.category\">Category</span>\n      <h3 data-slot=\"item-1.title\">Item</h3>\n      <p data-slot=\"item-1.body\">Description</p>\n      <a class=\"of1-discovery-gallery-card-link\" data-slot=\"item-1.cta\" href=\"#\">Learn more</a>\n    </article>\n    <article class=\"of1-discovery-gallery-card\" data-card=\"2\">\n      <img data-slot=\"item-2.image\" src=\"\" alt=\"\">\n      <span class=\"of1-discovery-gallery-card-category\" data-slot=\"item-2.category\">Category</span>\n      <h3 data-slot=\"item-2.title\">Item</h3>\n      <p data-slot=\"item-2.body\">Description</p>\n      <a class=\"of1-discovery-gallery-card-link\" data-slot=\"item-2.cta\" href=\"#\">Learn more</a>\n    </article>\n    <article class=\"of1-discovery-gallery-card\" data-card=\"3\">\n      <img data-slot=\"item-3.image\" src=\"\" alt=\"\">\n      <span class=\"of1-discovery-gallery-card-category\" data-slot=\"item-3.category\">Category</span>\n      <h3 data-slot=\"item-3.title\">Item</h3>\n      <p data-slot=\"item-3.body\">Description</p>\n      <a class=\"of1-discovery-gallery-card-link\" data-slot=\"item-3.cta\" href=\"#\">Learn more</a>\n    </article>\n    <article class=\"of1-discovery-gallery-card\" data-card=\"4\">\n      <img data-slot=\"item-4.image\" src=\"\" alt=\"\">\n      <span class=\"of1-discovery-gallery-card-category\" data-slot=\"item-4.category\">Category</span>\n      <h3 data-slot=\"item-4.title\">Item</h3>\n      <p data-slot=\"item-4.body\">Description</p>\n      <a class=\"of1-discovery-gallery-card-link\" data-slot=\"item-4.cta\" href=\"#\">Learn more</a>\n    </article>\n    <article class=\"of1-discovery-gallery-card\" data-card=\"5\">\n      <img data-slot=\"item-5.image\" src=\"\" alt=\"\">\n      <span class=\"of1-discovery-gallery-card-category\" data-slot=\"item-5.category\">Category</span>\n      <h3 data-slot=\"item-5.title\">Item</h3>\n      <p data-slot=\"item-5.body\">Description</p>\n      <a class=\"of1-discovery-gallery-card-link\" data-slot=\"item-5.cta\" href=\"#\">Learn more</a>\n    </article>\n    <article class=\"of1-discovery-gallery-card\" data-card=\"6\">\n      <img data-slot=\"item-6.image\" src=\"\" alt=\"\">\n      <span class=\"of1-discovery-gallery-card-category\" data-slot=\"item-6.category\">Category</span>\n      <h3 data-slot=\"item-6.title\">Item</h3>\n      <p data-slot=\"item-6.body\">Description</p>\n      <a class=\"of1-discovery-gallery-card-link\" data-slot=\"item-6.cta\" href=\"#\">Learn more</a>\n    </article>\n    <article class=\"of1-discovery-gallery-card\" data-card=\"7\">\n      <img data-slot=\"item-7.image\" src=\"\" alt=\"\">\n      <span class=\"of1-discovery-gallery-card-category\" data-slot=\"item-7.category\">Category</span>\n      <h3 data-slot=\"item-7.title\">Item</h3>\n      <p data-slot=\"item-7.body\">Description</p>\n      <a class=\"of1-discovery-gallery-card-link\" data-slot=\"item-7.cta\" href=\"#\">Learn more</a>\n    </article>\n    <article class=\"of1-discovery-gallery-card\" data-card=\"8\">\n      <img data-slot=\"item-8.image\" src=\"\" alt=\"\">\n      <span class=\"of1-discovery-gallery-card-category\" data-slot=\"item-8.category\">Category</span>\n      <h3 data-slot=\"item-8.title\">Item</h3>\n      <p data-slot=\"item-8.body\">Description</p>\n      <a class=\"of1-discovery-gallery-card-link\" data-slot=\"item-8.cta\" href=\"#\">Learn more</a>\n    </article>\n    <article class=\"of1-discovery-gallery-card\" data-card=\"9\">\n      <img data-slot=\"item-9.image\" src=\"\" alt=\"\">\n      <span class=\"of1-discovery-gallery-card-category\" data-slot=\"item-9.category\">Category</span>\n      <h3 data-slot=\"item-9.title\">Item</h3>\n      <p data-slot=\"item-9.body\">Description</p>\n      <a class=\"of1-discovery-gallery-card-link\" data-slot=\"item-9.cta\" href=\"#\">Learn more</a>\n    </article>\n  </div>\n</section>\n\n<section class=\"of1-discovery-gallery-spotlight of1-section\">\n  <div class=\"of1-discovery-gallery-spotlight-grid\">\n    <div class=\"of1-discovery-gallery-spotlight-media\"><img data-slot=\"spotlight.image\" src=\"\" alt=\"\"></div>\n    <div class=\"of1-discovery-gallery-spotlight-content\">\n      <span class=\"of1-discovery-gallery-spotlight-eyebrow\" data-slot=\"spotlight.eyebrow\">Featured</span>\n      <h2 data-slot=\"spotlight.title\">Spotlight title</h2>\n      <p data-slot=\"spotlight.body\">Spotlight description</p>\n      <a class=\"of1-discovery-gallery-spotlight-link\" data-slot=\"spotlight.cta\" href=\"#\">Read more</a>\n    </div>\n  </div>\n</section>\n\n<section class=\"of1-discovery-gallery-cta of1-section\">\n  <div class=\"of1-discovery-gallery-cta-inner\">\n    <h2 data-slot=\"cta.title\">See everything Claude offers</h2>\n    <a class=\"of1-discovery-gallery-cta-link\" data-slot=\"cta.link\" href=\"#\">Explore all products</a>\n  </div>\n</section>\n</main>\n"
+    },
+    {
+      "name": "of1-recommendation-curated-bundle",
+      "intent": "recommendation",
+      "description": "Persona-framed product bundle with tabbed detail views and a supporting grid of included items.",
+      "minItems": 2,
+      "maxItems": 3,
+      "stylesheet": "/styles/of1-recommendation-curated-bundle.css",
+      "slots": [
+        {
+          "key": "hero.eyebrow",
+          "type": "text",
+          "instruction": "Short label, 2-4 words"
+        },
+        {
+          "key": "hero.title",
+          "type": "text",
+          "instruction": "Headline, <=10 words"
+        },
+        {
+          "key": "hero.subtitle",
+          "type": "text",
+          "instruction": "1-2 sentence framing of the bundle"
+        },
+        {
+          "key": "hero.cta-primary",
+          "type": "link",
+          "instruction": "Primary CTA for the bundle"
+        },
+        {
+          "key": "persona.tag",
+          "type": "text",
+          "instruction": "Short label, e.g. 'Built for'"
+        },
+        {
+          "key": "persona.title",
+          "type": "text",
+          "instruction": "Persona description, <=8 words"
+        },
+        {
+          "key": "persona.body",
+          "type": "text",
+          "instruction": "1-sentence persona context"
+        },
+        {
+          "key": "tab-1.label",
+          "type": "text",
+          "instruction": "Tab label, 1-2 words"
+        },
+        {
+          "key": "tab-1.image",
+          "type": "image",
+          "instruction": "Product image for this tab"
+        },
+        {
+          "key": "tab-1.title",
+          "type": "text",
+          "instruction": "Product name"
+        },
+        {
+          "key": "tab-1.body",
+          "type": "text",
+          "instruction": "1-2 sentence description"
+        },
+        {
+          "key": "tab-1.cta",
+          "type": "link",
+          "instruction": "Link to product page"
+        },
+        {
+          "key": "tab-2.label",
+          "type": "text",
+          "instruction": "Tab label, 1-2 words"
+        },
+        {
+          "key": "tab-2.image",
+          "type": "image",
+          "instruction": "Product image for this tab"
+        },
+        {
+          "key": "tab-2.title",
+          "type": "text",
+          "instruction": "Product name"
+        },
+        {
+          "key": "tab-2.body",
+          "type": "text",
+          "instruction": "1-2 sentence description"
+        },
+        {
+          "key": "tab-2.cta",
+          "type": "link",
+          "instruction": "Link to product page"
+        },
+        {
+          "key": "tab-3.label",
+          "type": "text",
+          "instruction": "Tab label, 1-2 words"
+        },
+        {
+          "key": "tab-3.image",
+          "type": "image",
+          "instruction": "Product image for this tab"
+        },
+        {
+          "key": "tab-3.title",
+          "type": "text",
+          "instruction": "Product name"
+        },
+        {
+          "key": "tab-3.body",
+          "type": "text",
+          "instruction": "1-2 sentence description"
+        },
+        {
+          "key": "tab-3.cta",
+          "type": "link",
+          "instruction": "Link to product page"
+        },
+        {
+          "key": "item-1.image",
+          "type": "image",
+          "instruction": "Included product image"
+        },
+        {
+          "key": "item-1.title",
+          "type": "text",
+          "instruction": "Included product name"
+        },
+        {
+          "key": "item-1.body",
+          "type": "text",
+          "instruction": "1-sentence description"
+        },
+        {
+          "key": "item-1.cta",
+          "type": "link",
+          "instruction": "Link to product page"
+        },
+        {
+          "key": "item-2.image",
+          "type": "image",
+          "instruction": "Included product image"
+        },
+        {
+          "key": "item-2.title",
+          "type": "text",
+          "instruction": "Included product name"
+        },
+        {
+          "key": "item-2.body",
+          "type": "text",
+          "instruction": "1-sentence description"
+        },
+        {
+          "key": "item-2.cta",
+          "type": "link",
+          "instruction": "Link to product page"
+        },
+        {
+          "key": "item-3.image",
+          "type": "image",
+          "instruction": "Included product image"
+        },
+        {
+          "key": "item-3.title",
+          "type": "text",
+          "instruction": "Included product name"
+        },
+        {
+          "key": "item-3.body",
+          "type": "text",
+          "instruction": "1-sentence description"
+        },
+        {
+          "key": "item-3.cta",
+          "type": "link",
+          "instruction": "Link to product page"
+        },
+        {
+          "key": "cta.title",
+          "type": "text",
+          "instruction": "Closing CTA headline, <=8 words"
+        },
+        {
+          "key": "cta.link",
+          "type": "link",
+          "instruction": "Contact/sales CTA"
+        }
+      ],
+      "htmlContent": "<main>\n<section class=\"of1-recommendation-curated-bundle-hero of1-hero\">\n  <p class=\"of1-eyebrow\" data-slot=\"hero.eyebrow\">Curated for your workflow</p>\n  <h1 data-slot=\"hero.title\">A bundle built around how your team works</h1>\n  <p class=\"of1-recommendation-curated-bundle-hero-subtitle\" data-slot=\"hero.subtitle\">Instead of one product, most teams like yours end up combining a few. Here's the bundle we'd recommend.</p>\n  <a class=\"of1-cta of1-cta-primary\" data-slot=\"hero.cta-primary\" href=\"#\">Get the bundle</a>\n</section>\n\n<section class=\"of1-recommendation-curated-bundle-persona of1-section\">\n  <div class=\"of1-recommendation-curated-bundle-persona-inner\">\n    <span class=\"of1-recommendation-curated-bundle-persona-tag\" data-slot=\"persona.tag\">Built for</span>\n    <h2 data-slot=\"persona.title\">Engineering leaders scaling AI adoption</h2>\n    <p data-slot=\"persona.body\">You're evaluating tools to accelerate delivery while keeping security, compliance, and cost under control.</p>\n  </div>\n</section>\n\n<section class=\"of1-recommendation-curated-bundle-tabs of1-section\">\n  <div class=\"of1-recommendation-curated-bundle-tablist\" role=\"tablist\">\n    <button class=\"of1-recommendation-curated-bundle-tab of1-recommendation-curated-bundle-tab--active\" data-tab-btn=\"1\" role=\"tab\" aria-selected=\"true\" data-slot=\"tab-1.label\">Core pick</button>\n    <button class=\"of1-recommendation-curated-bundle-tab\" data-tab-btn=\"2\" role=\"tab\" aria-selected=\"false\" data-slot=\"tab-2.label\">Pairs well with</button>\n    <button class=\"of1-recommendation-curated-bundle-tab\" data-tab-btn=\"3\" role=\"tab\" aria-selected=\"false\" data-slot=\"tab-3.label\">For scale</button>\n  </div>\n  <div class=\"of1-recommendation-curated-bundle-panel of1-recommendation-curated-bundle-panel--active\" data-tab-panel=\"1\">\n    <img class=\"of1-recommendation-curated-bundle-panel-image\" data-slot=\"tab-1.image\" src=\"\" alt=\"\">\n    <div class=\"of1-recommendation-curated-bundle-panel-content\">\n      <h3 data-slot=\"tab-1.title\">Claude Code for Enterprise</h3>\n      <p data-slot=\"tab-1.body\">Agentic coding with centralized management: contribution dashboards, SSO/SCIM, and audit trails for large engineering orgs.</p>\n      <a class=\"of1-cta of1-cta-secondary\" data-slot=\"tab-1.cta\" href=\"#\">Learn more</a>\n    </div>\n  </div>\n  <div class=\"of1-recommendation-curated-bundle-panel\" data-tab-panel=\"2\" hidden>\n    <img class=\"of1-recommendation-curated-bundle-panel-image\" data-slot=\"tab-2.image\" src=\"\" alt=\"\">\n    <div class=\"of1-recommendation-curated-bundle-panel-content\">\n      <h3 data-slot=\"tab-2.title\">Claude Platform (API)</h3>\n      <p data-slot=\"tab-2.body\">Bring Claude's model family into custom internal tools with prompt caching, MCP connectors, and structured outputs.</p>\n      <a class=\"of1-cta of1-cta-secondary\" data-slot=\"tab-2.cta\" href=\"#\">Learn more</a>\n    </div>\n  </div>\n  <div class=\"of1-recommendation-curated-bundle-panel\" data-tab-panel=\"3\" hidden>\n    <img class=\"of1-recommendation-curated-bundle-panel-image\" data-slot=\"tab-3.image\" src=\"\" alt=\"\">\n    <div class=\"of1-recommendation-curated-bundle-panel-content\">\n      <h3 data-slot=\"tab-3.title\">Claude Security</h3>\n      <p data-slot=\"tab-3.body\">Adversarially-verified vulnerability scanning with reviewable patches, built for Enterprise rollouts.</p>\n      <a class=\"of1-cta of1-cta-secondary\" data-slot=\"tab-3.cta\" href=\"#\">Learn more</a>\n    </div>\n  </div>\n</section>\n\n<section class=\"of1-recommendation-curated-bundle-grid of1-section\">\n  <h2 class=\"of1-recommendation-curated-bundle-grid-title\">What's included</h2>\n  <div class=\"of1-recommendation-curated-bundle-grid-items\" data-grid-items>\n    <article class=\"of1-recommendation-curated-bundle-card\" data-card=\"1\">\n      <img data-slot=\"item-1.image\" src=\"\" alt=\"\">\n      <h3 data-slot=\"item-1.title\">Item</h3>\n      <p data-slot=\"item-1.body\">Description</p>\n      <a data-slot=\"item-1.cta\" href=\"#\">Learn more</a>\n    </article>\n    <article class=\"of1-recommendation-curated-bundle-card\" data-card=\"2\">\n      <img data-slot=\"item-2.image\" src=\"\" alt=\"\">\n      <h3 data-slot=\"item-2.title\">Item</h3>\n      <p data-slot=\"item-2.body\">Description</p>\n      <a data-slot=\"item-2.cta\" href=\"#\">Learn more</a>\n    </article>\n    <article class=\"of1-recommendation-curated-bundle-card\" data-card=\"3\">\n      <img data-slot=\"item-3.image\" src=\"\" alt=\"\">\n      <h3 data-slot=\"item-3.title\">Item</h3>\n      <p data-slot=\"item-3.body\">Description</p>\n      <a data-slot=\"item-3.cta\" href=\"#\">Learn more</a>\n    </article>\n  </div>\n</section>\n\n<section class=\"of1-recommendation-curated-bundle-cta of1-section\">\n  <div class=\"of1-recommendation-curated-bundle-cta-inner\">\n    <h2 data-slot=\"cta.title\">Ready to roll this out to your team?</h2>\n    <a class=\"of1-cta of1-cta-primary\" data-slot=\"cta.link\" href=\"#\">Contact sales</a>\n  </div>\n</section>\n\n<script>\n(function () {\n  var btns = document.querySelectorAll('[data-tab-btn]');\n  btns.forEach(function (btn) {\n    btn.addEventListener('click', function () {\n      var id = btn.getAttribute('data-tab-btn');\n      document.querySelectorAll('[data-tab-btn]').forEach(function (b) {\n        b.classList.remove('of1-recommendation-curated-bundle-tab--active');\n        b.setAttribute('aria-selected', 'false');\n      });\n      document.querySelectorAll('[data-tab-panel]').forEach(function (p) {\n        p.hidden = true;\n        p.classList.remove('of1-recommendation-curated-bundle-panel--active');\n      });\n      btn.classList.add('of1-recommendation-curated-bundle-tab--active');\n      btn.setAttribute('aria-selected', 'true');\n      var panel = document.querySelector('[data-tab-panel=\"' + id + '\"]');\n      panel.hidden = false;\n      panel.classList.add('of1-recommendation-curated-bundle-panel--active');\n    });\n  });\n})();\n</script>\n</main>\n"
+    },
+    {
+      "name": "of1-recommendation-hero-pick",
+      "intent": "recommendation",
+      "description": "Single best-match hero pick with a large product spotlight, reasons it fits, and a grid of alternatives.",
+      "minItems": 2,
+      "maxItems": 4,
+      "stylesheet": "/styles/of1-recommendation-hero-pick.css",
+      "slots": [
+        {
+          "key": "hero.eyebrow",
+          "type": "text",
+          "instruction": "Short label, 2-4 words, e.g. 'Personalized recommendation'"
+        },
+        {
+          "key": "hero.title",
+          "type": "text",
+          "instruction": "Headline, <=8 words"
+        },
+        {
+          "key": "hero.subtitle",
+          "type": "text",
+          "instruction": "1-2 sentence framing of the recommendation"
+        },
+        {
+          "key": "hero.cta-primary",
+          "type": "link",
+          "instruction": "Primary CTA to the top pick"
+        },
+        {
+          "key": "pick.image",
+          "type": "image",
+          "instruction": "Hero image of the recommended product"
+        },
+        {
+          "key": "pick.badge",
+          "type": "text",
+          "instruction": "Short badge, e.g. 'Best match for you'"
+        },
+        {
+          "key": "pick.title",
+          "type": "text",
+          "instruction": "Recommended product name"
+        },
+        {
+          "key": "pick.description",
+          "type": "text",
+          "instruction": "2-3 sentence description of the recommended product"
+        },
+        {
+          "key": "pick.feature-1",
+          "type": "text",
+          "instruction": "Short feature bullet"
+        },
+        {
+          "key": "pick.feature-2",
+          "type": "text",
+          "instruction": "Short feature bullet"
+        },
+        {
+          "key": "pick.feature-3",
+          "type": "text",
+          "instruction": "Short feature bullet"
+        },
+        {
+          "key": "pick.price",
+          "type": "text",
+          "instruction": "Price line, e.g. 'From $17/month'"
+        },
+        {
+          "key": "pick.cta",
+          "type": "link",
+          "instruction": "CTA to the recommended product page"
+        },
+        {
+          "key": "reason-1.title",
+          "type": "text",
+          "instruction": "Short reason title, <=5 words"
+        },
+        {
+          "key": "reason-1.body",
+          "type": "text",
+          "instruction": "1-sentence explanation"
+        },
+        {
+          "key": "reason-2.title",
+          "type": "text",
+          "instruction": "Short reason title, <=5 words"
+        },
+        {
+          "key": "reason-2.body",
+          "type": "text",
+          "instruction": "1-sentence explanation"
+        },
+        {
+          "key": "reason-3.title",
+          "type": "text",
+          "instruction": "Short reason title, <=5 words"
+        },
+        {
+          "key": "reason-3.body",
+          "type": "text",
+          "instruction": "1-sentence explanation"
+        },
+        {
+          "key": "item-1.image",
+          "type": "image",
+          "instruction": "Alternative product image"
+        },
+        {
+          "key": "item-1.title",
+          "type": "text",
+          "instruction": "Alternative product name"
+        },
+        {
+          "key": "item-1.body",
+          "type": "text",
+          "instruction": "1-sentence description"
+        },
+        {
+          "key": "item-1.cta",
+          "type": "link",
+          "instruction": "Link to the alternative product"
+        },
+        {
+          "key": "item-2.image",
+          "type": "image",
+          "instruction": "Alternative product image"
+        },
+        {
+          "key": "item-2.title",
+          "type": "text",
+          "instruction": "Alternative product name"
+        },
+        {
+          "key": "item-2.body",
+          "type": "text",
+          "instruction": "1-sentence description"
+        },
+        {
+          "key": "item-2.cta",
+          "type": "link",
+          "instruction": "Link to the alternative product"
+        },
+        {
+          "key": "item-3.image",
+          "type": "image",
+          "instruction": "Alternative product image"
+        },
+        {
+          "key": "item-3.title",
+          "type": "text",
+          "instruction": "Alternative product name"
+        },
+        {
+          "key": "item-3.body",
+          "type": "text",
+          "instruction": "1-sentence description"
+        },
+        {
+          "key": "item-3.cta",
+          "type": "link",
+          "instruction": "Link to the alternative product"
+        },
+        {
+          "key": "item-4.image",
+          "type": "image",
+          "instruction": "Alternative product image"
+        },
+        {
+          "key": "item-4.title",
+          "type": "text",
+          "instruction": "Alternative product name"
+        },
+        {
+          "key": "item-4.body",
+          "type": "text",
+          "instruction": "1-sentence description"
+        },
+        {
+          "key": "item-4.cta",
+          "type": "link",
+          "instruction": "Link to the alternative product"
+        },
+        {
+          "key": "cta.title",
+          "type": "text",
+          "instruction": "Closing CTA headline, <=8 words"
+        },
+        {
+          "key": "cta.link",
+          "type": "link",
+          "instruction": "Contact/sales CTA"
+        }
+      ],
+      "htmlContent": "<main>\n<section class=\"of1-recommendation-hero-pick-hero of1-hero\">\n  <p class=\"of1-eyebrow\" data-slot=\"hero.eyebrow\">Personalized recommendation</p>\n  <h1 data-slot=\"hero.title\">The right Claude for your team</h1>\n  <p class=\"of1-recommendation-hero-pick-hero-subtitle\" data-slot=\"hero.subtitle\">Based on what you're trying to do, here's the product we'd point you to first \u2014 plus a few strong alternatives.</p>\n  <a class=\"of1-cta of1-cta-primary\" data-slot=\"hero.cta-primary\" href=\"#\">Try Claude</a>\n</section>\n\n<section class=\"of1-recommendation-hero-pick-top of1-section\">\n  <div class=\"of1-recommendation-hero-pick-top-grid\">\n    <div class=\"of1-recommendation-hero-pick-top-media\">\n      <img data-slot=\"pick.image\" src=\"\" alt=\"\">\n    </div>\n    <div class=\"of1-recommendation-hero-pick-top-content\">\n      <span class=\"of1-recommendation-hero-pick-badge\" data-slot=\"pick.badge\">Best match for you</span>\n      <h2 data-slot=\"pick.title\">Claude Code</h2>\n      <p class=\"of1-recommendation-hero-pick-top-desc\" data-slot=\"pick.description\">An agentic coding assistant that works directly in your codebase \u2014 terminal, IDE, web, and GitHub \u2014 reading, writing, and shipping pull requests end-to-end.</p>\n      <ul class=\"of1-recommendation-hero-pick-features\">\n        <li data-slot=\"pick.feature-1\">Agentic multi-file editing and codebase understanding</li>\n        <li data-slot=\"pick.feature-2\">IDE extensions for VS Code and JetBrains</li>\n        <li data-slot=\"pick.feature-3\">Issue-to-PR workflows with automated tests</li>\n      </ul>\n      <div class=\"of1-recommendation-hero-pick-top-footer\">\n        <span class=\"of1-recommendation-hero-pick-price\" data-slot=\"pick.price\">From $17/month</span>\n        <a class=\"of1-cta of1-cta-primary\" data-slot=\"pick.cta\" href=\"#\">Get Claude Code</a>\n      </div>\n    </div>\n  </div>\n</section>\n\n<section class=\"of1-recommendation-hero-pick-reasons of1-section\">\n  <h2 class=\"of1-recommendation-hero-pick-reasons-title\">Why this fits</h2>\n  <div class=\"of1-recommendation-hero-pick-reasons-grid\">\n    <div class=\"of1-recommendation-hero-pick-reason-card\">\n      <h3 data-slot=\"reason-1.title\">Built for your toolchain</h3>\n      <p data-slot=\"reason-1.body\">Works in the terminal, IDE, and CI pipeline you already use \u2014 no new workflow to learn.</p>\n    </div>\n    <div class=\"of1-recommendation-hero-pick-reason-card\">\n      <h3 data-slot=\"reason-2.title\">Scales with your team</h3>\n      <p data-slot=\"reason-2.body\">Start solo and move to Team or Enterprise plans as adoption grows, with admin controls built in.</p>\n    </div>\n    <div class=\"of1-recommendation-hero-pick-reason-card\">\n      <h3 data-slot=\"reason-3.title\">Proven at companies like yours</h3>\n      <p data-slot=\"reason-3.body\">Teams at Rakuten, Notion, and Shopify use it daily to cut time-to-ship.</p>\n    </div>\n  </div>\n</section>\n\n<section class=\"of1-recommendation-hero-pick-alternatives of1-section\">\n  <h2 class=\"of1-recommendation-hero-pick-alternatives-title\">Also worth a look</h2>\n  <div class=\"of1-recommendation-hero-pick-alternatives-grid\" data-grid-items>\n    <article class=\"of1-recommendation-hero-pick-alt-card\" data-card=\"1\">\n      <img data-slot=\"item-1.image\" src=\"\" alt=\"\">\n      <h3 data-slot=\"item-1.title\">Item</h3>\n      <p data-slot=\"item-1.body\">Description</p>\n      <a class=\"of1-recommendation-hero-pick-alt-link\" data-slot=\"item-1.cta\" href=\"#\">Learn more</a>\n    </article>\n    <article class=\"of1-recommendation-hero-pick-alt-card\" data-card=\"2\">\n      <img data-slot=\"item-2.image\" src=\"\" alt=\"\">\n      <h3 data-slot=\"item-2.title\">Item</h3>\n      <p data-slot=\"item-2.body\">Description</p>\n      <a class=\"of1-recommendation-hero-pick-alt-link\" data-slot=\"item-2.cta\" href=\"#\">Learn more</a>\n    </article>\n    <article class=\"of1-recommendation-hero-pick-alt-card\" data-card=\"3\">\n      <img data-slot=\"item-3.image\" src=\"\" alt=\"\">\n      <h3 data-slot=\"item-3.title\">Item</h3>\n      <p data-slot=\"item-3.body\">Description</p>\n      <a class=\"of1-recommendation-hero-pick-alt-link\" data-slot=\"item-3.cta\" href=\"#\">Learn more</a>\n    </article>\n    <article class=\"of1-recommendation-hero-pick-alt-card\" data-card=\"4\">\n      <img data-slot=\"item-4.image\" src=\"\" alt=\"\">\n      <h3 data-slot=\"item-4.title\">Item</h3>\n      <p data-slot=\"item-4.body\">Description</p>\n      <a class=\"of1-recommendation-hero-pick-alt-link\" data-slot=\"item-4.cta\" href=\"#\">Learn more</a>\n    </article>\n  </div>\n</section>\n\n<section class=\"of1-recommendation-hero-pick-cta of1-section\">\n  <div class=\"of1-recommendation-hero-pick-cta-inner\">\n    <h2 data-slot=\"cta.title\">Not sure yet? Talk to our team.</h2>\n    <a class=\"of1-recommendation-hero-pick-cta-link\" data-slot=\"cta.link\" href=\"#\">Contact sales</a>\n  </div>\n</section>\n</main>\n"
+    },
+    {
+      "name": "of1-recommendation-ranked-list",
+      "intent": "recommendation",
+      "description": "Numbered ranked list of 3-5 recommended products in row form, best fit first, with a supporting quote.",
+      "minItems": 3,
+      "maxItems": 5,
+      "stylesheet": "/styles/of1-recommendation-ranked-list.css",
+      "slots": [
+        {
+          "key": "hero.eyebrow",
+          "type": "text",
+          "instruction": "Short label, 2-4 words"
+        },
+        {
+          "key": "hero.title",
+          "type": "text",
+          "instruction": "Headline, <=8 words"
+        },
+        {
+          "key": "hero.subtitle",
+          "type": "text",
+          "instruction": "1-2 sentence framing of the ranking"
+        },
+        {
+          "key": "hero.cta-primary",
+          "type": "link",
+          "instruction": "CTA to view all products"
+        },
+        {
+          "key": "intro.body",
+          "type": "text",
+          "instruction": "1-sentence note on ranking methodology"
+        },
+        {
+          "key": "item-1.rank",
+          "type": "text",
+          "instruction": "Rank number, e.g. '1'"
+        },
+        {
+          "key": "item-1.image",
+          "type": "image",
+          "instruction": "Product image"
+        },
+        {
+          "key": "item-1.title",
+          "type": "text",
+          "instruction": "Product name"
+        },
+        {
+          "key": "item-1.body",
+          "type": "text",
+          "instruction": "1-sentence description"
+        },
+        {
+          "key": "item-1.price",
+          "type": "text",
+          "instruction": "Price line, e.g. '$20/mo'"
+        },
+        {
+          "key": "item-1.cta",
+          "type": "link",
+          "instruction": "Link to product page"
+        },
+        {
+          "key": "item-2.rank",
+          "type": "text",
+          "instruction": "Rank number, e.g. '2'"
+        },
+        {
+          "key": "item-2.image",
+          "type": "image",
+          "instruction": "Product image"
+        },
+        {
+          "key": "item-2.title",
+          "type": "text",
+          "instruction": "Product name"
+        },
+        {
+          "key": "item-2.body",
+          "type": "text",
+          "instruction": "1-sentence description"
+        },
+        {
+          "key": "item-2.price",
+          "type": "text",
+          "instruction": "Price line"
+        },
+        {
+          "key": "item-2.cta",
+          "type": "link",
+          "instruction": "Link to product page"
+        },
+        {
+          "key": "item-3.rank",
+          "type": "text",
+          "instruction": "Rank number, e.g. '3'"
+        },
+        {
+          "key": "item-3.image",
+          "type": "image",
+          "instruction": "Product image"
+        },
+        {
+          "key": "item-3.title",
+          "type": "text",
+          "instruction": "Product name"
+        },
+        {
+          "key": "item-3.body",
+          "type": "text",
+          "instruction": "1-sentence description"
+        },
+        {
+          "key": "item-3.price",
+          "type": "text",
+          "instruction": "Price line"
+        },
+        {
+          "key": "item-3.cta",
+          "type": "link",
+          "instruction": "Link to product page"
+        },
+        {
+          "key": "item-4.rank",
+          "type": "text",
+          "instruction": "Rank number, e.g. '4'"
+        },
+        {
+          "key": "item-4.image",
+          "type": "image",
+          "instruction": "Product image"
+        },
+        {
+          "key": "item-4.title",
+          "type": "text",
+          "instruction": "Product name"
+        },
+        {
+          "key": "item-4.body",
+          "type": "text",
+          "instruction": "1-sentence description"
+        },
+        {
+          "key": "item-4.price",
+          "type": "text",
+          "instruction": "Price line"
+        },
+        {
+          "key": "item-4.cta",
+          "type": "link",
+          "instruction": "Link to product page"
+        },
+        {
+          "key": "item-5.rank",
+          "type": "text",
+          "instruction": "Rank number, e.g. '5'"
+        },
+        {
+          "key": "item-5.image",
+          "type": "image",
+          "instruction": "Product image"
+        },
+        {
+          "key": "item-5.title",
+          "type": "text",
+          "instruction": "Product name"
+        },
+        {
+          "key": "item-5.body",
+          "type": "text",
+          "instruction": "1-sentence description"
+        },
+        {
+          "key": "item-5.price",
+          "type": "text",
+          "instruction": "Price line"
+        },
+        {
+          "key": "item-5.cta",
+          "type": "link",
+          "instruction": "Link to product page"
+        },
+        {
+          "key": "quote.body",
+          "type": "text",
+          "instruction": "Short customer quote, 1 sentence, wrapped in quotes"
+        },
+        {
+          "key": "quote.author",
+          "type": "text",
+          "instruction": "Name, role, company"
+        },
+        {
+          "key": "cta.title",
+          "type": "text",
+          "instruction": "Closing CTA headline, <=8 words"
+        },
+        {
+          "key": "cta.link",
+          "type": "link",
+          "instruction": "Contact/sales CTA"
+        }
+      ],
+      "htmlContent": "<main>\n<section class=\"of1-recommendation-ranked-list-hero of1-hero\">\n  <p class=\"of1-eyebrow\" data-slot=\"hero.eyebrow\">Top picks for you</p>\n  <h1 data-slot=\"hero.title\">Ranked for how you work</h1>\n  <p class=\"of1-recommendation-ranked-list-hero-subtitle\" data-slot=\"hero.subtitle\">We matched your priorities against the Claude product lineup. Here's the order we'd recommend, best fit first.</p>\n  <a class=\"of1-cta of1-cta-primary\" data-slot=\"hero.cta-primary\" href=\"#\">See all products</a>\n</section>\n\n<section class=\"of1-recommendation-ranked-list-intro of1-section\">\n  <p class=\"of1-recommendation-ranked-list-intro-text\" data-slot=\"intro.body\">Ranked by fit with your priorities, not popularity \u2014 swap products anytime as your needs change.</p>\n</section>\n\n<section class=\"of1-recommendation-ranked-list-rows of1-section\">\n  <div class=\"of1-recommendation-ranked-list-rows-wrap\" data-grid-items>\n    <article class=\"of1-recommendation-ranked-list-row\" data-card=\"1\">\n      <span class=\"of1-recommendation-ranked-list-rank\" data-slot=\"item-1.rank\">1</span>\n      <img class=\"of1-recommendation-ranked-list-row-image\" data-slot=\"item-1.image\" src=\"\" alt=\"\">\n      <div class=\"of1-recommendation-ranked-list-row-content\">\n        <h3 data-slot=\"item-1.title\">Item</h3>\n        <p data-slot=\"item-1.body\">Description</p>\n      </div>\n      <span class=\"of1-recommendation-ranked-list-row-price\" data-slot=\"item-1.price\">$0/mo</span>\n      <a class=\"of1-cta of1-cta-secondary\" data-slot=\"item-1.cta\" href=\"#\">View</a>\n    </article>\n    <article class=\"of1-recommendation-ranked-list-row\" data-card=\"2\">\n      <span class=\"of1-recommendation-ranked-list-rank\" data-slot=\"item-2.rank\">2</span>\n      <img class=\"of1-recommendation-ranked-list-row-image\" data-slot=\"item-2.image\" src=\"\" alt=\"\">\n      <div class=\"of1-recommendation-ranked-list-row-content\">\n        <h3 data-slot=\"item-2.title\">Item</h3>\n        <p data-slot=\"item-2.body\">Description</p>\n      </div>\n      <span class=\"of1-recommendation-ranked-list-row-price\" data-slot=\"item-2.price\">$0/mo</span>\n      <a class=\"of1-cta of1-cta-secondary\" data-slot=\"item-2.cta\" href=\"#\">View</a>\n    </article>\n    <article class=\"of1-recommendation-ranked-list-row\" data-card=\"3\">\n      <span class=\"of1-recommendation-ranked-list-rank\" data-slot=\"item-3.rank\">3</span>\n      <img class=\"of1-recommendation-ranked-list-row-image\" data-slot=\"item-3.image\" src=\"\" alt=\"\">\n      <div class=\"of1-recommendation-ranked-list-row-content\">\n        <h3 data-slot=\"item-3.title\">Item</h3>\n        <p data-slot=\"item-3.body\">Description</p>\n      </div>\n      <span class=\"of1-recommendation-ranked-list-row-price\" data-slot=\"item-3.price\">$0/mo</span>\n      <a class=\"of1-cta of1-cta-secondary\" data-slot=\"item-3.cta\" href=\"#\">View</a>\n    </article>\n    <article class=\"of1-recommendation-ranked-list-row\" data-card=\"4\">\n      <span class=\"of1-recommendation-ranked-list-rank\" data-slot=\"item-4.rank\">4</span>\n      <img class=\"of1-recommendation-ranked-list-row-image\" data-slot=\"item-4.image\" src=\"\" alt=\"\">\n      <div class=\"of1-recommendation-ranked-list-row-content\">\n        <h3 data-slot=\"item-4.title\">Item</h3>\n        <p data-slot=\"item-4.body\">Description</p>\n      </div>\n      <span class=\"of1-recommendation-ranked-list-row-price\" data-slot=\"item-4.price\">$0/mo</span>\n      <a class=\"of1-cta of1-cta-secondary\" data-slot=\"item-4.cta\" href=\"#\">View</a>\n    </article>\n    <article class=\"of1-recommendation-ranked-list-row\" data-card=\"5\">\n      <span class=\"of1-recommendation-ranked-list-rank\" data-slot=\"item-5.rank\">5</span>\n      <img class=\"of1-recommendation-ranked-list-row-image\" data-slot=\"item-5.image\" src=\"\" alt=\"\">\n      <div class=\"of1-recommendation-ranked-list-row-content\">\n        <h3 data-slot=\"item-5.title\">Item</h3>\n        <p data-slot=\"item-5.body\">Description</p>\n      </div>\n      <span class=\"of1-recommendation-ranked-list-row-price\" data-slot=\"item-5.price\">$0/mo</span>\n      <a class=\"of1-cta of1-cta-secondary\" data-slot=\"item-5.cta\" href=\"#\">View</a>\n    </article>\n  </div>\n</section>\n\n<section class=\"of1-recommendation-ranked-list-quote of1-section\">\n  <blockquote class=\"of1-recommendation-ranked-list-quote-text\" data-slot=\"quote.body\">\"Claude Code is moving our team up a level.\"</blockquote>\n  <p class=\"of1-recommendation-ranked-list-quote-author\" data-slot=\"quote.author\">Simon Last, Co-founder, Notion</p>\n</section>\n\n<section class=\"of1-recommendation-ranked-list-cta of1-section\">\n  <div class=\"of1-recommendation-ranked-list-cta-inner\">\n    <h2 data-slot=\"cta.title\">Still comparing options?</h2>\n    <a class=\"of1-cta of1-cta-primary\" data-slot=\"cta.link\" href=\"#\">Talk to sales</a>\n  </div>\n</section>\n</main>\n"
+    }
+  ]
+}

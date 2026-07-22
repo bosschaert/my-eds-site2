@@ -1,0 +1,733 @@
+{
+  "slug": "index",
+  "url": "https://anthropic.com/",
+  "renderedBy": "playwright",
+  "fetchedAt": "2026-07-17T11:52:16.236Z",
+  "finalUrl": "https://www.anthropic.com/",
+  "title": "Home \\ Anthropic",
+  "description": "Anthropic is an AI safety and research company that's working to build reliable, interpretable, and steerable AI systems.",
+  "og": {
+    "title": "Home \\ Anthropic",
+    "description": "Anthropic is an AI safety and research company that's working to build reliable, interpretable, and steerable AI systems.",
+    "image": "https://cdn.prod.website-files.com/67ce28cfec624e2b733f8a52/68309ab48369f7ad9b4a40e1_open-graph.jpg",
+    "type": "website"
+  },
+  "headings": [
+    {
+      "tag": "h1",
+      "text": "AI research and products that put safety at the frontierAI research and products that put safety at the frontier"
+    },
+    {
+      "tag": "h2",
+      "text": "Anthropic is built on hard questions."
+    },
+    {
+      "tag": "h2",
+      "text": "Latest releases"
+    },
+    {
+      "tag": "h3",
+      "text": "Redeploying Fable 5"
+    },
+    {
+      "tag": "h3",
+      "text": "Introducing Sonnet 5"
+    },
+    {
+      "tag": "h3",
+      "text": "Announcing Claude Science"
+    },
+    {
+      "tag": "h2",
+      "text": "At Anthropic, we build AI to serve humanity’s long-term well-being."
+    },
+    {
+      "tag": "h2",
+      "text": "‍"
+    },
+    {
+      "tag": "h3",
+      "text": "Core views on AI safety"
+    },
+    {
+      "tag": "h3",
+      "text": "Anthropic’s Responsible Scaling Policy"
+    },
+    {
+      "tag": "h3",
+      "text": "Anthropic Academy: Build and Learn with Claude"
+    },
+    {
+      "tag": "h3",
+      "text": "Anthropic’s Economic Index"
+    },
+    {
+      "tag": "h3",
+      "text": "Claude’s Constitution"
+    },
+    {
+      "tag": "h3",
+      "text": "Products"
+    },
+    {
+      "tag": "h3",
+      "text": "Models"
+    },
+    {
+      "tag": "h3",
+      "text": "Solutions"
+    },
+    {
+      "tag": "h3",
+      "text": "Claude Platform"
+    },
+    {
+      "tag": "h3",
+      "text": "Resources"
+    },
+    {
+      "tag": "h3",
+      "text": "Programs"
+    },
+    {
+      "tag": "h3",
+      "text": "Help and security"
+    },
+    {
+      "tag": "h3",
+      "text": "Company"
+    },
+    {
+      "tag": "h3",
+      "text": "Terms and policies"
+    }
+  ],
+  "body": [
+    "Research",
+    "Policy",
+    "Commitments InitiativesClaude's ConstitutionClaude CorpsPolicy on the AI ExponentialTransparencyResponsible Scaling PolicyTrust centerSecurity and compliance",
+    "Learn LearnAnthropic AcademyTutorialsUse casesEngineering at AnthropicDeveloper docsCompanyAboutCareersEvents",
+    "News",
+    "Try ClaudeTry ClaudeTry ClaudeLearn more about Claude ProductsClaudeClaude CodeClaude CoworkClaude DesignClaude ScienceClaude SecurityClaude PlatformPricingContact salesModelsMythosFableOpusSonnetHaikuLog inClaude.aiClaude Console",
+    "AI will have a vast impact on the world. Anthropic is a public benefit corporation dedicated to securing its benefits and mitigating its risks.",
+    "See how we’re taking on the hardest questions about AI across safety, governance, and economic and societal impacts.",
+    "The export controls on Fable 5 and Mythos 5 have been lifted. Fable 5 will be available starting tomorrow, Wednesday, July 1, to users globally.",
+    "DateJune 30, 2026",
+    "CategoryAnnouncements",
+    "Our most agentic Sonnet yet, with top tier intelligence for coding and everyday professional work.",
+    "DateJune 30, 2026",
+    "CategoryAnnouncements",
+    "Claude Science is a customizable app that integrates the tools and packages researchers most often use, produces auditable artifacts, and provides flexible access to computing resources.",
+    "DateJune 30, 2026",
+    "CategoryAnnouncements",
+    "Core views on AI safetyAnnouncements",
+    "Anthropic’s Responsible Scaling PolicyAlignment Science",
+    "Anthropic Academy: Build and Learn with ClaudeEducation",
+    "Anthropic’s Economic IndexEconomic Research",
+    "Claude’s ConstitutionAnnouncements",
+    "Claude",
+    "Claude Code",
+    "Claude Code for Enterprise",
+    "Claude Cowork",
+    "@Claude",
+    "Claude Design",
+    "Claude Science",
+    "Claude Security",
+    "Claude for Chrome",
+    "Claude for Slack",
+    "Claude for Microsoft 365",
+    "Skills",
+    "Download app",
+    "Pricing",
+    "Log in to Claude",
+    "Mythos",
+    "Fable",
+    "Opus",
+    "Sonnet",
+    "Haiku",
+    "AI agents",
+    "Code modernization",
+    "Coding",
+    "Customer support",
+    "Cybersecurity",
+    "Financial services",
+    "Government",
+    "Healthcare",
+    "Higher education",
+    "K-12 teachers",
+    "Legal",
+    "Life sciences",
+    "Nonprofits",
+    "Small business",
+    "Overview",
+    "Developer docs",
+    "Pricing",
+    "Ecosystem",
+    "Marketplace",
+    "Regional compliance",
+    "Claude on AWS",
+    "Google Cloud",
+    "Microsoft Foundry",
+    "Console login",
+    "Blog",
+    "Claude partner network",
+    "Community",
+    "Connectors",
+    "Courses",
+    "Customer stories",
+    "Engineering at Anthropic",
+    "Events",
+    "Plugins",
+    "Powered by Claude",
+    "Service partners",
+    "Tutorials",
+    "Use cases",
+    "Startups",
+    "Research Labs",
+    "Availability",
+    "Status",
+    "Support center",
+    "Anthropic",
+    "Careers",
+    "Policy",
+    "Economic Futures",
+    "Research",
+    "News",
+    "Claude's Constitution",
+    "Claude Corps",
+    "Keep thinking",
+    "Policy on the AI Exponential",
+    "Responsible Scaling Policy",
+    "Security and compliance",
+    "Transparency",
+    "Privacy choices /* Dialog styling */ dialog#consent-container { margin: 0; padding: 8px; opacity: 0; transform: translateY(16px); transition: opacity 0.3s ease-out, transform 0.3s ease-out; } dialog#consent-container.show { opacity: 1; transform: translateY(0); } dialog#consent-container::backdrop { background: transparent; } dialog button span { display: inline !important; } /* Toggle switch styling */ .toggle_switch { position: relative; display: inline-block; width: 36px; height: 24px; } .toggle_switch input { opacity: 0; width: 0; height: 0; } .toggle_slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #87867f; transition: .4s; border-radius: 24px; } .toggle_slider:before { position: absolute; content: \"\"; height: 18px; width: 18px; left: 3px; bottom: 3px; background-color: white; transition: .4s; border-radius: 50%; } input:checked + .toggle_slider { background-color: #d97757; } input:checked + .toggle_slider:before { transform: translateX(12px); } input:disabled + .toggle_slider { cursor: not-allowed; opacity: 0.5; } @media only screen and (max-width: 501px) { dialog#consent-container { left: 8px !important; bottom: 8px !important; right: 8px !important; } #consent-banner { padding: 24px 16px 16px !important; } #simple-options { grid-template-columns: repeat(3, 1fr) !important; grid-template-rows: auto auto !important; } #customize-btn { grid-column: span 1 !important; } dialog button span { display: none !important; }",
+    "Privacy policy",
+    "Consumer health data privacy policy",
+    "Responsible disclosure policy",
+    "Terms of service: Commercial",
+    "Terms of service: Consumer",
+    "Terms of Service: US K-12",
+    "Data Processing Agreement: US K-12",
+    "Usage policy"
+  ],
+  "ctas": [
+    {
+      "label": "Skip to main content",
+      "href": "#main"
+    },
+    {
+      "label": "Skip to footer",
+      "href": "#footer"
+    },
+    {
+      "label": "Research",
+      "href": "https://www.anthropic.com/research"
+    },
+    {
+      "label": "Policy",
+      "href": "https://www.anthropic.com/policy"
+    },
+    {
+      "label": "Commitments",
+      "href": null
+    },
+    {
+      "label": "Learn",
+      "href": null
+    },
+    {
+      "label": "News",
+      "href": "https://www.anthropic.com/news"
+    },
+    {
+      "label": "Try Claude",
+      "href": "https://claude.ai/redirect/website.v1.43733e89-f6ee-4a7b-a246-5d8d8ea855ed"
+    },
+    {
+      "label": "Learn more about Claude",
+      "href": null
+    },
+    {
+      "label": "research",
+      "href": "https://www.anthropic.com/research"
+    },
+    {
+      "label": "products",
+      "href": "https://claude.com/product/overview"
+    },
+    {
+      "label": "research",
+      "href": "https://www.anthropic.com/research"
+    },
+    {
+      "label": "products",
+      "href": "https://claude.com/product/overview"
+    },
+    {
+      "label": "Learn more",
+      "href": "/path-to-hope"
+    },
+    {
+      "label": "Read announcement",
+      "href": "https://www.anthropic.com/news/redeploying-fable-5"
+    },
+    {
+      "label": "Model details",
+      "href": "https://www.anthropic.com/claude/sonnet"
+    },
+    {
+      "label": "Read announcement",
+      "href": "https://www.anthropic.com/news/claude-sonnet-5"
+    },
+    {
+      "label": "Read announcement",
+      "href": "https://www.anthropic.com/news/claude-science-ai-workbench"
+    },
+    {
+      "label": "Claude",
+      "href": "https://claude.com/product/overview"
+    },
+    {
+      "label": "Claude Code",
+      "href": "https://claude.com/product/claude-code"
+    },
+    {
+      "label": "Claude Code for Enterprise",
+      "href": "https://claude.com/product/claude-code/enterprise"
+    },
+    {
+      "label": "Claude Cowork",
+      "href": "https://claude.com/product/cowork"
+    },
+    {
+      "label": "@Claude",
+      "href": "https://claude.com/product/tag"
+    },
+    {
+      "label": "Claude Design",
+      "href": "https://claude.com/product/design"
+    },
+    {
+      "label": "Claude Science",
+      "href": "https://claude.com/product/claude-science"
+    },
+    {
+      "label": "Claude Security",
+      "href": "https://claude.com/product/claude-security"
+    },
+    {
+      "label": "Claude for Chrome",
+      "href": "https://claude.com/claude-for-chrome"
+    },
+    {
+      "label": "Claude for Slack",
+      "href": "https://claude.com/claude-for-slack"
+    },
+    {
+      "label": "Claude for Microsoft 365",
+      "href": "https://claude.com/claude-for-microsoft-365"
+    },
+    {
+      "label": "Skills",
+      "href": "https://www.claude.com/skills"
+    },
+    {
+      "label": "Download app",
+      "href": "https://claude.com/download"
+    },
+    {
+      "label": "Pricing",
+      "href": "https://claude.com/pricing"
+    },
+    {
+      "label": "Log in to Claude",
+      "href": "https://claude.ai/redirect/website.v1.43733e89-f6ee-4a7b-a246-5d8d8ea855ed/login"
+    },
+    {
+      "label": "Mythos",
+      "href": "https://www.anthropic.com/claude/mythos"
+    },
+    {
+      "label": "Fable",
+      "href": "https://www.anthropic.com/claude/fable"
+    },
+    {
+      "label": "Opus",
+      "href": "https://www.anthropic.com/claude/opus"
+    },
+    {
+      "label": "Sonnet",
+      "href": "https://www.anthropic.com/claude/sonnet"
+    },
+    {
+      "label": "Haiku",
+      "href": "https://www.anthropic.com/claude/haiku"
+    },
+    {
+      "label": "AI agents",
+      "href": "https://claude.com/solutions/agents"
+    },
+    {
+      "label": "Code modernization",
+      "href": "https://claude.com/solutions/code-modernization"
+    },
+    {
+      "label": "Coding",
+      "href": "https://claude.com/solutions/coding"
+    },
+    {
+      "label": "Customer support",
+      "href": "https://claude.com/solutions/customer-support"
+    },
+    {
+      "label": "Cybersecurity",
+      "href": "https://claude.com/solutions/cybersecurity"
+    },
+    {
+      "label": "Financial services",
+      "href": "https://claude.com/solutions/financial-services"
+    },
+    {
+      "label": "Government",
+      "href": "https://claude.com/solutions/government"
+    },
+    {
+      "label": "Healthcare",
+      "href": "https://claude.com/solutions/healthcare"
+    },
+    {
+      "label": "Higher education",
+      "href": "https://claude.com/solutions/education"
+    },
+    {
+      "label": "K-12 teachers",
+      "href": "https://claude.com/solutions/teachers"
+    },
+    {
+      "label": "Legal",
+      "href": "https://claude.com/solutions/legal"
+    },
+    {
+      "label": "Life sciences",
+      "href": "https://claude.com/solutions/life-sciences"
+    },
+    {
+      "label": "Nonprofits",
+      "href": "https://claude.com/solutions/nonprofits"
+    },
+    {
+      "label": "Small business",
+      "href": "https://claude.com/solutions/small-business"
+    },
+    {
+      "label": "Overview",
+      "href": "http://claude.com/platform/api"
+    },
+    {
+      "label": "Developer docs",
+      "href": "https://platform.claude.com/docs"
+    },
+    {
+      "label": "Pricing",
+      "href": "https://claude.com/pricing#api"
+    },
+    {
+      "label": "Ecosystem",
+      "href": "https://claude.com/ecosystem"
+    },
+    {
+      "label": "Marketplace",
+      "href": "https://claude.com/platform/marketplace"
+    },
+    {
+      "label": "Regional compliance",
+      "href": "https://claude.com/regional-compliance"
+    },
+    {
+      "label": "Claude on AWS",
+      "href": "https://claude.com/partners/claude-on-aws"
+    },
+    {
+      "label": "Google Cloud",
+      "href": "https://claude.com/partners/google-cloud"
+    },
+    {
+      "label": "Microsoft Foundry",
+      "href": "https://claude.com/partners/microsoft-foundry"
+    },
+    {
+      "label": "Console login",
+      "href": "https://platform.claude.com/"
+    },
+    {
+      "label": "Blog",
+      "href": "https://www.claude.com/blog"
+    },
+    {
+      "label": "Claude partner network",
+      "href": "https://claude.com/partners"
+    },
+    {
+      "label": "Community",
+      "href": "https://claude.com/community"
+    },
+    {
+      "label": "Connectors",
+      "href": "https://claude.com/partners/mcp"
+    },
+    {
+      "label": "Courses",
+      "href": "https://www.anthropic.com/learn"
+    },
+    {
+      "label": "Customer stories",
+      "href": "https://www.claude.com/customers"
+    },
+    {
+      "label": "Engineering at Anthropic",
+      "href": "https://www.anthropic.com/engineering"
+    },
+    {
+      "label": "Events",
+      "href": "https://www.anthropic.com/events"
+    },
+    {
+      "label": "Plugins",
+      "href": "https://claude.com/plugins"
+    },
+    {
+      "label": "Powered by Claude",
+      "href": "https://claude.com/partners/powered-by-claude"
+    },
+    {
+      "label": "Service partners",
+      "href": "https://claude.com/partners/services"
+    },
+    {
+      "label": "Tutorials",
+      "href": "https://claude.com/resources/tutorials"
+    },
+    {
+      "label": "Use cases",
+      "href": "https://claude.com/resources/use-cases"
+    },
+    {
+      "label": "Startups",
+      "href": "https://claude.com/programs/startups"
+    },
+    {
+      "label": "Research Labs",
+      "href": "https://claude.com/programs/claude-team-plan-for-research-labs"
+    },
+    {
+      "label": "Availability",
+      "href": "https://www.anthropic.com/supported-countries"
+    },
+    {
+      "label": "Status",
+      "href": "https://status.anthropic.com/"
+    },
+    {
+      "label": "Support center",
+      "href": "https://support.claude.com/"
+    },
+    {
+      "label": "Anthropic",
+      "href": "https://www.anthropic.com/company"
+    },
+    {
+      "label": "Careers",
+      "href": "https://www.anthropic.com/careers"
+    },
+    {
+      "label": "Policy",
+      "href": "https://www.anthropic.com/policy"
+    },
+    {
+      "label": "Economic Futures",
+      "href": "https://www.anthropic.com/economic-futures"
+    },
+    {
+      "label": "Research",
+      "href": "https://www.anthropic.com/research"
+    },
+    {
+      "label": "News",
+      "href": "https://www.anthropic.com/news"
+    },
+    {
+      "label": "Claude's Constitution",
+      "href": "https://www.anthropic.com/constitution"
+    },
+    {
+      "label": "Claude Corps",
+      "href": "https://www.anthropic.com/claude-corps"
+    },
+    {
+      "label": "Keep thinking",
+      "href": "https://www.anthropic.com/path-to-hope"
+    },
+    {
+      "label": "Policy on the AI Exponential",
+      "href": "https://www.anthropic.com/policy-on-the-ai-exponential"
+    },
+    {
+      "label": "Responsible Scaling Policy",
+      "href": "https://www.anthropic.com/responsible-scaling-policy"
+    },
+    {
+      "label": "Security and compliance",
+      "href": "https://trust.anthropic.com/"
+    },
+    {
+      "label": "Transparency",
+      "href": "https://www.anthropic.com/transparency"
+    },
+    {
+      "label": "Privacy choices",
+      "href": null
+    },
+    {
+      "label": "Privacy policy",
+      "href": "https://www.anthropic.com/legal/privacy"
+    },
+    {
+      "label": "Consumer health data privacy policy",
+      "href": "https://www.anthropic.com/legal/consumer-health-data-privacy-policy"
+    },
+    {
+      "label": "Responsible disclosure policy",
+      "href": "https://www.anthropic.com/responsible-disclosure-policy"
+    },
+    {
+      "label": "Terms of service: Commercial",
+      "href": "https://www.anthropic.com/legal/commercial-terms"
+    },
+    {
+      "label": "Terms of service: Consumer",
+      "href": "https://www.anthropic.com/legal/consumer-terms"
+    },
+    {
+      "label": "Terms of Service: US K-12",
+      "href": "https://anthropic.com/legal/k12-terms"
+    }
+  ],
+  "links": [
+    "https://www.anthropic.com/#main",
+    "https://www.anthropic.com/#footer",
+    "https://www.anthropic.com/",
+    "https://www.anthropic.com/research",
+    "https://www.anthropic.com/policy",
+    "https://www.anthropic.com/constitution",
+    "https://www.anthropic.com/claude-corps",
+    "https://www.anthropic.com/policy-on-the-ai-exponential",
+    "https://www.anthropic.com/transparency",
+    "https://www.anthropic.com/responsible-scaling-policy",
+    "http://trust.anthropic.com/",
+    "https://www.anthropic.com/learn",
+    "https://claude.com/resources/tutorials",
+    "https://claude.com/resources/use-cases",
+    "https://www.anthropic.com/engineering",
+    "https://platform.claude.com/docs",
+    "https://www.anthropic.com/company",
+    "https://www.anthropic.com/careers",
+    "https://www.anthropic.com/events",
+    "https://www.anthropic.com/news",
+    "https://claude.ai/redirect/website.v1.43733e89-f6ee-4a7b-a246-5d8d8ea855ed",
+    "https://claude.com/product/overview",
+    "https://claude.com/product/claude-code",
+    "https://claude.com/product/cowork",
+    "https://claude.com/product/design",
+    "https://claude.com/product/claude-science",
+    "https://claude.com/product/claude-security",
+    "https://claude.com/platform/api",
+    "https://claude.com/pricing",
+    "https://claude.com/contact-sales",
+    "https://www.anthropic.com/claude/mythos",
+    "https://www.anthropic.com/claude/fable",
+    "https://www.anthropic.com/claude/opus",
+    "https://www.anthropic.com/claude/sonnet",
+    "https://www.anthropic.com/claude/haiku",
+    "https://claude.ai/redirect/website.v1.43733e89-f6ee-4a7b-a246-5d8d8ea855ed/login",
+    "https://platform.claude.com/",
+    "https://www.anthropic.com/#",
+    "https://claude.ai/redirect/website.v1.43733e89-f6ee-4a7b-a246-5d8d8ea855ed/download",
+    "https://www.anthropic.com/path-to-hope",
+    "https://www.anthropic.com/news/redeploying-fable-5",
+    "https://www.anthropic.com/news/claude-sonnet-5",
+    "https://www.anthropic.com/news/claude-science-ai-workbench",
+    "https://www.anthropic.com/news/core-views-on-ai-safety",
+    "https://www.anthropic.com/rsp-updates",
+    "https://www.anthropic.com/economic-index",
+    "https://www.linkedin.com/company/anthropicresearch",
+    "https://x.com/AnthropicAI",
+    "https://www.youtube.com/@anthropic-ai",
+    "https://claude.com/product/claude-code/enterprise",
+    "https://claude.com/product/tag",
+    "https://claude.com/claude-for-chrome",
+    "https://claude.com/claude-for-slack",
+    "https://claude.com/claude-for-microsoft-365",
+    "https://www.claude.com/skills",
+    "https://claude.com/download",
+    "https://claude.com/solutions/agents",
+    "https://claude.com/solutions/code-modernization",
+    "https://claude.com/solutions/coding",
+    "https://claude.com/solutions/customer-support",
+    "https://claude.com/solutions/cybersecurity",
+    "https://claude.com/solutions/financial-services",
+    "https://claude.com/solutions/government",
+    "https://claude.com/solutions/healthcare",
+    "https://claude.com/solutions/education",
+    "https://claude.com/solutions/teachers",
+    "https://claude.com/solutions/legal",
+    "https://claude.com/solutions/life-sciences",
+    "https://claude.com/solutions/nonprofits",
+    "https://claude.com/solutions/small-business",
+    "http://claude.com/platform/api",
+    "https://claude.com/pricing#api",
+    "https://claude.com/ecosystem",
+    "https://claude.com/platform/marketplace",
+    "https://claude.com/regional-compliance",
+    "https://claude.com/partners/claude-on-aws",
+    "https://claude.com/partners/google-cloud",
+    "https://claude.com/partners/microsoft-foundry",
+    "https://www.claude.com/blog",
+    "https://claude.com/partners",
+    "https://claude.com/community",
+    "https://claude.com/partners/mcp",
+    "https://www.claude.com/customers",
+    "https://claude.com/plugins",
+    "https://claude.com/partners/powered-by-claude",
+    "https://claude.com/partners/services",
+    "https://claude.com/programs/startups",
+    "https://claude.com/programs/claude-team-plan-for-research-labs",
+    "https://www.anthropic.com/supported-countries",
+    "https://status.anthropic.com/",
+    "https://support.claude.com/",
+    "https://www.anthropic.com/economic-futures",
+    "https://trust.anthropic.com/",
+    "https://www.anthropic.com/legal/privacy",
+    "https://www.anthropic.com/legal/consumer-health-data-privacy-policy",
+    "https://www.anthropic.com/responsible-disclosure-policy",
+    "https://www.anthropic.com/legal/commercial-terms",
+    "https://www.anthropic.com/legal/consumer-terms",
+    "https://anthropic.com/legal/k12-terms",
+    "https://anthropic.com/legal/k12-dpa",
+    "https://www.anthropic.com/legal/aup"
+  ],
+  "media": {
+    "imgs": [],
+    "allImgCount": 0,
+    "cssBackgrounds": [],
+    "modals": []
+  },
+  "customProps": {},
+  "_signals": {
+    "filteredInterstitials": 0,
+    "distinctHeadings": 22,
+    "mainTextLen": 59471,
+    "realImageCount": 0,
+    "trackingOnlyMedia": false,
+    "spaShellSuspect": false
+  }
+}

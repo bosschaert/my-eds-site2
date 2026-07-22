@@ -1,0 +1,86 @@
+[
+  {
+    "id": "agentic-coding",
+    "name": "Agentic Coding",
+    "description": "Claude Code writes, tests, and verifies code across multiple files and parallel subagents, going beyond autocomplete to build entire features from natural language.",
+    "productIds": ["claude-code", "claude-code-enterprise"],
+    "category": "development"
+  },
+  {
+    "id": "computer-use",
+    "name": "Computer Use",
+    "description": "Claude can open apps, navigate browsers, and run dev tools directly to complete tasks that don't yet have a dedicated integration.",
+    "productIds": ["claude-code", "claude-cowork"],
+    "category": "automation"
+  },
+  {
+    "id": "routines-scheduling",
+    "name": "Routines & Scheduling",
+    "description": "Configurable automated tasks that run on a schedule, from an API call, or in response to an event — no manual trigger required.",
+    "productIds": ["claude-code", "claude-cowork"],
+    "category": "automation"
+  },
+  {
+    "id": "prompt-caching",
+    "name": "Prompt Caching",
+    "description": "Reduces cost and latency for repeated context by letting developers cache background knowledge and examples across API calls.",
+    "productIds": ["claude-platform-api"],
+    "category": "platform"
+  },
+  {
+    "id": "mcp-connector",
+    "name": "MCP Connector",
+    "description": "Connects Claude to remote Model Context Protocol servers without writing custom client code, extending Claude's reach into external tools.",
+    "productIds": ["claude-platform-api", "claude-code"],
+    "category": "platform"
+  },
+  {
+    "id": "reproducible-artifacts",
+    "name": "Reproducible Artifacts",
+    "description": "Every scientific output includes the exact code, environment, and conversation that produced it, with a background reviewer flagging incorrect citations or untraceable numbers.",
+    "productIds": ["claude-science"],
+    "category": "research"
+  },
+  {
+    "id": "design-system-import",
+    "name": "Design System Import",
+    "description": "Claude Design imports components and brand styling from GitHub, design files, or local codebases so generated visuals match real production assets.",
+    "productIds": ["claude-design"],
+    "category": "design"
+  },
+  {
+    "id": "adversarial-verification",
+    "name": "Adversarial Finding Verification",
+    "description": "Claude Security challenges its own vulnerability findings before surfacing them, reducing false positives compared to rule-based scanners.",
+    "productIds": ["claude-security"],
+    "category": "security"
+  },
+  {
+    "id": "enterprise-observability",
+    "name": "Enterprise Observability",
+    "description": "OpenTelemetry export of session activity, token usage, and cost, plus a contribution metrics dashboard for engineering-wide adoption tracking.",
+    "productIds": ["claude-code-enterprise"],
+    "category": "enterprise"
+  },
+  {
+    "id": "sso-scim",
+    "name": "SSO & SCIM Provisioning",
+    "description": "Enterprise-grade identity integration (Okta, Azure AD, SAML 2.0) with automated user provisioning and role-based access control.",
+    "productIds": ["claude-code-enterprise", "claude-assistant"],
+    "category": "enterprise"
+  },
+  {
+    "id": "memory-across-conversations",
+    "name": "Memory Across Conversations",
+    "description": "Claude remembers context from past conversations and can import memory when switching from another AI provider.",
+    "productIds": ["claude-assistant"],
+    "category": "assistant"
+  },
+  {
+    "id": "plugin-system",
+    "name": "Plugin System",
+    "description": "Bundles skills, connectors, and sub-agents into role-specific specialists (e.g. Brand Voice, Legal, Finance plugins) for Claude Cowork.",
+    "productIds": ["claude-cowork"],
+    "category": "automation"
+  }
+]

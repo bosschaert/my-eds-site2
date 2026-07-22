@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brand Review — anthropic.com</title>
+<style>
+  :root {
+    --bg: #faf9f5;
+    --surface: #ffffff;
+    --text: #141413;
+    --text-sec: #87867f;
+    --primary: #cc785c;
+    --border: #e8e5de;
+    --radius: 16px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    padding: 48px 24px;
+  }
+  .container { max-width: 1000px; margin: 0 auto; }
+  h1 { font-family: Georgia, serif; font-size: 36px; font-weight: 400; margin-bottom: 8px; }
+  h2 { font-family: Georgia, serif; font-size: 24px; font-weight: 400; margin: 48px 0 16px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  h3 { font-size: 16px; font-weight: 600; margin: 24px 0 8px; }
+  p { margin-bottom: 16px; color: var(--text-sec); }
+  .meta { color: var(--text-sec); font-size: 14px; margin-bottom: 32px; }
+  .card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; margin-bottom: 16px; }
+  .color-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 12px; margin: 16px 0; }
+  .color-swatch { border-radius: 8px; overflow: hidden; border: 1px solid var(--border); }
+  .color-swatch .swatch { height: 60px; }
+  .color-swatch .label { padding: 8px; font-size: 12px; background: var(--surface); }
+  .font-sample { margin: 12px 0; padding: 16px; background: var(--surface); border-radius: 8px; border: 1px solid var(--border); }
+  .font-sample .heading { font-family: Georgia, serif; font-size: 28px; margin-bottom: 8px; }
+  .font-sample .body-text { font-size: 16px; }
+  .screenshot { width: 100%; border-radius: var(--radius); border: 1px solid var(--border); margin: 12px 0; }
+  .logo-container { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 32px; text-align: center; margin: 16px 0; }
+  .logo-container img { max-width: 200px; height: auto; }
+  .tension { background: #fff8f0; border-left: 4px solid var(--primary); padding: 16px; margin: 12px 0; border-radius: 0 8px 8px 0; }
+  .tension-title { font-weight: 600; color: var(--primary); margin-bottom: 4px; }
+  .badge { display: inline-block; background: var(--text); color: var(--bg); font-size: 11px; padding: 2px 8px; border-radius: 4px; margin-left: 8px; vertical-align: middle; }
+  table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; }
+  th, td { padding: 8px 12px; text-align: left; border-bottom: 1px solid var(--border); }
+  th { font-weight: 600; }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>Brand Review</h1>
+  <p class="meta">anthropic.com &mdash; Extracted 2026-07-17 &mdash; 3 pages crawled (index, claude, research)</p>
+
+  <div class="card">
+    <h3>Coverage</h3>
+    <p>Palette, typography, shape, motifs, voice, logo, screenshots, system components. All sections populated from live Playwright renders.</p>
+  </div>
+
+  <h2>Logo</h2>
+  <div class="logo-container">
+    <img src="assets/logo.svg" alt="Anthropic logo">
+  </div>
+  <p>Source: inline SVG in site header (Lottie-animated wordmark). Renders "ANTHROPIC" in proprietary letterforms.</p>
+
+  <h2>Palette</h2>
+  <div class="color-grid">
+    <div class="color-swatch"><div class="swatch" style="background:#faf9f5"></div><div class="label">Background<br>#faf9f5</div></div>
+    <div class="color-swatch"><div class="swatch" style="background:#ffffff"></div><div class="label">Surface<br>#ffffff</div></div>
+    <div class="color-swatch"><div class="swatch" style="background:#141413"></div><div class="label">Text<br>#141413</div></div>
+    <div class="color-swatch"><div class="swatch" style="background:#87867f"></div><div class="label">Text Secondary<br>#87867f</div></div>
+    <div class="color-swatch"><div class="swatch" style="background:#cc785c"></div><div class="label">Primary/Accent<br>#cc785c</div></div>
+    <div class="color-swatch"><div class="swatch" style="background:#b0aea5"></div><div class="label">Secondary<br>#b0aea5</div></div>
+    <div class="color-swatch"><div class="swatch" style="background:#e8e5de"></div><div class="label">Border<br>#e8e5de</div></div>
+  </div>
+  <p>Source: <code>_brand-extraction.json &sect; palette</code>. Cross-page aggregate of computed background-color, color, and border-color values. The palette is intentionally restrained — warm neutrals with a single terracotta accent.</p>
+
+  <h2>Typography</h2>
+  <div class="font-sample">
+    <div class="heading">AI research and products that put safety at the frontier</div>
+    <div class="body-text">Anthropic is an AI safety and research company that's working to build reliable, interpretable, and steerable AI systems. We believe the responsible development of AI has immense potential to increase human prosperity.</div>
+  </div>
+  <table>
+    <tr><th>Role</th><th>Family</th><th>Weight</th><th>Notes</th></tr>
+    <tr><td>Heading</td><td>Anthropic Serif</td><td>400</td><td>Proprietary; fallback: Georgia</td></tr>
+    <tr><td>Body</td><td>Anthropic Sans</td><td>400</td><td>Proprietary; fallback: system sans</td></tr>
+    <tr><td>UI/Nav</td><td>Anthropic Sans</td><td>500</td><td>Buttons, navigation labels</td></tr>
+  </table>
+  <p>Source: <code>_brand-extraction.json &sect; type</code>. Scale audit: ad-hoc (no strict modular ratio detected).</p>
+
+  <h2>Shape &amp; Motifs</h2>
+  <div class="card">
+    <h3>Border Radius</h3>
+    <p style="margin:0">Dominant: <strong>16px</strong> (cards, containers) / <strong>8px</strong> (buttons, small elements)</p>
+  </div>
+  <div class="card">
+    <h3>Shadows</h3>
+    <p style="margin:0">Minimal — site uses borders rather than shadows for elevation. Near-zero shadow usage across all crawled pages.</p>
+  </div>
+  <div class="card">
+    <h3>Signature Motifs</h3>
+    <ul style="margin:8px 0 0 20px; color: var(--text-sec)">
+      <li>Warm neutral palette (cream + charcoal)</li>
+      <li>Generous whitespace between sections (80-128px)</li>
+      <li>Editorial serif typography for headlines</li>
+      <li>Text-centric hero sections (headline-forward, minimal imagery)</li>
+      <li>Subtle rounded corners without being playful</li>
+    </ul>
+  </div>
+
+  <h2>Voice</h2>
+  <div class="card">
+    <h3>Hero Headline</h3>
+    <p style="margin:0;color:var(--text);font-family:Georgia,serif;font-size:20px">"AI research and products that put safety at the frontier"</p>
+  </div>
+  <div class="card">
+    <h3>Lede</h3>
+    <p style="margin:0">"Anthropic is an AI safety and research company that's working to build reliable, interpretable, and steerable AI systems."</p>
+  </div>
+  <div class="card">
+    <h3>CTA Labels</h3>
+    <p style="margin:0">Try Claude &bull; Contact sales &bull; Learn more &bull; Read more &bull; Login</p>
+  </div>
+  <div class="card">
+    <h3>Register</h3>
+    <p style="margin:0"><strong>Brand</strong> — formal-adjacent, thoughtful, measured. Academic clarity with startup energy.</p>
+  </div>
+
+  <h2>System Components</h2>
+  <div class="card">
+    <h3>Site Header</h3>
+    <p style="margin:0">Logo (animated SVG) + horizontal navigation (Meet Claude, Platform, Solutions, Pricing, Resources) + CTAs (Login, Contact sales, Try Claude)</p>
+  </div>
+  <div class="card">
+    <h3>Site Footer</h3>
+    <p style="margin:0">Multi-column link layout: Products, Models, Solutions, Claude Platform, Resources, Company sections + legal links</p>
+  </div>
+  <div class="card">
+    <h3>Card Grid</h3>
+    <p style="margin:0">Used on homepage ("Latest releases") and research page. Cards with image, title, description, date.</p>
+  </div>
+
+  <h2>Screenshots</h2>
+  <h3>Homepage</h3>
+  <img class="screenshot" src="assets/screenshots/index.png" alt="anthropic.com homepage">
+  <h3>Claude Product Page</h3>
+  <img class="screenshot" src="assets/screenshots/claude.png" alt="Claude product page">
+  <h3>Research</h3>
+  <img class="screenshot" src="assets/screenshots/research.png" alt="Research page">
+
+  <h2>Tensions</h2>
+  <div class="tension">
+    <div class="tension-title">Private Typography <span class="badge">INFO</span></div>
+    <p style="margin:0">Site uses proprietary fonts (Anthropic Serif, Anthropic Sans) that are not available for reproduction. Downstream prototypes must use fallbacks (Georgia, system sans-serif) — the exact brand feel cannot be replicated without the original font files.</p>
+  </div>
+  <div class="tension">
+    <div class="tension-title">Animated Logo <span class="badge">INFO</span></div>
+    <p style="margin:0">The header logo is a Lottie SVG animation, not a static asset. The extracted SVG captures one frame. Motion is lost in static reproduction.</p>
+  </div>
+  <div class="tension">
+    <div class="tension-title">Low Color Variety <span class="badge">NEUTRAL</span></div>
+    <p style="margin:0">The palette is extremely restrained (essentially monochrome with one warm accent). This is intentional per the brand's "clarity over decoration" principle, not a gap in extraction.</p>
+  </div>
+
+</div>
+</body>
+</html>

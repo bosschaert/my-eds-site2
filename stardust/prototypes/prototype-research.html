@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Research - Anthropic</title>
+<style>
+/* Reset & Base */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #faf9f5;
+  --surface: #ffffff;
+  --text-primary: #141413;
+  --text-secondary: #87867f;
+  --accent: #cc785c;
+  --border: #e8e5de;
+  --button-bg: #141413;
+  --button-text: #faf9f5;
+  --radius-card: 16px;
+  --radius-button: 8px;
+  --font-heading: "Anthropic Serif", Georgia, serif;
+  --font-body: "Anthropic Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --max-width: 1200px;
+}
+
+html {
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body);
+  font-weight: 400;
+  color: var(--text-primary);
+  background-color: var(--bg);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Site Header */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: 0 40px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.site-header__wordmark {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0.05em;
+  color: var(--text-primary);
+  text-transform: uppercase;
+}
+
+.site-header__nav {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.site-header__nav a {
+  font-size: 14px;
+  color: var(--text-primary);
+  transition: color 0.2s;
+}
+
+.site-header__nav a:hover {
+  color: var(--text-secondary);
+}
+
+.site-header__nav a.active {
+  color: var(--accent);
+}
+
+.site-header__actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.site-header__cta {
+  background: var(--button-bg);
+  color: var(--button-text);
+  padding: 8px 20px;
+  border-radius: var(--radius-button);
+  font-size: 14px;
+  font-weight: 500;
+  transition: opacity 0.2s;
+}
+
+.site-header__cta:hover {
+  opacity: 0.85;
+}
+
+/* Page Container */
+.page-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* Research Teams Section */
+.research-teams {
+  padding: 80px 0 48px;
+}
+
+.research-teams__title {
+  font-family: var(--font-heading);
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 1.15;
+  margin-bottom: 40px;
+}
+
+.research-teams__pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 32px;
+}
+
+.research-teams__pill {
+  padding: 8px 18px;
+  border-radius: 24px;
+  border: 1px solid var(--border);
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text-primary);
+  background: var(--surface);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.research-teams__pill:hover {
+  border-color: var(--text-secondary);
+}
+
+.research-teams__pill.active {
+  background: var(--button-bg);
+  color: var(--button-text);
+  border-color: var(--button-bg);
+}
+
+.research-teams__description {
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--text-secondary);
+  max-width: 720px;
+}
+
+/* Featured Research */
+.featured-research {
+  padding: 0 0 80px;
+}
+
+.featured-research__hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+  margin-bottom: 48px;
+}
+
+.featured-research__hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.featured-research__hero-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.featured-research__hero-category {
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.featured-research__hero-title {
+  font-family: var(--font-heading);
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+.featured-research__hero-title a:hover {
+  color: var(--accent);
+  transition: color 0.2s;
+}
+
+.featured-research__hero-desc {
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--text-secondary);
+}
+
+.featured-research__hero-image {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  background: #f0eee6;
+  border-radius: var(--radius-card);
+}
+
+/* Featured Grid */
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.featured-card {
+  background: var(--surface);
+  border-radius: var(--radius-card);
+  padding: 28px;
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: border-color 0.2s;
+}
+
+.featured-card:hover {
+  border-color: var(--text-secondary);
+}
+
+.featured-card__meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.featured-card__category {
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.featured-card__title {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.35;
+}
+
+.featured-card__title a:hover {
+  color: var(--accent);
+  transition: color 0.2s;
+}
+
+/* Publications Section */
+.publications {
+  padding: 80px 0 64px;
+  border-top: 1px solid var(--border);
+}
+
+.publications__title {
+  font-family: var(--font-heading);
+  font-size: 36px;
+  font-weight: 400;
+  margin-bottom: 40px;
+}
+
+.publications__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.publication-row {
+  display: grid;
+  grid-template-columns: 120px 180px 1fr;
+  gap: 24px;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--border);
+  transition: background 0.15s;
+}
+
+.publication-row:first-child {
+  border-top: 1px solid var(--border);
+}
+
+.publication-row:hover {
+  background: rgba(0, 0, 0, 0.01);
+}
+
+.publication-row__date {
+  font-size: 14px;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.publication-row__category {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  font-size: 13px;
+  color: var(--text-secondary);
+  background: var(--surface);
+  width: fit-content;
+}
+
+.publication-row__title {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--text-primary);
+  transition: color 0.2s;
+}
+
+.publication-row__title:hover {
+  color: var(--accent);
+}
+
+.publications__more {
+  margin-top: 40px;
+}
+
+.publications__more-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  border-radius: var(--radius-button);
+  border: 1px solid var(--border);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
+  background: var(--surface);
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.publications__more-btn:hover {
+  border-color: var(--text-secondary);
+}
+
+/* Join CTA Section */
+.join-cta {
+  padding: 96px 0;
+  border-top: 1px solid var(--border);
+  text-align: center;
+}
+
+.join-cta__title {
+  font-family: var(--font-heading);
+  font-size: 42px;
+  font-weight: 400;
+  margin-bottom: 28px;
+}
+
+.join-cta__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 32px;
+  border-radius: var(--radius-button);
+  background: var(--button-bg);
+  color: var(--button-text);
+  font-size: 15px;
+  font-weight: 500;
+  transition: opacity 0.2s;
+}
+
+.join-cta__link:hover {
+  opacity: 0.85;
+}
+
+/* Site Footer */
+.site-footer {
+  background: var(--text-primary);
+  color: #ffffff;
+  padding: 80px 40px 48px;
+}
+
+.site-footer__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.site-footer__grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 40px;
+  margin-bottom: 64px;
+}
+
+.site-footer__col-title {
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 16px;
+}
+
+.site-footer__col ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.site-footer__col ul li a {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+  transition: color 0.2s;
+}
+
+.site-footer__col ul li a:hover {
+  color: #ffffff;
+}
+
+.site-footer__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 32px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.site-footer__wordmark {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.site-footer__legal {
+  display: flex;
+  gap: 24px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.site-footer__legal a:hover {
+  color: #ffffff;
+}
+
+/* Responsive: Tablet (900px) */
+@media (max-width: 900px) {
+  .site-header {
+    padding: 0 24px;
+  }
+
+  .page-container {
+    padding: 0 24px;
+  }
+
+  .research-teams__title {
+    font-size: 40px;
+  }
+
+  .featured-research__hero {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .featured-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .publication-row {
+    grid-template-columns: 100px 150px 1fr;
+    gap: 16px;
+  }
+
+  .site-footer__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Responsive: Mobile (640px) */
+@media (max-width: 640px) {
+  .site-header {
+    padding: 0 20px;
+  }
+
+  .site-header__nav {
+    display: none;
+  }
+
+  .page-container {
+    padding: 0 20px;
+  }
+
+  .research-teams {
+    padding: 48px 0 32px;
+  }
+
+  .research-teams__title {
+    font-size: 32px;
+  }
+
+  .research-teams__pills {
+    gap: 8px;
+  }
+
+  .research-teams__pill {
+    font-size: 13px;
+    padding: 6px 14px;
+  }
+
+  .featured-research {
+    padding: 0 0 48px;
+  }
+
+  .featured-research__hero-title {
+    font-size: 28px;
+  }
+
+  .featured-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .publication-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding: 16px 0;
+  }
+
+  .publication-row__date {
+    order: 1;
+  }
+
+  .publication-row__category {
+    order: 2;
+  }
+
+  .publication-row__title {
+    order: 0;
+    font-weight: 500;
+  }
+
+  .publications__title {
+    font-size: 28px;
+  }
+
+  .join-cta {
+    padding: 64px 0;
+  }
+
+  .join-cta__title {
+    font-size: 32px;
+  }
+
+  .site-footer {
+    padding: 48px 20px 32px;
+  }
+
+  .site-footer__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+
+  .site-footer__bottom {
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+  }
+}
+
+/* Responsive: Small Mobile (375px) */
+@media (max-width: 375px) {
+  .research-teams__title {
+    font-size: 28px;
+  }
+
+  .featured-research__hero-title {
+    font-size: 24px;
+  }
+
+  .featured-card__title {
+    font-size: 18px;
+  }
+
+  .join-cta__title {
+    font-size: 28px;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- Site Header -->
+<header class="site-header">
+  <div class="site-header__inner">
+    <a href="/" class="site-header__wordmark">ANTHROPIC</a>
+    <nav class="site-header__nav">
+      <a href="/research" class="active">Research</a>
+      <a href="/policy">Policy</a>
+      <a href="/commitments">Commitments</a>
+      <a href="/learn">Learn</a>
+      <a href="/news">News</a>
+    </nav>
+    <div class="site-header__actions">
+      <a href="/claude" class="site-header__cta">Try Claude</a>
+    </div>
+  </div>
+</header>
+
+<!-- Main Content -->
+<main>
+  <!-- Research Teams Section -->
+  <section class="research-teams">
+    <div class="page-container">
+      <h1 class="research-teams__title">Research</h1>
+      <div class="research-teams__pills">
+        <span class="research-teams__pill active">Alignment</span>
+        <span class="research-teams__pill">Economic Research</span>
+        <span class="research-teams__pill">Frontier Red Team</span>
+        <span class="research-teams__pill">Interpretability</span>
+        <span class="research-teams__pill">Societal Impacts</span>
+      </div>
+      <p class="research-teams__description">The Alignment team works to understand the risks of AI models and develop ways to ensure that future ones remain helpful, honest, and harmless.</p>
+    </div>
+  </section>
+
+  <!-- Featured Research -->
+  <section class="featured-research">
+    <div class="page-container">
+      <!-- Hero Featured Article -->
+      <div class="featured-research__hero">
+        <div class="featured-research__hero-content">
+          <div class="featured-research__hero-meta">
+            <span class="featured-research__hero-category">Interpretability</span>
+            <span>Jul 6, 2026</span>
+          </div>
+          <h2 class="featured-research__hero-title">
+            <a href="/research/global-workspace">A global workspace in language models</a>
+          </h2>
+          <p class="featured-research__hero-desc">New interpretability research reveals an emergent mental workspace in Claude that holds internal thoughts that don't appear in the model's output.</p>
+        </div>
+        <div class="featured-research__hero-image"></div>
+      </div>
+
+      <!-- Featured Cards Grid -->
+      <div class="featured-grid">
+        <article class="featured-card">
+          <div class="featured-card__meta">
+            <span class="featured-card__category">Economic Research</span>
+            <span>Jun 26, 2026</span>
+          </div>
+          <h3 class="featured-card__title">
+            <a href="/research/anthropic-economic-index-cadences">Anthropic Economic Index report: Cadences</a>
+          </h3>
+        </article>
+        <article class="featured-card">
+          <div class="featured-card__meta">
+            <span class="featured-card__category">Alignment</span>
+            <span>May 8, 2026</span>
+          </div>
+          <h3 class="featured-card__title">
+            <a href="/research/teaching-claude-why">Teaching Claude why</a>
+          </h3>
+        </article>
+        <article class="featured-card">
+          <div class="featured-card__meta">
+            <span class="featured-card__category">Research</span>
+            <span>Apr 24, 2026</span>
+          </div>
+          <h3 class="featured-card__title">
+            <a href="/research/project-deal">Project Deal</a>
+          </h3>
+        </article>
+        <article class="featured-card">
+          <div class="featured-card__meta">
+            <span class="featured-card__category">Societal Impacts</span>
+            <span>Mar 18, 2026</span>
+          </div>
+          <h3 class="featured-card__title">
+            <a href="/research/what-81000-people-want-from-ai">What 81,000 people want from AI</a>
+          </h3>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Publications Section -->
+  <section class="publications">
+    <div class="page-container">
+      <h2 class="publications__title">Publications</h2>
+      <div class="publications__list">
+        <div class="publication-row">
+          <span class="publication-row__date">Jul 14, 2026</span>
+          <span class="publication-row__category">Economic Research</span>
+          <a href="/research/how-canada-uses-claude" class="publication-row__title">How Canada uses Claude: Findings from the Anthropic Economic Index</a>
+        </div>
+        <div class="publication-row">
+          <span class="publication-row__date">Jul 13, 2026</span>
+          <span class="publication-row__category">Societal Impacts</span>
+          <a href="/research/claudes-values-across-models-and-languages" class="publication-row__title">Claude's values across models and languages</a>
+        </div>
+        <div class="publication-row">
+          <span class="publication-row__date">Jul 9, 2026</span>
+          <span class="publication-row__category">Frontier Red Team</span>
+          <a href="/research/claude-plays-robotics" class="publication-row__title">Claude plays robotics</a>
+        </div>
+        <div class="publication-row">
+          <span class="publication-row__date">Jul 8, 2026</span>
+          <span class="publication-row__category">Alignment</span>
+          <a href="/research/off-switch-dual-use-knowledge" class="publication-row__title">An off switch for dual-use knowledge in AI models</a>
+        </div>
+        <div class="publication-row">
+          <span class="publication-row__date">Jul 6, 2026</span>
+          <span class="publication-row__category">Interpretability</span>
+          <a href="/research/global-workspace" class="publication-row__title">A global workspace in language models</a>
+        </div>
+        <div class="publication-row">
+          <span class="publication-row__date">Jun 26, 2026</span>
+          <span class="publication-row__category">Economic Research</span>
+          <a href="/research/anthropic-economic-index-cadences" class="publication-row__title">Anthropic Economic Index report: Cadences</a>
+        </div>
+        <div class="publication-row">
+          <span class="publication-row__date">Jun 18, 2026</span>
+          <span class="publication-row__category">Frontier Red Team</span>
+          <a href="/research/project-fetch-phase-two" class="publication-row__title">Project Fetch: Phase two</a>
+        </div>
+        <div class="publication-row">
+          <span class="publication-row__date">Jun 16, 2026</span>
+          <span class="publication-row__category">Economic Research</span>
+          <a href="/research/agentic-coding-persistent-returns-expertise" class="publication-row__title">Agentic coding and persistent returns to expertise</a>
+        </div>
+        <div class="publication-row">
+          <span class="publication-row__date">Jun 8, 2026</span>
+          <span class="publication-row__category">Science</span>
+          <a href="/research/paving-way-agents-biology" class="publication-row__title">Paving the way for agents in biology</a>
+        </div>
+        <div class="publication-row">
+          <span class="publication-row__date">Jun 8, 2026</span>
+          <span class="publication-row__category">Frontier Red Team</span>
+          <a href="/research/measuring-llms-impact-nday-exploits" class="publication-row__title">Measuring LLMs' impact on N-day exploits</a>
+        </div>
+      </div>
+      <div class="publications__more">
+        <a href="/research/all" class="publications__more-btn">See more</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Join the Research Team CTA -->
+  <section class="join-cta">
+    <div class="page-container">
+      <h2 class="join-cta__title">Join the Research team</h2>
+      <a href="/careers" class="join-cta__link">See open roles</a>
+    </div>
+  </section>
+</main>
+
+<!-- Site Footer -->
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <div class="site-footer__grid">
+      <div class="site-footer__col">
+        <div class="site-footer__col-title">Products</div>
+        <ul>
+          <li><a href="/claude">Claude</a></li>
+          <li><a href="/api">API</a></li>
+          <li><a href="/claude/team">Team</a></li>
+          <li><a href="/claude/enterprise">Enterprise</a></li>
+        </ul>
+      </div>
+      <div class="site-footer__col">
+        <div class="site-footer__col-title">Models</div>
+        <ul>
+          <li><a href="/claude/sonnet">Claude Sonnet</a></li>
+          <li><a href="/claude/opus">Claude Opus</a></li>
+          <li><a href="/claude/haiku">Claude Haiku</a></li>
+        </ul>
+      </div>
+      <div class="site-footer__col">
+        <div class="site-footer__col-title">Resources</div>
+        <ul>
+          <li><a href="/research">Research</a></li>
+          <li><a href="/news">News</a></li>
+          <li><a href="/learn">Learn</a></li>
+          <li><a href="/customers">Customers</a></li>
+        </ul>
+      </div>
+      <div class="site-footer__col">
+        <div class="site-footer__col-title">Company</div>
+        <ul>
+          <li><a href="/company">About</a></li>
+          <li><a href="/careers">Careers</a></li>
+          <li><a href="/policy">Policy</a></li>
+          <li><a href="/commitments">Commitments</a></li>
+        </ul>
+      </div>
+      <div class="site-footer__col">
+        <div class="site-footer__col-title">Help</div>
+        <ul>
+          <li><a href="/support">Support</a></li>
+          <li><a href="/status">Status</a></li>
+          <li><a href="/docs">Documentation</a></li>
+          <li><a href="/trust">Trust center</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="site-footer__bottom">
+      <span class="site-footer__wordmark">ANTHROPIC</span>
+      <div class="site-footer__legal">
+        <a href="/terms">Terms</a>
+        <a href="/privacy">Privacy</a>
+        <a href="/responsible-disclosure">Security</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
