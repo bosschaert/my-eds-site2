@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Config Review - anthropic.com</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root { --bg:#1C1917;--fg:#F5F0E8;--accent:#FF3D00;--teal:#00E5A0;--dim:rgba(245,240,232,0.55);--faint:rgba(245,240,232,0.06);--border:rgba(245,240,232,0.1); }
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--fg);font-family:'JetBrains Mono',monospace;font-size:11px;line-height:1.6;padding:32px;max-width:1100px;margin:0 auto}
+h1{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:600;margin-bottom:8px}
+h2{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;margin:32px 0 12px;color:var(--teal)}
+h3{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:var(--dim);margin:16px 0 8px}
+h4{font-size:10px;font-weight:600;color:var(--dim);margin:10px 0 4px;text-transform:uppercase;letter-spacing:0.08em}
+.section{margin-bottom:24px;padding:16px;border:1px solid var(--border);border-radius:10px}
+.stats{display:flex;gap:16px;margin-bottom:24px;flex-wrap:wrap}
+.stat{text-align:center;padding:16px 24px;background:var(--faint);border-radius:10px;border:1px solid var(--border)}
+.stat-num{font-size:24px;font-weight:700;color:var(--accent)}
+.stat-label{font-size:9px;color:var(--dim);text-transform:uppercase;letter-spacing:0.1em;margin-top:4px}
+
+/* Products */
+.products-list{display:flex;flex-direction:column;gap:8px}
+.product-card{border:1px solid var(--border);border-radius:10px;overflow:hidden;cursor:pointer;transition:all 0.2s}
+.product-card:hover{border-color:rgba(0,229,160,0.3)}
+.product-card.expanded{border-color:var(--teal)}
+.product-card.expanded .expand-icon{transform:rotate(45deg)}
+.product-card.expanded .product-detail{display:grid}
+.product-summary{display:flex;align-items:center;gap:12px;padding:10px 14px}
+.product-thumb{width:48px;height:48px;object-fit:cover;border-radius:8px;background:#fff}
+.product-info{flex:1}
+.product-name{font-weight:600;font-size:11px}
+.product-meta{font-size:9px;color:var(--dim);display:flex;gap:8px;margin-top:2px}
+.product-meta .cat{text-transform:uppercase;letter-spacing:0.05em}
+.product-meta .price{color:var(--teal);font-weight:600}
+.product-meta .img-count{color:var(--accent)}
+.expand-icon{font-size:16px;color:var(--dim);transition:transform 0.2s}
+.product-detail{display:none;grid-template-columns:1fr 1fr;gap:16px;padding:16px;border-top:1px solid var(--border);background:var(--faint)}
+.product-gallery{display:flex;gap:8px;flex-wrap:wrap}
+.gallery-img{width:120px;height:120px;object-fit:cover;border-radius:8px;background:#fff;border:1px solid var(--border)}
+.product-desc{font-size:11px;color:var(--fg);margin-bottom:10px;line-height:1.6}
+.product-detail ul{list-style:none;padding:0;margin:4px 0 12px}
+.product-detail li{font-size:10px;color:var(--dim);padding:2px 0}
+.product-detail li::before{content:"→ ";color:var(--teal)}
+.kw{display:inline-block;padding:2px 8px;background:rgba(0,229,160,0.08);border:1px solid rgba(0,229,160,0.2);border-radius:12px;font-size:9px;color:var(--teal);margin:2px}
+.kw-list{margin:4px 0 8px}
+.product-persona,.product-usecase{font-size:9px;color:var(--dim);margin:4px 0}
+.product-link{display:inline-block;margin-top:8px;font-size:10px;color:var(--teal);text-decoration:none;border:1px solid rgba(0,229,160,0.3);padding:4px 12px;border-radius:20px}
+.product-link:hover{background:rgba(0,229,160,0.1)}
+
+/* Personas */
+.personas-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.persona-card{padding:12px;background:var(--faint);border-radius:8px;border:1px solid var(--border)}
+.persona-name{font-weight:600;color:var(--teal);margin-bottom:4px}
+.persona-desc{font-size:10px;color:var(--fg);margin-bottom:6px}
+.persona-kw{font-size:9px;color:var(--dim)}
+
+/* Suggestions */
+.suggestion-chip{display:inline-flex;flex-direction:column;padding:8px 14px;background:var(--faint);border:1px solid var(--border);border-radius:12px;margin:4px;max-width:320px;vertical-align:top}
+.sug-label{font-weight:600;font-size:11px;color:var(--fg)}
+.sug-query{font-size:9px;color:var(--dim);margin-top:2px}
+.sug-meta{margin-bottom:12px;padding:10px;background:var(--faint);border-radius:8px;border:1px solid var(--border)}
+.sug-meta span{display:block;margin:2px 0}
+.sug-meta .sug-title{font-weight:600;color:var(--fg)}
+.sug-meta .sug-sub{color:var(--dim);font-size:10px}
+.sug-meta .sug-ph{color:var(--accent);font-size:10px;font-style:italic}
+
+/* Brand */
+.brand-section p{margin-bottom:8px}
+
+/* Use cases */
+.usecase-card{padding:10px;background:var(--faint);border-radius:8px;border:1px solid var(--border);margin-bottom:8px}
+.usecase-name{font-weight:600;color:var(--fg);margin-bottom:4px}
+.usecase-desc{font-size:10px;color:var(--dim);margin-bottom:4px}
+.usecase-kw{font-size:9px;color:var(--dim)}
+
+/* Features */
+.feature-chip{display:inline-block;padding:4px 12px;background:var(--faint);border:1px solid var(--border);border-radius:20px;font-size:10px;color:var(--fg);margin:3px}
+</style>
+</head>
+<body>
+<h1>Config Review: <span style="color:var(--accent)">anthropic.com</span></h1>
+<p style="color:var(--dim);margin-bottom:24px">Review all configuration before deploy. Click any product to expand details and see all assets.</p>
+
+<div class="stats">
+  <div class="stat"><div class="stat-num">8</div><div class="stat-label">Products</div></div>
+  <div class="stat"><div class="stat-num">35</div><div class="stat-label">Images</div></div>
+  <div class="stat"><div class="stat-num">7</div><div class="stat-label">Personas</div></div>
+  <div class="stat"><div class="stat-num">11</div><div class="stat-label">Suggestions</div></div>
+  <div class="stat"><div class="stat-num">12</div><div class="stat-label">Features</div></div>
+  <div class="stat"><div class="stat-num">7</div><div class="stat-label">Use Cases</div></div>
+</div>
+
+<h2>Products (8)</h2>
+<div class="section">
+  <p style="color:var(--dim);margin-bottom:12px;font-size:10px">Click any product to expand — see all images, description, features, keywords, and metadata.</p>
+  <div class="products-list"><div class="product-card">
+  <div class="product-summary">
+    <img src="https://cdn.sanity.io/images/4zrzovbb/website/150dfe21dd8e8ee77fe0edacc93765a038ee25bf-4800x2520.jpg" alt="Claude" class="product-thumb" loading="lazy">
+    <div class="product-info">
+      <div class="product-name">Claude</div>
+      <div class="product-meta"><span class="cat">AI Assistant</span><span class="price">$20</span><span class="img-count">6 imgs</span></div>
+    </div>
+    <div class="expand-icon">+</div>
+  </div>
+  <div class="product-detail">
+    <div class="product-gallery"><img src="https://cdn.sanity.io/images/4zrzovbb/website/150dfe21dd8e8ee77fe0edacc93765a038ee25bf-4800x2520.jpg" alt="Claude" class="gallery-img" loading="lazy"><img src="https://cdn.sanity.io/images/4zrzovbb/website/1cb9e73bbea501aa7d268e93235cc9070023d0c3-4800x2520.jpg" alt="Claude" class="gallery-img" loading="lazy"><img src="https://cdn.sanity.io/images/4zrzovbb/website/40ab6434838c7cd995e4ef74862e1df2d051f8b4-4800x2520.jpg" alt="Claude" class="gallery-img" loading="lazy"><img src="https://cdn.sanity.io/images/4zrzovbb/website/777a5cbda7fbf7dede631821f6de45f12991ede6-4800x2520.jpg" alt="Claude" class="gallery-img" loading="lazy"><img src="https://cdn.sanity.io/images/4zrzovbb/website/92ed261f46696d6cd181408764ab5abd048a82f5-4800x2520.jpg" alt="Claude" class="gallery-img" loading="lazy"><img src="https://cdn.sanity.io/images/4zrzovbb/website/c772aa1a4ce89077edc8731fcb832822ab77d4a3-4800x2520.jpg" alt="Claude" class="gallery-img" loading="lazy"></div>
+    <div class="product-detail-content">
+      <p class="product-desc">Claude is Anthropic&#x27;s conversational AI assistant for everyday work: writing, learning, research, and analysis. Available on web, desktop (macOS, Windows), and mobile (iOS, Android), it supports voice mode, projects, artifacts, citations, and file uploads (PDF, Word, Excel, images). Free, Pro, Max, Team, and Enterprise plans scale from casual use to organization-wide deployment.</p>
+      <h4>Features</h4><ul><li>Web search and Google Workspace integration</li><li>Voice mode, artifacts, and projects</li><li>File uploads: PDF, Word, Excel, images</li><li>Memory across conversations</li><li>Desktop apps for macOS and Windows; mobile apps for iOS and Android</li><li>Access to the full Claude model family (Haiku, Sonnet, Opus, Fable, Mythos)</li></ul>
+      <h4>Highlights</h4><ul><li>Free tier available, Pro from $17/month</li><li>Import memory when switching from another AI provider</li><li>Extended thinking for complex problems</li></ul>
+      <div class="product-tags">
+        <h4>Keywords</h4><div class='kw-list'><span class="kw">claude</span><span class="kw">ai assistant</span><span class="kw">chatbot</span><span class="kw">chat</span><span class="kw">writing help</span><span class="kw">research assistant</span><span class="kw">ai chat</span><span class="kw">claude app</span></div>
+        <div class='product-persona'>Persona: <strong>individual-professional</strong></div>
+        <div class='product-usecase'>Use case: <strong>everyday-productivity</strong></div>
+      </div>
+      <a href="https://claude.com/product/overview" class="product-link" target="_blank">View on site &rarr;</a>
+    </div>
+  </div>
+</div><div class="product-card">
+  <div class="product-summary">
+    <img src="https://cdn.sanity.io/images/4zrzovbb/claude-com/050b07bf101bc4712abb3a7e1ba6f4d8dde33fcd-920x920.webp" alt="Claude Code" class="product-thumb" loading="lazy">
+    <div class="product-info">
+      <div class="product-name">Claude Code</div>
+      <div class="product-meta"><span class="cat">Developer Tools</span><span class="price">$17</span><span class="img-count">4 imgs</span></div>
+    </div>
+    <div class="expand-icon">+</div>
+  </div>
+  <div class="product-detail">
+    <div class="product-gallery"><img src="https://cdn.sanity.io/images/4zrzovbb/claude-com/050b07bf101bc4712abb3a7e1ba6f4d8dde33fcd-920x920.webp" alt="Claude Code" class="gallery-img" loading="lazy"><img src="https://cdn.sanity.io/images/4zrzovbb/claude-com/414e92e0a09c3fb2b45b93a9fcfaa8cb3531a341-920x920.webp" alt="Claude Code" class="gallery-img" loading="lazy"><img src="https://cdn.sanity.io/images/4zrzovbb/claude-com/ad5647024b50754209ac108ad151339a32fde625-920x920.webp" alt="Claude Code" class="gallery-img" loading="lazy"><img src="https://cdn.sanity.io/images/4zrzovbb/claude-com/6c36adaaf60ecdde313a93ad255eef573ea4de97-1200x630.jpg" alt="Claude Code" class="gallery-img" loading="lazy"></div>
+    <div class="product-detail-content">
+      <p class="product-desc">Claude Code is Anthropic&#x27;s agentic coding assistant that works directly in your codebase — terminal, IDE, web, mobile, Slack, and GitHub. It reads, writes, and executes code, runs tasks across parallel subagents, maps and explains entire codebases, and opens pull requests end-to-end. Runs locally and talks directly to model APIs without a remote code index.</p>
+      <h4>Features</h4><ul><li>Agentic multi-file editing and codebase understanding</li><li>Routines: scheduled or event-triggered automated tasks</li><li>Fast Mode: 2.5x faster Opus configuration for rapid iteration</li><li>Computer use: opens apps, navigates browsers, runs dev tools</li><li>IDE extensions for VS Code and JetBrains; GitHub Actions integration</li><li>Issue-to-PR workflows: reads issues, writes code, runs tests, submits PRs</li></ul>
+      <h4>Highlights</h4><ul><li>Pro from $17/month (annual), Max plans from $100/month</li><li>Used by Spotify, Rakuten, Notion, Shopify, Ramp, HubSpot</li><li>Rakuten cut time-to-market from 24 days to 5 days</li></ul>
+      <div class="product-tags">
+        <h4>Keywords</h4><div class='kw-list'><span class="kw">claude code</span><span class="kw">coding assistant</span><span class="kw">ai coding</span><span class="kw">developer tool</span><span class="kw">code generation</span><span class="kw">debugging</span><span class="kw">pair programming</span><span class="kw">cli coding agent</span></div>
+        <div class='product-persona'>Persona: <strong>developer</strong></div>
+        <div class='product-usecase'>Use case: <strong>software-development</strong></div>
+      </div>
+      <a href="https://claude.com/product/claude-code" class="product-link" target="_blank">View on site &rarr;</a>
+    </div>
+  </div>
+</div><div class="product-card">
+  <div class="product-summary">
+    <img src="https://cdn.prod.website-files.com/6889473510b50328dbb70ae6/696fc8952f473c6520149cfa_4f58536f1c08deac7a94811f4be57881_og-claude-cowork.jpg" alt="Claude Cowork" class="product-thumb" loading="lazy">
+    <div class="product-info">
+      <div class="product-name">Claude Cowork</div>
+      <div class="product-meta"><span class="cat">Productivity</span><span class="price">$20</span><span class="img-count">5 imgs</span></div>
+    </div>
+    <div class="expand-icon">+</div>
+  </div>
+  <div class="product-detail">
+    <div class="product-gallery"><img src="https://cdn.prod.website-files.com/6889473510b50328dbb70ae6/696fc8952f473c6520149cfa_4f58536f1c08deac7a94811f4be57881_og-claude-cowork.jpg" alt="Claude Cowork" class="gallery-img" loading="lazy"><img src="https://cdn.prod.website-files.com/6889473510b50328dbb70ae6/698f768dee28d89a40269b46_image_blog-plugins.jpg" alt="Claude Cowork" class="gallery-img" loading="lazy"><img src="https://cdn.prod.website-files.com/6889473510b50328dbb70ae6/6a3ac21c45fd1a5c3fb1ed7c_marketing.jpg" alt="Claude Cowork" class="gallery-img" loading="lazy"><img src="https://cdn.prod.website-files.com/6889473510b50328dbb70ae6/6a3ac2232033d66d13fa34e5_legal.png" alt="Claude Cowork" class="gallery-img" loading="lazy"><img src="https://cdn.prod.website-files.com/6889473510b50328dbb70ae6/6a3ac22356fc915f8ef66f85_sales.png" alt="Claude Cowork" class="gallery-img" loading="lazy"></div>
+    <div class="product-detail-content">
+      <p class="product-desc">Claude Cowork is an agentic productivity tool that completes multi-step knowledge work autonomously — reading, editing, and creating files directly in folders you specify, and connecting to external tools. Designed for non-coding professionals in marketing, sales, legal, and finance, it splits large projects into parallel sub-tasks and runs in the background, even when your laptop is closed.</p>
+      <h4>Features</h4><ul><li>End-to-end task completion in your files and tools, not just chat</li><li>Background and scheduled/recurring task execution</li><li>Parallel execution of sub-tasks across a project</li><li>Plugin system bundling skills, connectors, and sub-agents</li><li>Cross-platform continuity across web, desktop, and mobile</li><li>Transparency: shows every step, file, and decision made</li></ul>
+      <h4>Highlights</h4><ul><li>Included with Pro ($20/mo), Team ($20/seat/mo), and Enterprise</li><li>Used for marketing decks, sales briefs, legal audits, finance reconciliation</li><li>User approval required before deleting files</li></ul>
+      <div class="product-tags">
+        <h4>Keywords</h4><div class='kw-list'><span class="kw">claude cowork</span><span class="kw">task automation</span><span class="kw">ai agent</span><span class="kw">autonomous tasks</span><span class="kw">document automation</span><span class="kw">knowledge work</span><span class="kw">workflow automation</span><span class="kw">ai productivity tool</span></div>
+        <div class='product-persona'>Persona: <strong>knowledge-worker</strong></div>
+        <div class='product-usecase'>Use case: <strong>task-automation</strong></div>
+      </div>
+      <a href="https://claude.com/product/cowork" class="product-link" target="_blank">View on site &rarr;</a>
+    </div>
+  </div>
+</div><div class="product-card">
+  <div class="product-summary">
+    <img src="https://cdn.prod.website-files.com/6889473510b50328dbb70ae6/68c469d18f61fb5c21c81781_og-claude-api.jpg" alt="Claude Platform (API)" class="product-thumb" loading="lazy">
+    <div class="product-info">
+      <div class="product-name">Claude Platform (API)</div>
+      <div class="product-meta"><span class="cat">Developer Platform</span><span class="price">$3</span><span class="img-count">4 imgs</span></div>
+    </div>
+    <div class="expand-icon">+</div>
+  </div>
+  <div class="product-detail">
+    <div class="product-gallery"><img src="https://cdn.prod.website-files.com/6889473510b50328dbb70ae6/68c469d18f61fb5c21c81781_og-claude-api.jpg" alt="Claude Platform (API)" class="gallery-img" loading="lazy"><img src="https://cdn.prod.website-files.com/6889473510b50328dbb70ae6/696ab3c6f49d2f3d81e10a69_artifact_enterprise-rollout-mobile.webp" alt="Claude Platform (API)" class="gallery-img" loading="lazy"><img src="https://cdn.prod.website-files.com/6889473510b50328dbb70ae6/69e130b671817eddec5f2ec8_opus-4-7.webp" alt="Claude Platform (API)" class="gallery-img" loading="lazy"><img src="https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/690abdac9a60d37ccbb9f396_Amplitude.jpg" alt="Claude Platform (API)" class="gallery-img" loading="lazy"></div>
+    <div class="product-detail-content">
+      <p class="product-desc">The Claude Platform is Anthropic&#x27;s developer-facing API for integrating Claude&#x27;s model family into custom applications and workflows. It offers prompt caching, web search, advanced tool use, batch processing, memory, the Files API, structured outputs, and an MCP connector — plus the Claude Console workbench for building, testing, and evaluating prompts. Usage-based pricing scales from self-serve to sales-supported enterprise deployment.</p>
+      <h4>Features</h4><ul><li>Claude Managed Agents: composable APIs for building agents at scale</li><li>Prompt caching and batch processing (50% cost savings)</li><li>Web search and fetch tools for real-time data</li><li>Files API and structured JSON outputs</li><li>MCP connector for remote tool servers</li><li>Code execution: run Python and generate visualizations in-call</li></ul>
+      <h4>Highlights</h4><ul><li>Sonnet 5 at $2/MTok input introductory pricing</li><li>Used by Cursor, StubHub, Thomson Reuters, Databricks, Replit, Intercom</li><li>Self-serve or sales-assisted onboarding paths</li></ul>
+      <div class="product-tags">
+        <h4>Keywords</h4><div class='kw-list'><span class="kw">claude api</span><span class="kw">developer platform</span><span class="kw">llm api</span><span class="kw">claude pricing api</span><span class="kw">build with claude</span><span class="kw">ai agents api</span><span class="kw">claude console</span><span class="kw">sonnet api</span></div>
+        <div class='product-persona'>Persona: <strong>developer</strong></div>
+        <div class='product-usecase'>Use case: <strong>software-development</strong></div>
+      </div>
+      <a href="https://claude.com/platform/api" class="product-link" target="_blank">View on site &rarr;</a>
+    </div>
+  </div>
+</div><div class="product-card">
+  <div class="product-summary">
+    <img src="https://cdn.prod.website-files.com/6889473510b50328dbb70ae6/6a43a5d45976daa13ef88f08_science-pillars-3.webp" alt="Claude Science" class="product-thumb" loading="lazy">
+    <div class="product-info">
+      <div class="product-name">Claude Science</div>
+      <div class="product-meta"><span class="cat">Research Tools</span><span class="price">$None</span><span class="img-count">6 imgs</span></div>
+    </div>
+    <div class="expand-icon">+</div>
+  </div>
+  <div class="product-detail">
+    <div class="product-gallery"><img src="https://cdn.prod.website-files.com/6889473510b50328dbb70ae6/6a43a5d45976daa13ef88f08_science-pillars-3.webp" alt="Claude Science" class="gallery-img" loading="lazy"><img src="https://cdn.prod.website-files.com/6889473510b50328dbb70ae6/6a43a5d70cb6b4480ed0f16f_science-pillars-2.webp" alt="Claude Science" class="gallery-img" loading="lazy"><img src="https://cdn.prod.website-files.com/6889473510b50328dbb70ae6/6a43a5d70ebe75212a0ec830_science-pillars-1.webp" alt="Claude Science" class="gallery-img" loading="lazy"><img src="https://cdn.prod.website-files.com/6889473510b50328dbb70ae6/6a43a5f25539c9423e18b8a0_Single-cell-RNA-seq.webp" alt="Claude Science" class="gallery-img" loading="lazy"><img src="https://cdn.prod.website-files.com/6889473510b50328dbb70ae6/6a43a5f2cb0de5291e56f344_Cheminformatics.webp" alt="Claude Science" class="gallery-img" loading="lazy"><img src="https://cdn.prod.website-files.com/6889473510b50328dbb70ae6/6a4e5fd1272ee71ecb504bef_the-briefing-ai-for-science.jpg" alt="Claude Science" class="gallery-img" loading="lazy"></div>
+    <div class="product-detail-content">
+      <p class="product-desc">Claude Science (beta) is a desktop research application — &#x27;your research partner for rigorous science.&#x27; It runs analyses, searches 60+ scientific databases, and maintains full reproducibility from data wrangling through publication, with native rendering for proteins, molecules, and structures. Pre-configured for genomics, single-cell, proteomics, structural biology, and cheminformatics workflows.</p>
+      <h4>Features</h4><ul><li>Reproducible artifacts: exact code, environment, and conversation preserved</li><li>Background reviewer flags incorrect citations and untraceable numbers</li><li>Manages compute on laptops, HPC clusters, or Modal accounts via SSH</li><li>Persistent Python and R kernels across an analysis session</li><li>Manuscript drafting alongside underlying analysis with LaTeX preview</li><li>Query access to 60+ scientific databases</li></ul>
+      <h4>Highlights</h4><ul><li>Available for macOS (Apple Silicon and Intel) and Linux</li><li>Pre-configured for single-cell RNA-seq, phylogenetics, protein structure, cheminformatics</li><li>Contact sales for enterprise research lab deployment</li></ul>
+      <div class="product-tags">
+        <h4>Keywords</h4><div class='kw-list'><span class="kw">claude science</span><span class="kw">research assistant</span><span class="kw">scientific computing</span><span class="kw">genomics ai</span><span class="kw">single-cell rna-seq</span><span class="kw">protein structure</span><span class="kw">cheminformatics</span><span class="kw">reproducible research</span></div>
+        <div class='product-persona'>Persona: <strong>researcher</strong></div>
+        <div class='product-usecase'>Use case: <strong>scientific-research</strong></div>
+      </div>
+      <a href="https://claude.com/product/claude-science" class="product-link" target="_blank">View on site &rarr;</a>
+    </div>
+  </div>
+</div><div class="product-card">
+  <div class="product-summary">
+    <img src="https://cdn.prod.website-files.com/6889473510b50328dbb70ae6/6a32f0ce3acdbbc3c4395c05_og-claude-design.jpg" alt="Claude Design" class="product-thumb" loading="lazy">
+    <div class="product-info">
+      <div class="product-name">Claude Design</div>
+      <div class="product-meta"><span class="cat">Design Tools</span><span class="price">$None</span><span class="img-count">4 imgs</span></div>
+    </div>
+    <div class="expand-icon">+</div>
+  </div>
+  <div class="product-detail">
+    <div class="product-gallery"><img src="https://cdn.prod.website-files.com/6889473510b50328dbb70ae6/6a32f0ce3acdbbc3c4395c05_og-claude-design.jpg" alt="Claude Design" class="gallery-img" loading="lazy"><img src="https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/68bb5eb091e9b1deda6f7435_Gamma-light-theme.svg" alt="Claude Design" class="gallery-img" loading="lazy"><img src="https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/68bb5f628079049002c70825_Lovable-light-theme.svg" alt="Claude Design" class="gallery-img" loading="lazy"><img src="https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/6a32e4d71f0791469e8be823_miro_light.svg" alt="Claude Design" class="gallery-img" loading="lazy"></div>
+    <div class="product-detail-content">
+      <p class="product-desc">Claude Design (beta) lets teams collaborate with Claude to create visual work — designs, decks, prototypes, and documents — through natural language descriptions and iterative refinement. It imports design systems from GitHub or local codebases so output uses real components and brand styling, and syncs directly with Claude Code via /design-sync.</p>
+      <h4>Features</h4><ul><li>Natural language to visual: describe what you need, refine the draft</li><li>Design system import from GitHub, design files, or codebases</li><li>Claude Code synchronization via /design and /design-sync commands</li><li>Fine-grained editing: comments, sliders, drag/resize/align</li><li>Export to PDF, PPTX, or HTML; connectors to Adobe, Canva, Figma-adjacent tools</li><li>Admin-locked design systems for brand consistency</li></ul>
+      <h4>Highlights</h4><ul><li>Included with Pro, Max, Team, and Enterprise subscriptions</li><li>Used for prototypes, pitch decks, marketing collateral, wireframes</li><li>Enterprise admins enable it manually in Organization settings</li></ul>
+      <div class="product-tags">
+        <h4>Keywords</h4><div class='kw-list'><span class="kw">claude design</span><span class="kw">ai design tool</span><span class="kw">prototyping</span><span class="kw">mockups</span><span class="kw">pitch deck generator</span><span class="kw">design system</span><span class="kw">wireframes</span><span class="kw">ai presentation maker</span></div>
+        <div class='product-persona'>Persona: <strong>designer</strong></div>
+        <div class='product-usecase'>Use case: <strong>design-prototyping</strong></div>
+      </div>
+      <a href="https://claude.com/product/design" class="product-link" target="_blank">View on site &rarr;</a>
+    </div>
+  </div>
+</div><div class="product-card">
+  <div class="product-summary">
+    <img src="https://cdn.prod.website-files.com/6889473510b50328dbb70ae6/69974e8e374fa7ebd6e107ca_og-claude-security.jpg" alt="Claude Security" class="product-thumb" loading="lazy">
+    <div class="product-info">
+      <div class="product-name">Claude Security</div>
+      <div class="product-meta"><span class="cat">Security</span><span class="price">$None</span><span class="img-count">2 imgs</span></div>
+    </div>
+    <div class="expand-icon">+</div>
+  </div>
+  <div class="product-detail">
+    <div class="product-gallery"><img src="https://cdn.prod.website-files.com/6889473510b50328dbb70ae6/69974e8e374fa7ebd6e107ca_og-claude-security.jpg" alt="Claude Security" class="gallery-img" loading="lazy"><img src="https://cdn.prod.website-files.com/6889473510b50328dbb70ae6/69c5ce5b40c4078ea6468b2f_og-security.jpg" alt="Claude Security" class="gallery-img" loading="lazy"></div>
+    <div class="product-detail-content">
+      <p class="product-desc">Claude Security (public beta) is an AI-driven code security scanner for Claude Enterprise customers. It traces data flows across files to find complex, multi-component vulnerabilities that traditional rule-based scanners miss, runs every finding through an adversarial self-verification pass to cut false positives, and proposes reviewable patches for each issue found.</p>
+      <h4>Features</h4><ul><li>Context-aware scanning that traces data flow across files</li><li>Adversarial finding verification to reduce false positives</li><li>Patch generation with human approval required before implementation</li><li>Webhook integration with Slack and Jira; CSV/Markdown export</li><li>Scoped or scheduled scans on specific directories</li><li>Documented dismissals carried forward across tool runs</li></ul>
+      <h4>Highlights</h4><ul><li>Public beta for Claude Enterprise customers</li><li>Team and Max plan access listed as coming soon</li><li>Finds memory corruption, injection flaws, auth bypasses, logic errors</li></ul>
+      <div class="product-tags">
+        <h4>Keywords</h4><div class='kw-list'><span class="kw">claude security</span><span class="kw">ai code scanner</span><span class="kw">vulnerability scanning</span><span class="kw">static analysis ai</span><span class="kw">security patch generator</span><span class="kw">enterprise security tool</span><span class="kw">code vulnerability detection</span><span class="kw">devsecops ai</span></div>
+        <div class='product-persona'>Persona: <strong>security-engineer</strong></div>
+        <div class='product-usecase'>Use case: <strong>code-security</strong></div>
+      </div>
+      <a href="https://claude.com/product/claude-security" class="product-link" target="_blank">View on site &rarr;</a>
+    </div>
+  </div>
+</div><div class="product-card">
+  <div class="product-summary">
+    <img src="https://cdn.sanity.io/images/4zrzovbb/claude-com/050b07bf101bc4712abb3a7e1ba6f4d8dde33fcd-920x920.webp" alt="Claude Code for Enterprise" class="product-thumb" loading="lazy">
+    <div class="product-info">
+      <div class="product-name">Claude Code for Enterprise</div>
+      <div class="product-meta"><span class="cat">Developer Tools</span><span class="price">$100</span><span class="img-count">4 imgs</span></div>
+    </div>
+    <div class="expand-icon">+</div>
+  </div>
+  <div class="product-detail">
+    <div class="product-gallery"><img src="https://cdn.sanity.io/images/4zrzovbb/claude-com/050b07bf101bc4712abb3a7e1ba6f4d8dde33fcd-920x920.webp" alt="Claude Code for Enterprise" class="gallery-img" loading="lazy"><img src="https://cdn.sanity.io/images/4zrzovbb/claude-com/414e92e0a09c3fb2b45b93a9fcfaa8cb3531a341-920x920.webp" alt="Claude Code for Enterprise" class="gallery-img" loading="lazy"><img src="https://cdn.sanity.io/images/4zrzovbb/claude-com/ad5647024b50754209ac108ad151339a32fde625-920x920.webp" alt="Claude Code for Enterprise" class="gallery-img" loading="lazy"><img src="https://cdn.sanity.io/images/4zrzovbb/claude-com/6c36adaaf60ecdde313a93ad255eef573ea4de97-1200x630.jpg" alt="Claude Code for Enterprise" class="gallery-img" loading="lazy"></div>
+    <div class="product-detail-content">
+      <p class="product-desc">Claude Code for Enterprise brings agentic coding to large engineering organizations with centralized management: contribution metrics dashboards, server-managed tool permissions, OpenTelemetry monitoring, SSO/SCIM provisioning, and audit trails. SOC 2 Type II compliant with TLS 1.3 in transit and AES-256 at rest, plus bring-your-own-key deployment via Bedrock, Vertex AI, or Microsoft Foundry.</p>
+      <h4>Features</h4><ul><li>Contribution metrics dashboard for usage, PRs, and committed code</li><li>Server-managed settings: tool permissions, file access, MCP configs</li><li>OpenTelemetry export for session activity, token usage, and cost</li><li>SSO (Okta, Azure AD, SAML 2.0) and SCIM automated provisioning</li><li>VPC isolation and private endpoints; no training on customer data</li><li>Role-based permissions and audit trails</li></ul>
+      <h4>Highlights</h4><ul><li>Team plan from $100/person/month, Enterprise custom pricing</li><li>Rakuten: 24 days to 5 days time-to-market, 99.9% accuracy</li><li>Zapier: 89% employee adoption, 800+ AI agents deployed</li></ul>
+      <div class="product-tags">
+        <h4>Keywords</h4><div class='kw-list'><span class="kw">claude code enterprise</span><span class="kw">enterprise coding ai</span><span class="kw">engineering team ai</span><span class="kw">sso scim coding tool</span><span class="kw">soc 2 ai coding</span><span class="kw">enterprise dev platform</span><span class="kw">fleet migration ai</span><span class="kw">vpc ai deployment</span></div>
+        <div class='product-persona'>Persona: <strong>engineering-leader</strong></div>
+        <div class='product-usecase'>Use case: <strong>enterprise-engineering</strong></div>
+      </div>
+      <a href="https://claude.com/product/claude-code/enterprise" class="product-link" target="_blank">View on site &rarr;</a>
+    </div>
+  </div>
+</div></div>
+</div>
+
+<h2>Brand Voice</h2>
+<div class="section brand-section">
+  <h3>Personality</h3><p>Thoughtful, measured, mission-driven, intellectually rigorous, quietly confident</p>
+  <h3>Tone</h3><p>Serious and safety-focused without being alarmist; academic yet accessible. Anthropic writes like a research institution that also ships products — balancing philosophical framing about AI&#x27;s long-term impact with concrete, grounded descriptions of what its tools actually do.</p>
+  <h3>Vocabulary</h3><p style="color:var(--teal)">safety, frontier, alignment, interpretability, responsible scaling, agentic, frontier models, safety-first, public benefit corporation, constitution</p>
+  <h3>Avoid Words</h3><p style="color:var(--accent)">revolutionary, game-changing, disruptive, cutting-edge, cheap, hack, guys, awesome, amazing, insane</p>
+</div>
+
+<h2>Personas (7)</h2>
+<div class="section"><div class="personas-grid"><div class="persona-card">
+  <div class="persona-name">Developer / Engineer</div>
+  <div class="persona-desc">Individual contributors and engineering teams who write, review, and ship code and want an AI pair programmer embedded in their existing toolchain.</div>
+  <div class="persona-kw">Keywords: developer, engineer, coding, code, programmer, software engineer, debug, refactor</div>
+</div><div class="persona-card">
+  <div class="persona-name">Engineering Leader</div>
+  <div class="persona-desc">VPs of Engineering and technical directors evaluating AI tools to accelerate their team&#x27;s development velocity while managing security, compliance, and cost.</div>
+  <div class="persona-kw">Keywords: vp of engineering, engineering manager, cto, team lead, rollout, adoption, engineering productivity, developer platform</div>
+</div><div class="persona-card">
+  <div class="persona-name">Knowledge Worker</div>
+  <div class="persona-desc">Non-coding professionals in marketing, sales, legal, and finance who need research, analysis, and document creation automated end-to-end.</div>
+  <div class="persona-kw">Keywords: marketing, sales, legal, finance, operations, admin work, reports, documents</div>
+</div><div class="persona-card">
+  <div class="persona-name">Individual Professional</div>
+  <div class="persona-desc">Writers, learners, and everyday problem-solvers who use Claude as a conversational assistant for writing, research, and learning.</div>
+  <div class="persona-kw">Keywords: writer, student, learner, everyday use, personal assistant, writing help, study, brainstorm</div>
+</div><div class="persona-card">
+  <div class="persona-name">Researcher / Scientist</div>
+  <div class="persona-desc">Life sciences and academic researchers running rigorous, reproducible analyses across genomics, proteomics, and cheminformatics.</div>
+  <div class="persona-kw">Keywords: researcher, scientist, phd, lab, genomics, bioinformatics, reproducibility, academic research</div>
+</div><div class="persona-card">
+  <div class="persona-name">Designer / Product Team</div>
+  <div class="persona-desc">Designers, product managers, and marketers who need to turn ideas into visual work quickly — decks, prototypes, and marketing assets.</div>
+  <div class="persona-kw">Keywords: designer, product manager, prototype, mockup, pitch deck, marketing collateral, wireframe, visual design</div>
+</div><div class="persona-card">
+  <div class="persona-name">Security Engineer</div>
+  <div class="persona-desc">Application security and DevSecOps teams responsible for finding and remediating vulnerabilities before they ship.</div>
+  <div class="persona-kw">Keywords: security engineer, appsec, devsecops, vulnerability, penetration testing, code scanning, compliance security, patch management</div>
+</div></div></div>
+
+<h2>Use Cases (7)</h2>
+<div class="section"><div class="usecase-card">
+  <div class="usecase-name">Software Development</div>
+  <div class="usecase-desc">Writing, debugging, reviewing, and shipping code faster with an AI agent embedded in the terminal, IDE, or CI pipeline.</div>
+  <div class='usecase-kw'>Keywords: write code, debug, fix bug, code review, refactor, build a feature</div>
+</div><div class="usecase-card">
+  <div class="usecase-name">Enterprise Engineering Rollout</div>
+  <div class="usecase-desc">Deploying AI coding tools across an entire engineering organization with governance, observability, and compliance built in.</div>
+  <div class='usecase-kw'>Keywords: rollout ai coding, team-wide adoption, engineering compliance, sso scim, fleet-wide migration, observability</div>
+</div><div class="usecase-card">
+  <div class="usecase-name">Knowledge Work Automation</div>
+  <div class="usecase-desc">Delegating multi-step research, analysis, and document creation tasks so they run end-to-end without manual babysitting.</div>
+  <div class='usecase-kw'>Keywords: automate tasks, delegate work, hands-off ai, research automation, document creation, recurring reports</div>
+</div><div class="usecase-card">
+  <div class="usecase-name">Everyday Productivity</div>
+  <div class="usecase-desc">Using Claude as a daily assistant for writing, learning, research, and quick analysis across web, desktop, and mobile.</div>
+  <div class='usecase-kw'>Keywords: everyday ai, writing assistant, learn something, study help, quick research, explain this</div>
+</div><div class="usecase-card">
+  <div class="usecase-name">Scientific Research</div>
+  <div class="usecase-desc">Running reproducible, auditable scientific analyses — from data wrangling to publication — across genomics, proteomics, and cheminformatics.</div>
+  <div class='usecase-kw'>Keywords: scientific analysis, reproducible research, lab workflow, genomics analysis, manuscript drafting, clinical data analysis</div>
+</div><div class="usecase-card">
+  <div class="usecase-name">Design &amp; Prototyping</div>
+  <div class="usecase-desc">Turning ideas into visual work — mockups, decks, and prototypes — through natural language, on-brand and ready to share.</div>
+  <div class='usecase-kw'>Keywords: make a prototype, design a deck, create mockup, visual design, brand assets, wireframe flow</div>
+</div><div class="usecase-card">
+  <div class="usecase-name">Code Security &amp; Compliance</div>
+  <div class="usecase-desc">Finding and remediating vulnerabilities in codebases before they reach production, with human-approved patches.</div>
+  <div class='usecase-kw'>Keywords: find vulnerabilities, security scan, patch code, compliance scan, secure code review</div>
+</div></div>
+
+<h2>Features (12)</h2>
+<div class="section"><div><span class="feature-chip">Agentic Coding</span><span class="feature-chip">Computer Use</span><span class="feature-chip">Routines &amp; Scheduling</span><span class="feature-chip">Prompt Caching</span><span class="feature-chip">MCP Connector</span><span class="feature-chip">Reproducible Artifacts</span><span class="feature-chip">Design System Import</span><span class="feature-chip">Adversarial Finding Verification</span><span class="feature-chip">Enterprise Observability</span><span class="feature-chip">SSO &amp; SCIM Provisioning</span><span class="feature-chip">Memory Across Conversations</span><span class="feature-chip">Plugin System</span></div></div>
+
+<h2>Suggestions (11)</h2>
+<div class="section">
+  <div class="sug-meta">
+    <span class="sug-title">What Are You Trying to Solve?</span>
+    <span class="sug-sub">Explore Claude&#x27;s products by role, task, or budget — from everyday writing to frontier engineering.</span>
+    <span class="sug-ph">Placeholder: "Ask about Claude Code, research tools, security scans..."</span>
+  </div>
+  <div><div class="suggestion-chip"><span class="sug-label">Claude Code deep dive</span><span class="sug-query">Tell me everything about Claude Code for developers</span></div><div class="suggestion-chip"><span class="sug-label">Claude vs Cowork</span><span class="sug-query">Compare Claude and Claude Cowork for everyday work</span></div><div class="suggestion-chip"><span class="sug-label">Code vs Enterprise</span><span class="sug-query">Compare Claude Code and Claude Code for Enterprise</span></div><div class="suggestion-chip"><span class="sug-label">Best for researchers</span><span class="sug-query">What&#x27;s the best Claude product for scientific research</span></div><div class="suggestion-chip"><span class="sug-label">Best for security teams</span><span class="sug-query">Best AI tool for finding and patching code vulnerabilities</span></div><div class="suggestion-chip"><span class="sug-label">Developer tools</span><span class="sug-query">Show me all of Anthropic&#x27;s developer tools</span></div><div class="suggestion-chip"><span class="sug-label">Knowledge worker tools</span><span class="sug-query">Show me tools for automating knowledge work</span></div><div class="suggestion-chip"><span class="sug-label">Code under $20/mo</span><span class="sug-query">Which Claude Code plan is under $20 a month</span></div><div class="suggestion-chip"><span class="sug-label">API pricing</span><span class="sug-query">What does the Claude Platform API cost per month</span></div><div class="suggestion-chip"><span class="sug-label">Best for designers</span><span class="sug-query">Best Claude product for building prototypes and decks</span></div><div class="suggestion-chip"><span class="sug-label">Enterprise rollout tools</span><span class="sug-query">Show me tools for rolling out AI coding across an engineering org</span></div></div>
+</div>
+
+<h2>CTA Template</h2>
+<div class="section"><pre style="font-size:10px;color:var(--dim);overflow-x:auto;white-space:pre-wrap">{
+  &quot;html&quot;: &quot;&lt;div style=\&quot;background:#141413;padding:4rem 2rem;text-align:center;border-radius:16px;margin:0;\&quot;&gt;&lt;h2 style=\&quot;color:#faf9f5;font-family:&#x27;Anthropic Serif&#x27;,Georgia,serif;font-weight:400;font-size:2.25rem;line-height:1.3;margin:0 0 1rem;\&quot;&gt;{{title}}&lt;/h2&gt;&lt;p style=\&quot;color:#b0aea5;font-family:&#x27;Anthropic Sans&#x27;,-apple-system,BlinkMacSystemFont,sans-serif;font-weight:400;font-size:1.125rem;line-height:1.5;max-width:600px;margin:0 auto 2rem;\&quot;&gt;{{description}}&lt;/p&gt;&lt;a href=\&quot;{{href}}\&quot; style=\&quot;display:inline-block;background:#d97757;color:#faf9f5;font-family:&#x27;Anthropic Sans&#x27;,-apple-system,BlinkMacSystemFont,sans-serif;font-weight:600;font-size:1rem;padding:14px 32px;border-radius:8px;text-decoration:none;\&quot;&gt;{{buttonText}}&lt;/a&gt;&lt;/div&gt;&quot;,
+  &quot;slots&quot;: [
+    &quot;title&quot;,
+    &quot;description&quot;,
+    &quot;buttonText&quot;
+  ],
+  &quot;fallback&quot;: {
+    &quot;title&quot;: &quot;Discover how Claude can help your team&quot;,
+    &quot;description&quot;: &quot;Explore Anthropic&#x27;s AI research and see how Claude can support your work.&quot;,
+    &quot;buttonText&quot;: &quot;Try Claude&quot;
+  }
+}</pre></div>
+
+<script>
+document.querySelectorAll('.product-card').forEach(card => {
+  card.addEventListener('click', () => card.classList.toggle('expanded'));
+});
+</script>
+</body>
+</html>

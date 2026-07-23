@@ -1,0 +1,40 @@
+{
+  "site": {
+    "originUrl": "https://www.anthropic.com",
+    "extractedAt": "2026-07-17T11:51:00.000Z",
+    "pageCap": 3,
+    "totalDiscovered": 3,
+    "crawled": 3
+  },
+  "pages": [
+    {
+      "slug": "index",
+      "url": "https://www.anthropic.com/",
+      "status": "prototyped",
+      "currentStatePath": "stardust/current/pages/index.json",
+      "prototypePath": "stardust/prototypes/prototype-home.html",
+      "migratedPath": null
+    },
+    {
+      "slug": "claude",
+      "url": "https://www.anthropic.com/claude",
+      "status": "prototyped",
+      "currentStatePath": "stardust/current/pages/claude.json",
+      "prototypePath": "stardust/prototypes/prototype-claude.html",
+      "migratedPath": null
+    },
+    {
+      "slug": "research",
+      "url": "https://www.anthropic.com/research",
+      "status": "prototyped",
+      "currentStatePath": "stardust/current/pages/research.json",
+      "prototypePath": "stardust/prototypes/prototype-research.html",
+      "migratedPath": null
+    }
+  ],
+  "direction": {
+    "resolvedAt": "2026-07-17T11:59:12Z",
+    "phrase": "pixel-perfect faithful reproduction",
+    "directionFile": "stardust/direction.md"
+  }
+}

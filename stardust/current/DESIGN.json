@@ -1,0 +1,68 @@
+{
+  "colors": {
+    "background": "#faf9f5",
+    "surface": "#ffffff",
+    "text": "#141413",
+    "textSecondary": "#87867f",
+    "primary": "#cc785c",
+    "secondary": "#b0aea5",
+    "accent": "#cc785c",
+    "border": "#e8e5de"
+  },
+  "typography": {
+    "heading": {
+      "family": "Anthropic Serif, Georgia, serif",
+      "weight": "400",
+      "style": "normal"
+    },
+    "body": {
+      "family": "Anthropic Sans, -apple-system, BlinkMacSystemFont, sans-serif",
+      "weight": "400",
+      "style": "normal"
+    },
+    "baseSize": "16px",
+    "scaleRatio": 1.25,
+    "lineHeight": 1.5
+  },
+  "rounded": "16px",
+  "spacing": {
+    "base": "8px",
+    "scale": [4, 8, 12, 16, 24, 32, 48, 64, 96, 128]
+  },
+  "components": {
+    "buttons": {
+      "borderRadius": "8px",
+      "padding": "12px 24px",
+      "primaryBackground": "#141413",
+      "primaryText": "#faf9f5"
+    },
+    "cards": {
+      "borderRadius": "16px",
+      "shadow": "none",
+      "border": "1px solid #e8e5de"
+    }
+  },
+  "extensions": {
+    "componentStyle": "minimal",
+    "motifs": [
+      "warm neutral palette",
+      "generous whitespace",
+      "editorial typography",
+      "subtle rounded corners",
+      "text-centric hero sections"
+    ],
+    "voice": {
+      "heroHeadline": "AI research and products that put safety at the frontier",
+      "heroLede": "Anthropic is an AI safety and research company that's working to build reliable, interpretable, and steerable AI systems.",
+      "ctaLabels": ["Try Claude", "Contact sales", "Learn more", "Read more"],
+      "register": "brand",
+      "heroImage": "https://cdn.prod.website-files.com/67ce28cfec624e2b733f8a52/68309ab48369f7ad9b4a40e1_open-graph.jpg"
+    },
+    "modules": [],
+    "systemComponents": [
+      "site header with logo + nav + CTAs (Try Claude, Contact sales, Login)",
+      "site footer with link columns and legal links",
+      "card grid for latest releases/research"
+    ]
+  }
+}

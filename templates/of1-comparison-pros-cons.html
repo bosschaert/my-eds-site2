@@ -1,0 +1,124 @@
+<main>
+<section class="of1-cmp-pc-hero of1-hero">
+  <p class="of1-eyebrow" data-slot="hero.eyebrow">Weigh your options</p>
+  <h1 data-slot="hero.title">Pros and cons, side by side</h1>
+  <p class="of1-cmp-pc-hero-subtitle" data-slot="hero.subtitle">Every option has tradeoffs. Here's how they break down.</p>
+</section>
+
+<section class="of1-cmp-pc-tabs of1-section">
+  <div class="of1-cmp-pc-tablist" role="tablist" data-slot-list="tabs.labels">
+    <button class="of1-cmp-pc-tab" role="tab" aria-selected="true" data-tab-target="1">Item 1</button>
+    <button class="of1-cmp-pc-tab" role="tab" aria-selected="false" data-tab-target="2">Item 2</button>
+    <button class="of1-cmp-pc-tab" role="tab" aria-selected="false" data-tab-target="3">Item 3</button>
+  </div>
+
+  <div class="of1-cmp-pc-panels" data-grid-items>
+    <article class="of1-cmp-pc-panel" data-card="1" data-tab-panel="1" style="display:block">
+      <div class="of1-cmp-pc-panel-head">
+        <img data-slot="item-1.image" src="" alt="">
+        <div>
+          <p class="of1-cmp-pc-panel-eyebrow" data-slot="item-1.subtitle">Category</p>
+          <h2 data-slot="item-1.title">Item name</h2>
+          <p class="of1-cmp-pc-panel-price" data-slot="item-1.price">$0/mo</p>
+        </div>
+      </div>
+      <div class="of1-cmp-pc-panel-cols">
+        <div class="of1-cmp-pc-col of1-cmp-pc-col-pro">
+          <h4>Pros</h4>
+          <ul data-slot-list="item-1.pros">
+            <li>Strength</li>
+          </ul>
+        </div>
+        <div class="of1-cmp-pc-col of1-cmp-pc-col-con">
+          <h4>Cons</h4>
+          <ul data-slot-list="item-1.cons">
+            <li>Tradeoff</li>
+          </ul>
+        </div>
+      </div>
+      <a class="of1-cta of1-cta-primary" data-slot="item-1.cta" href="#">Learn more</a>
+    </article>
+
+    <article class="of1-cmp-pc-panel" data-card="2" data-tab-panel="2" style="display:none">
+      <div class="of1-cmp-pc-panel-head">
+        <img data-slot="item-2.image" src="" alt="">
+        <div>
+          <p class="of1-cmp-pc-panel-eyebrow" data-slot="item-2.subtitle">Category</p>
+          <h2 data-slot="item-2.title">Item name</h2>
+          <p class="of1-cmp-pc-panel-price" data-slot="item-2.price">$0/mo</p>
+        </div>
+      </div>
+      <div class="of1-cmp-pc-panel-cols">
+        <div class="of1-cmp-pc-col of1-cmp-pc-col-pro">
+          <h4>Pros</h4>
+          <ul data-slot-list="item-2.pros">
+            <li>Strength</li>
+          </ul>
+        </div>
+        <div class="of1-cmp-pc-col of1-cmp-pc-col-con">
+          <h4>Cons</h4>
+          <ul data-slot-list="item-2.cons">
+            <li>Tradeoff</li>
+          </ul>
+        </div>
+      </div>
+      <a class="of1-cta of1-cta-primary" data-slot="item-2.cta" href="#">Learn more</a>
+    </article>
+
+    <article class="of1-cmp-pc-panel" data-card="3" data-tab-panel="3" style="display:none">
+      <div class="of1-cmp-pc-panel-head">
+        <img data-slot="item-3.image" src="" alt="">
+        <div>
+          <p class="of1-cmp-pc-panel-eyebrow" data-slot="item-3.subtitle">Category</p>
+          <h2 data-slot="item-3.title">Item name</h2>
+          <p class="of1-cmp-pc-panel-price" data-slot="item-3.price">$0/mo</p>
+        </div>
+      </div>
+      <div class="of1-cmp-pc-panel-cols">
+        <div class="of1-cmp-pc-col of1-cmp-pc-col-pro">
+          <h4>Pros</h4>
+          <ul data-slot-list="item-3.pros">
+            <li>Strength</li>
+          </ul>
+        </div>
+        <div class="of1-cmp-pc-col of1-cmp-pc-col-con">
+          <h4>Cons</h4>
+          <ul data-slot-list="item-3.cons">
+            <li>Tradeoff</li>
+          </ul>
+        </div>
+      </div>
+      <a class="of1-cta of1-cta-primary" data-slot="item-3.cta" href="#">Learn more</a>
+    </article>
+  </div>
+</section>
+
+<section class="of1-cmp-pc-summary of1-section">
+  <h2 data-slot="summary.title">Quick summary</h2>
+  <ul class="of1-cmp-pc-summary-list" data-slot-list="summary.points">
+    <li>Summary point</li>
+  </ul>
+</section>
+
+<section class="of1-cmp-pc-cta of1-hero">
+  <h2 data-slot="cta.title">Ready to decide?</h2>
+  <p data-slot="cta.subtitle">Pick the option that fits, then get moving.</p>
+  <a class="of1-cta of1-cta-primary" data-slot="cta.cta-primary" href="#">Get started</a>
+</section>
+
+<script>
+(function () {
+  var tabs = document.querySelectorAll('.of1-cmp-pc-tab');
+  var panels = document.querySelectorAll('.of1-cmp-pc-panel');
+  tabs.forEach(function (tab) {
+    tab.addEventListener('click', function () {
+      var target = tab.getAttribute('data-tab-target');
+      tabs.forEach(function (t) { t.setAttribute('aria-selected', String(t === tab)); });
+      panels.forEach(function (p) {
+        p.style.display = p.getAttribute('data-tab-panel') === target ? 'block' : 'none';
+      });
+    });
+  });
+})();
+</script>
+</main>

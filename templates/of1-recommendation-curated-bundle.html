@@ -1,0 +1,103 @@
+<main>
+<section class="of1-recommendation-curated-bundle-hero of1-hero">
+  <p class="of1-eyebrow" data-slot="hero.eyebrow">Curated for your workflow</p>
+  <h1 data-slot="hero.title">A bundle built around how your team works</h1>
+  <p class="of1-recommendation-curated-bundle-hero-subtitle" data-slot="hero.subtitle">Instead of one product, most teams like yours end up combining a few. Here's the bundle we'd recommend.</p>
+  <a class="of1-cta of1-cta-primary" data-slot="hero.cta-primary" href="#">Get the bundle</a>
+</section>
+
+<section class="of1-recommendation-curated-bundle-persona of1-section">
+  <div class="of1-recommendation-curated-bundle-persona-inner">
+    <span class="of1-recommendation-curated-bundle-persona-tag" data-slot="persona.tag">Built for</span>
+    <h2 data-slot="persona.title">Engineering leaders scaling AI adoption</h2>
+    <p data-slot="persona.body">You're evaluating tools to accelerate delivery while keeping security, compliance, and cost under control.</p>
+  </div>
+</section>
+
+<section class="of1-recommendation-curated-bundle-tabs of1-section">
+  <div class="of1-recommendation-curated-bundle-tablist" role="tablist">
+    <button class="of1-recommendation-curated-bundle-tab of1-recommendation-curated-bundle-tab--active" data-tab-btn="1" role="tab" aria-selected="true" data-slot="tab-1.label">Core pick</button>
+    <button class="of1-recommendation-curated-bundle-tab" data-tab-btn="2" role="tab" aria-selected="false" data-slot="tab-2.label">Pairs well with</button>
+    <button class="of1-recommendation-curated-bundle-tab" data-tab-btn="3" role="tab" aria-selected="false" data-slot="tab-3.label">For scale</button>
+  </div>
+  <div class="of1-recommendation-curated-bundle-panel of1-recommendation-curated-bundle-panel--active" data-tab-panel="1">
+    <img class="of1-recommendation-curated-bundle-panel-image" data-slot="tab-1.image" src="" alt="">
+    <div class="of1-recommendation-curated-bundle-panel-content">
+      <h3 data-slot="tab-1.title">Claude Code for Enterprise</h3>
+      <p data-slot="tab-1.body">Agentic coding with centralized management: contribution dashboards, SSO/SCIM, and audit trails for large engineering orgs.</p>
+      <a class="of1-cta of1-cta-secondary" data-slot="tab-1.cta" href="#">Learn more</a>
+    </div>
+  </div>
+  <div class="of1-recommendation-curated-bundle-panel" data-tab-panel="2" hidden>
+    <img class="of1-recommendation-curated-bundle-panel-image" data-slot="tab-2.image" src="" alt="">
+    <div class="of1-recommendation-curated-bundle-panel-content">
+      <h3 data-slot="tab-2.title">Claude Platform (API)</h3>
+      <p data-slot="tab-2.body">Bring Claude's model family into custom internal tools with prompt caching, MCP connectors, and structured outputs.</p>
+      <a class="of1-cta of1-cta-secondary" data-slot="tab-2.cta" href="#">Learn more</a>
+    </div>
+  </div>
+  <div class="of1-recommendation-curated-bundle-panel" data-tab-panel="3" hidden>
+    <img class="of1-recommendation-curated-bundle-panel-image" data-slot="tab-3.image" src="" alt="">
+    <div class="of1-recommendation-curated-bundle-panel-content">
+      <h3 data-slot="tab-3.title">Claude Security</h3>
+      <p data-slot="tab-3.body">Adversarially-verified vulnerability scanning with reviewable patches, built for Enterprise rollouts.</p>
+      <a class="of1-cta of1-cta-secondary" data-slot="tab-3.cta" href="#">Learn more</a>
+    </div>
+  </div>
+</section>
+
+<section class="of1-recommendation-curated-bundle-grid of1-section">
+  <h2 class="of1-recommendation-curated-bundle-grid-title">What's included</h2>
+  <div class="of1-recommendation-curated-bundle-grid-items" data-grid-items>
+    <article class="of1-recommendation-curated-bundle-card" data-card="1">
+      <img data-slot="item-1.image" src="" alt="">
+      <h3 data-slot="item-1.title">Item</h3>
+      <p data-slot="item-1.body">Description</p>
+      <a data-slot="item-1.cta" href="#">Learn more</a>
+    </article>
+    <article class="of1-recommendation-curated-bundle-card" data-card="2">
+      <img data-slot="item-2.image" src="" alt="">
+      <h3 data-slot="item-2.title">Item</h3>
+      <p data-slot="item-2.body">Description</p>
+      <a data-slot="item-2.cta" href="#">Learn more</a>
+    </article>
+    <article class="of1-recommendation-curated-bundle-card" data-card="3">
+      <img data-slot="item-3.image" src="" alt="">
+      <h3 data-slot="item-3.title">Item</h3>
+      <p data-slot="item-3.body">Description</p>
+      <a data-slot="item-3.cta" href="#">Learn more</a>
+    </article>
+  </div>
+</section>
+
+<section class="of1-recommendation-curated-bundle-cta of1-section">
+  <div class="of1-recommendation-curated-bundle-cta-inner">
+    <h2 data-slot="cta.title">Ready to roll this out to your team?</h2>
+    <a class="of1-cta of1-cta-primary" data-slot="cta.link" href="#">Contact sales</a>
+  </div>
+</section>
+
+<script>
+(function () {
+  var btns = document.querySelectorAll('[data-tab-btn]');
+  btns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var id = btn.getAttribute('data-tab-btn');
+      document.querySelectorAll('[data-tab-btn]').forEach(function (b) {
+        b.classList.remove('of1-recommendation-curated-bundle-tab--active');
+        b.setAttribute('aria-selected', 'false');
+      });
+      document.querySelectorAll('[data-tab-panel]').forEach(function (p) {
+        p.hidden = true;
+        p.classList.remove('of1-recommendation-curated-bundle-panel--active');
+      });
+      btn.classList.add('of1-recommendation-curated-bundle-tab--active');
+      btn.setAttribute('aria-selected', 'true');
+      var panel = document.querySelector('[data-tab-panel="' + id + '"]');
+      panel.hidden = false;
+      panel.classList.add('of1-recommendation-curated-bundle-panel--active');
+    });
+  });
+})();
+</script>
+</main>

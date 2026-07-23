@@ -1,0 +1,62 @@
+{
+  "title": "What Are You Trying to Solve?",
+  "subtitle": "Explore Claude's products by role, task, or budget — from everyday writing to frontier engineering.",
+  "placeholder": "Ask about Claude Code, research tools, security scans...",
+  "suggestions": [
+    {
+      "type": "explore",
+      "label": "Claude Code deep dive",
+      "query": "Tell me everything about Claude Code for developers"
+    },
+    {
+      "type": "explore",
+      "label": "Claude vs Cowork",
+      "query": "Compare Claude and Claude Cowork for everyday work"
+    },
+    {
+      "type": "explore",
+      "label": "Code vs Enterprise",
+      "query": "Compare Claude Code and Claude Code for Enterprise"
+    },
+    {
+      "type": "explore",
+      "label": "Best for researchers",
+      "query": "What's the best Claude product for scientific research"
+    },
+    {
+      "type": "explore",
+      "label": "Best for security teams",
+      "query": "Best AI tool for finding and patching code vulnerabilities"
+    },
+    {
+      "type": "explore",
+      "label": "Developer tools",
+      "query": "Show me all of Anthropic's developer tools"
+    },
+    {
+      "type": "explore",
+      "label": "Knowledge worker tools",
+      "query": "Show me tools for automating knowledge work"
+    },
+    {
+      "type": "explore",
+      "label": "Code under $20/mo",
+      "query": "Which Claude Code plan is under $20 a month"
+    },
+    {
+      "type": "explore",
+      "label": "API pricing",
+      "query": "What does the Claude Platform API cost per month"
+    },
+    {
+      "type": "explore",
+      "label": "Best for designers",
+      "query": "Best Claude product for building prototypes and decks"
+    },
+    {
+      "type": "explore",
+      "label": "Enterprise rollout tools",
+      "query": "Show me tools for rolling out AI coding across an engineering org"
+    }
+  ]
+}

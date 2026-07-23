@@ -1,0 +1,130 @@
+<main>
+<section class="of1-deep-dive-faq-explainer-hero of1-hero">
+  <div class="of1-hero-grid">
+    <p class="of1-eyebrow" data-slot="hero.eyebrow">Deep dive</p>
+    <h1 data-slot="hero.title">Is Claude Code safe for proprietary code</h1>
+    <p data-slot="hero.subtitle">Everything you need to know about security, compliance, and how Claude Code handles your codebase.</p>
+    <a class="of1-cta of1-cta-primary" data-slot="hero.cta-primary" href="#">Try Claude Code</a>
+  </div>
+</section>
+
+<section class="of1-deep-dive-faq-explainer-tabs of1-section">
+  <div class="of1-dd-tabs" data-of1-tabs>
+    <div class="of1-dd-tab-nav" role="tablist">
+      <button class="of1-dd-tab-btn is-active" data-tab-btn="1" type="button" data-slot="tab-1.label">Overview</button>
+      <button class="of1-dd-tab-btn" data-tab-btn="2" type="button" data-slot="tab-2.label">How it works</button>
+      <button class="of1-dd-tab-btn" data-tab-btn="3" type="button" data-slot="tab-3.label">Security</button>
+    </div>
+    <div class="of1-dd-tab-panel is-active" data-tab-panel="1">
+      <p data-slot="tab-1.body">Panel one content.</p>
+    </div>
+    <div class="of1-dd-tab-panel" data-tab-panel="2" hidden>
+      <p data-slot="tab-2.body">Panel two content.</p>
+    </div>
+    <div class="of1-dd-tab-panel" data-tab-panel="3" hidden>
+      <p data-slot="tab-3.body">Panel three content.</p>
+    </div>
+  </div>
+</section>
+
+<section class="of1-deep-dive-faq-explainer-facts of1-section">
+  <h2 data-slot="facts.title">At a glance</h2>
+  <div class="of1-dd-cap-grid" data-grid-items>
+    <article data-card="1">
+      <h3 data-slot="item-1.title">Fact</h3>
+      <p data-slot="item-1.body">Detail.</p>
+    </article>
+    <article data-card="2">
+      <h3 data-slot="item-2.title">Fact</h3>
+      <p data-slot="item-2.body">Detail.</p>
+    </article>
+    <article data-card="3">
+      <h3 data-slot="item-3.title">Fact</h3>
+      <p data-slot="item-3.body">Detail.</p>
+    </article>
+  </div>
+</section>
+
+<section class="of1-deep-dive-faq-explainer-faq of1-section">
+  <h2 data-slot="faq.title">Frequently asked questions</h2>
+  <div class="of1-dd-accordion" data-of1-accordion>
+    <div class="of1-dd-accordion-item is-open" data-acc-item="1">
+      <button class="of1-dd-accordion-trigger" data-acc-trigger="1" type="button">
+        <span data-slot="faq-1.question">Question one</span>
+        <span class="of1-dd-accordion-icon">+</span>
+      </button>
+      <div class="of1-dd-accordion-panel" data-acc-panel="1">
+        <p data-slot="faq-1.answer">Answer one.</p>
+      </div>
+    </div>
+    <div class="of1-dd-accordion-item" data-acc-item="2">
+      <button class="of1-dd-accordion-trigger" data-acc-trigger="2" type="button">
+        <span data-slot="faq-2.question">Question two</span>
+        <span class="of1-dd-accordion-icon">+</span>
+      </button>
+      <div class="of1-dd-accordion-panel" data-acc-panel="2" hidden>
+        <p data-slot="faq-2.answer">Answer two.</p>
+      </div>
+    </div>
+    <div class="of1-dd-accordion-item" data-acc-item="3">
+      <button class="of1-dd-accordion-trigger" data-acc-trigger="3" type="button">
+        <span data-slot="faq-3.question">Question three</span>
+        <span class="of1-dd-accordion-icon">+</span>
+      </button>
+      <div class="of1-dd-accordion-panel" data-acc-panel="3" hidden>
+        <p data-slot="faq-3.answer">Answer three.</p>
+      </div>
+    </div>
+    <div class="of1-dd-accordion-item" data-acc-item="4">
+      <button class="of1-dd-accordion-trigger" data-acc-trigger="4" type="button">
+        <span data-slot="faq-4.question">Question four</span>
+        <span class="of1-dd-accordion-icon">+</span>
+      </button>
+      <div class="of1-dd-accordion-panel" data-acc-panel="4" hidden>
+        <p data-slot="faq-4.answer">Answer four.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="of1-deep-dive-faq-explainer-cta of1-section">
+  <h2 data-slot="cta.title">Still have questions</h2>
+  <a class="of1-cta of1-cta-primary" data-slot="cta.link" href="#">Contact sales</a>
+</section>
+
+<script>
+(function () {
+  var root = document.currentScript.closest('main');
+  var tabs = root.querySelector('[data-of1-tabs]');
+  if (tabs) {
+    tabs.querySelectorAll('[data-tab-btn]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var id = btn.getAttribute('data-tab-btn');
+        tabs.querySelectorAll('[data-tab-btn]').forEach(function (b) { b.classList.remove('is-active'); });
+        tabs.querySelectorAll('[data-tab-panel]').forEach(function (p) {
+          p.classList.remove('is-active');
+          p.hidden = true;
+        });
+        btn.classList.add('is-active');
+        var panel = tabs.querySelector('[data-tab-panel="' + id + '"]');
+        panel.classList.add('is-active');
+        panel.hidden = false;
+      });
+    });
+  }
+  var accordion = root.querySelector('[data-of1-accordion]');
+  if (accordion) {
+    accordion.querySelectorAll('[data-acc-trigger]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var id = btn.getAttribute('data-acc-trigger');
+        var item = accordion.querySelector('[data-acc-item="' + id + '"]');
+        var panel = accordion.querySelector('[data-acc-panel="' + id + '"]');
+        var isOpen = item.classList.contains('is-open');
+        item.classList.toggle('is-open', !isOpen);
+        panel.hidden = isOpen;
+      });
+    });
+  }
+})();
+</script>
+</main>

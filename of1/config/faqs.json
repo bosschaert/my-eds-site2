@@ -1,0 +1,79 @@
+[
+  {
+    "id": "claude-vs-claude-code",
+    "question": "What's the difference between Claude and Claude Code?",
+    "answer": "Claude is the general conversational assistant for writing, research, and everyday tasks across web, desktop, and mobile. Claude Code is a specialized agentic tool for software engineering — it works directly in your codebase across terminal, IDE, and GitHub to write, test, and ship code.",
+    "relatedProducts": ["claude-assistant", "claude-code"],
+    "category": "product-comparison"
+  },
+  {
+    "id": "cowork-vs-chat",
+    "question": "How is Claude Cowork different from regular Claude chat?",
+    "answer": "Chat responds to messages without file access. Cowork reads, edits, and creates files directly in folders you specify and completes multi-step tasks end-to-end, running in the background even when your laptop is closed.",
+    "relatedProducts": ["claude-cowork", "claude-assistant"],
+    "category": "product-comparison"
+  },
+  {
+    "id": "cowork-vs-claude-code",
+    "question": "How is Claude Cowork different from Claude Code?",
+    "answer": "Claude Code is built for software engineering — reading, writing, and testing code in a codebase. Claude Cowork targets non-coding knowledge work such as research, analysis, and document creation for teams in marketing, sales, legal, and finance.",
+    "relatedProducts": ["claude-cowork", "claude-code"],
+    "category": "product-comparison"
+  },
+  {
+    "id": "how-much-claude-code-cost",
+    "question": "How much does Claude Code cost?",
+    "answer": "Claude Code is included with the Pro plan ($17/month annual or $20/month), Max plans (5x usage at $100/month or 20x usage at $200/month), and Team/Enterprise plans. API access through the Console is billed at standard token rates.",
+    "relatedProducts": ["claude-code"],
+    "category": "pricing"
+  },
+  {
+    "id": "claude-plans-overview",
+    "question": "What Claude plans are available?",
+    "answer": "Free gives basic chat access. Pro ($17-20/month) adds Claude Code, Cowork, Design, and Science with more usage. Max (from $100/month) offers 5x or 20x more usage than Pro. Team ($20-25/seat/month) adds SSO and admin controls for 2-150 seats. Enterprise offers custom pricing with compliance, audit logs, and dedicated support.",
+    "relatedProducts": ["claude-assistant", "claude-code-enterprise"],
+    "category": "pricing"
+  },
+  {
+    "id": "claude-code-security",
+    "question": "Is Claude Code safe to use with proprietary code?",
+    "answer": "Claude Code for Enterprise is SOC 2 Type II compliant, encrypts data with TLS 1.3 in transit and AES-256 at rest, and does not train on Enterprise customer data. Bring-your-own-key deployment is available via Amazon Bedrock, Google Vertex AI, or Microsoft Foundry, keeping code within your own VPC.",
+    "relatedProducts": ["claude-code-enterprise", "claude-security"],
+    "category": "security"
+  },
+  {
+    "id": "claude-science-platforms",
+    "question": "What platforms does Claude Science support?",
+    "answer": "Claude Science is available as a downloadable desktop app for macOS (Apple Silicon and Intel) and Linux, and can manage compute jobs on laptops, HPC clusters, or Modal accounts via SSH.",
+    "relatedProducts": ["claude-science"],
+    "category": "product-details"
+  },
+  {
+    "id": "claude-security-availability",
+    "question": "Who can use Claude Security?",
+    "answer": "Claude Security is currently in public beta for Claude Enterprise customers. Access for Team and Max plans is listed as coming soon.",
+    "relatedProducts": ["claude-security"],
+    "category": "availability"
+  },
+  {
+    "id": "claude-design-availability",
+    "question": "Is Claude Design included in my subscription?",
+    "answer": "Yes. Claude Design is included with Pro, Max, Team, and Enterprise plans and shares usage limits with chat, Cowork, and Claude Code. Enterprise admins must enable it manually in Organization settings.",
+    "relatedProducts": ["claude-design"],
+    "category": "pricing"
+  },
+  {
+    "id": "claude-code-requirements",
+    "question": "What are the system requirements for Claude Code?",
+    "answer": "Claude Code runs on macOS, Linux, and Windows. It works locally in your terminal and talks directly to model APIs without requiring a backend server or remote code index, and it requests permission before modifying files or running commands.",
+    "relatedProducts": ["claude-code"],
+    "category": "product-details"
+  },
+  {
+    "id": "claude-api-models",
+    "question": "Which Claude models are available through the API?",
+    "answer": "The Claude Platform offers the full model family: Haiku 4.5 (fastest, most cost-effective), Sonnet 5 (high-performance for coding and agents), Opus 4.8 (complex agentic coding and enterprise work), and Fable 5 (next-generation intelligence for long-running agents), each with usage-based per-token pricing.",
+    "relatedProducts": ["claude-platform-api"],
+    "category": "product-details"
+  }
+]

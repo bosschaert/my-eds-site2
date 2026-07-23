@@ -1,0 +1,220 @@
+@import url("/styles/of1-template-base.css");
+
+.of1-eyebrow {
+  font-size: var(--size-eyebrow);
+  font-weight: 500;
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 16px;
+}
+
+.of1-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  border-radius: var(--radius-button);
+  font-size: var(--size-body);
+  font-weight: 500;
+  transition: opacity 0.2s;
+}
+
+.of1-cta-primary {
+  background: var(--color-button-bg);
+  color: var(--color-button-text);
+}
+
+.of1-cta-primary:hover {
+  opacity: 0.85;
+}
+
+.of1-section {
+  padding: var(--space-section) var(--space-container);
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.of1-hero {
+  padding: var(--space-section-lg) var(--space-container) var(--space-section);
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Hero */
+.of1-roi-story-hero h1 {
+  font-size: var(--size-h1);
+  line-height: var(--line-tight);
+  margin-bottom: 24px;
+}
+
+.of1-roi-story-hero-subtitle {
+  font-size: var(--size-body-lg);
+  color: var(--color-fg-dim);
+  line-height: var(--line-relaxed);
+  margin-bottom: 32px;
+}
+
+/* Timeline */
+.of1-roi-story-timeline h2 {
+  font-size: var(--size-h2);
+  margin-bottom: 48px;
+  text-align: center;
+}
+
+.of1-roi-story-timeline-list {
+  max-width: 760px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.of1-roi-story-step {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 24px;
+  align-items: start;
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.of1-roi-story-step:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.of1-roi-story-step-number {
+  font-family: var(--font-display);
+  font-size: var(--size-h3);
+  color: var(--color-accent);
+}
+
+.of1-roi-story-step h3 {
+  font-size: var(--size-h4);
+  margin-bottom: 8px;
+}
+
+.of1-roi-story-step p {
+  font-size: var(--size-small);
+  color: var(--color-fg-dim);
+  line-height: var(--line-relaxed);
+}
+
+/* Proof stats */
+.of1-roi-story-proof {
+  background: var(--color-surface);
+}
+
+.of1-roi-story-proof-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.of1-roi-story-proof-card {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 32px;
+  text-align: center;
+}
+
+.of1-roi-story-proof-stat {
+  font-family: var(--font-display);
+  font-size: var(--size-h2);
+  color: var(--color-fg);
+  margin-bottom: 12px;
+}
+
+.of1-roi-story-proof-body {
+  font-size: var(--size-small);
+  color: var(--color-fg-dim);
+  line-height: var(--line-relaxed);
+}
+
+/* Accordion FAQ */
+.of1-roi-story-faq h2 {
+  font-size: var(--size-h2);
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.of1-roi-story-accordion {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.of1-roi-story-accordion-item {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.of1-roi-story-accordion-trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 24px 0;
+  background: none;
+  border: none;
+  font-family: var(--font-body);
+  font-size: var(--size-body-lg);
+  color: var(--color-fg);
+  text-align: left;
+}
+
+.of1-roi-story-accordion-icon {
+  font-size: var(--size-h3);
+  color: var(--color-accent);
+  flex-shrink: 0;
+}
+
+.of1-roi-story-accordion-panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  overflow: hidden;
+  transition: grid-template-rows 0.25s ease;
+}
+
+.of1-roi-story-accordion-panel.is-open {
+  grid-template-rows: 1fr;
+}
+
+.of1-roi-story-accordion-panel p {
+  min-height: 0;
+  overflow: hidden;
+  font-size: var(--size-small);
+  color: var(--color-fg-dim);
+  line-height: var(--line-relaxed);
+  padding-bottom: 24px;
+}
+
+/* Closing CTA */
+.of1-roi-story-cta h2 {
+  font-size: var(--size-h2);
+  margin-bottom: 16px;
+}
+
+.of1-roi-story-cta p {
+  font-size: var(--size-body-lg);
+  color: var(--color-fg-dim);
+  margin-bottom: 32px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .of1-roi-story-proof-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .of1-roi-story-hero h1 {
+    font-size: 36px;
+  }
+
+  .of1-roi-story-step {
+    grid-template-columns: 40px 1fr;
+  }
+}

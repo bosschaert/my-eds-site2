@@ -1,0 +1,48 @@
+{
+  "personality": "Thoughtful, measured, mission-driven, intellectually rigorous, quietly confident",
+  "tone": "Serious and safety-focused without being alarmist; academic yet accessible. Anthropic writes like a research institution that also ships products — balancing philosophical framing about AI's long-term impact with concrete, grounded descriptions of what its tools actually do.",
+  "vocabulary": [
+    "safety",
+    "frontier",
+    "alignment",
+    "interpretability",
+    "responsible scaling",
+    "agentic",
+    "frontier models",
+    "safety-first",
+    "public benefit corporation",
+    "constitution",
+    "economic index",
+    "societal impact",
+    "thinking partner",
+    "problem solvers",
+    "hard questions",
+    "long-term well-being",
+    "steerable",
+    "reliable",
+    "governance",
+    "deep research"
+  ],
+  "avoidWords": [
+    "revolutionary",
+    "game-changing",
+    "disruptive",
+    "cutting-edge",
+    "cheap",
+    "hack",
+    "guys",
+    "awesome",
+    "amazing",
+    "insane",
+    "crazy",
+    "supercharge",
+    "unleash"
+  ],
+  "sentenceStyle": "Declarative, unhurried sentences with generous room to breathe. Product copy is short and direct, often addressing the reader as 'you' ('Tackle any big, bold, bewildering challenge with Claude'). Editorial and research copy runs longer and more reflective, favoring measured claims over hype ('AI will have a vast impact on the world... dedicated to securing its benefits and mitigating its risks'). Avoids exclamation points and superlative marketing language; confidence comes from understatement, not amplification.",
+  "toneByContext": {
+    "recommendations": "Grounded and practical — frame each product/model by the concrete work it helps with (coding, deep research, everyday tasks) rather than abstract superiority claims.",
+    "comparisons": "Even-handed and specific — distinguish models and products by capability and use case (e.g., 'fastest' vs 'most capable for complex tasks') rather than by hype or ranking language.",
+    "educational": "Patient and precise, in the register of a research team explaining its work — willing to name open questions and tradeoffs rather than oversimplifying.",
+    "discovery": "Inviting but restrained — pose the possibility ('Bring your hardest questions to Claude') and let the breadth of use cases speak for itself instead of pushing urgency."
+  }
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "ramp-anton-biryukov",
+    "quote": "Claude Code has dramatically accelerated our team's coding efficiency. I can now write EDA code in a notebook—pulling data, training a model, and evaluating it with basic metrics—and then ask Claude to convert that into a Metaflow pipeline. This process saves 1-2 days of routine (and often boring!) work per model.",
+    "author": "Anton Biryukov",
+    "role": "Staff Software Engineer",
+    "company": "Ramp",
+    "source": "website"
+  },
+  {
+    "id": "intercom-fergal-reid",
+    "quote": "With Claude, we're not just automating customer service—we're elevating it to truly human quality. This lets support teams think more strategically about customer experience and what makes interactions genuinely valuable.",
+    "author": "Fergal Reid",
+    "role": "VP of AI",
+    "company": "Intercom",
+    "source": "website"
+  },
+  {
+    "id": "notion-simon-last",
+    "quote": "Claude Code is moving our team up a level: we decide what needs to happen, and smooth the process so it can build and verify end-to-end. A big part of my job now is to keep as many instances of Claude Code busy as possible.",
+    "author": "Simon Last",
+    "role": "Co-founder",
+    "company": "Notion",
+    "source": "website"
+  }
+]
