@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Brand review — Saint-Louis Agglomération</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --primary:#00ADEF; --secondary:#73B72A; --ink:#013C54; --accent:#E8E100;
+    --surface:#F4EFEB; --bg:#FFFFFF; --text:#333333; --muted:#9C9C9C;
+    --sans:"Open Sans", Arial, sans-serif;
+    --maxw:1080px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;font-family:var(--sans);color:var(--text);background:var(--bg);line-height:1.55;-webkit-font-smoothing:antialiased;}
+  a{color:var(--ink);}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+  /* Masthead */
+  header.mast{background:var(--ink);color:#fff;padding:56px 0 48px;}
+  header.mast .wrap{display:flex;gap:28px;align-items:center;flex-wrap:wrap;}
+  header.mast img.logo{height:64px;width:auto;background:rgba(255,255,255,.06);border-radius:8px;padding:8px 14px;}
+  header.mast .brand h1{font-size:clamp(26px,4vw,40px);line-height:1.05;margin:0 0 6px;font-weight:800;letter-spacing:-0.01em;}
+  header.mast .hero-line{color:var(--accent);font-weight:700;font-size:18px;margin:0 0 4px;}
+  header.mast .tagline{color:rgba(255,255,255,.8);margin:0;font-size:15px;max-width:60ch;}
+  header.mast .origin{margin-top:14px;font-size:13px;color:rgba(255,255,255,.6);}
+  header.mast .origin a{color:var(--primary);text-decoration:none;}
+  /* section nav sticky */
+  nav.toc{position:sticky;top:0;z-index:10;background:var(--primary);}
+  nav.toc .wrap{display:flex;gap:6px;flex-wrap:wrap;padding-top:10px;padding-bottom:10px;}
+  nav.toc a{color:#fff;text-decoration:none;font-size:12px;font-weight:600;padding:5px 10px;border-radius:4px;opacity:.9;}
+  nav.toc a:hover{background:rgba(255,255,255,.18);opacity:1;}
+  section{padding:48px 0;border-bottom:1px solid #eee;}
+  section h2.sec{font-size:26px;font-weight:800;color:var(--ink);margin:0 0 6px;letter-spacing:-0.01em;}
+  .sub{color:#555;margin:0 0 26px;max-width:70ch;}
+  .badges{display:inline-flex;gap:6px;margin-left:10px;vertical-align:middle;}
+  .badge{font-size:10px;letter-spacing:.04em;text-transform:uppercase;padding:3px 7px;border-radius:999px;font-weight:700;}
+  .b-observed{background:#e6f7ff;color:#025b7a;}
+  .b-crosspage{background:#eaf6e0;color:#3c6414;}
+  .b-homeonly{background:#fff7cc;color:#7a6b00;}
+  .b-inferred{background:#f0e6ff;color:#5a2a8a;}
+  .b-synth{background:#ffe8e0;color:#9a3b1c;}
+  .cite{font-size:12px;color:var(--muted);margin-top:8px;}
+  .cite code{background:#f4f4f4;color:#555;padding:1px 5px;border-radius:3px;font-size:11px;}
+  /* coverage */
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;}
+  .stat{background:var(--surface);border-radius:10px;padding:20px 22px;}
+  .stat .n{font-size:32px;font-weight:800;color:var(--ink);line-height:1;}
+  .stat .l{font-size:13px;color:#555;margin-top:6px;}
+  /* pages */
+  .pages{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;}
+  .page-card{border:1px solid #e6e6e6;border-radius:10px;overflow:hidden;background:#fff;}
+  .page-card img{width:100%;display:block;border-bottom:1px solid #eee;}
+  .page-card .cap{padding:12px 14px;}
+  .page-card .cap strong{display:block;color:var(--ink);font-size:14px;}
+  .page-card .cap code{font-size:12px;color:var(--muted);}
+  /* palette */
+  .swatches{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px;}
+  .sw{border-radius:10px;overflow:hidden;border:1px solid #eee;}
+  .sw .chip{height:88px;}
+  .sw .meta{padding:12px 14px;font-size:13px;}
+  .sw .meta .val{font-weight:700;color:var(--ink);}
+  .sw .meta .role{color:#555;text-transform:capitalize;}
+  .sw .meta .use{color:var(--muted);font-size:12px;margin-top:4px;}
+  /* typography specimens */
+  .spec{padding:16px 0;border-bottom:1px dashed #eee;}
+  .spec:last-child{border-bottom:none;}
+  .spec .meta{font-size:12px;color:var(--muted);margin-bottom:6px;font-family:var(--sans);}
+  .spec .demo{color:var(--ink);}
+  /* voice */
+  .voice-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;}
+  .vc{background:var(--surface);border-radius:10px;padding:20px 22px;}
+  .vc .lbl{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--secondary);font-weight:700;margin-bottom:8px;}
+  .vc .txt{color:var(--ink);font-size:16px;}
+  .pill-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px;}
+  .pill{background:var(--surface);color:var(--ink);border-radius:999px;padding:6px 14px;font-size:13px;font-weight:600;}
+  /* tensions */
+  .tensions{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:18px;}
+  .tension{border:1px solid #f0d9d0;background:#fff8f5;border-radius:10px;padding:20px 22px;}
+  .tension .tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.03em;background:#9a3b1c;color:#fff;padding:3px 9px;border-radius:4px;margin-bottom:10px;}
+  .tension h3{margin:0 0 8px;font-size:16px;color:var(--ink);}
+  .tension p{margin:0;font-size:14px;color:#4a4a4a;}
+  /* motifs */
+  .radius-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px;}
+  .radius-card{background:var(--primary);color:#fff;padding:26px 18px;text-align:center;}
+  .radius-card .rv{font-size:20px;font-weight:800;}
+  .radius-card .rc{font-size:12px;opacity:.85;margin-top:4px;}
+  /* components list */
+  ul.comps{list-style:none;padding:0;margin:0;}
+  ul.comps li{padding:12px 16px;background:var(--surface);border-radius:8px;margin-bottom:10px;color:var(--ink);font-size:14px;}
+  ul.comps li b{color:var(--ink);}
+  /* system components */
+  .syscomp{background:var(--surface);border-radius:10px;padding:18px 20px;margin-bottom:14px;}
+  .syscomp .kind{display:inline-block;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;background:var(--ink);color:#fff;padding:3px 9px;border-radius:4px;margin-bottom:8px;}
+  .syscomp .navtabs{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px;}
+  .syscomp .navtabs span{background:var(--primary);color:#fff;font-size:12px;padding:4px 10px;border-radius:4px;}
+  /* logo section */
+  .logo-row{display:flex;gap:32px;align-items:flex-start;flex-wrap:wrap;}
+  .logo-box{background:var(--ink);border-radius:10px;padding:24px 30px;}
+  .logo-box img{height:80px;width:auto;}
+  dl.meta{margin:0;display:grid;grid-template-columns:auto 1fr;gap:6px 20px;font-size:14px;}
+  dl.meta dt{color:var(--muted);}
+  dl.meta dd{margin:0;color:var(--ink);}
+  /* photography */
+  .photo-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;}
+  .photo-grid figure{margin:0;border-radius:10px;overflow:hidden;border:1px solid #eee;}
+  .photo-grid img{width:100%;height:170px;object-fit:cover;display:block;}
+  .photo-grid figcaption{font-size:12px;color:#555;padding:8px 12px;background:#fff;}
+  /* footer */
+  footer.rev{background:var(--ink);color:rgba(255,255,255,.75);padding:40px 0;font-size:13px;}
+  footer.rev .wrap b{color:#fff;}
+  footer.rev a{color:var(--primary);}
+  .legend{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px;}
+  @media(max-width:640px){header.mast{padding:36px 0;}section{padding:36px 0;}}
+</style>
+</head>
+<body>
+
+<header class="mast">
+  <div class="wrap">
+    <img class="logo" src="assets/logo.png" alt="Saint-Louis Agglomération">
+    <div class="brand">
+      <h1>Saint-Louis Agglomération</h1>
+      <p class="hero-line">Terres d'avenir</p>
+      <p class="tagline">Situé en Alsace, dans le sud-est du Département du Haut-Rhin, dans la région des trois frontières.</p>
+      <p class="origin">Brand review du site actuel · <a href="https://www.agglo-saint-louis.fr/">www.agglo-saint-louis.fr</a></p>
+    </div>
+  </div>
+</header>
+
+<nav class="toc">
+  <div class="wrap">
+    <a href="#coverage">Couverture</a>
+    <a href="#pages">Page</a>
+    <a href="#palette">Palette</a>
+    <a href="#type">Typographie</a>
+    <a href="#voice">Voix</a>
+    <a href="#tensions">Tensions</a>
+    <a href="#photo">Photographie</a>
+    <a href="#motifs">Motifs</a>
+    <a href="#components">Composants</a>
+    <a href="#system">Composants système</a>
+    <a href="#logo">Logo</a>
+  </div>
+</nav>
+
+<!-- COVERAGE -->
+<section id="coverage">
+  <div class="wrap">
+    <h2 class="sec">Couverture de l'extraction<span class="badges"><span class="badge b-synth">synthesized</span></span></h2>
+    <p class="sub">Extraction mono-page (page d'accueil) pour l'uplift presales. La surface de marque et cette revue s'appuient sur la page rendue en direct via Playwright.</p>
+    <div class="stats">
+      <div class="stat"><div class="n">1</div><div class="l">page extraite (accueil), rendue en direct — HTTP 200, 1440×900</div></div>
+      <div class="stat"><div class="n">medium</div><div class="l">stratégie d'attente · ~3,0 s · scroll lazy-load appliqué</div></div>
+      <div class="stat"><div class="n">8 · 1</div><div class="l">couleurs distinctes · famille typographique (Open Sans)</div></div>
+    </div>
+    <p class="cite">Source : <code>_crawl-log.json</code>, <code>_brand-extraction.json</code>. Site WordPress (thème <code>ca3f</code>, HDR Communications © 2019). Consentement : tarteaucitron (écarté avant capture).</p>
+  </div>
+</section>
+
+<!-- PAGES -->
+<section id="pages">
+  <div class="wrap">
+    <h2 class="sec">Page capturée<span class="badges"><span class="badge b-homeonly">home-only</span></span></h2>
+    <p class="sub">Capture plein-page à 1440px de la page d'accueil.</p>
+    <div class="pages">
+      <div class="page-card">
+        <img src="assets/screenshots/home.png" alt="Capture de la page d'accueil">
+        <div class="cap"><strong>Accueil du site de Saint-Louis Agglomération</strong><code>/fr/</code></div>
+      </div>
+    </div>
+    <p class="cite">Source : <code>assets/screenshots/home.png</code></p>
+  </div>
+</section>
+
+<!-- PALETTE -->
+<section id="palette">
+  <div class="wrap">
+    <h2 class="sec">Palette<span class="badges"><span class="badge b-observed">observed</span></span></h2>
+    <p class="sub">Identité civique en quatre couleurs (bleu ciel · vert prairie · navy profond · jaune), sur fond blanc et panneaux pierre chaude. Fréquences comptées sur les styles calculés de la page rendue.</p>
+    <div class="swatches">
+      <div class="sw"><div class="chip" style="background:#00ADEF"></div><div class="meta"><span class="val">#00ADEF</span> · <span class="role">primary</span><div class="use">nav, titres h2, pilules hero · 19×</div></div></div>
+      <div class="sw"><div class="chip" style="background:#73B72A"></div><div class="meta"><span class="val">#73B72A</span> · <span class="role">secondary</span><div class="use">boutons CTA, ruban, flèches · 5×</div></div></div>
+      <div class="sw"><div class="chip" style="background:#013C54"></div><div class="meta"><span class="val">#013C54</span> · <span class="role">ink</span><div class="use">footer, texte nav, sous-titres · 42×</div></div></div>
+      <div class="sw"><div class="chip" style="background:#E8E100"></div><div class="meta"><span class="val">#E8E100</span> · <span class="role">accent</span><div class="use">logo, retour haut, footer · 6×</div></div></div>
+      <div class="sw"><div class="chip" style="background:#F4EFEB"></div><div class="meta"><span class="val">#F4EFEB</span> · <span class="role">surface</span><div class="use">panneaux de contenu · 7×</div></div></div>
+      <div class="sw"><div class="chip" style="background:#FFFFFF;border-bottom:1px solid #eee"></div><div class="meta"><span class="val">#FFFFFF</span> · <span class="role">background</span><div class="use">fond de page · 75×</div></div></div>
+      <div class="sw"><div class="chip" style="background:#333333"></div><div class="meta"><span class="val">#333333</span> · <span class="role">text</span><div class="use">corps de texte · 83×</div></div></div>
+      <div class="sw"><div class="chip" style="background:#9C9C9C"></div><div class="meta"><span class="val">#9C9C9C</span> · <span class="role">text muted</span><div class="use">liens « accès directs » · 10× — contraste 2,40:1 ⚠</div></div></div>
+    </div>
+    <p class="cite">Source : <code>_brand-extraction.json § palette</code></p>
+  </div>
+</section>
+
+<!-- TYPE -->
+<section id="type">
+  <div class="wrap">
+    <h2 class="sec">Typographie<span class="badges"><span class="badge b-observed">observed</span> <span class="badge b-synth">No modular scale</span></span></h2>
+    <p class="sub">Une seule famille — <b>Open Sans</b> (400/700). Aucun registre display : les titres de section (14px) partagent la taille du corps, la page paraît plate.</p>
+    <div class="spec">
+      <div class="meta">h1 hero · 36px / 700 / line-height 39.6px</div>
+      <div class="demo" style="font-size:36px;font-weight:700;line-height:1.1;">Bienvenue en Saint-Louis Agglomération</div>
+    </div>
+    <div class="spec">
+      <div class="meta">h2 titre de section · 14px / 700 · couleur #00ADEF</div>
+      <div class="demo" style="font-size:14px;font-weight:700;color:#00ADEF;">GRANDS PROJETS</div>
+    </div>
+    <div class="spec">
+      <div class="meta">onglet nav · 11.9px / 400 · couleur #013C54</div>
+      <div class="demo" style="font-size:11.9px;color:#013C54;">Coopération transfrontalière</div>
+    </div>
+    <div class="spec">
+      <div class="meta">corps · 14px / 400 · line-height 20px</div>
+      <div class="demo" style="font-size:14px;color:#222;max-width:70ch;">Située en Alsace, dans le sud-est du Département du Haut-Rhin, Saint-Louis Agglomération constitue l'aboutissement du développement de la coopération intercommunale dans la région des trois frontières.</div>
+    </div>
+    <p class="cite">Source : <code>_brand-extraction.json § type</code> — <code>scaleAudit.kind: "ad-hoc"</code> (11.9 → 13 → 14 → 36px).</p>
+  </div>
+</section>
+
+<!-- VOICE -->
+<section id="voice">
+  <div class="wrap">
+    <h2 class="sec">Voix <span style="font-size:14px;font-weight:600;color:var(--secondary)">· ton : institutionnel / français formel</span><span class="badges"><span class="badge b-homeonly">home-only</span></span></h2>
+    <p class="sub">Registre administratif et factuel. Eyebrows en MAJUSCULES, CTA utilitaires.</p>
+    <div class="voice-cards">
+      <div class="vc"><div class="lbl">Hero</div><div class="txt">Bienvenue en Saint-Louis Agglomération</div></div>
+      <div class="vc"><div class="lbl">Baseline</div><div class="txt">Terres d'avenir</div></div>
+      <div class="vc"><div class="lbl">Premier paragraphe</div><div class="txt" style="font-size:14px;">Située en Alsace, dans le sud-est du Département du Haut-Rhin… la coopération intercommunale dans la région des trois frontières.</div></div>
+    </div>
+    <div class="pill-row">
+      <span class="pill">En savoir plus</span>
+      <span class="pill">VOIR TOUS LES PROJETS</span>
+      <span class="pill">VOIR TOUTES LES CONCERTATIONS PUBLIQUES</span>
+      <span class="pill">CONTACT</span>
+      <span class="pill">SOCIAL WALL</span>
+      <span class="pill">PORTAIL OPEN DATA</span>
+    </div>
+    <p class="cite">Source : <code>_brand-extraction.json § voice / voiceTable</code></p>
+  </div>
+</section>
+
+<!-- TENSIONS -->
+<section id="tensions">
+  <div class="wrap">
+    <h2 class="sec">Tensions<span class="badges"><span class="badge b-synth">detectors run</span></span></h2>
+    <p class="sub">Observations descriptives des contradictions internes du site actuel — l'agenda de décision pour la phase de direction. Descriptif, non prescriptif.</p>
+    <div class="tensions">
+      <div class="tension">
+        <span class="tag">T-scale</span>
+        <h3>Échelle typographique ad-hoc</h3>
+        <p>11,9 → 13 → 14 → 36px, sans ratio cohérent, et aucun palier display : les titres de section (14px) ont la même taille que le corps. La direction devra décider d'adopter une échelle modulaire et un vrai registre display.</p>
+      </div>
+      <div class="tension">
+        <span class="tag">T-contrast</span>
+        <h3>Contraste insuffisant sur le texte de marque</h3>
+        <p>Liens « ACCÈS DIRECTS » (#9C9C9C sur #F4EFEB) = <b>2,40:1</b> ; titres cyan #00ADEF sur blanc = <b>2,55:1</b> ; libellés blancs sur bouton vert #73B72A = <b>2,46:1</b>. Tous sous le seuil WCAG (4,5:1 corps / 3:1 grand texte). Problème d'accessibilité.</p>
+      </div>
+      <div class="tension">
+        <span class="tag">T-cta-vocab</span>
+        <h3>Voix des CTA fragmentée</h3>
+        <p>« En savoir plus » vs « VOIR TOUS LES PROJETS » vs « VOIR TOUTES LES CONCERTATIONS PUBLIQUES » cohabitent pour la même action « voir plus ». La direction devra choisir une voix canonique.</p>
+      </div>
+      <div class="tension">
+        <span class="tag">T-radius-vocab</span>
+        <h3>Vocabulaire de rayons fragmenté</h3>
+        <p>Trois petits rayons en usage (3px, 10px, 14px). La direction devra fixer une valeur unique ou accepter la variance.</p>
+      </div>
+      <div class="tension">
+        <span class="tag">T-logo-variants</span>
+        <h3>Une seule variante de logo capturée</h3>
+        <p>Seule la version claire (mot-symbole blanc, pour fonds photo/sombres) est capturée. La refonte aura besoin d'un jeu de variantes (monochrome, inversée dark-on-light, SVG).</p>
+      </div>
+      <div class="tension">
+        <span class="tag">T-no-tokens</span>
+        <h3>Aucun design token</h3>
+        <p>Aucune custom property CSS détectée sur la page. Le site actuel n'a pas de couche de tokens ; la cible en introduira une — changement structurel à signaler.</p>
+      </div>
+      <div class="tension">
+        <span class="tag">T-missed-photo</span>
+        <h3>Photographie sous-exploitée</h3>
+        <p>La photographie de paysage (Petite Camargue, vues aériennes) est le meilleur atout, mais elle est réduite à une bande hero de ~420px et à des vignettes. « Terres d'avenir » mérite une image plein-écran.</p>
+      </div>
+    </div>
+    <p class="cite">Détecteurs : <code>brand-review-template.md § Detectors</code>. Contrastes mesurés depuis <code>_brand-extraction.json § palette</code>.</p>
+  </div>
+</section>
+
+<!-- PHOTOGRAPHY -->
+<section id="photo">
+  <div class="wrap">
+    <h2 class="sec">Photographie<span class="badges"><span class="badge b-observed">observed</span></span></h2>
+    <p class="sub">Photographie documentaire du territoire des trois frontières — le meilleur atout de la marque, actuellement sous-dimensionné.</p>
+    <div class="photo-grid">
+      <figure><img src="assets/media/petite_camargue.jpg" alt="Petite Camargue"><figcaption>Hero — Petite Camargue (canal / réserve naturelle)</figcaption></figure>
+      <figure><img src="assets/media/territoire.jpg" alt="Territoire"><figcaption>Grands projets — vue aérienne du territoire</figcaption></figure>
+      <figure><img src="assets/media/Visuel_Open_Data_1200x530px.jpg" alt="Open Data"><figcaption>Portail Open Data</figcaption></figure>
+      <figure><img src="assets/media/Concertation_PCAET_1200px.jpg" alt="Concertation PCAET"><figcaption>Concertation — PCAET</figcaption></figure>
+      <figure><img src="assets/media/scarabee-japonais-AS-2025.jpeg" alt="Scarabée japonais"><figcaption>Actualité — scarabée japonais</figcaption></figure>
+      <figure><img src="assets/media/map.png" alt="Carte"><figcaption>Nous trouver — carte du territoire</figcaption></figure>
+    </div>
+    <p class="cite">Source : <code>_brand-extraction.json § photography</code>, <code>assets/media/</code></p>
+  </div>
+</section>
+
+<!-- MOTIFS -->
+<section id="motifs">
+  <div class="wrap">
+    <h2 class="sec">Motifs<span class="badges"><span class="badge b-observed">observed</span></span></h2>
+    <p class="sub">Rayons de bordure en usage (mode par occurrence). Aucune ombre portée — surfaces plates, séparées par des bandes de couleur et des panneaux pierre.</p>
+    <div class="radius-grid">
+      <div class="radius-card" style="border-radius:10px"><div class="rv">10px</div><div class="rc">6 occurrences</div></div>
+      <div class="radius-card" style="border-radius:3px"><div class="rv">3px</div><div class="rc">3 occurrences</div></div>
+      <div class="radius-card" style="border-radius:14px"><div class="rv">14px</div><div class="rc">1 occurrence</div></div>
+    </div>
+    <p class="cite">Source : <code>_brand-extraction.json § motifs.borderRadius</code> · <code>motifs.shadow.stack: []</code></p>
+  </div>
+</section>
+
+<!-- COMPONENTS -->
+<section id="components">
+  <div class="wrap">
+    <h2 class="sec">Composants<span class="badges"><span class="badge b-crosspage">observed</span></span></h2>
+    <ul class="comps">
+      <li><b>Hero photographique plein-écran</b> — carousel avec logo en surimpression et pilules CTA (SOCIAL WALL, PORTAIL OPEN DATA)</li>
+      <li><b>Nav à onglets colorés</b> — 7 thèmes horizontaux (Vie quotidienne, Eco-citoyen, Aménagement du territoire…)</li>
+      <li><b>Carousel « À LA UNE »</b> — 7 actualités, pager numérique 1–7</li>
+      <li><b>Liste « ACCÈS DIRECTS »</b> — 10 liens rapides, icônes en ligne (texte gris atténué)</li>
+      <li><b>Ruban / étiquette</b> — « GRANDS PROJETS » en ruban vert sur image</li>
+      <li><b>Panneaux pierre chaude</b> — fonds de contenu #F4EFEB, sans ombre</li>
+      <li><b>Footer navy multi-colonnes</b> — adresse, carte, horaires, contact</li>
+    </ul>
+    <p class="cite">Source : <code>_brand-extraction.json § motifs.patterns / systemComponents</code></p>
+  </div>
+</section>
+
+<!-- SYSTEM COMPONENTS -->
+<section id="system">
+  <div class="wrap">
+    <h2 class="sec">Composants système<span class="badges"><span class="badge b-homeonly">home-only</span></span></h2>
+    <div class="syscomp">
+      <span class="kind">header + nav</span>
+      <p style="margin:0;font-size:14px;color:var(--ink)">Barre utilitaire (Plan du site · Aller au menu · Aller au contenu · A+ · A− · météo · réseaux sociaux · CONTACT), puis hero photo plein-largeur, puis nav à onglets thématiques.</p>
+      <div class="navtabs">
+        <span>Saint-Louis Agglomération</span><span>Vie quotidienne</span><span>Eco-citoyen</span>
+        <span>Economie, emploi et formation</span><span>Aménagement du territoire</span>
+        <span>Coopération transfrontalière</span><span>Sports, Culture, Tourisme</span>
+      </div>
+    </div>
+    <div class="syscomp">
+      <span class="kind">footer</span>
+      <p style="margin:0;font-size:14px;color:var(--ink)">Footer navy à 4 colonnes — Adresse (Place de l'Hôtel de Ville, CS 50199, 68305 SAINT-LOUIS Cedex) · Nous trouver (carte) · Horaires (Lun–Jeu 09h–11h30 / 14h30–17h ; Ven 09h–11h30 / 14h30–16h30) · Contact (Tél 03.89.70.90.70). Ligne légale : Mentions légales · Plan du site · Accès réservé · Espace presse · Politique de confidentialité · Gestion des cookies.</p>
+    </div>
+    <p class="cite">Source : <code>_brand-extraction.json § systemComponents</code>, <code>pages/home.json § sections</code></p>
+  </div>
+</section>
+
+<!-- LOGO -->
+<section id="logo">
+  <div class="wrap">
+    <h2 class="sec">Logo<span class="badges"><span class="badge b-homeonly">home-only</span></span></h2>
+    <div class="logo-row">
+      <div class="logo-box"><img src="assets/logo.png" alt="Logo Saint-Louis Agglomération"></div>
+      <dl class="meta">
+        <dt>Source</dt><dd>&lt;img&gt; dans le header (thème ca3f)</dd>
+        <dt>Fichier</dt><dd>PNG, 550×195 (rendu 180–360px)</dd>
+        <dt>Description</dt><dd>Marque abstraite bleu + vert + jaune (confluence des trois frontières) + « Terres d'avenir »</dd>
+        <dt>Variantes capturées</dt><dd>1 (mot-symbole clair pour fond photo)</dd>
+        <dt>Variantes manquantes</dt><dd>monochrome, inversée dark-on-light, SVG</dd>
+      </dl>
+    </div>
+    <p class="cite">Source : <code>_brand-extraction.json § logo</code> · <code>assets/logo.png</code></p>
+  </div>
+</section>
+
+<footer class="rev">
+  <div class="wrap">
+    <p><b>Provenance.</b> Cette revue lit : <code>PRODUCT.md</code>, <code>DESIGN.md/json</code>, <code>_brand-extraction.json</code>, <code>pages/home.json</code>, <code>_crawl-log.json</code>, <code>assets/screenshots/home.png</code>. Extraction mono-page (accueil), rendue en direct via Playwright.</p>
+    <p><b>Prochaine étape.</b> <code>stardust:direct</code> — résoudre une direction de refonte. (Cet uplift s'arrête après la brand review.)</p>
+    <div class="legend">
+      <span class="badge b-observed">observed</span>
+      <span class="badge b-crosspage">cross-page</span>
+      <span class="badge b-homeonly">home-only</span>
+      <span class="badge b-inferred">inferred</span>
+      <span class="badge b-synth">synthesized</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
