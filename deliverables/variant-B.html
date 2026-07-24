@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Saint-Louis Agglomération — Terres d'avenir</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#013C54;
+    --cyan:#00ADEF;
+    --cyan-text:#016490;
+    --green:#73B72A;
+    --green-cta:#4E8017;
+    --yellow:#E8E100;
+    --stone:#F4EFEB;
+    --ink:#2A2E30;
+    --muted:#5C6B73;
+    --white:#FFFFFF;
+    --line:#E3DDD6;
+
+    --font:"Open Sans",Arial,system-ui,sans-serif;
+
+    --step--1:clamp(.82rem,.79rem + .12vw,.9rem);
+    --step-0:clamp(1rem,.96rem + .2vw,1.06rem);
+    --step-1:clamp(1.2rem,1.12rem + .35vw,1.35rem);
+    --step-2:clamp(1.55rem,1.38rem + .7vw,1.9rem);
+    --step-3:clamp(2rem,1.7rem + 1.3vw,2.8rem);
+    --step-4:clamp(2.6rem,2rem + 2.5vw,4rem);
+    --step-5:clamp(3.2rem,2.1rem + 4.6vw,5.6rem);
+
+    --maxw:1220px;
+    --gap:clamp(1.25rem,.9rem + 1.5vw,2.2rem);
+    --pad-section:clamp(3.5rem,2.4rem + 3.6vw,5rem);
+    --radius:14px;
+
+    --z-sticky:100;
+    --ease:cubic-bezier(0.25,0.46,0.45,0.94);
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--font);font-size:var(--step-0);line-height:1.6;color:var(--ink);background:var(--white);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  h1,h2,h3,h4{line-height:1.1;letter-spacing:-.015em;color:var(--navy);text-wrap:balance;font-weight:800}
+  p{text-wrap:pretty}
+  .wrap{max-width:var(--maxw);margin-inline:auto;padding-inline:clamp(1.1rem,.6rem + 2vw,2.2rem)}
+  .wrap-wide{max-width:1440px;margin-inline:auto;padding-inline:clamp(1.1rem,.6rem + 2vw,2.2rem)}
+
+  /* Utility bar */
+  .utility{background:var(--navy);color:var(--white);font-size:var(--step--1);position:relative;z-index:5}
+  .utility .wrap-wide{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:42px;flex-wrap:wrap}
+  .utility a{color:rgba(255,255,255,.82);transition:color .2s}
+  .utility a:hover{color:var(--yellow)}
+  .utility-left{display:flex;gap:1.2rem;align-items:center}
+  .utility-left .sep{opacity:.35}
+  .utility-right{display:flex;gap:1.1rem;align-items:center}
+  .weather{display:inline-flex;gap:.4rem;align-items:center;color:rgba(255,255,255,.9)}
+  .txt-size button{background:none;border:1px solid rgba(255,255,255,.35);color:#fff;border-radius:6px;width:26px;height:24px;font:inherit;cursor:pointer;line-height:1}
+  .social{display:inline-flex;gap:.6rem}
+  .social a{width:26px;height:26px;display:grid;place-items:center;border-radius:50%;background:rgba(255,255,255,.12)}
+  .btn-contact{background:var(--green-cta);color:#fff!important;padding:.4rem .95rem;border-radius:999px;font-weight:700}
+  .btn-contact:hover{background:#3f6b12}
+
+  /* ===== HERO — photography as protagonist (bet) ===== */
+  .hero{position:relative;min-height:clamp(600px,92vh,860px);display:flex;flex-direction:column;color:#fff;overflow:hidden}
+  .hero-media{position:absolute;inset:0}
+  .hero-media img{width:100%;height:100%;object-fit:cover;transform:scale(1.02)}
+  .hero::after{content:"";position:absolute;inset:0;background:
+      linear-gradient(180deg,rgba(1,45,62,.5) 0%,rgba(1,45,62,.05) 30%,rgba(1,45,62,.15) 55%,rgba(1,45,62,.9) 100%)}
+  .hero-topbar{position:relative;z-index:2;padding-top:clamp(1.6rem,3vw,2.6rem)}
+  .hero-topbar .wrap-wide{display:flex;align-items:center;justify-content:space-between}
+  .hero-logo img{height:clamp(58px,7.5vw,92px);width:auto;filter:drop-shadow(0 2px 14px rgba(0,0,0,.4))}
+  .hero-nav{display:flex;gap:.4rem}
+  .hero-nav a{padding:.55rem 1rem;font-size:var(--step--1);font-weight:700;color:#fff;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);backdrop-filter:blur(3px);transition:background .2s}
+  .hero-nav a:hover{background:rgba(255,255,255,.22)}
+  .hero-body{position:relative;z-index:2;margin-top:auto;padding-bottom:clamp(3rem,6vw,6rem)}
+  .hero-eyebrow{font-size:var(--step-1);font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:var(--yellow);margin-bottom:1rem}
+  .hero h1{color:#fff;font-size:var(--step-5);font-weight:800;max-width:14ch;letter-spacing:-.025em;line-height:.98;text-shadow:0 4px 40px rgba(1,30,42,.45)}
+  .hero-lede{font-size:clamp(1.15rem,1rem + .6vw,1.5rem);color:rgba(255,255,255,.95);max-width:48ch;margin-top:1.4rem;line-height:1.5;text-shadow:0 1px 14px rgba(1,30,42,.5)}
+  .hero-ctas{display:flex;flex-wrap:wrap;gap:.9rem;margin-top:2rem}
+  .btn{display:inline-flex;align-items:center;gap:.55rem;font-weight:700;padding:.95rem 1.7rem;border-radius:999px;font-size:var(--step-0);transition:transform .2s var(--ease),background .2s;cursor:pointer;border:0}
+  .btn svg{width:1.1em;height:1.1em}
+  .btn-primary{background:var(--green-cta);color:#fff}
+  .btn-primary:hover{background:#3f6b12;transform:translateY(-2px)}
+  .btn-ghost{background:rgba(255,255,255,.14);color:#fff;border:1.5px solid rgba(255,255,255,.6);backdrop-filter:blur(3px)}
+  .btn-ghost:hover{background:rgba(255,255,255,.24);transform:translateY(-2px)}
+  .scroll-cue{position:absolute;bottom:1.4rem;left:50%;transform:translateX(-50%);z-index:2;color:rgba(255,255,255,.75);font-size:var(--step--1);letter-spacing:.15em;text-transform:uppercase;display:flex;flex-direction:column;align-items:center;gap:.5rem}
+  .scroll-cue svg{width:20px;height:20px;animation:bob 2s var(--ease) infinite}
+  @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(6px)}}
+
+  /* Search + tasks — overlaid on a floating panel below hero */
+  .taskfloat{position:relative;z-index:4;margin-top:-3.5rem}
+  .taskpanel{background:#fff;border-radius:18px;box-shadow:0 24px 60px rgba(1,60,84,.16);padding:clamp(1.4rem,3vw,2.2rem)}
+  .search{display:flex;gap:.6rem;max-width:100%}
+  .search input{flex:1;border:1.5px solid var(--line);border-radius:999px;padding:.9rem 1.4rem;font:inherit;font-size:var(--step-0);color:var(--ink)}
+  .search input::placeholder{color:var(--muted)}
+  .search input:focus{outline:none;border-color:var(--cyan-text);box-shadow:0 0 0 3px rgba(1,100,144,.15)}
+  .search button{background:var(--navy);color:#fff;border:0;border-radius:999px;padding:0 1.5rem;font:inherit;font-weight:700;cursor:pointer;display:inline-flex;align-items:center;gap:.5rem}
+  .search button:hover{background:#012c3e}
+  .quicktasks{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:.9rem;margin-top:1.5rem}
+  .qt{display:flex;flex-direction:column;gap:.5rem;padding:1rem 1.1rem;border-radius:12px;background:var(--stone);border:1px solid transparent;transition:transform .2s var(--ease),border-color .2s,background .2s;color:var(--navy)}
+  .qt:hover{transform:translateY(-3px);border-color:var(--cyan);background:#fff;box-shadow:0 8px 20px rgba(1,60,84,.08)}
+  .qt-ico{width:38px;height:38px;border-radius:10px;background:rgba(0,173,239,.14);color:var(--cyan-text);display:grid;place-items:center}
+  .qt-ico svg{width:20px;height:20px}
+  .qt strong{font-size:var(--step-0);font-weight:700}
+  .qt span{font-size:var(--step--1);color:var(--muted)}
+
+  section{padding-block:var(--pad-section)}
+  .section-stone{background:var(--stone)}
+  .section-navy{background:var(--navy);color:#fff}
+  .section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:1rem;margin-bottom:clamp(1.6rem,3vw,2.4rem);flex-wrap:wrap}
+  .section-head h2{font-size:var(--step-3);color:var(--cyan-text)}
+  .section-navy .section-head h2{color:#fff}
+  .link-all{display:inline-flex;align-items:center;gap:.4rem;font-weight:700;color:var(--green-cta);font-size:var(--step-0)}
+  .link-all:hover{gap:.65rem}
+  .link-all svg{width:1em;height:1em;transition:transform .2s}
+  .section-navy .link-all{color:var(--yellow)}
+
+  /* ===== Editorial "Découvrir le territoire" band — big duotone aerial (bet) ===== */
+  .discover{position:relative;overflow:hidden}
+  .discover-grid{display:grid;grid-template-columns:1.15fr .85fr;align-items:stretch;min-height:min(80vh,640px)}
+  .discover-media{position:relative;overflow:hidden}
+  .discover-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease)}
+  .discover:hover .discover-media img{transform:scale(1.05)}
+  .discover-media::after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,rgba(1,60,84,.15),rgba(0,173,239,.12))}
+  .discover-text{background:var(--navy);color:#fff;display:flex;flex-direction:column;justify-content:center;padding:clamp(2.2rem,4vw,4.5rem)}
+  .discover-text .eyebrow{color:var(--yellow);font-weight:700;letter-spacing:.2em;text-transform:uppercase;font-size:var(--step--1);margin-bottom:1rem}
+  .discover-text h2{color:#fff;font-size:var(--step-4);max-width:14ch}
+  .discover-text p{color:rgba(255,255,255,.9);font-size:var(--step-1);margin-top:1.2rem;max-width:44ch;line-height:1.55}
+  .discover-stats{display:flex;gap:clamp(1.5rem,3vw,2.8rem);margin-top:2rem;flex-wrap:wrap}
+  .stat .n{font-size:var(--step-3);font-weight:800;color:var(--yellow);line-height:1}
+  .stat .l{font-size:var(--step--1);color:rgba(255,255,255,.75);margin-top:.35rem}
+  .discover-text .btn{margin-top:2.2rem;align-self:flex-start}
+
+  /* ===== Photo-led asymmetric news (bet) ===== */
+  .news-asym{display:grid;grid-template-columns:1.55fr 1fr;gap:var(--gap)}
+  .news-hero{position:relative;border-radius:var(--radius);overflow:hidden;min-height:420px;display:flex;align-items:flex-end;color:#fff;isolation:isolate}
+  .news-hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform .7s var(--ease)}
+  .news-hero:hover img{transform:scale(1.04)}
+  .news-hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(1,45,62,0) 35%,rgba(1,45,62,.92) 100%)}
+  .news-hero .body{padding:clamp(1.6rem,3vw,2.4rem)}
+  .news-hero .tag{display:inline-block;background:var(--green);color:#fff;font-size:var(--step--1);font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:.3rem .8rem;border-radius:7px;margin-bottom:.9rem}
+  .news-hero h3{color:#fff;font-size:var(--step-3);max-width:20ch}
+  .news-hero p{color:rgba(255,255,255,.9);margin-top:.7rem;max-width:52ch}
+  .news-hero .btn{margin-top:1.2rem}
+  .news-rail{display:flex;flex-direction:column;gap:1rem}
+  .news-card{display:flex;gap:1rem;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:1rem;transition:transform .2s var(--ease),box-shadow .2s}
+  .news-card:hover{transform:translateY(-3px);box-shadow:0 12px 26px rgba(1,60,84,.1)}
+  .news-card .thumb{width:110px;height:88px;flex:none;border-radius:10px;overflow:hidden}
+  .news-card .thumb img{width:100%;height:100%;object-fit:cover}
+  .news-card .meta{font-size:var(--step--1);color:var(--cyan-text);font-weight:700;text-transform:uppercase;letter-spacing:.05em}
+  .news-card h4{font-size:var(--step-0);margin-top:.3rem;color:var(--navy)}
+
+  /* Accès directs — quiet dark band with clear contrast */
+  .access{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:.75rem}
+  .section-navy .access a{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);color:#fff}
+  .section-navy .access a:hover{background:rgba(255,255,255,.12);border-color:var(--cyan)}
+  .access a{display:flex;align-items:center;gap:.85rem;padding:.95rem 1.1rem;border-radius:10px;font-weight:600;font-size:var(--step-0);transition:background .2s,border-color .2s,transform .2s}
+  .access a:hover{transform:translateY(-2px)}
+  .a-ico{width:34px;height:34px;flex:none;border-radius:9px;background:rgba(0,173,239,.2);color:var(--cyan);display:grid;place-items:center;transition:background .2s,color .2s}
+  .access a:hover .a-ico{background:var(--cyan);color:var(--navy)}
+  .a-ico svg{width:18px;height:18px}
+
+  /* Feature projects (photography scaled up) */
+  .feature-grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--gap)}
+  .feature{position:relative;border-radius:var(--radius);overflow:hidden;min-height:400px;display:flex;align-items:flex-end;color:#fff;isolation:isolate}
+  .feature img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform .6s var(--ease)}
+  .feature:hover img{transform:scale(1.04)}
+  .feature::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(1,45,62,0) 28%,rgba(1,45,62,.92) 100%)}
+  .feature .fbody{padding:clamp(1.6rem,3vw,2.2rem)}
+  .feature .ribbon{position:absolute;top:1.1rem;left:1.1rem;background:var(--green);color:#fff;font-weight:800;font-size:var(--step--1);letter-spacing:.06em;text-transform:uppercase;padding:.4rem .9rem;border-radius:7px;z-index:1}
+  .feature h3{color:#fff;font-size:var(--step-2)}
+  .feature p{color:rgba(255,255,255,.9);margin-top:.5rem;max-width:44ch}
+  .feature .btn{margin-top:1.1rem}
+
+  /* Concertations */
+  .concert-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:var(--gap)}
+  .concert{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;transition:transform .25s var(--ease),box-shadow .25s}
+  .concert:hover{transform:translateY(-4px);box-shadow:0 16px 34px rgba(1,60,84,.12)}
+  .concert .media{aspect-ratio:16/9;overflow:hidden}
+  .concert .media img{width:100%;height:100%;object-fit:cover}
+  .concert .body{padding:1.3rem 1.4rem 1.5rem;display:flex;flex-direction:column;gap:.5rem;flex:1}
+  .concert .status{font-size:var(--step--1);font-weight:700;color:var(--green-cta);letter-spacing:.04em;text-transform:uppercase}
+  .concert h4{font-size:var(--step-1)}
+  .concert .link-all{margin-top:auto}
+
+  /* Footer */
+  footer{background:var(--navy);color:rgba(255,255,255,.82);padding-block:clamp(3rem,4vw,4rem) 1.6rem}
+  .foot-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:var(--gap)}
+  footer h5{color:var(--yellow);font-size:var(--step-0);letter-spacing:.04em;text-transform:uppercase;margin-bottom:1rem;font-weight:700}
+  footer a{color:rgba(255,255,255,.82);transition:color .2s}
+  footer a:hover{color:#fff}
+  .foot-logo img{height:66px;width:auto;margin-bottom:1.1rem}
+  .foot-map{border-radius:10px;overflow:hidden;border:1px solid rgba(255,255,255,.12)}
+  .foot-map img{width:100%;height:130px;object-fit:cover}
+  .foot-contact a.big{color:#fff;font-weight:700;font-size:var(--step-1)}
+  .foot-legal{border-top:1px solid rgba(255,255,255,.14);margin-top:2.4rem;padding-top:1.4rem;display:flex;flex-wrap:wrap;gap:.4rem 1.2rem;font-size:var(--step--1);align-items:center}
+  .foot-legal .credit{margin-left:auto;color:rgba(255,255,255,.5)}
+
+  @media(max-width:900px){
+    .discover-grid,.news-asym,.feature-grid,.foot-grid{grid-template-columns:1fr}
+    .discover-media{min-height:320px}
+    .hero-nav{display:none}
+  }
+  @media(prefers-reduced-motion:reduce){
+    *{transition:none!important;animation:none!important}
+    html{scroll-behavior:auto}
+    .hero-media img{transform:none}
+  }
+</style>
+</head>
+<body>
+
+<div class="utility">
+  <div class="wrap-wide">
+    <div class="utility-left">
+      <a href="#">Plan du site</a><span class="sep">·</span><a href="#contenu">Aller au contenu</a>
+    </div>
+    <div class="utility-right">
+      <span class="weather" aria-label="Météo">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 3v2M12 19v2M5 12H3M21 12h-2M6 6l1.5 1.5M18 6l-1.5 1.5"/></svg>18° / 33°
+      </span>
+      <span class="txt-size"><button aria-label="Agrandir">A+</button> <button aria-label="Réduire">A−</button></span>
+      <span class="social">
+        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M13 22v-8h3l1-4h-4V8c0-1 .3-2 2-2h2V2.2C18.4 2.1 17 2 16 2c-3 0-5 1.8-5 5v3H8v4h3v8z"/></svg></a>
+        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/></svg></a>
+        <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M22 8a3 3 0 0 0-2-2c-1.8-.5-8-.5-8-.5s-6.2 0-8 .5a3 3 0 0 0-2 2 31 31 0 0 0 0 8 3 3 0 0 0 2 2c1.8.5 8 .5 8 .5s6.2 0 8-.5a3 3 0 0 0 2-2 31 31 0 0 0 0-8zM10 15V9l5 3z"/></svg></a>
+      </span>
+      <a class="btn-contact" href="#footer">Contact</a>
+    </div>
+  </div>
+</div>
+
+<!-- HERO: photography as protagonist -->
+<header class="hero">
+  <div class="hero-media">
+    <img src="assets/media/petite_camargue.jpg" alt="Vue aérienne de la Petite Camargue alsacienne — canaux, forêts et villages du territoire">
+  </div>
+  <div class="hero-topbar">
+    <div class="wrap-wide">
+      <a class="hero-logo" href="#" aria-label="Accueil"><img src="assets/logo.png" alt="Saint-Louis Agglomération — Terres d'avenir"></a>
+      <nav class="hero-nav" aria-label="Raccourcis">
+        <a href="#">Social Wall</a>
+        <a href="#opendata">Open Data</a>
+        <a href="#footer">Contact</a>
+      </nav>
+    </div>
+  </div>
+  <div class="hero-body">
+    <div class="wrap-wide">
+      <p class="hero-eyebrow">Terres d'avenir</p>
+      <h1>Bienvenue en Saint-Louis Agglomération</h1>
+      <p class="hero-lede">40 communes au cœur des trois frontières — entre l'Alsace, l'Allemagne et la Suisse. Un territoire de nature, de villages et de projets.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="#discover">Découvrir le territoire</a>
+        <a class="btn btn-ghost" href="#taches">Accéder à mes démarches</a>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-cue" aria-hidden="true">
+    <span>Défiler</span>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M6 13l6 6 6-6"/></svg>
+  </div>
+</header>
+
+<!-- Floating task panel -->
+<div class="taskfloat" id="taches">
+  <div class="wrap">
+    <div class="taskpanel">
+      <form class="search" role="search" onsubmit="return false">
+        <input type="search" placeholder="Rechercher une démarche, une info, un service…" aria-label="Rechercher">
+        <button type="submit"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>Rechercher</button>
+      </form>
+      <nav class="quicktasks" aria-label="Accès rapides">
+        <a class="qt" href="#"><span class="qt-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7h18M6 7V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2M5 7l1 13a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1l1-13"/></svg></span><strong>Déchets & collecte</strong><span>Calendrier, tri, déchetteries</span></a>
+        <a class="qt" href="#"><span class="qt-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span><strong>Agenda</strong><span>Événements du territoire</span></a>
+        <a class="qt" href="#"><span class="qt-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h6"/></svg></span><strong>Marchés publics</strong><span>Consultations en cours</span></a>
+        <a class="qt" href="#"><span class="qt-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></span><strong>Offres d'emploi</strong><span>Rejoindre l'agglomération</span></a>
+        <a class="qt" href="#"><span class="qt-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.5-7-10a7 7 0 0 1 14 0c0 5.5-7 10-7 10z"/><circle cx="12" cy="11" r="2.5"/></svg></span><strong>Nous trouver</strong><span>Adresse & horaires</span></a>
+      </nav>
+    </div>
+  </div>
+</div>
+
+<!-- Editorial territory band -->
+<section class="discover" id="discover" style="padding-block:0">
+  <div class="discover-grid">
+    <div class="discover-media">
+      <img src="assets/media/territoire.jpg" alt="Village de l'agglomération dans la vallée, vu du ciel">
+    </div>
+    <div class="discover-text">
+      <p class="eyebrow">La région des trois frontières</p>
+      <h2>Découvrez notre territoire autrement</h2>
+      <p>Située en Alsace, dans le sud-est du Haut-Rhin, Saint-Louis Agglomération réunit villages, terres agricoles et espaces naturels remarquables — de la Petite Camargue alsacienne aux coteaux du Sundgau.</p>
+      <div class="discover-stats">
+        <div class="stat"><div class="n">40</div><div class="l">communes membres</div></div>
+        <div class="stat"><div class="n">3</div><div class="l">frontières</div></div>
+        <div class="stat"><div class="n">FR·DE·CH</div><div class="l">au cœur de l'Europe</div></div>
+      </div>
+      <a class="btn btn-primary" href="#">En savoir plus</a>
+    </div>
+  </div>
+</section>
+
+<!-- Photo-led news -->
+<section id="actualites">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>À la une</h2>
+      <a class="link-all" href="#">Toutes les actualités <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+    <div class="news-asym">
+      <article class="news-hero">
+        <img src="assets/media/scarabee-japonais-AS-2025.jpeg" alt="Scarabée japonais sur une branche">
+        <div class="body">
+          <span class="tag">Environnement</span>
+          <h3>Informations sur le scarabée japonais</h3>
+          <p>La prolifération du scarabée japonais entraîne la modification des modalités de collecte du bac vert sur six communes de notre territoire.</p>
+          <a class="btn btn-primary" href="#">En savoir plus</a>
+        </div>
+      </article>
+      <div class="news-rail">
+        <a class="news-card" href="#"><span class="thumb"><img src="assets/media/Concertation_PCAET_1200px.jpg" alt=""></span><span><span class="meta">Aménagement</span><h4>Concertation publique sur le PCAET</h4></span></a>
+        <a class="news-card" href="#"><span class="thumb"><img src="assets/media/petite_camargue.jpg" alt=""></span><span><span class="meta">Nature</span><h4>La Petite Camargue alsacienne en été</h4></span></a>
+        <a class="news-card" href="#"><span class="thumb"><img src="assets/media/territoire.jpg" alt=""></span><span><span class="meta">Territoire</span><h4>Création de la ZAC du quartier du Lys</h4></span></a>
+        <a class="news-card" href="#"><span class="thumb"><img src="assets/media/Visuel_Open_Data_1200x530px.jpg" alt=""></span><span><span class="meta">Données</span><h4>Le portail Open Data s'enrichit</h4></span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Accès directs on navy band -->
+<section class="section-navy">
+  <div class="wrap">
+    <div class="section-head"><h2>Accès directs</h2></div>
+    <nav class="access" aria-label="Accès directs">
+      <a href="#"><span class="a-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5h16M4 12h16M4 19h10"/></svg></span>Actualités</a>
+      <a href="#"><span class="a-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.5-7-10a7 7 0 0 1 14 0c0 5.5-7 10-7 10z"/><circle cx="12" cy="11" r="2.5"/></svg></span>Nous trouver</a>
+      <a href="#"><span class="a-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span>Agenda des évènements</a>
+      <a href="#"><span class="a-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1"/><path d="M14 11a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1"/></svg></span>Liens utiles</a>
+      <a href="#"><span class="a-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg></span>Marchés publics</a>
+      <a href="#"><span class="a-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12M8 11l4 4 4-4M5 21h14"/></svg></span>Documents à télécharger</a>
+      <a href="#"><span class="a-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19V5a2 2 0 0 1 2-2h10l4 4v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M8 7h6M8 11h8M8 15h8"/></svg></span>Publications</a>
+      <a href="#"><span class="a-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12a10 10 0 0 1 20 0M6 12a6 6 0 0 1 12 0M10 12a2 2 0 0 1 4 0"/></svg></span>Fibre</a>
+      <a href="#"><span class="a-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></span>Offres d'emplois</a>
+      <a href="#"><span class="a-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="9" r="1.8"/><path d="m5 19 5-5 4 4 3-3 4 4"/></svg></span>Galerie multimédia</a>
+    </nav>
+  </div>
+</section>
+
+<!-- Grands projets -->
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Grands projets</h2>
+      <a class="link-all" href="#">Voir tous les projets <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+    <div class="feature-grid">
+      <article class="feature">
+        <img src="assets/media/petite_camargue.jpg" alt="Vue aérienne des canaux et forêts de la Petite Camargue">
+        <span class="ribbon">Territoire</span>
+        <div class="fbody"><h3>ZAC du quartier du Lys</h3><p>Un projet d'aménagement structurant pour l'avenir du territoire.</p><a class="btn btn-primary" href="#">En savoir plus</a></div>
+      </article>
+      <article class="feature" id="opendata">
+        <img src="assets/media/Concertation_PCAET_1200px.jpg" alt="Portail Open Data">
+        <span class="ribbon" style="background:var(--cyan)">Open Data</span>
+        <div class="fbody"><h3>Portail Open Data</h3><p>Depuis 2021, une plateforme ouverte à tous met à disposition les données publiques de l'agglomération.</p><a class="btn btn-primary" href="#">Accéder au portail</a></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Concertations -->
+<section class="section-stone">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Concertations publiques</h2>
+      <a class="link-all" href="#">Voir toutes les concertations <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+    <div class="concert-grid">
+      <article class="concert"><a href="#" class="media"><img src="assets/media/Concertation_PCAET_1200px.jpg" alt="Concertation PCAET"></a><div class="body"><span class="status">En cours</span><h4>Plan Climat-Air-Énergie Territorial</h4><p>Donnez votre avis sur la stratégie climat du territoire.</p><a class="link-all" href="#">Participer <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></article>
+      <article class="concert"><a href="#" class="media"><img src="assets/media/territoire.jpg" alt="ZAC du quartier du Lys"></a><div class="body"><span class="status">En cours</span><h4>Création de la ZAC du quartier du Lys</h4><p>Projet d'aménagement structurant pour le territoire.</p><a class="link-all" href="#">Participer <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></article>
+      <article class="concert"><a href="#" class="media"><img src="assets/media/petite_camargue.jpg" alt="Mobilités douces"></a><div class="body"><span class="status">À venir</span><h4>Schéma des mobilités douces</h4><p>Vers un réseau cyclable à l'échelle de l'agglomération.</p><a class="link-all" href="#">En savoir plus <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer id="footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-logo"><img src="assets/logo.png" alt="Saint-Louis Agglomération"></div>
+        <p style="max-width:34ch">Communauté d'agglomération de 40 communes au cœur des trois frontières.</p>
+      </div>
+      <div><h5>Adresse</h5><p>Place de l'Hôtel de Ville<br>CS 50199<br>68305 SAINT-LOUIS Cedex</p></div>
+      <div><h5>Horaires</h5><p>Du lundi au jeudi<br>09h00 – 11h30 · 14h30 – 17h00<br><br>Vendredi<br>09h00 – 11h30 · 14h30 – 16h30</p></div>
+      <div class="foot-contact">
+        <h5>Contact</h5>
+        <p><a class="big" href="tel:+33389709070">03 89 70 90 70</a></p>
+        <p style="margin-top:.6rem"><a href="#">Envoyez un message →</a></p>
+        <div class="foot-map" style="margin-top:1rem"><img src="assets/media/map.png" alt="Carte de localisation"></div>
+      </div>
+    </div>
+    <div class="foot-legal">
+      <a href="#">Mentions légales</a><a href="#">Plan du site</a><a href="#">Accès réservé</a><a href="#">Espace presse</a><a href="#">Politique de confidentialité</a><a href="#">Gestion des cookies</a>
+      <span class="credit">© 2025 Saint-Louis Agglomération</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+.intro-container,
+.intro-wrapper {
+  padding: 0;
+}
+
+.intro.block { padding: 0; }
+
+.intro .wrap {
+  max-width: 900px;
+  text-align: center;
+}
+
+.intro .kicker {
+  color: var(--cyan-text);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-size: var(--step--1);
+}
+
+.intro p:not(.kicker) {
+  font-size: var(--step-1);
+  color: var(--ink);
+  margin-top: 1rem;
+  line-height: 1.65;
+}
