@@ -1,0 +1,98 @@
+.taskbar-container,
+.taskbar-wrapper {
+  padding: 0;
+}
+
+.taskbar.block {
+  background: var(--white);
+  border-bottom: 1px solid var(--line);
+  position: relative;
+  z-index: 3;
+  margin-top: -2px;
+}
+
+.taskbar .wrap {
+  padding-block: clamp(1.4rem, 3vw, 2.1rem);
+}
+
+.taskbar .search {
+  display: flex;
+  gap: 0.6rem;
+  max-width: 640px;
+  margin-inline: auto;
+}
+
+.taskbar .search input {
+  flex: 1;
+  border: 1.5px solid var(--line);
+  border-radius: 999px;
+  padding: 0.85rem 1.3rem;
+  font: inherit;
+  font-size: var(--step-0);
+  color: var(--ink);
+}
+
+.taskbar .search input::placeholder { color: var(--muted); }
+
+.taskbar .search input:focus {
+  outline: none;
+  border-color: var(--cyan-text);
+  box-shadow: 0 0 0 3px rgb(1 100 144 / 15%);
+}
+
+.taskbar .search button {
+  background: var(--navy);
+  color: var(--white);
+  border: 0;
+  border-radius: 999px;
+  padding: 0 1.4rem;
+  font: inherit;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background 0.2s;
+}
+
+.taskbar .search button:hover { background: #012c3e; }
+.taskbar .search button svg { width: 18px; height: 18px; }
+
+.taskbar .quicktasks {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 0.9rem;
+  margin-top: clamp(1.3rem, 3vw, 1.9rem);
+}
+
+.taskbar .qt {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  padding: 1.1rem 1.15rem;
+  border-radius: var(--radius);
+  background: var(--stone);
+  border: 1px solid transparent;
+  color: var(--navy);
+  transition: transform 0.2s var(--ease), border-color 0.2s, background 0.2s, box-shadow 0.2s;
+}
+
+.taskbar .qt:hover {
+  transform: translateY(-3px);
+  border-color: var(--cyan);
+  background: var(--white);
+  box-shadow: 0 8px 20px rgb(1 60 84 / 8%);
+}
+
+.taskbar .qt-ico {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: rgb(0 173 239 / 14%);
+  color: var(--cyan-text);
+  display: grid;
+  place-items: center;
+}
+
+.taskbar .qt-ico svg { width: 20px; height: 20px; }
+.taskbar .qt strong { font-size: var(--step-0); font-weight: 700; }
+.taskbar .qt span { font-size: var(--step--1); color: var(--muted); }

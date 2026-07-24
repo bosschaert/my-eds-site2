@@ -1,0 +1,57 @@
+.concertations-container,
+.concertations-wrapper {
+  padding: 0;
+}
+
+.concertations .concert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--gap);
+}
+
+.concertations .concert {
+  background: var(--white);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 4px 18px rgb(1 60 84 / 7%);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s var(--ease), box-shadow 0.25s;
+}
+
+.concertations .concert:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 32px rgb(1 60 84 / 12%);
+}
+
+.concertations .concert .media {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  display: block;
+}
+
+.concertations .concert .media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.concertations .concert .body {
+  padding: 1.3rem 1.4rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.concertations .concert .status {
+  font-size: var(--step--1);
+  font-weight: 700;
+  color: var(--green-cta);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.concertations .concert h4 { font-size: var(--step-1); margin: 0; }
+.concertations .concert p { margin: 0; color: var(--ink); }
+.concertations .concert .link-all { margin-top: auto; }

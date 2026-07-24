@@ -1,0 +1,39 @@
+.themenav-container,
+.themenav-wrapper {
+  padding: 0;
+}
+
+/* ---------- theme nav ---------- */
+.themenav .themenav {
+  background: var(--white);
+  border-bottom: 1px solid var(--line);
+}
+
+.themenav .themenav .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  padding-block: 0.5rem;
+}
+
+.themenav .themenav a {
+  flex: 1 1 auto;
+  text-align: center;
+  padding: 0.8rem 1rem;
+  font-weight: 700;
+  font-size: var(--step--1);
+  color: var(--navy);
+  border-radius: 8px;
+  transition: background 0.2s, color 0.2s;
+  letter-spacing: 0.01em;
+}
+
+.themenav .themenav a:hover,
+.themenav .themenav a[aria-current] {
+  background: var(--navy);
+  color: var(--white);
+}
+
+@media (width <= 860px) {
+  .themenav .themenav a { flex: 1 1 45%; }
+}
